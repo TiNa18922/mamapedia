@@ -167,6 +167,41 @@ body{background:#a89080;
   color:#fff;border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;
   text-align:center;opacity:0;pointer-events:none;transition:opacity .25s;z-index:999;}
 .toast.show{opacity:1;}
+
+/* ── Market v2 ── */
+.mkt-chip{padding:6px 14px;border:1.5px solid var(--border);border-radius:20px;background:var(--surface);font-size:12px;font-weight:700;color:var(--t2);cursor:pointer;font-family:inherit;white-space:nowrap;}
+.mkt-chip-on{background:var(--action);border-color:var(--action);color:#fff;}
+.mkt-item2{display:flex;gap:12px;background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:12px;margin-bottom:10px;cursor:pointer;transition:transform .15s;}
+.mkt-item2:active{transform:scale(.98);}
+.mkt-item2-img{width:56px;height:56px;border-radius:12px;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
+.mkt-item2-body{flex:1;min-width:0;}
+.mkt-item2-name{font-size:14px;font-weight:800;color:var(--t1);margin-bottom:2px;}
+.mkt-item2-desc{font-size:12px;color:var(--t2);margin-bottom:4px;}
+.mkt-item2-price{font-size:15px;font-weight:800;color:var(--action);}
+.mkt-item2-time{font-size:11px;color:var(--t3);}
+.mkt-type-tag{display:inline-block;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700;}
+.mkt-type-tag.sell{background:rgba(230,138,92,.15);color:#c05020;}
+.mkt-type-tag.swap{background:rgba(94,142,196,.15);color:#3a6a9a;}
+.mkt-type-tag.free{background:rgba(29,158,117,.15);color:#0F6E56;}
+/* Publish panel */
+.pub-dot{width:10px;height:10px;border-radius:50%;background:var(--border);flex-shrink:0;transition:background .2s;}
+.pub-dot-on{background:var(--action);}
+.pub-dot-done{background:#6BAE8A;}
+.pub-line{flex:1;height:2px;background:var(--border);}
+.pub-step-title{font-size:17px;font-weight:900;color:var(--t1);margin-bottom:4px;}
+.pub-type-card{display:flex;align-items:center;gap:14px;background:var(--surface);border:2px solid var(--border);border-radius:16px;padding:14px 16px;cursor:pointer;transition:all .18s;}
+.pub-type-card.selected{border-color:var(--action);background:rgba(230,138,92,.06);}
+.pub-type-ico{font-size:28px;flex-shrink:0;}
+.pub-type-name{font-size:15px;font-weight:800;color:var(--t1);}
+.pub-type-desc{font-size:12px;color:var(--t2);margin-top:2px;}
+.pub-field{margin-bottom:14px;}
+.pub-label{display:block;font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;}
+.pub-input{width:100%;padding:11px 12px;border:1.5px solid var(--border);border-radius:12px;background:var(--surface);font-family:inherit;font-size:14px;color:var(--t1);outline:none;box-sizing:border-box;}
+.pub-input:focus{border-color:var(--action);}
+.pub-chip{padding:8px 14px;border:1.5px solid var(--border);border-radius:20px;background:var(--surface);font-size:12px;font-weight:700;color:var(--t2);cursor:pointer;font-family:inherit;}
+.pub-chip.sel{background:rgba(230,138,92,.12);border-color:var(--action);color:var(--action);}
+.pub-next-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--action-lt),var(--action));color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;}
+.pub-back-btn{flex:1;padding:14px;background:transparent;border:1.5px solid var(--border);border-radius:14px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;color:var(--t2);}
 </style>
 </head>
 <body>
@@ -514,12 +549,15 @@ body{background:#a89080;
 ══════════════════════════════════════ -->
 <div class="tab-overlay" id="market-overlay">
   <div class="mkt-hero">
-    <div style="display:flex;align-items:center;gap:10px">
-      <div style="font-size:28px">🛍️</div>
-      <div>
-        <h1>KI-Marktplatz</h1>
-        <p>Foto hochladen → KI erkennt & beschreibt automatisch</p>
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="font-size:28px">🛍️</div>
+        <div>
+          <h1 id="mkt-hero-title">二手市场</h1>
+          <p id="mkt-hero-sub">出售 · 交换 · 免费转让</p>
+        </div>
       </div>
+      <button onclick="openPublishPanel()" style="background:#fff;color:var(--action);border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);" id="mkt-publish-fab">+ 发布</button>
     </div>
   </div>
   <div class="mkt-body" id="mkt-body">
@@ -577,34 +615,258 @@ body{background:#a89080;
       ✅ Inserat veröffentlichen (VIP)
     </button>
     
-    <!-- Existing Listings -->
-    <div class="mkt-listings">
-      <div class="mkt-list-title">🔥 Aktuelle Angebote</div>
-      <div class="mkt-item" onclick="showToast('💬 Kontakt geöffnet')">
-        <div class="mkt-item-img">🚗</div>
-        <div class="mkt-item-info">
-          <div class="mkt-item-name">Maxi-Cosi Kindersitz</div>
-          <div class="mkt-item-desc">Gr. 0-18 kg, sehr guter Zustand · Oberkassel</div>
-          <div><span class="mkt-item-price">€45</span><span class="mkt-item-tag">· vor 2h</span></div>
+    <!-- Filter chips -->
+    <div id="mkt-filter-chips" style="display:flex;gap:8px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;">
+      <button class="mkt-chip mkt-chip-on" onclick="mktFilter('all',this)">全部</button>
+      <button class="mkt-chip" onclick="mktFilter('sell',this)">💰 出售</button>
+      <button class="mkt-chip" onclick="mktFilter('swap',this)">🔄 交换</button>
+      <button class="mkt-chip" onclick="mktFilter('free',this)">🎁 免费</button>
+    </div>
+
+    <!-- Listings -->
+    <div class="mkt-listings" id="mkt-listings-wrap">
+      <div class="mkt-list-title" id="mkt-list-lbl">🔥 最新发布</div>
+
+      <div class="mkt-item2" data-type="sell" onclick="showToast('💬 联系卖家')">
+        <div class="mkt-item2-img">🚗</div>
+        <div class="mkt-item2-body">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+            <span class="mkt-type-tag sell">💰 出售</span>
+            <span class="mkt-item2-time">vor 2h</span>
+          </div>
+          <div class="mkt-item2-name">Maxi-Cosi Kindersitz</div>
+          <div class="mkt-item2-desc">Gr. 0-18 kg · 九成新 · Oberkassel</div>
+          <div class="mkt-item2-price">€45</div>
         </div>
       </div>
-      <div class="mkt-item" onclick="showToast('💬 Kontakt geöffnet')">
-        <div class="mkt-item-img">👕</div>
-        <div class="mkt-item-info">
-          <div class="mkt-item-name">Kinderbekleidung Set 62-68</div>
-          <div class="mkt-item-desc">H&M/Zara Mix, 10 Teile · Pempelfort</div>
-          <div><span class="mkt-item-price">€20</span><span class="mkt-item-tag">· vor 5h</span></div>
+
+      <div class="mkt-item2" data-type="swap" onclick="showToast('💬 联系交换')">
+        <div class="mkt-item2-img">👕</div>
+        <div class="mkt-item2-body">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+            <span class="mkt-type-tag swap">🔄 交换</span>
+            <span class="mkt-item2-time">vor 5h</span>
+          </div>
+          <div class="mkt-item2-name">Kinderbekleidung Set 62-68</div>
+          <div class="mkt-item2-desc">想换：Gr. 74-80 · Pempelfort</div>
+          <div class="mkt-item2-price" style="color:var(--t2);font-size:12px;">物物交换</div>
         </div>
       </div>
-      <div class="mkt-item" onclick="showToast('💬 Kontakt geöffnet')">
-        <div class="mkt-item-img">🪑</div>
-        <div class="mkt-item-info">
-          <div class="mkt-item-name">IKEA Hochstuhl ANTILOP</div>
-          <div class="mkt-item-desc">Mit Tablett, kaum benutzt · Bilk</div>
-          <div><span class="mkt-item-price">€15</span><span class="mkt-item-tag">· vor 1d</span></div>
+
+      <div class="mkt-item2" data-type="free" onclick="showToast('💬 联系领取')">
+        <div class="mkt-item2-img">🪑</div>
+        <div class="mkt-item2-body">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+            <span class="mkt-type-tag free">🎁 免费</span>
+            <span class="mkt-item2-time">vor 1d</span>
+          </div>
+          <div class="mkt-item2-name">IKEA Hochstuhl ANTILOP</div>
+          <div class="mkt-item2-desc">带托盘 · 自取 · Bilk</div>
+          <div class="mkt-item2-price" style="color:#1D9E75;">免费转让</div>
         </div>
+      </div>
+
+      <div class="mkt-item2" data-type="sell" onclick="showToast('💬 联系卖家')">
+        <div class="mkt-item2-img">📚</div>
+        <div class="mkt-item2-body">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+            <span class="mkt-type-tag sell">💰 出售</span>
+            <span class="mkt-item2-time">vor 2d</span>
+          </div>
+          <div class="mkt-item2-name">德语儿童绘本20本</div>
+          <div class="mkt-item2-desc">适合3-6岁 · 九成新 · Stadtmitte</div>
+          <div class="mkt-item2-price">€30</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══ PUBLISH PANEL ══ -->
+<div id="pub-overlay" style="display:none;position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:200;align-items:flex-end;">
+  <div id="pub-panel" style="background:var(--bg);border-radius:24px 24px 0 0;width:100%;max-height:88%;overflow-y:auto;padding:0 0 20px;transform:translateY(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);">
+
+    <!-- Handle bar -->
+    <div style="display:flex;justify-content:center;padding:12px 0 4px;">
+      <div style="width:40px;height:4px;background:var(--border);border-radius:99px;"></div>
+    </div>
+
+    <!-- Step indicator -->
+    <div style="display:flex;align-items:center;padding:0 20px 12px;gap:0;">
+      <div id="pub-s1" class="pub-dot pub-dot-on"></div>
+      <div class="pub-line"></div>
+      <div id="pub-s2" class="pub-dot"></div>
+      <div class="pub-line"></div>
+      <div id="pub-s3" class="pub-dot"></div>
+      <div class="pub-line"></div>
+      <div id="pub-s4" class="pub-dot"></div>
+    </div>
+
+    <!-- ── Step 1: Type ── -->
+    <div id="pub-step1" style="padding:0 20px;">
+      <div class="pub-step-title" id="pub-s1-title">选择发布类型</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px;">
+        <div class="pub-type-card" id="pt-sell" onclick="pubSelectType('sell')">
+          <div class="pub-type-ico">💰</div>
+          <div>
+            <div class="pub-type-name" id="pt-sell-name">出售</div>
+            <div class="pub-type-desc" id="pt-sell-desc">设定价格，出售二手物品</div>
+          </div>
+        </div>
+        <div class="pub-type-card" id="pt-swap" onclick="pubSelectType('swap')">
+          <div class="pub-type-ico">🔄</div>
+          <div>
+            <div class="pub-type-name" id="pt-swap-name">交换</div>
+            <div class="pub-type-desc" id="pt-swap-desc">我有X，想换Y，物物交换</div>
+          </div>
+        </div>
+        <div class="pub-type-card" id="pt-free" onclick="pubSelectType('free')">
+          <div class="pub-type-ico">🎁</div>
+          <div>
+            <div class="pub-type-name" id="pt-free-name">免费转让</div>
+            <div class="pub-type-desc" id="pt-free-desc">不要钱，送给需要的妈妈</div>
+          </div>
+        </div>
+      </div>
+      <button class="pub-next-btn" onclick="pubNext(1)" id="pub-btn1" style="margin-top:20px;">下一步 →</button>
+    </div>
+
+    <!-- ── Step 2: Product Info ── -->
+    <div id="pub-step2" style="display:none;padding:0 20px;">
+      <div class="pub-step-title" id="pub-s2-title">商品信息</div>
+
+      <div class="pub-field">
+        <label class="pub-label" id="pub-l-name">商品名称 *</label>
+        <input id="pub-name" class="pub-input" placeholder="例：Bugaboo 婴儿车">
+      </div>
+
+      <div class="pub-field">
+        <label class="pub-label" id="pub-l-cat">分类 *</label>
+        <select id="pub-cat" class="pub-input">
+          <option value="">请选择</option>
+          <option>🚗 婴儿车 & 出行</option>
+          <option>🛏️ 婴儿床 & 家具</option>
+          <option>👕 婴幼儿服装</option>
+          <option>🧸 玩具 & 游戏</option>
+          <option>📚 儿童书籍 & 教材</option>
+          <option>🍼 喂养用品</option>
+          <option>🎒 学校用品</option>
+          <option>🏊 运动用品</option>
+          <option>🎨 其他</option>
+        </select>
+      </div>
+
+      <div class="pub-field">
+        <label class="pub-label" id="pub-l-cond">成色 *</label>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;" id="pub-cond-chips">
+          <button class="pub-chip" onclick="pubPickCond(this,'全新')">全新</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'九成新')">九成新</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'八成新')">八成新</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'七成新')">七成新</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'五成新以下')">五成新以下</button>
+        </div>
+      </div>
+
+      <!-- 出售专用：价格 -->
+      <div class="pub-field" id="pub-field-price">
+        <label class="pub-label" id="pub-l-price">价格 (€) *</label>
+        <input id="pub-price" class="pub-input" type="number" placeholder="例：25">
+      </div>
+
+      <!-- 交换专用：想换什么 -->
+      <div class="pub-field" id="pub-field-swap" style="display:none;">
+        <label class="pub-label" id="pub-l-swap">想换什么 *</label>
+        <input id="pub-swap" class="pub-input" placeholder="例：Gr. 74-80 婴儿服装">
+      </div>
+
+      <!-- 免费转让专用：取件方式 -->
+      <div class="pub-field" id="pub-field-pickup" style="display:none;">
+        <label class="pub-label" id="pub-l-pickup">取件方式 *</label>
+        <div style="display:flex;gap:8px;" id="pub-pickup-chips">
+          <button class="pub-chip" onclick="pubPickPickup(this,'自取')">🚶 自取</button>
+          <button class="pub-chip" onclick="pubPickPickup(this,'可送')">🚗 可送</button>
+          <button class="pub-chip" onclick="pubPickPickup(this,'两者皆可')">✅ 两者皆可</button>
+        </div>
+      </div>
+
+      <div class="pub-field">
+        <label class="pub-label" id="pub-l-desc">商品描述（可选）</label>
+        <textarea id="pub-desc" class="pub-input" rows="3" placeholder="更多详情..."></textarea>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;">
+        <button class="pub-back-btn" onclick="pubBack(2)">← 返回</button>
+        <button class="pub-next-btn" style="flex:2;" onclick="pubNext(2)">下一步 →</button>
       </div>
     </div>
+
+    <!-- ── Step 3: Location & Contact ── -->
+    <div id="pub-step3" style="display:none;padding:0 20px;">
+      <div class="pub-step-title" id="pub-s3-title">地点 & 联系</div>
+
+      <div class="pub-field">
+        <label class="pub-label" id="pub-l-dist">所在区域 *</label>
+        <select id="pub-dist" class="pub-input">
+          <option value="">请选择</option>
+          <option>Stadtmitte</option>
+          <option>Pempelfort</option>
+          <option>Derendorf</option>
+          <option>Oberkassel</option>
+          <option>Heerdt/Lörick</option>
+          <option>Flingern</option>
+          <option>Bilk/Friedrichstadt</option>
+          <option>Düsseltal</option>
+          <option>Gerresheim</option>
+          <option>其他</option>
+        </select>
+      </div>
+
+      <div class="pub-field">
+        <label class="pub-label" id="pub-l-email">联系邮箱 *</label>
+        <input id="pub-email" class="pub-input" type="email" placeholder="your@email.com">
+        <div style="font-size:11px;color:var(--t2);margin-top:4px;" id="pub-email-hint">感兴趣的妈妈会通过邮箱联系你</div>
+      </div>
+
+      <div class="pub-field">
+        <label class="pub-label" id="pub-l-wa">WhatsApp（可选）</label>
+        <input id="pub-wa" class="pub-input" type="tel" placeholder="0176 ...">
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;">
+        <button class="pub-back-btn" onclick="pubBack(3)">← 返回</button>
+        <button class="pub-next-btn" style="flex:2;" onclick="pubNext(3)">下一步 →</button>
+      </div>
+    </div>
+
+    <!-- ── Step 4: Review & Submit ── -->
+    <div id="pub-step4" style="display:none;padding:0 20px;">
+      <div class="pub-step-title" id="pub-s4-title">确认发布</div>
+
+      <div id="pub-preview-card" style="background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:16px;margin-top:14px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <span id="pub-prev-typetag" class="mkt-type-tag sell">💰 出售</span>
+          <span id="pub-prev-cat" style="font-size:12px;color:var(--t2);"></span>
+        </div>
+        <div id="pub-prev-name" style="font-size:16px;font-weight:800;color:var(--t1);margin-bottom:4px;"></div>
+        <div id="pub-prev-detail" style="font-size:13px;color:var(--t2);margin-bottom:8px;"></div>
+        <div id="pub-prev-price" style="font-size:15px;font-weight:800;color:var(--action);"></div>
+        <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;color:var(--t2);">
+          <div id="pub-prev-district"></div>
+          <div id="pub-prev-contact"></div>
+        </div>
+      </div>
+
+      <div style="background:#FFF3CD;border-radius:12px;padding:12px;margin-top:12px;font-size:12px;color:#856404;" id="pub-note">
+        📧 点击发布后将跳转到Google表单完成提交，请用同一邮箱验证。
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;">
+        <button class="pub-back-btn" onclick="pubBack(4)">← 返回</button>
+        <button onclick="pubSubmit()" style="flex:2;padding:14px;background:linear-gradient(135deg,var(--action-lt),var(--action));color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;" id="pub-submit-btn">✅ 发布商品</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -2509,20 +2771,8 @@ Analysiere das hochgeladene Foto und antworte NUR im folgenden JSON-Format (kein
   btnTxt.textContent = '🔄 Erneut analysieren';
 }
 
-function publishListing() {
-  showToast('✅ Inserat veröffentlicht! Sichtbar für alle Mamas in Düsseldorf.');
-  // Reset market state
-  setTimeout(() => {
-    document.getElementById('upload-zone').style.display = 'block';
-    document.getElementById('mkt-preview').style.display = 'none';
-    document.getElementById('mkt-analyze-btn').style.display = 'none';
-    document.getElementById('ai-result-card').style.display = 'none';
-    document.getElementById('mkt-publish-btn').style.display = 'none';
-    document.getElementById('mkt-analyze-btn').disabled = false;
-    document.getElementById('mkt-btn-txt').textContent = '🤖 KI-Analyse starten';
-    document.getElementById('mkt-file-input').value = '';
-  }, 1800);
-}
+// publishListing replaced by pubSubmit()
+function publishListing(){openPublishPanel();}
 
 // ══════════════════════════════════════
 // STEP 2: COMMUNITY MODULE
@@ -3037,6 +3287,279 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(injectS2, 80);
   };
 });
+
+// ══════════════════════════════════════
+// MARKETPLACE PUBLISH PANEL v2
+// ══════════════════════════════════════
+
+// Google Form URL — replace with your actual form URL after creating it
+var GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ-RxXhfszpqwLywlPrG6niS20Z83z3Flv0SYkfeVmnjCv4w/viewform';
+// Google Form field entry IDs — replace after creating form
+var GF = {
+  type:     'entry.1780845744',
+  name:     'entry.1030023306',
+  category: 'entry.1159693407',
+  condition:'entry.2051700145',
+  price:    'entry.227266182',
+  swap:     'entry.1544692769',
+  pickup:   'entry.1244202384',
+  desc:     'entry.1787902544',
+  district: 'entry.256143030',
+  email:    'entry.2059531285',
+  whatsapp: 'entry.80810985'
+};
+
+var PUB = {
+  open: false,
+  step: 1,
+  type: '',
+  cond: '',
+  pickup: '',
+  lang: typeof aiLang !== 'undefined' ? aiLang : 'zh'
+};
+
+var PUB_LABELS = {
+  zh: {
+    s1:'选择发布类型', s2:'商品信息', s3:'地点 & 联系', s4:'确认发布',
+    sellName:'出售', sellDesc:'设定价格，出售二手物品',
+    swapName:'交换', swapDesc:'我有X，想换Y，物物交换',
+    freeName:'免费转让', freeDesc:'不要钱，送给需要的妈妈',
+    lName:'商品名称 *', lCat:'分类 *', lCond:'成色 *',
+    lPrice:'价格 (€) *', lSwap:'想换什么 *', lPickup:'取件方式 *',
+    lDesc:'商品描述（可选）', lDist:'所在区域 *',
+    lEmail:'联系邮箱 *', lWa:'WhatsApp（可选）',
+    emailHint:'感兴趣的妈妈会通过邮箱联系你',
+    note:'📧 点击发布后将跳转到Google表单完成提交，请用同一邮箱验证。',
+    heroTitle:'二手市场', heroSub:'出售 · 交换 · 免费转让',
+    listLabel:'🔥 最新发布', submitBtn:'✅ 发布商品'
+  },
+  en: {
+    s1:'Choose listing type', s2:'Product details', s3:'Location & contact', s4:'Review & publish',
+    sellName:'Sell', sellDesc:'Set a price and sell second-hand items',
+    swapName:'Swap', swapDesc:'I have X, looking for Y',
+    freeName:'Free giveaway', freeDesc:'Give it away for free',
+    lName:'Item name *', lCat:'Category *', lCond:'Condition *',
+    lPrice:'Price (€) *', lSwap:'Looking for *', lPickup:'Pickup method *',
+    lDesc:'Description (optional)', lDist:'District *',
+    lEmail:'Contact email *', lWa:'WhatsApp (optional)',
+    emailHint:'Interested mamas will contact you by email',
+    note:'📧 After clicking publish, you will be redirected to Google Form to complete submission.',
+    heroTitle:'Second-hand Market', heroSub:'Sell · Swap · Free',
+    listLabel:'🔥 Latest listings', submitBtn:'✅ Publish listing'
+  },
+  de: {
+    s1:'Inseratstyp wählen', s2:'Artikeldetails', s3:'Ort & Kontakt', s4:'Bestätigen & veröffentlichen',
+    sellName:'Verkaufen', sellDesc:'Preis festlegen und Artikel verkaufen',
+    swapName:'Tauschen', swapDesc:'Ich habe X, suche Y',
+    freeName:'Verschenken', freeDesc:'Kostenlos abzugeben',
+    lName:'Artikelname *', lCat:'Kategorie *', lCond:'Zustand *',
+    lPrice:'Preis (€) *', lSwap:'Suche im Tausch *', lPickup:'Abholung *',
+    lDesc:'Beschreibung (optional)', lDist:'Stadtteil *',
+    lEmail:'Kontakt-E-Mail *', lWa:'WhatsApp (optional)',
+    emailHint:'Interessierte Mamas kontaktieren dich per E-Mail',
+    note:'📧 Nach dem Klick auf Veröffentlichen wirst du zum Google Formular weitergeleitet.',
+    heroTitle:'Gebrauchtmarkt', heroSub:'Verkaufen · Tauschen · Verschenken',
+    listLabel:'🔥 Neueste Angebote', submitBtn:'✅ Inserat veröffentlichen'
+  }
+};
+
+function pubL(k) {
+  var lang = typeof aiLang !== 'undefined' ? aiLang : 'zh';
+  return (PUB_LABELS[lang] || PUB_LABELS.zh)[k] || '';
+}
+
+function pubUpdateDots(step) {
+  [1,2,3,4].forEach(function(i) {
+    var el = document.getElementById('pub-s'+i);
+    if (!el) return;
+    el.className = 'pub-dot' + (i === step ? ' pub-dot-on' : i < step ? ' pub-dot-done' : '');
+    el.style.background = i === step ? 'var(--action)' : i < step ? '#6BAE8A' : '';
+  });
+}
+
+function pubApplyLabels() {
+  var el = function(id) { return document.getElementById(id); };
+  el('pub-s1-title').textContent = pubL('s1');
+  el('pub-s2-title').textContent = pubL('s2');
+  el('pub-s3-title').textContent = pubL('s3');
+  el('pub-s4-title').textContent = pubL('s4');
+  el('pt-sell-name').textContent = pubL('sellName');
+  el('pt-sell-desc').textContent = pubL('sellDesc');
+  el('pt-swap-name').textContent = pubL('swapName');
+  el('pt-swap-desc').textContent = pubL('swapDesc');
+  el('pt-free-name').textContent = pubL('freeName');
+  el('pt-free-desc').textContent = pubL('freeDesc');
+  el('pub-l-name').textContent = pubL('lName');
+  el('pub-l-cat').textContent = pubL('lCat');
+  el('pub-l-cond').textContent = pubL('lCond');
+  el('pub-l-price').textContent = pubL('lPrice');
+  el('pub-l-swap').textContent = pubL('lSwap');
+  el('pub-l-pickup').textContent = pubL('lPickup');
+  el('pub-l-desc').textContent = pubL('lDesc');
+  el('pub-l-dist').textContent = pubL('lDist');
+  el('pub-l-email').textContent = pubL('lEmail');
+  el('pub-l-wa').textContent = pubL('lWa');
+  el('pub-email-hint').textContent = pubL('emailHint');
+  el('pub-note').textContent = pubL('note');
+  el('pub-submit-btn').textContent = pubL('submitBtn');
+  el('mkt-hero-title').textContent = pubL('heroTitle');
+  el('mkt-hero-sub').textContent = pubL('heroSub');
+  el('mkt-list-lbl').textContent = pubL('listLabel');
+}
+
+window.openPublishPanel = function() {
+  pubApplyLabels();
+  PUB.step = 1;
+  PUB.type = '';
+  PUB.cond = '';
+  PUB.pickup = '';
+  ['pub-step1','pub-step2','pub-step3','pub-step4'].forEach(function(id, i) {
+    document.getElementById(id).style.display = i === 0 ? 'block' : 'none';
+  });
+  [1,2,3].forEach(function(i) {
+    document.getElementById('pt-' + ['sell','swap','free'][i-1]).classList.remove('selected');
+  });
+  pubUpdateDots(1);
+  var overlay = document.getElementById('pub-overlay');
+  var panel = document.getElementById('pub-panel');
+  overlay.style.display = 'flex';
+  setTimeout(function() { panel.style.transform = 'translateY(0)'; }, 10);
+};
+
+window.closePublishPanel = function() {
+  var panel = document.getElementById('pub-panel');
+  panel.style.transform = 'translateY(100%)';
+  setTimeout(function() {
+    document.getElementById('pub-overlay').style.display = 'none';
+  }, 350);
+};
+
+// Close on overlay tap
+document.getElementById('pub-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closePublishPanel();
+});
+
+window.pubSelectType = function(type) {
+  PUB.type = type;
+  ['sell','swap','free'].forEach(function(t) {
+    document.getElementById('pt-'+t).classList.toggle('selected', t === type);
+  });
+};
+
+window.pubPickCond = function(btn, val) {
+  PUB.cond = val;
+  document.querySelectorAll('#pub-cond-chips .pub-chip').forEach(function(b) { b.classList.remove('sel'); });
+  btn.classList.add('sel');
+};
+
+window.pubPickPickup = function(btn, val) {
+  PUB.pickup = val;
+  document.querySelectorAll('#pub-pickup-chips .pub-chip').forEach(function(b) { b.classList.remove('sel'); });
+  btn.classList.add('sel');
+};
+
+function pubShowStep(step) {
+  PUB.step = step;
+  [1,2,3,4].forEach(function(i) {
+    document.getElementById('pub-step'+i).style.display = i === step ? 'block' : 'none';
+  });
+  pubUpdateDots(step);
+  document.getElementById('pub-panel').scrollTo({top:0, behavior:'smooth'});
+}
+
+window.pubNext = function(step) {
+  if (step === 1) {
+    if (!PUB.type) { showToast('请选择发布类型'); return; }
+    // Show/hide type-specific fields
+    document.getElementById('pub-field-price').style.display = PUB.type === 'sell' ? 'block' : 'none';
+    document.getElementById('pub-field-swap').style.display = PUB.type === 'swap' ? 'block' : 'none';
+    document.getElementById('pub-field-pickup').style.display = PUB.type === 'free' ? 'block' : 'none';
+    pubShowStep(2);
+  } else if (step === 2) {
+    var name = document.getElementById('pub-name').value.trim();
+    var cat = document.getElementById('pub-cat').value;
+    if (!name) { showToast('请填写商品名称'); return; }
+    if (!cat) { showToast('请选择分类'); return; }
+    if (!PUB.cond) { showToast('请选择成色'); return; }
+    if (PUB.type === 'sell' && !document.getElementById('pub-price').value) { showToast('请填写价格'); return; }
+    if (PUB.type === 'swap' && !document.getElementById('pub-swap').value.trim()) { showToast('请填写想换什么'); return; }
+    if (PUB.type === 'free' && !PUB.pickup) { showToast('请选择取件方式'); return; }
+    pubShowStep(3);
+  } else if (step === 3) {
+    var dist = document.getElementById('pub-dist').value;
+    var email = document.getElementById('pub-email').value.trim();
+    if (!dist) { showToast('请选择区域'); return; }
+    if (!email || !email.includes('@')) { showToast('请填写有效邮箱'); return; }
+    pubBuildPreview();
+    pubShowStep(4);
+  }
+};
+
+window.pubBack = function(step) {
+  pubShowStep(step - 1);
+};
+
+function pubBuildPreview() {
+  var typeMap = {sell:'💰 出售', swap:'🔄 交换', free:'🎁 免费转让'};
+  var typeClass = PUB.type;
+  var tag = document.getElementById('pub-prev-typetag');
+  tag.textContent = typeMap[PUB.type] || '';
+  tag.className = 'mkt-type-tag ' + typeClass;
+
+  document.getElementById('pub-prev-cat').textContent = document.getElementById('pub-cat').value;
+  document.getElementById('pub-prev-name').textContent = document.getElementById('pub-name').value;
+
+  var detail = PUB.cond;
+  if (PUB.type === 'swap') detail += ' · 想换：' + document.getElementById('pub-swap').value;
+  if (PUB.type === 'free') detail += ' · ' + PUB.pickup;
+  document.getElementById('pub-prev-detail').textContent = detail;
+
+  var price = '';
+  if (PUB.type === 'sell') price = '€' + document.getElementById('pub-price').value;
+  else if (PUB.type === 'swap') price = '物物交换';
+  else price = '免费转让';
+  document.getElementById('pub-prev-price').textContent = price;
+
+  document.getElementById('pub-prev-district').textContent = '📍 ' + document.getElementById('pub-dist').value;
+  var contact = '📧 ' + document.getElementById('pub-email').value;
+  var wa = document.getElementById('pub-wa').value.trim();
+  if (wa) contact += '  📱 ' + wa;
+  document.getElementById('pub-prev-contact').textContent = contact;
+}
+
+window.pubSubmit = function() {
+  var params = {};
+  var typeLabel = {sell:'出售', swap:'交换', free:'免费转让'};
+  params[GF.type] = typeLabel[PUB.type] || '';
+  params[GF.name] = document.getElementById('pub-name').value;
+  params[GF.category] = document.getElementById('pub-cat').value;
+  params[GF.condition] = PUB.cond;
+  params[GF.price] = PUB.type === 'sell' ? document.getElementById('pub-price').value : '';
+  params[GF.swap] = PUB.type === 'swap' ? document.getElementById('pub-swap').value : '';
+  params[GF.pickup] = PUB.type === 'free' ? PUB.pickup : '';
+  params[GF.desc] = document.getElementById('pub-desc').value;
+  params[GF.district] = document.getElementById('pub-dist').value;
+  params[GF.email] = document.getElementById('pub-email').value;
+  params[GF.whatsapp] = document.getElementById('pub-wa').value;
+
+  var qs = Object.keys(params).map(function(k) {
+    return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+  }).join('&');
+
+  var url = GOOGLE_FORM_URL + '?' + qs;
+  window.open(url, '_blank');
+  closePublishPanel();
+  showToast('✅ 正在跳转到表单完成提交...');
+};
+
+window.mktFilter = function(type, btn) {
+  document.querySelectorAll('.mkt-chip').forEach(function(b) { b.classList.remove('mkt-chip-on'); });
+  btn.classList.add('mkt-chip-on');
+  document.querySelectorAll('.mkt-item2').forEach(function(item) {
+    item.style.display = (type === 'all' || item.dataset.type === type) ? 'flex' : 'none';
+  });
+};
+
 </script>
 
 </body>
