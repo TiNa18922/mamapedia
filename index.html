@@ -202,6 +202,27 @@ body{background:#a89080;
 .pub-chip.sel{background:rgba(230,138,92,.12);border-color:var(--action);color:var(--action);}
 .pub-next-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--action-lt),var(--action));color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;}
 .pub-back-btn{flex:1;padding:14px;background:transparent;border:1.5px solid var(--border);border-radius:14px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;color:var(--t2);}
+
+/* ── Community v2 ── */
+.post-type-chip{padding:6px 12px;border:1.5px solid var(--border);border-radius:20px;background:var(--surface);font-size:12px;font-weight:700;color:var(--t2);cursor:pointer;font-family:inherit;}
+.post-type-chip.on{background:rgba(90,106,191,.12);border-color:#5a6abf;color:#3a4a9a;}
+.com-post2{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:14px 16px;margin-bottom:10px;cursor:pointer;transition:transform .15s;}
+.com-post2:active{transform:scale(.99);}
+.com-post2-type{display:inline-block;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:8px;}
+.com-post2-type.help{background:rgba(230,138,92,.12);color:#c05020;}
+.com-post2-type.tip{background:rgba(29,158,117,.12);color:#0F6E56;}
+.com-post2-type.event{background:rgba(90,106,191,.12);color:#3a4a9a;}
+.com-post2-type.exp{background:rgba(212,168,83,.15);color:#856404;}
+.com-post2-title{font-size:14px;font-weight:800;color:var(--t1);line-height:1.4;margin-bottom:5px;}
+.com-post2-body{font-size:12px;color:var(--t2);line-height:1.6;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.com-post2-footer{display:flex;align-items:center;gap:12px;margin-top:8px;}
+.com-post2-stat{font-size:12px;color:var(--t2);cursor:pointer;transition:color .15s;}
+.com-post2-stat:hover{color:var(--action);}
+.com-post2-stat.liked{color:#e05555;}
+.com-reply-box{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:10px 12px;margin-bottom:8px;}
+.com-reply-author{font-size:12px;font-weight:800;color:var(--t1);}
+.com-reply-text{font-size:12px;color:var(--t2);margin-top:3px;line-height:1.5;}
+.com-reply-time{font-size:11px;color:var(--t3);}
 </style>
 </head>
 <body>
@@ -874,47 +895,77 @@ body{background:#a89080;
      STEP 2: COMMUNITY OVERLAY
 ══════════════════════════════════════ -->
 <div class="tab-overlay" id="community-overlay">
-  <div class="com-hero">
-    <div style="display:flex;align-items:center;gap:10px">
-      <div style="font-size:28px">💬</div>
-      <div>
-        <h1>Community</h1>
-        <p>KI taggt automatisch · Erfahrungen teilen</p>
+  <div class="com-hero" style="padding-bottom:12px;">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="font-size:28px">💬</div>
+        <div>
+          <h1 id="com-hero-title">Community</h1>
+          <p id="com-hero-sub">分享经验 · 互相帮助 · 一起成长</p>
+        </div>
       </div>
+      <button onclick="openNewPost()" style="background:#fff;color:#5a6abf;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);">+ 发帖</button>
     </div>
   </div>
-  <div class="com-tabs">
-    <button class="com-tab on" onclick="filterPosts('all',this)">🔥 Aktuell</button>
-    <button class="com-tab" onclick="filterPosts('help',this)">🙋 Hilfe</button>
-    <button class="com-tab" onclick="filterPosts('tip',this)">💡 Tipps</button>
-    <button class="com-tab" onclick="filterPosts('event',this)">📅 Events</button>
+
+  <!-- Tabs -->
+  <div class="com-tabs" id="com-tabs-bar">
+    <button class="com-tab on" onclick="filterPosts('all',this)" id="ctab-all">🔥 全部</button>
+    <button class="com-tab" onclick="filterPosts('help',this)" id="ctab-help">🙋 求助</button>
+    <button class="com-tab" onclick="filterPosts('tip',this)" id="ctab-tip">💡 经验</button>
+    <button class="com-tab" onclick="filterPosts('event',this)" id="ctab-event">📅 活动</button>
+    <button class="com-tab" onclick="filterPosts('exp',this)" id="ctab-exp">🌟 故事</button>
   </div>
+
   <div class="com-body" id="com-body"></div>
-  <button class="com-new-btn" onclick="openNewPost()">✏️</button>
-  
+
+  <!-- Post Detail Panel -->
+  <div id="post-detail-panel" style="display:none;position:absolute;inset:0;background:var(--bg);z-index:150;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);">
+    <div style="background:linear-gradient(160deg,#3a4a9a,#5a6abf);padding:14px 20px;flex-shrink:0;">
+      <div class="status-bar wh" style="padding:0 0 8px;"><span class="time">9:41</span><div class="icons">●●● WiFi 🔋</div></div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button onclick="closePostDetail()" style="background:rgba(255,255,255,.2);border:none;border-radius:50%;width:32px;height:32px;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">‹</button>
+        <span style="color:#fff;font-size:15px;font-weight:800;" id="detail-back-label">返回</span>
+      </div>
+    </div>
+    <div style="flex:1;overflow-y:auto;padding:16px 20px;" id="post-detail-body"></div>
+  </div>
+
   <!-- New Post Modal -->
   <div class="post-modal" id="post-modal">
     <div class="post-sheet">
-      <h3>✏️ Neuer Beitrag</h3>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <h3 style="margin:0;font-size:16px;" id="npm-title">✏️ 发布帖子</h3>
+        <button onclick="closeNewPost()" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--t2);">✕</button>
+      </div>
+
+      <!-- Post type chips -->
+      <div style="display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;" id="post-type-chips">
+        <button class="post-type-chip on" onclick="selectPostType('help',this)">🙋 求助</button>
+        <button class="post-type-chip" onclick="selectPostType('tip',this)">💡 经验</button>
+        <button class="post-type-chip" onclick="selectPostType('event',this)">📅 活动</button>
+        <button class="post-type-chip" onclick="selectPostType('exp',this)">🌟 故事</button>
+      </div>
+
       <div class="post-field">
-        <label>Titel</label>
-        <input id="post-title" placeholder="Was möchtest du fragen?" oninput="suggestTags()">
+        <label id="npm-l-title">标题 *</label>
+        <input id="post-title" placeholder="简单描述你想分享的..." oninput="suggestTags()">
       </div>
       <div class="post-field">
-        <label>Inhalt</label>
-        <textarea id="post-body" rows="3" placeholder="Beschreibe deine Frage oder deinen Tipp..." oninput="suggestTags()"></textarea>
+        <label id="npm-l-body">内容 *</label>
+        <textarea id="post-body" rows="4" placeholder="详细说说吧，越具体越能帮到大家..." oninput="suggestTags()"></textarea>
       </div>
       <div class="post-field">
-        <label>🤖 KI-Tags (tippen zum Hinzufügen)</label>
+        <label id="npm-l-tags">🤖 AI标签建议</label>
         <div class="post-ai-tags" id="post-ai-tags">
           <span class="post-ai-tag" onclick="addTag(this)">#Düsseldorf</span>
-          <span class="post-ai-tag" onclick="addTag(this)">#Kita</span>
-          <span class="post-ai-tag" onclick="addTag(this)">#U3</span>
+          <span class="post-ai-tag" onclick="addTag(this)">#Mama</span>
         </div>
+        <div id="post-selected-tags" style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;"></div>
       </div>
-      <div style="display:flex;gap:8px">
-        <button style="flex:1;background:#F5EDE0;border:none;border-radius:10px;padding:10px;font-family:inherit;font-size:13px;color:var(--t2);cursor:pointer;font-weight:700" onclick="closeNewPost()">Abbrechen</button>
-        <button class="post-submit-btn" style="flex:2" onclick="submitPost()">Veröffentlichen (Basic+)</button>
+      <div style="display:flex;gap:8px;margin-top:4px;">
+        <button style="flex:1;background:#F5EDE0;border:none;border-radius:12px;padding:12px;font-family:inherit;font-size:13px;color:var(--t2);cursor:pointer;font-weight:700" onclick="closeNewPost()" id="npm-cancel">取消</button>
+        <button class="post-submit-btn" style="flex:2;" onclick="submitPost()" id="npm-submit">发布</button>
       </div>
     </div>
   </div>
@@ -942,7 +993,7 @@ body{background:#a89080;
       <ul class="tier-features">
         <li>Alle 161 Einträge durchsuchen</li>
         <li>3 KI-Fragen pro Tag</li>
-        <li class="no">Community posten</li>
+        <li>Community posten ✅</li>
         <li class="no">Marktplatz verkaufen</li>
       </ul>
       <button class="tier-btn" onclick="selectTier('free')">Aktueller Plan</button>
@@ -2777,88 +2828,281 @@ function publishListing(){openPublishPanel();}
 // ══════════════════════════════════════
 // STEP 2: COMMUNITY MODULE
 // ══════════════════════════════════════
+// ══════════════════════════════════════
+// COMMUNITY MODULE v2
+// ══════════════════════════════════════
+
 const COMMUNITY_POSTS = [
   {
     id:1, type:'help',
     avatar:'🌸', author:'小李妈妈', time:'vor 2h',
-    title:'Kinderarzt gesucht der Chinesisch oder Englisch spricht – Oberkassel',
-    body:'Wir sind neu in Düsseldorf und suchen einen Kinderarzt in der Nähe von Oberkassel, der Englisch oder Chinesisch spricht. Hat jemand eine Empfehlung?',
-    tags:['#Oberkassel','#Kinderarzt','#Englisch','#U6'],
-    tagTypes:['loc','','','age'],
-    likes:12, replies:8, hot:true
+    title:'Kinderarzt gesucht – spricht Englisch oder Chinesisch in Oberkassel',
+    body:'Wir sind neu in Düsseldorf und suchen einen Kinderarzt in der Nähe von Oberkassel. Hat jemand eine Empfehlung für eine Praxis die Englisch oder Chinesisch spricht?',
+    tags:['#Oberkassel','#Kinderarzt','#Englisch'],
+    likes:12, replies:8, hot:true,
+    comments:[
+      {avatar:'🌺', author:'Taipei Mama', time:'vor 1h', text:'Dr. Kever-Sager in Grafenberg spricht EN/ES/TR/PL! Tel: 0211 668 190'},
+      {avatar:'🍀', author:'HK Mama', time:'vor 45min', text:'Wir gehen zu Dr. Pigulla in Derendorf, sehr nett und englischsprachig 👍'},
+      {avatar:'🎀', author:'Shanghai Mama', time:'vor 20min', text:'Fair Doctors in Oberbilk hat auch Englisch und ist ohne Termin möglich!'}
+    ]
   },
   {
     id:2, type:'tip',
     avatar:'🌺', author:'Taipei Mama', time:'vor 4h',
     title:'Tipp: Kita-Navigator sofort nach der Geburt ausfüllen! 🏫',
-    body:'Wir haben 3 Monate gewartet und fast keinen Platz bekommen. Meldet euer Baby direkt nach der Geburt auf duesseldorf.kita-navigator.org an. Je früher desto besser!',
-    tags:['#Kita','#U3','#Tipp','#Düsseldorf'],
-    tagTypes:['','age','','loc'],
-    likes:34, replies:15, hot:true
+    body:'Wir haben 3 Monate gewartet und fast keinen Platz bekommen. Meldet euer Baby direkt nach der Geburt auf duesseldorf.kita-navigator.org an. Je früher desto besser! Wir haben am Ende 8 Kitas gleichzeitig angemeldet.',
+    tags:['#Kita','#U3','#Tipp'],
+    likes:47, replies:15, hot:true,
+    comments:[
+      {avatar:'🌻', author:'Beijing Mama', time:'vor 3h', text:'Danke für den Tipp! Wir haben auch sofort nach der Geburt angemeldet und nach 6 Monaten einen Platz bekommen 🎉'},
+      {avatar:'🌸', author:'小王妈妈', time:'vor 2h', text:'对！而且要同时申请多所，不要只申请一所。我们申请了6所，最后拿到了2个offer！'}
+    ]
   },
   {
     id:3, type:'event',
     avatar:'🌻', author:'MamaPedia Team', time:'vor 1d',
-    title:'📅 Chinesisch-Deutsch Spielgruppe – Samstag 10 Uhr in Pempelfort',
-    body:'Wir organisieren eine zweisprachige Spielgruppe für Kinder 1-4 Jahre. Kommt vorbei! Ort: Café Mama, Luisenstraße 22. Bringt Snacks für die Kinder mit 🧃',
-    tags:['#Spielgruppe','#Pempelfort','#U4','#Zweisprachig'],
-    tagTypes:['','loc','age',''],
-    likes:28, replies:22, hot:false
+    title:'📅 中德双语妈妈茶会 – 下周六上午10点 Pempelfort',
+    body:'欢迎所有在杜塞的国际妈妈！带孩子一起来，孩子可以玩耍，妈妈们可以交流经验。地点：Café Mama, Luisenstraße 22。提供咖啡和儿童零食 🧃',
+    tags:['#活动','#Pempelfort','#Spielgruppe'],
+    likes:38, replies:22, hot:true,
+    comments:[
+      {avatar:'🎀', author:'Tokyo Mama', time:'vor 20h', text:'我们会去！请问需要提前报名吗？'},
+      {avatar:'🌺', author:'MamaPedia Team', time:'vor 18h', text:'不需要报名，直接来就好！我们有足够的空间 😊'},
+      {avatar:'🍀', author:'Seoul Mama', time:'vor 10h', text:'上次参加了，超棒的！认识了好多妈妈朋友 ❤️'}
+    ]
   },
   {
     id:4, type:'help',
     avatar:'🍀', author:'München→Düsseldorf', time:'vor 2d',
-    title:'Elterngeld-Antrag – welche Unterlagen brauche ich als Chinesin?',
-    body:'Ich habe eine Niederlassungserlaubnis. Mein Mann arbeitet, ich war vorher auch berufstätig. Welche Dokumente muss ich für den Elterngeld-Antrag mitbringen? Hat jemand Erfahrung?',
-    tags:['#Elterngeld','#Ausländer','#Niederlassungserlaubnis','#Behörden'],
-    tagTypes:['','','',''],
-    likes:9, replies:6, hot:false
+    title:'Elterngeld-Antrag – welche Unterlagen als Ausländerin?',
+    body:'Ich habe eine Niederlassungserlaubnis. Mein Mann arbeitet, ich war vorher auch berufstätig. Welche Dokumente muss ich für den Elterngeld-Antrag mitbringen? Hat jemand Erfahrung gemacht?',
+    tags:['#Elterngeld','#Ausländer','#Behörden'],
+    likes:9, replies:6, hot:false,
+    comments:[
+      {avatar:'🌸', author:'Düsseldorf Mama', time:'vor 1d', text:'Pass/Aufenthaltstitel, Geburtsurkunde des Kindes, Lohnabrechnungen der letzten 12 Monate, Kontoverbindung – das sind die wichtigsten!'},
+      {avatar:'🌺', author:'Pempelfort Mama', time:'vor 20h', text:'Ich empfehle den Termin beim Elterngeld-Beratungsdienst der AWO zu machen, die helfen kostenlos und auf Englisch!'}
+    ]
   },
   {
     id:5, type:'tip',
-    avatar:'🎀', author:'Düsseldorf Mama', time:'vor 3d',
+    avatar:'🎀', author:'Düsseldorf Veteran', time:'vor 3d',
     title:'💡 Kostenloses BAMF-Deutsch A1→B1 mit Kinderbetreuung!',
-    body:'Das VHS Düsseldorf bietet Integrationskurse mit Kinderbetreuung an. Einfach beim Jobcenter oder direkt bei der VHS fragen. Ich bin jetzt im B1-Kurs und mein Baby ist dabei!',
-    tags:['#Deutsch','#BAMF','#VHS','#Kinderbetreuung'],
-    tagTypes:['','','',''],
-    likes:41, replies:19, hot:true
+    body:'Das VHS Düsseldorf bietet Integrationskurse mit Kinderbetreuung an. Einfach beim Jobcenter oder direkt bei der VHS fragen. Ich bin jetzt im B1-Kurs und mein Baby ist dabei! Der Kurs ist komplett kostenlos wenn man berechtigt ist.',
+    tags:['#Deutsch','#BAMF','#VHS'],
+    likes:56, replies:19, hot:true,
+    comments:[
+      {avatar:'🍀', author:'新来的妈妈', time:'vor 2d', text:'请问怎么报名？需要什么条件？'},
+      {avatar:'🎀', author:'Düsseldorf Veteran', time:'vor 2d', text:'去最近的Jobcenter或者直接去VHS（Bertha-von-Suttner-Platz 1），带着Pass和Aufenthaltstitel就可以！'}
+    ]
+  },
+  {
+    id:6, type:'exp',
+    avatar:'🌹', author:'3年经验妈妈', time:'vor 4d',
+    title:'🌟 在德国生娃全程记录：从怀孕到出院',
+    body:'来德国3年了，去年在Düsseldorf生了我的第一个宝宝。从怀孕、选医院、生产到出院，整个过程和国内差别很大。想把我的经验分享给刚来的妈妈们，希望能帮到你们！',
+    tags:['#生育经验','#医院','#怀孕'],
+    likes:89, replies:34, hot:true,
+    comments:[
+      {avatar:'🌸', author:'准妈妈', time:'vor 3d', text:'太感谢了！请问你在哪个医院生的？EVK还是Uniklinik？'},
+      {avatar:'🌹', author:'3年经验妈妈', time:'vor 3d', text:'我在EVK Düsseldorf生的，助产士很好，有英语服务。提前预约Kreißsaal很重要！'},
+      {avatar:'🌺', author:'Taipei Mama', time:'vor 2d', text:'我也在EVK生的！那里的中文翻译服务很棒 👍'}
+    ]
+  },
+  {
+    id:7, type:'event',
+    avatar:'🎈', author:'Spielgruppe Oberkassel', time:'vor 5d',
+    title:'📅 Jeden Donnerstag: Deutsch-Englisch Spielgruppe für U3',
+    body:'Wir treffen uns jeden Donnerstag von 9:30-11:30 Uhr im Gemeindehaus St. Josef, Oberkassel. Für Kinder von 0-3 Jahren. Kosten: 3€ pro Termin. Anmeldung nicht nötig, einfach vorbeikommen!',
+    tags:['#Spielgruppe','#Oberkassel','#U3'],
+    likes:24, replies:11, hot:false,
+    comments:[
+      {avatar:'🍀', author:'新妈妈', time:'vor 4d', text:'请问明天还有吗？'},
+      {avatar:'🎈', author:'Spielgruppe Oberkassel', time:'vor 4d', text:'Ja, immer donnerstags! Wir freuen uns auf euch 😊'}
+    ]
+  },
+  {
+    id:8, type:'tip',
+    avatar:'💚', author:'省钱达人妈妈', time:'vor 6d',
+    title:'💡 杜塞尔多夫省钱攻略：Familienkarte和各种免费资源',
+    body:'来德国后发现有好多免费或优惠资源很多人不知道！比如：Düsseldorf Card家庭版可以免费进很多博物馆、图书馆有免费儿童活动、Familienzentren有免费早教课...',
+    tags:['#省钱','#家庭','#Düsseldorf'],
+    likes:73, replies:28, hot:true,
+    comments:[
+      {avatar:'🌸', author:'精打细算妈', time:'vor 5d', text:'还有Kaufland和Lidl的Schnäppchen每周四更新，可以省很多！'},
+      {avatar:'🌺', author:'新来的', time:'vor 5d', text:'图书馆的免费资源真的太棒了！我们每周都去，孩子可以借绘本、玩玩具'}
+    ]
   }
 ];
 
 let activeFilter = 'all';
+let newPostType = 'help';
+let selectedTags = [];
+
+// Post likes state
+let postLikes = {};
+COMMUNITY_POSTS.forEach(p => { postLikes[p.id] = {count: p.likes, liked: false}; });
+
+// User's own posts
+let userPosts = [];
+
+function getAllPosts() {
+  return [...userPosts, ...COMMUNITY_POSTS].sort((a,b) => {
+    if (a.hot && !b.hot) return -1;
+    if (!a.hot && b.hot) return 1;
+    return 0;
+  });
+}
 
 function renderPosts(filter) {
   activeFilter = filter;
   const body = document.getElementById('com-body');
-  const posts = filter === 'all' ? COMMUNITY_POSTS : COMMUNITY_POSTS.filter(p => p.type === filter);
-  body.innerHTML = posts.map(p => `
-    <div class="com-post">
-      <div class="com-post-header">
-        <div class="com-avatar">${p.avatar}</div>
-        <div>
-          <div class="com-author">${p.author}</div>
-          <div class="com-time">${p.time}</div>
-        </div>
-        ${p.hot ? '<span class="com-hot">🔥 Hot</span>' : ''}
+  const all = getAllPosts();
+  const posts = filter === 'all' ? all : all.filter(p => p.type === filter);
+
+  const typeLabel = {help:'🙋 求助', tip:'💡 经验', event:'📅 活动', exp:'🌟 故事'};
+
+  body.innerHTML = posts.map(p => {
+    const likes = postLikes[p.id] || {count: p.likes, liked: false};
+    const typeClass = p.type;
+    const typeLbl = typeLabel[p.type] || p.type;
+    const replies = p.comments ? p.comments.length : (p.replies || 0);
+    const isNew = userPosts.includes(p);
+    return `
+    <div class="com-post2" onclick="openPostDetail(${p.id})">
+      ${p.hot || isNew ? '<span style="float:right;background:rgba(230,138,92,.15);color:var(--action);font-size:10px;font-weight:800;padding:3px 7px;border-radius:10px;">' + (isNew ? '✨ 新' : '🔥 热门') + '</span>' : ''}
+      <span class="com-post2-type ${typeClass}">${typeLbl}</span>
+      <div class="com-post2-title">${p.title}</div>
+      <div class="com-post2-body">${p.body}</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+        ${(p.tags||[]).map(t => `<span style="font-size:11px;color:var(--t3);">${t}</span>`).join('')}
       </div>
-      <div class="com-post-title">${p.title}</div>
-      <div class="com-post-body">${p.body}</div>
-      <div class="com-tags">
-        ${p.tags.map((t,i) => `<span class="com-tag ${p.tagTypes[i]||''}">${t}</span>`).join('')}
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:0;">
+        <div style="width:22px;height:22px;border-radius:50%;background:rgba(230,138,92,.15);display:flex;align-items:center;justify-content:center;font-size:12px;">${p.avatar}</div>
+        <span style="font-size:11px;color:var(--t2);font-weight:700;">${p.author}</span>
+        <span style="font-size:11px;color:var(--t3);">· ${p.time}</span>
       </div>
-      <div class="com-footer">
-        <span class="com-action" onclick="showToast('❤️ Gefällt mir +1')">❤️ ${p.likes}</span>
-        <span class="com-action" onclick="openAI('${p.tags[0]}')">💬 ${p.replies} Antworten</span>
-        <span class="com-action" onclick="showToast('🔗 Link kopiert')">🔗 Teilen</span>
+      <div class="com-post2-footer" onclick="event.stopPropagation()">
+        <span class="com-post2-stat ${likes.liked ? 'liked' : ''}" onclick="toggleLike(${p.id},this)">
+          ${likes.liked ? '❤️' : '🤍'} ${likes.count}
+        </span>
+        <span class="com-post2-stat" onclick="openPostDetail(${p.id})">💬 ${replies} 回复</span>
+        <span class="com-post2-stat" onclick="showToast('🔗 链接已复制')">🔗 分享</span>
       </div>
-    </div>
-  `).join('');
+    </div>`;
+  }).join('');
 }
 
 function filterPosts(filter, btn) {
   document.querySelectorAll('.com-tab').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   renderPosts(filter);
+}
+
+function toggleLike(postId, el) {
+  if (!postLikes[postId]) postLikes[postId] = {count:0, liked:false};
+  postLikes[postId].liked = !postLikes[postId].liked;
+  postLikes[postId].count += postLikes[postId].liked ? 1 : -1;
+  renderPosts(activeFilter);
+}
+
+function openPostDetail(postId) {
+  const all = getAllPosts();
+  const post = all.find(p => p.id === postId);
+  if (!post) return;
+
+  const panel = document.getElementById('post-detail-panel');
+  const body = document.getElementById('post-detail-body');
+  const typeLabel = {help:'🙋 求助', tip:'💡 经验', event:'📅 活动', exp:'🌟 故事'};
+  const likes = postLikes[post.id] || {count: post.likes, liked: false};
+
+  body.innerHTML = `
+    <div style="margin-bottom:12px;">
+      <span class="com-post2-type ${post.type}" style="margin-bottom:10px;display:inline-block;">${typeLabel[post.type]||post.type}</span>
+      <h2 style="font-size:16px;font-weight:900;color:var(--t1);line-height:1.4;margin:0 0 10px;">${post.title}</h2>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(230,138,92,.15);display:flex;align-items:center;justify-content:center;">${post.avatar}</div>
+        <span style="font-size:13px;font-weight:700;color:var(--t1);">${post.author}</span>
+        <span style="font-size:12px;color:var(--t3);">· ${post.time}</span>
+      </div>
+      <p style="font-size:14px;color:var(--t1);line-height:1.7;margin-bottom:12px;">${post.body}</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
+        ${(post.tags||[]).map(t => `<span style="background:rgba(0,0,0,.05);border-radius:20px;padding:3px 9px;font-size:12px;color:var(--t2);">${t}</span>`).join('')}
+      </div>
+      <div style="display:flex;gap:14px;padding:10px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:16px;">
+        <span class="com-post2-stat ${likes.liked?'liked':''}" onclick="toggleLike(${post.id},this);document.getElementById('detail-likes-${post.id}').textContent=(postLikes[${post.id}].count);" style="font-size:14px;">
+          ${likes.liked?'❤️':'🤍'} <span id="detail-likes-${post.id}">${likes.count}</span>
+        </span>
+        <span style="font-size:14px;color:var(--t2);">💬 ${(post.comments||[]).length} 回复</span>
+      </div>
+    </div>
+
+    <div style="font-size:13px;font-weight:800;color:var(--t1);margin-bottom:10px;">${(post.comments||[]).length} 条回复</div>
+    ${(post.comments||[]).map(c => `
+      <div class="com-reply-box">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+          <div style="width:22px;height:22px;border-radius:50%;background:rgba(90,106,191,.12);display:flex;align-items:center;justify-content:center;font-size:11px;">${c.avatar}</div>
+          <span class="com-reply-author">${c.author}</span>
+          <span class="com-reply-time">· ${c.time}</span>
+        </div>
+        <div class="com-reply-text">${c.text}</div>
+      </div>
+    `).join('')}
+
+    <div style="margin-top:16px;">
+      <div style="font-size:13px;font-weight:800;color:var(--t1);margin-bottom:8px;" id="reply-label">写回复</div>
+      <textarea id="reply-input" placeholder="分享你的经验或建议..." rows="3"
+        style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:12px;font-family:inherit;font-size:13px;color:var(--t1);background:var(--surface);outline:none;box-sizing:border-box;resize:none;"></textarea>
+      <button onclick="submitReply(${post.id})" style="width:100%;margin-top:8px;padding:12px;background:linear-gradient(135deg,var(--action-lt),var(--action));color:#fff;border:none;border-radius:12px;font-size:14px;font-weight:800;font-family:inherit;cursor:pointer;" id="reply-submit-btn">发布回复</button>
+    </div>
+  `;
+
+  panel.style.display = 'flex';
+  setTimeout(() => { panel.style.transform = 'translateX(0)'; }, 10);
+}
+
+function closePostDetail() {
+  const panel = document.getElementById('post-detail-panel');
+  panel.style.transform = 'translateX(100%)';
+  setTimeout(() => { panel.style.display = 'none'; }, 350);
+}
+
+function submitReply(postId) {
+  const input = document.getElementById('reply-input');
+  const text = input.value.trim();
+  if (!text) { showToast('请先写点内容'); return; }
+
+  const all = getAllPosts();
+  const post = all.find(p => p.id === postId);
+  if (!post) return;
+  if (!post.comments) post.comments = [];
+  post.comments.push({
+    avatar: '🌸',
+    author: '我',
+    time: 'gerade eben',
+    text: text
+  });
+  input.value = '';
+  showToast('✅ 回复已发布！');
+  openPostDetail(postId);
+}
+
+function openNewPost() {
+  selectedTags = [];
+  document.getElementById('post-title').value = '';
+  document.getElementById('post-body').value = '';
+  document.getElementById('post-selected-tags').innerHTML = '';
+  suggestTags();
+  document.getElementById('post-modal').classList.add('open');
+}
+
+function closeNewPost() {
+  document.getElementById('post-modal').classList.remove('open');
+}
+
+function selectPostType(type, btn) {
+  newPostType = type;
+  document.querySelectorAll('.post-type-chip').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
 }
 
 // New Post
@@ -2898,10 +3142,22 @@ function suggestTags() {
       tags = [...arr, ...tags].slice(0, 6);
     }
   });
+  // Update selected tags display
+  const selDiv = document.getElementById('post-selected-tags');
+  if (selDiv) {
+    selDiv.innerHTML = selectedTags.map(t => 
+      `<span style="background:rgba(230,138,92,.12);border:1px solid var(--action);border-radius:20px;padding:3px 8px;font-size:11px;color:var(--action);cursor:pointer;" onclick="removeTag('${t}')">${t} ✕</span>`
+    ).join('');
+  }
   
   document.getElementById('post-ai-tags').innerHTML = tags.map(t =>
     `<span class="post-ai-tag" onclick="addTag(this)">${t}</span>`
   ).join('');
+}
+
+function removeTag(tag) {
+  selectedTags = selectedTags.filter(t => t !== tag);
+  suggestTags();
 }
 
 function addTag(el) {
@@ -2911,6 +3167,33 @@ function addTag(el) {
 }
 
 function submitPost() {
+  const title = document.getElementById('post-title').value.trim();
+  const body = document.getElementById('post-body').value.trim();
+  if (!title) { showToast('请填写标题'); return; }
+  if (!body) { showToast('请填写内容'); return; }
+
+  const newPost = {
+    id: Date.now(),
+    type: newPostType,
+    avatar: '🌸',
+    author: '我',
+    time: 'gerade eben',
+    title: title,
+    body: body,
+    tags: [...selectedTags],
+    likes: 0,
+    replies: 0,
+    hot: false,
+    comments: []
+  };
+  postLikes[newPost.id] = {count: 0, liked: false};
+  userPosts.unshift(newPost);
+  closeNewPost();
+  showToast('✅ 帖子已发布！');
+  filterPosts('all', document.getElementById('ctab-all'));
+}
+
+function _submitPost_old() {
   const title = document.getElementById('post-title').value;
   if (!title.trim()) { showToast('⚠️ Bitte Titel eingeben'); return; }
   closeNewPost();
