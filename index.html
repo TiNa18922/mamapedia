@@ -2323,13 +2323,27 @@ function setLang(l, btn) {
   // Sync global AI language
   if (typeof aiLang !== 'undefined') aiLang = l;
   // Sync GSF wizard language
-  if (typeof GSF_LANG !== 'undefined') { GSF_LANG = l; }
+  if (typeof GSF_LANG !== 'undefined') {
+    GSF_LANG = l;
+    var gsfTitleEl = document.getElementById('gsf-title');
+    var gsfSubEl = document.getElementById('gsf-subtitle');
+    var gsfBtnEl = document.getElementById('gsf-toggle-btn');
+    var GSFT_lbl = {
+      de:{title:'Passende Grundschule finden',sub:'Wenige Fragen, KI-Empfehlung',start:'Starten'},
+      en:{title:'Find the right school',sub:'A few questions for personalised advice',start:'Start'},
+      zh:{title:'帮我选合适的小学',sub:'几个问题，AI给你个性化建议',start:'开始'}
+    };
+    var gll = GSFT_lbl[l] || GSFT_lbl.de;
+    if(gsfTitleEl) gsfTitleEl.textContent = gll.title;
+    if(gsfSubEl) gsfSubEl.textContent = gll.sub;
+    if(gsfBtnEl && !GSF_OPEN) gsfBtnEl.textContent = gll.start;
+  }
   // Sync GS tracker language
   if (typeof GS_LANG !== 'undefined') { GS_LANG = l; if(typeof gsRenderAll==='function') gsRenderAll(); }
   // Sync AI panel labels
   if (typeof pubApplyLabels === 'function') pubApplyLabels();
   // Sync community labels
-  if (typeof comApplyLabels === 'function') comApplyLabels();
+  if (typeof comApplyLabels === 'function') comApplyLabels(); else { var cheroSub=document.getElementById('com-hero-sub'); }
   // Sync Markt hero labels
   const mhtEl = document.getElementById('mkt-hero-title');
   const mhsEl = document.getElementById('mkt-hero-sub');
@@ -2347,6 +2361,15 @@ function setLang(l, btn) {
   if (mhsEl) mhsEl.textContent = lb.mhs;
   if (mllEl) mllEl.textContent = lb.mll;
   if (mfabEl) mfabEl.textContent = lb.fab;
+  // Update Markt filter chips
+  var mktChips = document.querySelectorAll('#mkt-filter-chips .mkt-chip');
+  var chipTxt = {
+    de: ['Alle','💰 Verkaufen','🔄 Tauschen','🎁 Gratis'],
+    en: ['All','💰 Sell','🔄 Swap','🎁 Free'],
+    zh: ['全部','💰 出售','🔄 交换','🎁 免费']
+  };
+  var ct = chipTxt[l] || chipTxt.de;
+  mktChips.forEach(function(c,i){if(ct[i])c.textContent=ct[i];});
   if (comHeroEl) comHeroEl.textContent = lb.comH;
   if (comSubEl) comSubEl.textContent = lb.comS;
 }
@@ -3074,7 +3097,12 @@ function renderPosts(filter) {
   const all = getAllPosts();
   const posts = filter === 'all' ? all : all.filter(p => p.type === filter);
 
-  const typeLabel = {help:'🙋 求助', tip:'💡 经验', event:'📅 活动', exp:'🌟 故事'};
+  const typeLabelMap = {
+    de: {help:'🙋 Hilfe', tip:'💡 Tipp', event:'📅 Event', exp:'🌟 Story'},
+    en: {help:'🙋 Help', tip:'💡 Tip', event:'📅 Event', exp:'🌟 Story'},
+    zh: {help:'🙋 求助', tip:'💡 经验', event:'📅 活动', exp:'🌟 故事'}
+  };
+  const typeLabel = typeLabelMap[typeof aiLang!=='undefined'?aiLang:'de'] || typeLabelMap.de;
 
   body.innerHTML = posts.map(p => {
     const likes = postLikes[p.id] || {count: p.likes, liked: false};
@@ -3105,6 +3133,53 @@ function renderPosts(filter) {
       </div>
     </div>`;
   }).join('');
+}
+
+function comApplyLabels() {
+  var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
+  var lbl = {
+    de: {hero:'Community', sub:'Erfahrungen teilen · Gegenseitig helfen · Gemeinsam wachsen',
+         fab:'+ Beitrag', all:'🔥 Alle', help:'🙋 Hilfe', tip:'💡 Tipps', event:'📅 Events', exp:'🌟 Storys',
+         npmTitle:'✏️ Beitrag schreiben', npmCancel:'Abbrechen', npmSubmit:'Veröffentlichen',
+         lTitle:'Titel *', lBody:'Inhalt *', lTags:'🤖 KI-Tag-Vorschläge',
+         helpChip:'🙋 Hilfe', tipChip:'💡 Tipp', eventChip:'📅 Event', expChip:'🌟 Story',
+         replyLabel:'Antwort schreiben', replyBtn:'Antwort veröffentlichen'},
+    en: {hero:'Community', sub:'Share experiences · Help each other · Grow together',
+         fab:'+ Post', all:'🔥 All', help:'🙋 Help', tip:'💡 Tips', event:'📅 Events', exp:'🌟 Stories',
+         npmTitle:'✏️ Write a post', npmCancel:'Cancel', npmSubmit:'Publish',
+         lTitle:'Title *', lBody:'Content *', lTags:'🤖 AI tag suggestions',
+         helpChip:'🙋 Help', tipChip:'💡 Tip', eventChip:'📅 Event', expChip:'🌟 Story',
+         replyLabel:'Write a reply', replyBtn:'Post reply'},
+    zh: {hero:'Community', sub:'分享经验 · 互相帮助 · 一起成长',
+         fab:'+ 发帖', all:'🔥 全部', help:'🙋 求助', tip:'💡 经验', event:'📅 活动', exp:'🌟 故事',
+         npmTitle:'✏️ 发布帖子', npmCancel:'取消', npmSubmit:'发布',
+         lTitle:'标题 *', lBody:'内容 *', lTags:'🤖 AI标签建议',
+         helpChip:'🙋 求助', tipChip:'💡 经验', eventChip:'📅 活动', expChip:'🌟 故事',
+         replyLabel:'写回复', replyBtn:'发布回复'}
+  };
+  var t = lbl[l] || lbl.de;
+  var el = function(id){return document.getElementById(id);};
+  if(el('com-hero-title')) el('com-hero-title').textContent = t.hero;
+  if(el('com-hero-sub')) el('com-hero-sub').textContent = t.sub;
+  var fab = document.querySelector('[onclick="openNewPost()"]');
+  if(fab && fab.id !== 'gsf-toggle-btn') fab.textContent = t.fab;
+  if(el('ctab-all')) el('ctab-all').textContent = t.all;
+  if(el('ctab-help')) el('ctab-help').textContent = t.help;
+  if(el('ctab-tip')) el('ctab-tip').textContent = t.tip;
+  if(el('ctab-event')) el('ctab-event').textContent = t.event;
+  if(el('ctab-exp')) el('ctab-exp').textContent = t.exp;
+  if(el('npm-title')) el('npm-title').textContent = t.npmTitle;
+  if(el('npm-cancel')) el('npm-cancel').textContent = t.npmCancel;
+  if(el('npm-submit')) el('npm-submit').textContent = t.npmSubmit;
+  if(el('npm-l-title')) el('npm-l-title').textContent = t.lTitle;
+  if(el('npm-l-body')) el('npm-l-body').textContent = t.lBody;
+  if(el('npm-l-tags')) el('npm-l-tags').textContent = t.lTags;
+  // Update post type chips in new post modal
+  var chips = document.querySelectorAll('.post-type-chip');
+  var chipLabels = [t.helpChip, t.tipChip, t.eventChip, t.expChip];
+  chips.forEach(function(c,i){if(chipLabels[i])c.textContent=chipLabels[i];});
+  // Re-render posts with new language
+  renderPosts(activeFilter);
 }
 
 function filterPosts(filter, btn) {
