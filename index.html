@@ -1281,8 +1281,8 @@ function ktRender(){
 
 // Sync with MamaPedia global language on open
 var origSetLang=window.setLang;
-window.setLang=function(l){
-  if(origSetLang)origSetLang(l);
+window.setLang=function(l,btn){
+  if(origSetLang)origSetLang(l,btn);
   var map={'zh':'zh','en':'en','de':'de'};
   if(map[l]){
     KT_LANG=map[l];
@@ -1465,8 +1465,8 @@ function kfSetLang(l){
 
 // Hook into MamaPedia global lang switch
 var _origSetLang2=window.setLang;
-window.setLang=function(l){
-  if(_origSetLang2)_origSetLang2(l);
+window.setLang=function(l,btn){
+  if(_origSetLang2)_origSetLang2(l,btn);
   var m={'zh':'zh','en':'en','de':'de'};
   if(m[l]){KF_LANG=m[l];kfSetLang(m[l]);}
   if(typeof ktRender==='function'){
@@ -2308,71 +2308,98 @@ function filterChip(el, acc) {
   el.classList.add('on'); el.style.background = acc; el.style.borderColor = 'transparent';
 }
 
-const TL = {
-  de: { gr:'Hallo, Mama! 👋', sub:'Wie kann ich dir heute helfen?', srch:'Kita, Arzt, Elterngeld...' },
-  en: { gr:'Hello, Mama! 👋', sub:'How can I help you today?',      srch:'Search...' },
-  zh: { gr:'你好，妈妈！👋',    sub:'今天我能帮你什么？',                srch:'搜索...' }
-};
-function setLang(l, btn) {
-  document.querySelectorAll('.lb').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  const t = TL[l];
-  document.getElementById('h-gr').textContent   = t.gr;
-  document.getElementById('h-sub').textContent  = t.sub;
-  document.getElementById('h-srch').placeholder = t.srch;
-  // Sync global AI language
-  if (typeof aiLang !== 'undefined') aiLang = l;
-  // Sync GSF wizard language
-  if (typeof GSF_LANG !== 'undefined') {
-    GSF_LANG = l;
-    var gsfTitleEl = document.getElementById('gsf-title');
-    var gsfSubEl = document.getElementById('gsf-subtitle');
-    var gsfBtnEl = document.getElementById('gsf-toggle-btn');
-    var GSFT_lbl = {
-      de:{title:'Passende Grundschule finden',sub:'Wenige Fragen, KI-Empfehlung',start:'Starten'},
-      en:{title:'Find the right school',sub:'A few questions for personalised advice',start:'Start'},
-      zh:{title:'帮我选合适的小学',sub:'几个问题，AI给你个性化建议',start:'开始'}
+
+// ══════════════════════════════════════
+// LANGUAGE SWITCHER — wraps KF/KT chain
+// ══════════════════════════════════════
+(function(){
+  var _prevLang = window.setLang; // KF→KT chain
+
+  var TL = {
+    de:{gr:'Hallo, Mama! 👋', sub:'Wie kann ich dir heute helfen?', srch:'Kita, Arzt, Elterngeld...'},
+    en:{gr:'Hello, Mama! 👋', sub:'How can I help you today?', srch:'Search...'},
+    zh:{gr:'你好，妈妈！👋', sub:'今天我能帮你什么？', srch:'搜索...'}
+  };
+
+  window.setLang = function(l, btn) {
+    // 1. Update language button state
+    document.querySelectorAll('.lb').forEach(function(b){ b.classList.remove('on'); });
+    if (btn) {
+      btn.classList.add('on');
+    } else {
+      document.querySelectorAll('.lb').forEach(function(b){
+        var t = b.textContent.trim();
+        if ((l==='de'&&t==='DE')||(l==='en'&&t==='EN')||(l==='zh'&&(t==='中文'||t==='ZH'))) b.classList.add('on');
+      });
+    }
+
+    // 2. Homepage text
+    var t = TL[l] || TL.de;
+    var el = function(id){return document.getElementById(id);};
+    if (el('h-gr')) el('h-gr').textContent = t.gr;
+    if (el('h-sub')) el('h-sub').textContent = t.sub;
+    if (el('h-srch')) el('h-srch').placeholder = t.srch;
+
+    // 3. Call KF→KT chain (updates KF_LANG, KT_LANG, kfSetLang, ktRender)
+    if (_prevLang) _prevLang(l, btn);
+
+    // 4. Sync global aiLang
+    if (typeof aiLang !== 'undefined') aiLang = l;
+
+    // 5. GSF wizard
+    if (typeof GSF_LANG !== 'undefined') {
+      GSF_LANG = l;
+      var gsfLabels = {de:{title:'Passende Grundschule finden',sub:'Wenige Fragen, KI-Empfehlung',start:'Starten'},
+        en:{title:'Find the right school',sub:'A few questions for personalised advice',start:'Start'},
+        zh:{title:'帮我选合适的小学',sub:'几个问题，AI给你个性化建议',start:'开始'}};
+      var gl = gsfLabels[l]||gsfLabels.de;
+      if(el('gsf-title')) el('gsf-title').textContent=gl.title;
+      if(el('gsf-subtitle')) el('gsf-subtitle').textContent=gl.sub;
+      if(el('gsf-toggle-btn')&&typeof GSF_OPEN!=='undefined'&&!GSF_OPEN) el('gsf-toggle-btn').textContent=gl.start;
+    }
+
+    // 6. GS tracker
+    if (typeof GS_LANG !== 'undefined') {
+      GS_LANG = l;
+      if (typeof gsRenderAll === 'function') gsRenderAll();
+    }
+
+    // 7. Publish panel
+    if (typeof pubApplyLabels === 'function') pubApplyLabels();
+
+    // 8. Community
+    if (typeof comApplyLabels === 'function') {
+      try { comApplyLabels(); } catch(e) {}
+    }
+
+    // 9. Markt labels
+    var mktLabels = {
+      de:{mht:'Gebrauchtmarkt',mhs:'Verkaufen · Tauschen · Verschenken',mll:'🔥 Neueste Angebote',fab:'+ Inserieren'},
+      en:{mht:'Second-hand Market',mhs:'Sell · Swap · Free',mll:'🔥 Latest listings',fab:'+ Post'},
+      zh:{mht:'二手市场',mhs:'出售 · 交换 · 免费转让',mll:'🔥 最新发布',fab:'+ 发布'}
     };
-    var gll = GSFT_lbl[l] || GSFT_lbl.de;
-    if(gsfTitleEl) gsfTitleEl.textContent = gll.title;
-    if(gsfSubEl) gsfSubEl.textContent = gll.sub;
-    if(gsfBtnEl && !GSF_OPEN) gsfBtnEl.textContent = gll.start;
-  }
-  // Sync GS tracker language
-  if (typeof GS_LANG !== 'undefined') { GS_LANG = l; if(typeof gsRenderAll==='function') gsRenderAll(); }
-  // Sync AI panel labels
-  if (typeof pubApplyLabels === 'function') pubApplyLabels();
-  // Sync community labels
-  if (typeof comApplyLabels === 'function') comApplyLabels(); else { var cheroSub=document.getElementById('com-hero-sub'); }
-  // Sync Markt hero labels
-  const mhtEl = document.getElementById('mkt-hero-title');
-  const mhsEl = document.getElementById('mkt-hero-sub');
-  const mllEl = document.getElementById('mkt-list-lbl');
-  const mfabEl = document.getElementById('mkt-publish-fab');
-  const comHeroEl = document.getElementById('com-hero-title');
-  const comSubEl = document.getElementById('com-hero-sub');
-  const labels = {
-    de: {mht:'Gebrauchtmarkt', mhs:'Verkaufen · Tauschen · Verschenken', mll:'🔥 Neueste Angebote', fab:'+ Inserieren', comH:'Community', comS:'Erfahrungen teilen · Gegenseitig helfen'},
-    en: {mht:'Second-hand Market', mhs:'Sell · Swap · Free', mll:'🔥 Latest listings', fab:'+ Post', comH:'Community', comS:'Share · Help · Connect'},
-    zh: {mht:'二手市场', mhs:'出售 · 交换 · 免费转让', mll:'🔥 最新发布', fab:'+ 发布', comH:'Community', comS:'分享经验 · 互相帮助 · 一起成长'}
+    var ml = mktLabels[l]||mktLabels.de;
+    if(el('mkt-hero-title')) el('mkt-hero-title').textContent=ml.mht;
+    if(el('mkt-hero-sub')) el('mkt-hero-sub').textContent=ml.mhs;
+    if(el('mkt-list-lbl')) el('mkt-list-lbl').textContent=ml.mll;
+    if(el('mkt-publish-fab')) el('mkt-publish-fab').textContent=ml.fab;
+
+    // 10. Markt filter chips
+    var chipTxt = {de:['Alle','💰 Verkaufen','🔄 Tauschen','🎁 Gratis'],en:['All','💰 Sell','🔄 Swap','🎁 Free'],zh:['全部','💰 出售','🔄 交换','🎁 免费']};
+    var ct = chipTxt[l]||chipTxt.de;
+    document.querySelectorAll('#mkt-filter-chips .mkt-chip').forEach(function(c,i){if(ct[i])c.textContent=ct[i];});
+
+    // 11. AI panel language tab
+    document.querySelectorAll('.ai-lb').forEach(function(b){ b.classList.remove('on'); b.style.background=''; b.style.borderColor=''; b.style.color=''; });
+    document.querySelectorAll('.ai-lb').forEach(function(b){
+      var bt = b.textContent.trim();
+      if((l==='de'&&bt==='Deutsch')||(l==='en'&&bt==='English')||(l==='zh'&&bt==='中文')){
+        b.classList.add('on'); b.style.background='#E68A5C'; b.style.borderColor='transparent'; b.style.color='white';
+      }
+    });
   };
-  const lb = labels[l] || labels.de;
-  if (mhtEl) mhtEl.textContent = lb.mht;
-  if (mhsEl) mhsEl.textContent = lb.mhs;
-  if (mllEl) mllEl.textContent = lb.mll;
-  if (mfabEl) mfabEl.textContent = lb.fab;
-  // Update Markt filter chips
-  var mktChips = document.querySelectorAll('#mkt-filter-chips .mkt-chip');
-  var chipTxt = {
-    de: ['Alle','💰 Verkaufen','🔄 Tauschen','🎁 Gratis'],
-    en: ['All','💰 Sell','🔄 Swap','🎁 Free'],
-    zh: ['全部','💰 出售','🔄 交换','🎁 免费']
-  };
-  var ct = chipTxt[l] || chipTxt.de;
-  mktChips.forEach(function(c,i){if(ct[i])c.textContent=ct[i];});
-  if (comHeroEl) comHeroEl.textContent = lb.comH;
-  if (comSubEl) comSubEl.textContent = lb.comS;
-}
+})();
+
 
 let _t;
 function showToast(msg) {
