@@ -574,11 +574,11 @@ body{background:#a89080;
       <div style="display:flex;align-items:center;gap:10px">
         <div style="font-size:28px">🛍️</div>
         <div>
-          <h1 id="mkt-hero-title">二手市场</h1>
-          <p id="mkt-hero-sub">出售 · 交换 · 免费转让</p>
+          <h1 id="mkt-hero-title">Gebrauchtmarkt</h1>
+          <p id="mkt-hero-sub">Verkaufen · Tauschen · Verschenken</p>
         </div>
       </div>
-      <button onclick="openPublishPanel()" style="background:#fff;color:var(--action);border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);" id="mkt-publish-fab">+ 发布</button>
+      <button onclick="openPublishPanel()" style="background:#fff;color:var(--action);border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);" id="mkt-publish-fab">+ Inserieren</button>
     </div>
   </div>
   <div class="mkt-body" id="mkt-body">
@@ -638,15 +638,15 @@ body{background:#a89080;
     
     <!-- Filter chips -->
     <div id="mkt-filter-chips" style="display:flex;gap:8px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;">
-      <button class="mkt-chip mkt-chip-on" onclick="mktFilter('all',this)">全部</button>
-      <button class="mkt-chip" onclick="mktFilter('sell',this)">💰 出售</button>
-      <button class="mkt-chip" onclick="mktFilter('swap',this)">🔄 交换</button>
-      <button class="mkt-chip" onclick="mktFilter('free',this)">🎁 免费</button>
+      <button class="mkt-chip mkt-chip-on" onclick="mktFilter('all',this)">Alle</button>
+      <button class="mkt-chip" onclick="mktFilter('sell',this)">💰 Verkaufen</button>
+      <button class="mkt-chip" onclick="mktFilter('swap',this)">🔄 Tauschen</button>
+      <button class="mkt-chip" onclick="mktFilter('free',this)">🎁 Gratis</button>
     </div>
 
     <!-- Listings -->
     <div class="mkt-listings" id="mkt-listings-wrap">
-      <div class="mkt-list-title" id="mkt-list-lbl">🔥 最新发布</div>
+      <div class="mkt-list-title" id="mkt-list-lbl">🔥 Neueste Angebote</div>
 
       <div class="mkt-item2" data-type="sell" onclick="showToast('💬 联系卖家')">
         <div class="mkt-item2-img">🚗</div>
@@ -726,44 +726,44 @@ body{background:#a89080;
 
     <!-- ── Step 1: Type ── -->
     <div id="pub-step1" style="padding:0 20px;">
-      <div class="pub-step-title" id="pub-s1-title">选择发布类型</div>
+      <div class="pub-step-title" id="pub-s1-title">Inseratstyp wählen</div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px;">
         <div class="pub-type-card" id="pt-sell" onclick="pubSelectType('sell')">
           <div class="pub-type-ico">💰</div>
           <div>
-            <div class="pub-type-name" id="pt-sell-name">出售</div>
-            <div class="pub-type-desc" id="pt-sell-desc">设定价格，出售二手物品</div>
+            <div class="pub-type-name" id="pt-sell-name">Verkaufen</div>
+            <div class="pub-type-desc" id="pt-sell-desc">Preis festlegen und Artikel verkaufen</div>
           </div>
         </div>
         <div class="pub-type-card" id="pt-swap" onclick="pubSelectType('swap')">
           <div class="pub-type-ico">🔄</div>
           <div>
-            <div class="pub-type-name" id="pt-swap-name">交换</div>
-            <div class="pub-type-desc" id="pt-swap-desc">我有X，想换Y，物物交换</div>
+            <div class="pub-type-name" id="pt-swap-name">Tauschen</div>
+            <div class="pub-type-desc" id="pt-swap-desc">Ich habe X, suche Y zum Tauschen</div>
           </div>
         </div>
         <div class="pub-type-card" id="pt-free" onclick="pubSelectType('free')">
           <div class="pub-type-ico">🎁</div>
           <div>
-            <div class="pub-type-name" id="pt-free-name">免费转让</div>
-            <div class="pub-type-desc" id="pt-free-desc">不要钱，送给需要的妈妈</div>
+            <div class="pub-type-name" id="pt-free-name">Verschenken</div>
+            <div class="pub-type-desc" id="pt-free-desc">Kostenlos abzugeben</div>
           </div>
         </div>
       </div>
-      <button class="pub-next-btn" onclick="pubNext(1)" id="pub-btn1" style="margin-top:20px;">下一步 →</button>
+      <button class="pub-next-btn" onclick="pubNext(1)" id="pub-btn1" style="margin-top:20px;">Weiter →</button>
     </div>
 
     <!-- ── Step 2: Product Info ── -->
     <div id="pub-step2" style="display:none;padding:0 20px;">
-      <div class="pub-step-title" id="pub-s2-title">商品信息</div>
+      <div class="pub-step-title" id="pub-s2-title">Artikeldetails</div>
 
       <div class="pub-field">
-        <label class="pub-label" id="pub-l-name">商品名称 *</label>
-        <input id="pub-name" class="pub-input" placeholder="例：Bugaboo 婴儿车">
+        <label class="pub-label" id="pub-l-name">Artikelname *</label>
+        <input id="pub-name" class="pub-input" placeholder="z.B. Bugaboo Kinderwagen">
       </div>
 
       <div class="pub-field">
-        <label class="pub-label" id="pub-l-cat">分类 *</label>
+        <label class="pub-label" id="pub-l-cat">Kategorie *</label>
         <select id="pub-cat" class="pub-input">
           <option value="">请选择</option>
           <option>🚗 婴儿车 & 出行</option>
@@ -779,41 +779,41 @@ body{background:#a89080;
       </div>
 
       <div class="pub-field">
-        <label class="pub-label" id="pub-l-cond">成色 *</label>
+        <label class="pub-label" id="pub-l-cond">Zustand *</label>
         <div style="display:flex;gap:6px;flex-wrap:wrap;" id="pub-cond-chips">
-          <button class="pub-chip" onclick="pubPickCond(this,'全新')">全新</button>
-          <button class="pub-chip" onclick="pubPickCond(this,'九成新')">九成新</button>
-          <button class="pub-chip" onclick="pubPickCond(this,'八成新')">八成新</button>
-          <button class="pub-chip" onclick="pubPickCond(this,'七成新')">七成新</button>
-          <button class="pub-chip" onclick="pubPickCond(this,'五成新以下')">五成新以下</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'Neu')">Neu</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'Wie neu')">Wie neu</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'Sehr gut')">Sehr gut</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'Gut')">Gut</button>
+          <button class="pub-chip" onclick="pubPickCond(this,'Akzeptabel')">Akzeptabel</button>
         </div>
       </div>
 
       <!-- 出售专用：价格 -->
       <div class="pub-field" id="pub-field-price">
-        <label class="pub-label" id="pub-l-price">价格 (€) *</label>
-        <input id="pub-price" class="pub-input" type="number" placeholder="例：25">
+        <label class="pub-label" id="pub-l-price">Preis (€) *</label>
+        <input id="pub-price" class="pub-input" type="number" placeholder="z.B. 25">
       </div>
 
       <!-- 交换专用：想换什么 -->
       <div class="pub-field" id="pub-field-swap" style="display:none;">
-        <label class="pub-label" id="pub-l-swap">想换什么 *</label>
-        <input id="pub-swap" class="pub-input" placeholder="例：Gr. 74-80 婴儿服装">
+        <label class="pub-label" id="pub-l-swap">Suche im Tausch *</label>
+        <input id="pub-swap" class="pub-input" placeholder="z.B. Kleidung Gr. 74-80">
       </div>
 
       <!-- 免费转让专用：取件方式 -->
       <div class="pub-field" id="pub-field-pickup" style="display:none;">
-        <label class="pub-label" id="pub-l-pickup">取件方式 *</label>
+        <label class="pub-label" id="pub-l-pickup">Abholung *</label>
         <div style="display:flex;gap:8px;" id="pub-pickup-chips">
-          <button class="pub-chip" onclick="pubPickPickup(this,'自取')">🚶 自取</button>
-          <button class="pub-chip" onclick="pubPickPickup(this,'可送')">🚗 可送</button>
-          <button class="pub-chip" onclick="pubPickPickup(this,'两者皆可')">✅ 两者皆可</button>
+          <button class="pub-chip" onclick="pubPickPickup(this,'Selbstabholung')">🚶 Selbstabholung</button>
+          <button class="pub-chip" onclick="pubPickPickup(this,'Lieferung möglich')">🚗 Lieferung</button>
+          <button class="pub-chip" onclick="pubPickPickup(this,'Beides möglich')">✅ Beides</button>
         </div>
       </div>
 
       <div class="pub-field">
-        <label class="pub-label" id="pub-l-desc">商品描述（可选）</label>
-        <textarea id="pub-desc" class="pub-input" rows="3" placeholder="更多详情..."></textarea>
+        <label class="pub-label" id="pub-l-desc">Beschreibung (optional)</label>
+        <textarea id="pub-desc" class="pub-input" rows="3" placeholder="Weitere Details..."></textarea>
       </div>
 
       <div style="display:flex;gap:10px;margin-top:16px;">
@@ -827,7 +827,7 @@ body{background:#a89080;
       <div class="pub-step-title" id="pub-s3-title">地点 & 联系</div>
 
       <div class="pub-field">
-        <label class="pub-label" id="pub-l-dist">所在区域 *</label>
+        <label class="pub-label" id="pub-l-dist">Stadtteil *</label>
         <select id="pub-dist" class="pub-input">
           <option value="">请选择</option>
           <option>Stadtmitte</option>
@@ -844,13 +844,13 @@ body{background:#a89080;
       </div>
 
       <div class="pub-field">
-        <label class="pub-label" id="pub-l-email">联系邮箱 *</label>
+        <label class="pub-label" id="pub-l-email">E-Mail-Adresse *</label>
         <input id="pub-email" class="pub-input" type="email" placeholder="your@email.com">
-        <div style="font-size:11px;color:var(--t2);margin-top:4px;" id="pub-email-hint">感兴趣的妈妈会通过邮箱联系你</div>
+        <div style="font-size:11px;color:var(--t2);margin-top:4px;" id="pub-email-hint">Interessierte Mamas melden sich per E-Mail</div>
       </div>
 
       <div class="pub-field">
-        <label class="pub-label" id="pub-l-wa">WhatsApp（可选）</label>
+        <label class="pub-label" id="pub-l-wa">WhatsApp (optional)</label>
         <input id="pub-wa" class="pub-input" type="tel" placeholder="0176 ...">
       </div>
 
@@ -862,7 +862,7 @@ body{background:#a89080;
 
     <!-- ── Step 4: Review & Submit ── -->
     <div id="pub-step4" style="display:none;padding:0 20px;">
-      <div class="pub-step-title" id="pub-s4-title">确认发布</div>
+      <div class="pub-step-title" id="pub-s4-title">Bestätigen &amp; veröffentlichen</div>
 
       <div id="pub-preview-card" style="background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:16px;margin-top:14px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
@@ -879,12 +879,12 @@ body{background:#a89080;
       </div>
 
       <div style="background:#FFF3CD;border-radius:12px;padding:12px;margin-top:12px;font-size:12px;color:#856404;" id="pub-note">
-        📧 点击发布后将跳转到Google表单完成提交，请用同一邮箱验证。
+        📧 Nach dem Klick wirst du zum Google Formular weitergeleitet.
       </div>
 
       <div style="display:flex;gap:10px;margin-top:16px;">
         <button class="pub-back-btn" onclick="pubBack(4)">← 返回</button>
-        <button onclick="pubSubmit()" style="flex:2;padding:14px;background:linear-gradient(135deg,var(--action-lt),var(--action));color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;" id="pub-submit-btn">✅ 发布商品</button>
+        <button onclick="pubSubmit()" style="flex:2;padding:14px;background:linear-gradient(135deg,var(--action-lt),var(--action));color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;" id="pub-submit-btn">✅ Inserat veröffentlichen</button>
       </div>
     </div>
 
@@ -901,20 +901,20 @@ body{background:#a89080;
         <div style="font-size:28px">💬</div>
         <div>
           <h1 id="com-hero-title">Community</h1>
-          <p id="com-hero-sub">分享经验 · 互相帮助 · 一起成长</p>
+          <p id="com-hero-sub">Erfahrungen teilen · Gegenseitig helfen · Gemeinsam wachsen</p>
         </div>
       </div>
-      <button onclick="openNewPost()" style="background:#fff;color:#5a6abf;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);">+ 发帖</button>
+      <button onclick="openNewPost()" style="background:#fff;color:#5a6abf;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);" id="com-post-fab">+ Beitrag</button>
     </div>
   </div>
 
   <!-- Tabs -->
   <div class="com-tabs" id="com-tabs-bar">
-    <button class="com-tab on" onclick="filterPosts('all',this)" id="ctab-all">🔥 全部</button>
-    <button class="com-tab" onclick="filterPosts('help',this)" id="ctab-help">🙋 求助</button>
-    <button class="com-tab" onclick="filterPosts('tip',this)" id="ctab-tip">💡 经验</button>
-    <button class="com-tab" onclick="filterPosts('event',this)" id="ctab-event">📅 活动</button>
-    <button class="com-tab" onclick="filterPosts('exp',this)" id="ctab-exp">🌟 故事</button>
+    <button class="com-tab on" onclick="filterPosts('all',this)" id="ctab-all">🔥 Alle</button>
+    <button class="com-tab" onclick="filterPosts('help',this)" id="ctab-help">🙋 Hilfe</button>
+    <button class="com-tab" onclick="filterPosts('tip',this)" id="ctab-tip">💡 Tipps</button>
+    <button class="com-tab" onclick="filterPosts('event',this)" id="ctab-event">📅 Events</button>
+    <button class="com-tab" onclick="filterPosts('exp',this)" id="ctab-exp">🌟 Storys</button>
   </div>
 
   <div class="com-body" id="com-body"></div>
@@ -935,28 +935,28 @@ body{background:#a89080;
   <div class="post-modal" id="post-modal">
     <div class="post-sheet">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-        <h3 style="margin:0;font-size:16px;" id="npm-title">✏️ 发布帖子</h3>
+        <h3 style="margin:0;font-size:16px;" id="npm-title">✏️ Beitrag schreiben</h3>
         <button onclick="closeNewPost()" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--t2);">✕</button>
       </div>
 
       <!-- Post type chips -->
       <div style="display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;" id="post-type-chips">
-        <button class="post-type-chip on" onclick="selectPostType('help',this)">🙋 求助</button>
-        <button class="post-type-chip" onclick="selectPostType('tip',this)">💡 经验</button>
-        <button class="post-type-chip" onclick="selectPostType('event',this)">📅 活动</button>
-        <button class="post-type-chip" onclick="selectPostType('exp',this)">🌟 故事</button>
+        <button class="post-type-chip on" onclick="selectPostType('help',this)">🙋 Hilfe</button>
+        <button class="post-type-chip" onclick="selectPostType('tip',this)">💡 Tipp</button>
+        <button class="post-type-chip" onclick="selectPostType('event',this)">📅 Event</button>
+        <button class="post-type-chip" onclick="selectPostType('exp',this)">🌟 Story</button>
       </div>
 
       <div class="post-field">
-        <label id="npm-l-title">标题 *</label>
+        <label id="npm-l-title">Titel *</label>
         <input id="post-title" placeholder="简单描述你想分享的..." oninput="suggestTags()">
       </div>
       <div class="post-field">
-        <label id="npm-l-body">内容 *</label>
+        <label id="npm-l-body">Inhalt *</label>
         <textarea id="post-body" rows="4" placeholder="详细说说吧，越具体越能帮到大家..." oninput="suggestTags()"></textarea>
       </div>
       <div class="post-field">
-        <label id="npm-l-tags">🤖 AI标签建议</label>
+        <label id="npm-l-tags">🤖 KI-Tag-Vorschläge</label>
         <div class="post-ai-tags" id="post-ai-tags">
           <span class="post-ai-tag" onclick="addTag(this)">#Düsseldorf</span>
           <span class="post-ai-tag" onclick="addTag(this)">#Mama</span>
@@ -964,8 +964,8 @@ body{background:#a89080;
         <div id="post-selected-tags" style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;"></div>
       </div>
       <div style="display:flex;gap:8px;margin-top:4px;">
-        <button style="flex:1;background:#F5EDE0;border:none;border-radius:12px;padding:12px;font-family:inherit;font-size:13px;color:var(--t2);cursor:pointer;font-weight:700" onclick="closeNewPost()" id="npm-cancel">取消</button>
-        <button class="post-submit-btn" style="flex:2;" onclick="submitPost()" id="npm-submit">发布</button>
+        <button style="flex:1;background:#F5EDE0;border:none;border-radius:12px;padding:12px;font-family:inherit;font-size:13px;color:var(--t2);cursor:pointer;font-weight:700" onclick="closeNewPost()" id="npm-cancel">Abbrechen</button>
+        <button class="post-submit-btn" style="flex:2;" onclick="submitPost()" id="npm-submit">Veröffentlichen</button>
       </div>
     </div>
   </div>
@@ -1119,7 +1119,7 @@ body{background:#a89080;
 <script>
 (function(){
 var KT_OPEN=false;
-var KT_LANG='zh';
+var KT_LANG='de';
 var KT_TAB='steps';
 var KT_SD=JSON.parse(localStorage.getItem('kt_steps')||'[]');
 var KT_DD=JSON.parse(localStorage.getItem('kt_docs')||'[]');
@@ -1393,7 +1393,7 @@ ktRender();
 var KF_OPEN=false;
 var KF_STEP=1;
 var KF_DATA={year:'',month:'',district:'',hours:'',lang:''};
-var KF_LANG='zh';
+var KF_LANG='de';
 
 var KFT={
   zh:{
@@ -1651,7 +1651,7 @@ Kinder- und</div><div class="entry-sub">Kinder- und Jugendmedizin</div><div clas
 </div>
 <script>
 (function(){
-var GS_OPEN=false, GS_TAB='steps', GS_LANG='zh';
+var GS_OPEN=false, GS_TAB='steps', GS_LANG='de';
 var GS_SD=JSON.parse(localStorage.getItem('gs_steps')||'[]');
 var GS_DD=JSON.parse(localStorage.getItem('gs_docs')||'[]');
 
@@ -1876,7 +1876,7 @@ gsRenderAll();
 
 <script>
 (function(){
-var GSF_OPEN=false,GSF_STEP=0,GSF_LANG='zh';
+var GSF_OPEN=false,GSF_STEP=0,GSF_LANG='de';
 var GSF_DATA={schoolType:'',district:'',year:'',plan:'',german:'',distance:'',schoolLang:''};
 
 var GSFT={
@@ -2320,6 +2320,35 @@ function setLang(l, btn) {
   document.getElementById('h-gr').textContent   = t.gr;
   document.getElementById('h-sub').textContent  = t.sub;
   document.getElementById('h-srch').placeholder = t.srch;
+  // Sync global AI language
+  if (typeof aiLang !== 'undefined') aiLang = l;
+  // Sync GSF wizard language
+  if (typeof GSF_LANG !== 'undefined') { GSF_LANG = l; }
+  // Sync GS tracker language
+  if (typeof GS_LANG !== 'undefined') { GS_LANG = l; if(typeof gsRenderAll==='function') gsRenderAll(); }
+  // Sync AI panel labels
+  if (typeof pubApplyLabels === 'function') pubApplyLabels();
+  // Sync community labels
+  if (typeof comApplyLabels === 'function') comApplyLabels();
+  // Sync Markt hero labels
+  const mhtEl = document.getElementById('mkt-hero-title');
+  const mhsEl = document.getElementById('mkt-hero-sub');
+  const mllEl = document.getElementById('mkt-list-lbl');
+  const mfabEl = document.getElementById('mkt-publish-fab');
+  const comHeroEl = document.getElementById('com-hero-title');
+  const comSubEl = document.getElementById('com-hero-sub');
+  const labels = {
+    de: {mht:'Gebrauchtmarkt', mhs:'Verkaufen · Tauschen · Verschenken', mll:'🔥 Neueste Angebote', fab:'+ Inserieren', comH:'Community', comS:'Erfahrungen teilen · Gegenseitig helfen'},
+    en: {mht:'Second-hand Market', mhs:'Sell · Swap · Free', mll:'🔥 Latest listings', fab:'+ Post', comH:'Community', comS:'Share · Help · Connect'},
+    zh: {mht:'二手市场', mhs:'出售 · 交换 · 免费转让', mll:'🔥 最新发布', fab:'+ 发布', comH:'Community', comS:'分享经验 · 互相帮助 · 一起成长'}
+  };
+  const lb = labels[l] || labels.de;
+  if (mhtEl) mhtEl.textContent = lb.mht;
+  if (mhsEl) mhsEl.textContent = lb.mhs;
+  if (mllEl) mllEl.textContent = lb.mll;
+  if (mfabEl) mfabEl.textContent = lb.fab;
+  if (comHeroEl) comHeroEl.textContent = lb.comH;
+  if (comSubEl) comSubEl.textContent = lb.comS;
 }
 
 let _t;
@@ -2394,9 +2423,9 @@ function showToast(msg) {
       <button class="ai-close" onclick="closeAI()">✕</button>
     </div>
     <div class="ai-lang-row">
-      <button class="ai-lb on" onclick="setAILang('zh',this)">中文</button>
+      <button class="ai-lb" onclick="setAILang('zh',this)">中文</button>
       <button class="ai-lb" onclick="setAILang('en',this)">English</button>
-      <button class="ai-lb" onclick="setAILang('de',this)">Deutsch</button>
+      <button class="ai-lb on" onclick="setAILang('de',this)">Deutsch</button>
     </div>
     <div class="ai-msgs" id="ai-msgs"></div>
     <div class="ai-quick" id="ai-quick"></div>
@@ -2409,7 +2438,7 @@ function showToast(msg) {
 
 <script>
 // ── AI Panel State ──
-let aiLang = 'zh';
+let aiLang = 'de';
 let aiCtx = '';
 let aiHistory = [];
 let aiLoading = false;
@@ -3457,6 +3486,8 @@ async function sendAI() {
   width: 100%; background: #FDF5E6;
   border-radius: 24px 24px 0 0;
   padding: 0 0 28px;
+  max-height: 75%;
+  overflow-y: auto;
   box-shadow: 0 -8px 40px rgba(0,0,0,.22);
   transform: translateY(100%);
   transition: transform .35s cubic-bezier(.4,0,.2,1);
@@ -3512,9 +3543,12 @@ async function sendAI() {
   overlay.innerHTML = `
     <div id="book-panel">
       <div class="book-handle"></div>
-      <div class="book-header">
-        <div class="book-title" id="book-name">Termin buchen</div>
-        <div class="book-sub-lbl" id="book-sub-lbl">预约挂号 · Appointment · Termin vereinbaren</div>
+      <div class="book-header" style="display:flex;align-items:flex-start;justify-content:space-between;">
+        <div>
+          <div class="book-title" id="book-name">Termin buchen</div>
+          <div class="book-sub-lbl" id="book-sub-lbl">预约挂号 · Appointment · Termin vereinbaren</div>
+        </div>
+        <button onclick="closeBook()" style="background:none;border:none;font-size:18px;cursor:pointer;color:#B8A898;padding:0;line-height:1;">✕</button>
       </div>
       <div class="book-body" id="book-body"></div>
     </div>`;
@@ -3524,10 +3558,10 @@ async function sendAI() {
     if (e.target === overlay) closeBook();
   });
 
-  // Append to .phone when DOM ready
+  // Append to .phone (or body as fallback)
   document.addEventListener('DOMContentLoaded', function() {
-    const phone = document.querySelector('.phone');
-    if (phone) phone.appendChild(overlay);
+    const phone = document.querySelector('.phone') || document.body;
+    phone.appendChild(overlay);
   });
 })();
 
@@ -3614,11 +3648,14 @@ function openBook(name, rawUrl, phone, category) {
 
   h += `<div class="book-tip">${tips[Math.floor(Math.random()*tips.length)]}</div>`;
   document.getElementById('book-body').innerHTML = h;
-  document.getElementById('book-overlay').classList.add('open');
+  const overlay = document.getElementById('book-overlay');
+  if (!overlay) { console.error('book-overlay not found'); return; }
+  overlay.classList.add('open');
 }
 
 function closeBook() {
-  document.getElementById('book-overlay').classList.remove('open');
+  const overlay = document.getElementById('book-overlay');
+  if (overlay) overlay.classList.remove('open');
 }
 
 // ── Inject action buttons ──────────────────
@@ -3727,7 +3764,7 @@ var PUB = {
   type: '',
   cond: '',
   pickup: '',
-  lang: typeof aiLang !== 'undefined' ? aiLang : 'zh'
+  lang: typeof aiLang !== 'undefined' ? aiLang : 'de'
 };
 
 var PUB_LABELS = {
