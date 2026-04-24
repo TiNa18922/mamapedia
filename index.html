@@ -3514,7 +3514,7 @@ async function sendAI() {
       <div class="book-handle"></div>
       <div class="book-header">
         <div class="book-title" id="book-name">Termin buchen</div>
-        <div class="book-sub-lbl">预约挂号 · Appointment · Termin vereinbaren</div>
+        <div class="book-sub-lbl" id="book-sub-lbl">预约挂号 · Appointment · Termin vereinbaren</div>
       </div>
       <div class="book-body" id="book-body"></div>
     </div>`;
@@ -3540,17 +3540,42 @@ function normalizeUrl(raw) {
   return '';
 }
 
-function openBook(name, rawUrl, phone) {
+function openBook(name, rawUrl, phone, category) {
   document.getElementById('book-name').textContent = name;
+
+  // Detect context: Freizeit / Shop / Medical
+  const isParty = category && (category.includes('Geburtstag') || category.includes('Freizeit') || category.includes('Sport') || category.includes('Beauty'));
+  const isShop  = category && (category.includes('Einkaufen') || name.includes('Shop') || name.includes('Markt') || name.includes('超'));
+
+  // Update subtitle
+  const subEl = document.getElementById('book-sub-lbl');
+  if (subEl) {
+    if (isParty) subEl.textContent = '派对预订 · Party buchen · Book a party';
+    else if (isShop) subEl.textContent = '商店信息 · Shop-Infos · Store info';
+    else subEl.textContent = '预约挂号 · Appointment · Termin vereinbaren';
+  }
 
   const url     = normalizeUrl(rawUrl);
   const goodTel = phone && phone.replace(/\D/g,'').length >= 6;
 
-  const tips = [
+  // Tips based on context
+  const tips = isParty ? [
+    '💡 <strong>提示：</strong>建议提前2-4周预订！电话时说：<em>"Ich möchte einen Kindergeburtstag buchen"</em>（我想预订儿童生日派对）。',
+    '💡 <strong>Tip:</strong> Book 2-4 weeks in advance! When calling: <em>"Ich möchte einen Kindergeburtstag buchen"</em>.',
+    '💡 <strong>Tipp:</strong> 2-4 Wochen im Voraus buchen! Beim Anruf: <em>"Ich möchte einen Kindergeburtstag buchen"</em>.'
+  ] : isShop ? [
+    '💡 <strong>提示：</strong>建议先查看官网确认营业时间后再前往。',
+    '💡 <strong>Tip:</strong> Check the website for opening hours before visiting.',
+    '💡 <strong>Tipp:</strong> Öffnungszeiten vor dem Besuch auf der Website prüfen.'
+  ] : [
     '💡 <strong>提示：</strong>建议先试官网预约。电话时说：<em>"Ich brauche einen Termin"</em>（我需要预约）。',
     '💡 <strong>Tip:</strong> Try online first. When calling: <em>"Ich brauche einen Termin"</em> (I need an appointment).',
     '💡 <strong>Tipp:</strong> Online-Termin bevorzugen. Beim Anruf: <em>"Ich brauche einen Termin"</em>.'
   ];
+
+  // Button labels based on context
+  const webLabel = isParty ? 'Party-Website öffnen' : isShop ? 'Shop-Website öffnen' : 'Praxis-Website öffnen';
+  const webDesc  = isParty ? 'Online buchen · 官网预订 · Book online' : isShop ? 'Webshop · 官网 · Online shop' : 'Online buchen · 官网预约 · Book online';
 
   let h = '';
 
@@ -3558,8 +3583,8 @@ function openBook(name, rawUrl, phone) {
     <a class="book-option web" href="${url}" target="_blank" rel="noopener">
       <div class="book-opt-icon g">🌐</div>
       <div class="book-opt-info">
-        <div class="book-opt-label">Praxis-Website öffnen</div>
-        <div class="book-opt-desc">Online buchen · 官网预约 · Book online</div>
+        <div class="book-opt-label">${webLabel}</div>
+        <div class="book-opt-desc">${webDesc}</div>
       </div>
       <span class="book-opt-arr">›</span>
     </a>`;
@@ -3596,19 +3621,32 @@ function closeBook() {
   document.getElementById('book-overlay').classList.remove('open');
 }
 
-// ── Inject 📅 Termin buttons ──────────────────
-// Uses setAttribute(onclick) so handler survives innerHTML cloning
+// ── Inject action buttons ──────────────────
+// Context-aware: Termin for medical, Buchen for party, Maps for shops
 
-const BOOK_SCREENS = [
-  'sub-Gesundheit___Medizin-Kinderaerzte',
-  'sub-Gesundheit___Medizin-Frauenaerzte',
-  'sub-Gesundheit___Medizin-Hebammen',
-  'sub-Gesundheit___Medizin-Zahnaerzte',
-  'sub-Gesundheit___Medizin-Therapeuten',
-  'sub-Gesundheit___Medizin-Krankenhaeuser'
-];
+const BOOK_SCREENS = {
+  medical: [
+    'sub-Gesundheit___Medizin-Kinderaerzte',
+    'sub-Gesundheit___Medizin-Frauenaerzte',
+    'sub-Gesundheit___Medizin-Hebammen',
+    'sub-Gesundheit___Medizin-Zahnaerzte',
+    'sub-Gesundheit___Medizin-Therapeuten',
+    'sub-Gesundheit___Medizin-Krankenhaeuser'
+  ],
+  party: [
+    'sub-Freizeit___Leben-Geburtstagsparty',
+    'sub-Freizeit___Leben-Freizeitaktivitaeten',
+    'sub-Freizeit___Leben-Sport___Fitness'
+  ]
+};
 
-function injectCard(card) {
+function getScreenCategory(screenId) {
+  if (BOOK_SCREENS.party.includes(screenId)) return 'Geburtstagsparty';
+  if (BOOK_SCREENS.medical.includes(screenId)) return 'Gesundheit';
+  return 'Gesundheit';
+}
+
+function injectCard(card, category) {
   if (card.querySelector('.book-btn')) return;
 
   const name   = card.querySelector('.entry-name')?.textContent?.trim() || '';
@@ -3621,31 +3659,35 @@ function injectCard(card) {
   const goodTel = phone.replace(/\D/g,'').length >= 6;
   if (!url && !goodTel) return;
 
+  const isParty = category === 'Geburtstagsparty';
+
   const btn = document.createElement('button');
   btn.className   = 'book-btn';
-  btn.textContent = '📅 Termin';
-  btn.title       = 'Termin buchen · 预约挂号';
+  btn.textContent = isParty ? '🎂 Buchen' : '📅 Termin';
+  btn.title       = isParty ? 'Party buchen · 派对预订' : 'Termin buchen · 预约挂号';
 
   const sn = name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
   const su = url.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
   const sp = phone.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+  const sc = category.replace(/'/g,"\\'");
   btn.setAttribute('onclick',
-    `event.stopPropagation();openBook('${sn}','${su}','${sp}')`);
+    `event.stopPropagation();openBook('${sn}','${su}','${sp}','${sc}')`);
 
   const footer = card.querySelector('.entry-footer');
   if (footer) footer.appendChild(btn);
 }
 
 function injectPool() {
-  BOOK_SCREENS.forEach(id => {
+  [...BOOK_SCREENS.medical, ...BOOK_SCREENS.party].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.querySelectorAll('.entry-card').forEach(injectCard);
+    const cat = getScreenCategory(id);
+    if (el) el.querySelectorAll('.entry-card').forEach(c => injectCard(c, cat));
   });
 }
 
-function injectS2() {
+function injectS2(cat) {
   const s2 = document.getElementById('s2');
-  if (s2) s2.querySelectorAll('.entry-card').forEach(injectCard);
+  if (s2) s2.querySelectorAll('.entry-card').forEach(c => injectCard(c, cat || 'Gesundheit'));
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -3653,7 +3695,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const _orig = window.openSub;
   window.openSub = function(cat, sub) {
     _orig(cat, sub);
-    setTimeout(injectS2, 80);
+    const isParty = sub === 'Geburtstagsparty' || sub === 'Freizeitaktivitäten' || sub === 'Sport & Fitness';
+    setTimeout(() => injectS2(isParty ? 'Geburtstagsparty' : 'Gesundheit'), 80);
   };
 });
 
