@@ -255,13 +255,13 @@ body{background:#a89080;
       <div><h2 id="h-gr">Hallo, Mama! 👋</h2><p id="h-sub">Wie kann ich dir heute helfen?</p></div>
       <div class="illus">🤱</div>
     </div>
-    <div class="sec-ttl">Kategorien</div>
+    <div class="sec-ttl" id="h-kategorien">Kategorien</div>
     <div class="cat-grid">
-<div class="cat-tile" onclick="openCat('Behörden & Soziales')" style=""><div class="cat-icon" style="background:rgba(230,138,92,.12)">🏛️<div class="premium-pip">⭐</div></div><div class="cat-lbl">Behörden<br><span style="font-size:9px;color:var(--t3);font-weight:600">办事指南</span></div></div>
-<div class="cat-tile" onclick="openCat('Gesundheit & Medizin')" style=""><div class="cat-icon" style="background:rgba(107,174,138,.12)">❤️</div><div class="cat-lbl">Gesundheit<br><span style="font-size:9px;color:var(--t3);font-weight:600">医疗健康</span></div></div>
-<div class="cat-tile" onclick="openCat('Bildung & Erziehung')" style=""><div class="cat-icon" style="background:rgba(94,142,196,.12)">📚</div><div class="cat-lbl">Bildung<br><span style="font-size:9px;color:var(--t3);font-weight:600">教育育儿</span></div></div>
-<div class="cat-tile" onclick="openCat('Freizeit & Leben')" style=""><div class="cat-icon" style="background:rgba(91,173,176,.12)">🌍</div><div class="cat-lbl">Freizeit<br><span style="font-size:9px;color:var(--t3);font-weight:600">融入生活</span></div></div>
-<div class="cat-tile" onclick="openCat('Leben & Services')" style=""><div class="cat-icon" style="background:rgba(176,112,96,.12)">🛍️</div><div class="cat-lbl">Services<br><span style="font-size:9px;color:var(--t3);font-weight:600">生活服务</span></div></div>
+<div class="cat-tile" onclick="openCat('Behörden & Soziales')" style=""><div class="cat-icon" style="background:rgba(230,138,92,.12)">🏛️<div class="premium-pip">⭐</div></div><div class="cat-lbl"><span id="cat-lbl-behoerden">Behörden</span><br><span id="cat-sub-behoerden" style="font-size:9px;color:var(--t3);font-weight:600">Ämter & Soziales</span></div></div>
+<div class="cat-tile" onclick="openCat('Gesundheit & Medizin')" style=""><div class="cat-icon" style="background:rgba(107,174,138,.12)">❤️</div><div class="cat-lbl"><span id="cat-lbl-gesundheit">Gesundheit</span><br><span id="cat-sub-gesundheit" style="font-size:9px;color:var(--t3);font-weight:600">Ärzte & Medizin</span></div></div>
+<div class="cat-tile" onclick="openCat('Bildung & Erziehung')" style=""><div class="cat-icon" style="background:rgba(94,142,196,.12)">📚</div><div class="cat-lbl"><span id="cat-lbl-bildung">Bildung</span><br><span id="cat-sub-bildung" style="font-size:9px;color:var(--t3);font-weight:600">Schule & Kita</span></div></div>
+<div class="cat-tile" onclick="openCat('Freizeit & Leben')" style=""><div class="cat-icon" style="background:rgba(91,173,176,.12)">🌍</div><div class="cat-lbl"><span id="cat-lbl-freizeit">Freizeit</span><br><span id="cat-sub-freizeit" style="font-size:9px;color:var(--t3);font-weight:600">Einkaufen & Mehr</span></div></div>
+<div class="cat-tile" onclick="openCat('Leben & Services')" style=""><div class="cat-icon" style="background:rgba(176,112,96,.12)">🛍️</div><div class="cat-lbl"><span id="cat-lbl-services">Services</span><br><span id="cat-sub-services" style="font-size:9px;color:var(--t3);font-weight:600">Haushalt & Mehr</span></div></div>
 
     </div>
     <div style="height:16px"></div>
@@ -548,20 +548,20 @@ body{background:#a89080;
 <nav class="bnav" id="bnav">
   <button class="bnav-btn active" id="bnav-home" onclick="switchTab('home',this)">
     <span class="bnav-ico">🏠</span>
-    <span class="bnav-lbl">Home</span>
+    <span class="bnav-lbl" id="bnav-lbl-home">Home</span>
   </button>
   <button class="bnav-btn" id="bnav-market" onclick="switchTab('market',this)">
     <span class="bnav-ico">🛍️</span>
-    <span class="bnav-lbl">Markt</span>
+    <span class="bnav-lbl" id="bnav-lbl-markt">Markt</span>
   </button>
   <button class="bnav-center-wrap" onclick="openAI('MamaPedia Düsseldorf')">🤖</button>
   <button class="bnav-btn" id="bnav-community" onclick="switchTab('community',this)">
     <span class="bnav-ico">💬</span>
-    <span class="bnav-lbl">Community</span>
+    <span class="bnav-lbl" id="bnav-lbl-community">Community</span>
   </button>
   <button class="bnav-btn" id="bnav-profile" onclick="switchTab('profile',this)">
     <span class="bnav-ico">👤</span>
-    <span class="bnav-lbl">Profil</span>
+    <span class="bnav-lbl" id="bnav-lbl-profil">Profil</span>
   </button>
 </nav>
 
@@ -2340,7 +2340,56 @@ function filterChip(el, acc) {
     if (el('h-sub')) el('h-sub').textContent = t.sub;
     if (el('h-srch')) el('h-srch').placeholder = t.srch;
 
-    // 3. Call KF→KT chain (updates KF_LANG, KT_LANG, kfSetLang, ktRender)
+    // 3. Bottom nav + Kategorien heading
+    var navLabels = {
+      de:{home:'Home', markt:'Markt', comm:'Community', profil:'Profil', kat:'Kategorien'},
+      en:{home:'Home', markt:'Market', comm:'Community', profil:'Profile', kat:'Categories'},
+      zh:{home:'首页', markt:'市场', comm:'社区', profil:'我的', kat:'分类'}
+    };
+    var nl = navLabels[l] || navLabels.de;
+    if(el('bnav-lbl-home')) el('bnav-lbl-home').textContent = nl.home;
+    if(el('bnav-lbl-markt')) el('bnav-lbl-markt').textContent = nl.markt;
+    if(el('bnav-lbl-community')) el('bnav-lbl-community').textContent = nl.comm;
+    if(el('bnav-lbl-profil')) el('bnav-lbl-profil').textContent = nl.profil;
+    if(el('h-kategorien')) el('h-kategorien').textContent = nl.kat;
+
+    // 4. Category tiles
+    var catLabels = {
+      de:{
+        beh:'Behörden',    behS:'Ämter & Soziales',
+        ges:'Gesundheit',  gesS:'Ärzte & Medizin',
+        bil:'Bildung',     bilS:'Schule & Kita',
+        fre:'Freizeit',    freS:'Einkaufen & Mehr',
+        ser:'Services',    serS:'Haushalt & Mehr'
+      },
+      en:{
+        beh:'Authorities', behS:'Offices & Benefits',
+        ges:'Health',      gesS:'Doctors & Care',
+        bil:'Education',   bilS:'School & Kita',
+        fre:'Leisure',     freS:'Shopping & More',
+        ser:'Services',    serS:'Home & More'
+      },
+      zh:{
+        beh:'政府部门',    behS:'办事指南',
+        ges:'健康医疗',    gesS:'医生 & 医院',
+        bil:'教育',        bilS:'学校 & 幼儿园',
+        fre:'休闲生活',    freS:'购物 & 更多',
+        ser:'生活服务',    serS:'家政 & 更多'
+      }
+    };
+    var cl = catLabels[l] || catLabels.de;
+    if(el('cat-lbl-behoerden')) el('cat-lbl-behoerden').textContent = cl.beh;
+    if(el('cat-sub-behoerden')) el('cat-sub-behoerden').textContent = cl.behS;
+    if(el('cat-lbl-gesundheit')) el('cat-lbl-gesundheit').textContent = cl.ges;
+    if(el('cat-sub-gesundheit')) el('cat-sub-gesundheit').textContent = cl.gesS;
+    if(el('cat-lbl-bildung')) el('cat-lbl-bildung').textContent = cl.bil;
+    if(el('cat-sub-bildung')) el('cat-sub-bildung').textContent = cl.bilS;
+    if(el('cat-lbl-freizeit')) el('cat-lbl-freizeit').textContent = cl.fre;
+    if(el('cat-sub-freizeit')) el('cat-sub-freizeit').textContent = cl.freS;
+    if(el('cat-lbl-services')) el('cat-lbl-services').textContent = cl.ser;
+    if(el('cat-sub-services')) el('cat-sub-services').textContent = cl.serS;
+
+    // 5. Call KF→KT chain (updates KF_LANG, KT_LANG, kfSetLang, ktRender)
     if (_prevLang) _prevLang(l, btn);
 
     // 4. Sync global aiLang
@@ -2372,22 +2421,7 @@ function filterChip(el, acc) {
       try { comApplyLabels(); } catch(e) {}
     }
 
-    // 9. Markt labels
-    var mktLabels = {
-      de:{mht:'Gebrauchtmarkt',mhs:'Verkaufen · Tauschen · Verschenken',mll:'🔥 Neueste Angebote',fab:'+ Inserieren'},
-      en:{mht:'Second-hand Market',mhs:'Sell · Swap · Free',mll:'🔥 Latest listings',fab:'+ Post'},
-      zh:{mht:'二手市场',mhs:'出售 · 交换 · 免费转让',mll:'🔥 最新发布',fab:'+ 发布'}
-    };
-    var ml = mktLabels[l]||mktLabels.de;
-    if(el('mkt-hero-title')) el('mkt-hero-title').textContent=ml.mht;
-    if(el('mkt-hero-sub')) el('mkt-hero-sub').textContent=ml.mhs;
-    if(el('mkt-list-lbl')) el('mkt-list-lbl').textContent=ml.mll;
-    if(el('mkt-publish-fab')) el('mkt-publish-fab').textContent=ml.fab;
-
-    // 10. Markt filter chips
-    var chipTxt = {de:['Alle','💰 Verkaufen','🔄 Tauschen','🎁 Gratis'],en:['All','💰 Sell','🔄 Swap','🎁 Free'],zh:['全部','💰 出售','🔄 交换','🎁 免费']};
-    var ct = chipTxt[l]||chipTxt.de;
-    document.querySelectorAll('#mkt-filter-chips .mkt-chip').forEach(function(c,i){if(ct[i])c.textContent=ct[i];});
+    // 9+10. Markt labels handled in step 12 below
 
     // 11. AI panel language tab
     document.querySelectorAll('.ai-lb').forEach(function(b){ b.classList.remove('on'); b.style.background=''; b.style.borderColor=''; b.style.color=''; });
@@ -2397,6 +2431,24 @@ function filterChip(el, acc) {
         b.classList.add('on'); b.style.background='#E68A5C'; b.style.borderColor='transparent'; b.style.color='white';
       }
     });
+
+    // 12. Re-render currently visible tab with new language
+    var mktLabels = {
+      de:{mht:'Gebrauchtmarkt',mhs:'Verkaufen · Tauschen · Verschenken',mll:'🔥 Neueste Angebote',fab:'+ Inserieren'},
+      en:{mht:'Second-hand Market',mhs:'Sell · Swap · Free',mll:'🔥 Latest listings',fab:'+ Post'},
+      zh:{mht:'二手市场',mhs:'出售 · 交换 · 免费转让',mll:'🔥 最新发布',fab:'+ 发布'}
+    };
+    var ml = mktLabels[l] || mktLabels.de;
+    if(el('mkt-hero-title')) el('mkt-hero-title').textContent = ml.mht;
+    if(el('mkt-hero-sub')) el('mkt-hero-sub').textContent = ml.mhs;
+    if(el('mkt-list-lbl')) el('mkt-list-lbl').textContent = ml.mll;
+    if(el('mkt-publish-fab')) el('mkt-publish-fab').textContent = ml.fab;
+    var chipTxt = {de:['Alle','💰 Verkaufen','🔄 Tauschen','🎁 Gratis'],en:['All','💰 Sell','🔄 Swap','🎁 Free'],zh:['全部','💰 出售','🔄 交换','🎁 免费']};
+    var ct = chipTxt[l] || chipTxt.de;
+    document.querySelectorAll('#mkt-filter-chips .mkt-chip').forEach(function(c,i){if(ct[i])c.textContent=ct[i];});
+    // Community
+    if(typeof comApplyLabels === 'function') { try { comApplyLabels(); } catch(e){} }
+    if(typeof renderPosts === 'function') { try { renderPosts(typeof activeFilter!=='undefined'?activeFilter:'all'); } catch(e){} }
   };
 })();
 
@@ -2854,11 +2906,31 @@ function switchTab(tab, btn) {
   });
   
   if (tab === 'home') {
-    // Show home (stack is always visible behind overlays)
-    stack.className = 'stack'; // reset to home
+    stack.className = 'stack';
   } else {
     document.getElementById(tabMap[tab]).classList.add('visible');
-    if (tab === 'community') renderPosts('all');
+    // Re-apply current language when switching tabs
+    var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
+    if (tab === 'community') {
+      renderPosts('all');
+      if (typeof comApplyLabels === 'function') comApplyLabels();
+    }
+    if (tab === 'market') {
+      var mktLabels = {
+        de:{mht:'Gebrauchtmarkt',mhs:'Verkaufen · Tauschen · Verschenken',mll:'🔥 Neueste Angebote',fab:'+ Inserieren'},
+        en:{mht:'Second-hand Market',mhs:'Sell · Swap · Free',mll:'🔥 Latest listings',fab:'+ Post'},
+        zh:{mht:'二手市场',mhs:'出售 · 交换 · 免费转让',mll:'🔥 最新发布',fab:'+ 发布'}
+      };
+      var ml = mktLabels[l] || mktLabels.de;
+      var el = function(id){return document.getElementById(id);};
+      if(el('mkt-hero-title')) el('mkt-hero-title').textContent = ml.mht;
+      if(el('mkt-hero-sub')) el('mkt-hero-sub').textContent = ml.mhs;
+      if(el('mkt-list-lbl')) el('mkt-list-lbl').textContent = ml.mll;
+      if(el('mkt-publish-fab')) el('mkt-publish-fab').textContent = ml.fab;
+      var chipTxt = {de:['Alle','💰 Verkaufen','🔄 Tauschen','🎁 Gratis'],en:['All','💰 Sell','🔄 Swap','🎁 Free'],zh:['全部','💰 出售','🔄 交换','🎁 免费']};
+      var ct = chipTxt[l] || chipTxt.de;
+      document.querySelectorAll('#mkt-filter-chips .mkt-chip').forEach(function(c,i){if(ct[i])c.textContent=ct[i];});
+    }
   }
 }
 
