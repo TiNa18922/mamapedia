@@ -223,6 +223,35 @@ body{background:#a89080;
 .com-reply-author{font-size:12px;font-weight:800;color:var(--t1);}
 .com-reply-text{font-size:12px;color:var(--t2);margin-top:3px;line-height:1.5;}
 .com-reply-time{font-size:11px;color:var(--t3);}
+
+/* ── Profile v2 ── */
+.prof-quick-btn{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:12px 6px;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;position:relative;transition:transform .15s;}
+.prof-quick-btn:active{transform:scale(.96);}
+.prof-quick-ico{font-size:22px;}
+.prof-quick-lbl{font-size:10px;font-weight:700;color:var(--t2);text-align:center;}
+.prof-quick-badge{position:absolute;top:6px;right:6px;background:#e05555;color:#fff;border-radius:99px;font-size:9px;font-weight:800;padding:2px 5px;min-width:14px;text-align:center;}
+.prof-section{margin-bottom:16px;}
+.prof-section-title{font-size:11px;font-weight:900;color:var(--t3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;padding:0 2px;}
+.prof-card{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:14px;}
+.prof-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer;}
+.prof-row-lbl{font-size:13px;font-weight:700;color:var(--t1);}
+.prof-row-sub{font-size:11px;color:var(--t2);margin-top:1px;}
+.prof-lang-btn{padding:5px 8px;border:1.5px solid var(--border);border-radius:8px;background:transparent;font-size:11px;font-weight:700;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .15s;}
+.prof-lang-btn.on{background:var(--action);border-color:var(--action);color:#fff;}
+.prof-toggle{width:42px;height:24px;background:var(--border);border-radius:12px;cursor:pointer;position:relative;transition:background .2s;flex-shrink:0;}
+.prof-toggle.on{background:var(--action);}
+.prof-toggle-knob{width:18px;height:18px;background:#fff;border-radius:50%;position:absolute;top:3px;left:3px;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2);}
+.prof-toggle.on .prof-toggle-knob{transform:translateX(18px);}
+.prof-tier-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer;transition:background .15s;}
+.prof-tier-row:active{background:rgba(0,0,0,.03);}
+.prof-tier-row.active{background:rgba(230,138,92,.06);}
+.tier-check{font-size:16px;color:var(--action);font-weight:900;}
+.avatar-opt{font-size:28px;cursor:pointer;padding:6px;border-radius:10px;transition:background .15s;display:inline-block;}
+.avatar-opt:active{background:var(--border);}
+/* Inbox / Cart items */
+.prof-inbox-item{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:8px;}
+.prof-inbox-unread{border-color:var(--action);background:rgba(230,138,92,.04);}
+.prof-cart-item{display:flex;align-items:center;gap:12px;background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:10px 12px;margin-bottom:8px;}
 </style>
 </head>
 <body>
@@ -974,63 +1003,185 @@ body{background:#a89080;
 <!-- ══════════════════════════════════════
      STEP 4: PROFILE / MEMBERSHIP OVERLAY
 ══════════════════════════════════════ -->
-<div class="tab-overlay" id="profile-overlay">
-  <div class="prof-hero">
-    <div class="prof-avatar">🌸</div>
-    <div class="prof-name" id="prof-name">Mama</div>
-    <span class="prof-tier" id="prof-tier-badge">✨ Free</span>
-  </div>
-  <div class="prof-body">
-    <div style="font-size:12px;font-weight:900;color:var(--t3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Mitgliedschaft wählen</div>
-    
-    <!-- Free Tier -->
-    <div class="tier-card tier-free" onclick="selectTier('free')">
-      <div class="tier-header">
-        <span class="tier-badge">FREE</span>
-        <span class="tier-name">Kostenlos</span>
+<div class="tab-overlay" id="profile-overlay" style="overflow-y:auto;">
+
+  <!-- ── Hero ── -->
+  <div class="prof-hero" style="padding-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div id="prof-avatar-btn" onclick="openAvatarPicker()" style="width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:30px;cursor:pointer;border:2px solid rgba(255,255,255,.4);" id="prof-avatar-display">🌸</div>
+      <div>
+        <div id="prof-name" style="font-size:18px;font-weight:900;color:#fff;cursor:pointer;" onclick="editProfileName()">Mama</div>
+        <div id="prof-district-display" style="font-size:12px;color:rgba(255,255,255,.75);margin-top:2px;">📍 Düsseldorf</div>
+        <span class="prof-tier" id="prof-tier-badge" style="margin-top:4px;display:inline-block;">✨ Free</span>
       </div>
-      <div class="tier-price">€0 <span>/ Monat</span></div>
-      <ul class="tier-features">
-        <li>Alle 161 Einträge durchsuchen</li>
-        <li>3 KI-Fragen pro Tag</li>
-        <li>Community posten ✅</li>
-        <li class="no">Marktplatz verkaufen</li>
-      </ul>
-      <button class="tier-btn" onclick="selectTier('free')">Aktueller Plan</button>
-    </div>
-    
-    <!-- Basic Tier -->
-    <div class="tier-card tier-basic" onclick="selectTier('basic')">
-      <div class="tier-header">
-        <span class="tier-badge">BASIC</span>
-        <span class="tier-name">Basic Mitglied</span>
-      </div>
-      <div class="tier-price">€6,99 <span>/ Monat</span></div>
-      <ul class="tier-features">
-        <li>Alles aus Free</li>
-        <li>Unbegrenzte KI-Fragen</li>
-        <li>Community posten & kommentieren</li>
-        <li class="no">Marktplatz verkaufen</li>
-      </ul>
-      <button class="tier-btn" onclick="selectTier('basic');event.stopPropagation()">Basic wählen</button>
-    </div>
-    
-    <!-- VIP Tier -->
-    <div class="tier-card tier-vip" onclick="selectTier('vip')">
-      <div class="tier-header">
-        <span class="tier-badge" style="background:#D4A853">⭐ VIP</span>
-        <span class="tier-name">VIP Mitglied</span>
-      </div>
-      <div class="tier-price" style="color:#D4A853">€12,99 <span>/ Monat</span></div>
-      <ul class="tier-features">
-        <li>Alles aus Basic</li>
-        <li>Marktplatz: kaufen & verkaufen</li>
-        <li>KI-Produkterkennung (Foto)</li>
-        <li>Prioritäts-KI-Support</li>
-      </ul>
-      <button class="tier-btn" style="background:#D4A853" onclick="selectTier('vip');event.stopPropagation()">VIP wählen</button>
     </div>
   </div>
+
+  <div style="padding:0 16px 80px;">
+
+    <!-- ── Quick Actions ── -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px;">
+      <div class="prof-quick-btn" onclick="openProfilePanel('cart')">
+        <div class="prof-quick-ico">🛒</div>
+        <div class="prof-quick-lbl" id="pq-cart">Warenkorb</div>
+        <div class="prof-quick-badge" id="cart-badge" style="display:none;">0</div>
+      </div>
+      <div class="prof-quick-btn" onclick="openProfilePanel('groups')">
+        <div class="prof-quick-ico">👥</div>
+        <div class="prof-quick-lbl" id="pq-groups">Gruppen</div>
+      </div>
+      <div class="prof-quick-btn" onclick="openProfilePanel('inbox')">
+        <div class="prof-quick-ico">📬</div>
+        <div class="prof-quick-lbl" id="pq-inbox">Postfach</div>
+        <div class="prof-quick-badge" id="inbox-badge">3</div>
+      </div>
+      <div class="prof-quick-btn" onclick="openProfilePanel('saved')">
+        <div class="prof-quick-ico">❤️</div>
+        <div class="prof-quick-lbl" id="pq-saved">Gespeichert</div>
+      </div>
+    </div>
+
+    <!-- ── Mein Kind ── -->
+    <div class="prof-section">
+      <div class="prof-section-title" id="ps-child">👶 Mein Kind</div>
+      <div class="prof-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <span style="font-size:13px;font-weight:700;color:var(--t1);" id="child-age-display">Geburtsdatum eingeben</span>
+          <button onclick="editChildBirthday()" style="background:rgba(230,138,92,.1);border:none;border-radius:8px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--action);cursor:pointer;font-family:inherit;" id="child-edit-btn">✏️ Bearbeiten</button>
+        </div>
+        <input type="month" id="child-birthday-input" style="display:none;width:100%;padding:8px 10px;border:1.5px solid var(--border);border-radius:10px;font-family:inherit;font-size:13px;background:var(--surface);color:var(--t1);" onchange="saveChildBirthday(this.value)">
+        <div id="child-milestones" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"></div>
+      </div>
+    </div>
+
+    <!-- ── Einstellungen ── -->
+    <div class="prof-section">
+      <div class="prof-section-title" id="ps-settings">⚙️ Einstellungen</div>
+      <div class="prof-card" style="padding:0;">
+
+        <!-- District -->
+        <div class="prof-row" style="border-bottom:1px solid var(--border);" onclick="editDistrict()">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:18px;">📍</span>
+            <div>
+              <div class="prof-row-lbl" id="pr-district">Mein Stadtteil</div>
+              <div class="prof-row-sub" id="prof-district-val">Noch nicht gesetzt</div>
+            </div>
+          </div>
+          <span style="color:var(--t3);font-size:18px;">›</span>
+        </div>
+
+        <!-- Dark mode -->
+        <div class="prof-row">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:18px;">🌙</span>
+            <div class="prof-row-lbl" id="pr-dark">Dunkelmodus</div>
+          </div>
+          <div class="prof-toggle" id="dark-toggle" onclick="toggleDarkMode()">
+            <div class="prof-toggle-knob"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Mitgliedschaft ── -->
+    <div class="prof-section">
+      <div class="prof-section-title" id="ps-member">⭐ Mitgliedschaft</div>
+      <div class="prof-card" style="padding:0;">
+        <div class="prof-tier-row active" onclick="selectTier('free')" id="tier-row-free">
+          <div>
+            <div style="font-size:13px;font-weight:800;color:var(--t1);">Free <span style="color:var(--t3);font-weight:600;">· €0/Monat</span></div>
+            <div style="font-size:11px;color:var(--t2);margin-top:2px;" id="tier-free-desc">Alle Einträge · 3 KI-Fragen/Tag</div>
+          </div>
+          <span class="tier-check" id="tc-free">✓</span>
+        </div>
+        <div class="prof-tier-row" onclick="selectTier('basic')" id="tier-row-basic" style="border-top:1px solid var(--border);">
+          <div>
+            <div style="font-size:13px;font-weight:800;color:var(--t1);">Basic <span style="color:var(--t3);font-weight:600;">· €6,99/Monat</span></div>
+            <div style="font-size:11px;color:var(--t2);margin-top:2px;" id="tier-basic-desc">Unbegrenzte KI · Community</div>
+          </div>
+          <span class="tier-check" id="tc-basic" style="display:none;">✓</span>
+        </div>
+        <div class="prof-tier-row" onclick="selectTier('vip')" id="tier-row-vip" style="border-top:1px solid var(--border);">
+          <div>
+            <div style="font-size:13px;font-weight:800;color:#D4A853;">⭐ VIP <span style="color:var(--t3);font-weight:600;">· €12,99/Monat</span></div>
+            <div style="font-size:11px;color:var(--t2);margin-top:2px;" id="tier-vip-desc">Marktplatz · KI-Foto · Priorität</div>
+          </div>
+          <span class="tier-check" id="tc-vip" style="display:none;">✓</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Über MamaPedia ── -->
+    <div class="prof-section">
+      <div class="prof-section-title" id="ps-about">ℹ️ Über MamaPedia</div>
+      <div class="prof-card" style="padding:0;">
+        <div class="prof-row" style="border-bottom:1px solid var(--border);" onclick="showToast('📧 hello@mamapedia.de')">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:18px;">📧</span>
+            <div class="prof-row-lbl" id="pr-contact">Kontakt</div>
+          </div>
+          <span style="color:var(--t3);font-size:18px;">›</span>
+        </div>
+        <div class="prof-row" style="border-bottom:1px solid var(--border);" onclick="showToast('🔒 Deine Daten sind sicher')">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:18px;">🔒</span>
+            <div class="prof-row-lbl" id="pr-privacy">Datenschutz</div>
+          </div>
+          <span style="color:var(--t3);font-size:18px;">›</span>
+        </div>
+        <div class="prof-row">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:18px;">📱</span>
+            <div>
+              <div class="prof-row-lbl">Version</div>
+              <div class="prof-row-sub">MamaPedia v2.5 · Düsseldorf 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /padding -->
+
+  <!-- ── Profile Sub-Panels ── -->
+  <div id="prof-panel-overlay" style="display:none;position:absolute;inset:0;background:var(--bg);z-index:180;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);">
+    <div style="background:linear-gradient(160deg,#c05020,var(--action));flex-shrink:0;">
+      <div class="status-bar wh" style="padding:0 20px 0;"><span class="time">9:41</span><div class="icons">●●● WiFi 🔋</div></div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 20px 14px;">
+        <button onclick="closeProfPanel()" style="background:rgba(255,255,255,.2);border:none;border-radius:50%;width:32px;height:32px;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">‹</button>
+        <span id="prof-panel-title" style="color:#fff;font-size:15px;font-weight:800;"></span>
+      </div>
+    </div>
+    <div id="prof-panel-body" style="flex:1;overflow-y:auto;padding:16px 20px;"></div>
+  </div>
+
+  <!-- Avatar Picker -->
+  <div id="avatar-picker" style="display:none;position:absolute;inset:0;background:rgba(0,0,0,.5);z-index:200;align-items:flex-end;">
+    <div style="background:var(--bg);border-radius:24px 24px 0 0;padding:20px;width:100%;box-sizing:border-box;">
+      <div style="font-size:14px;font-weight:800;color:var(--t1);margin-bottom:14px;" id="ap-title">Avatar wählen</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+        <span class="avatar-opt" onclick="pickAvatar('🌸')">🌸</span>
+        <span class="avatar-opt" onclick="pickAvatar('🌺')">🌺</span>
+        <span class="avatar-opt" onclick="pickAvatar('🌻')">🌻</span>
+        <span class="avatar-opt" onclick="pickAvatar('🍀')">🍀</span>
+        <span class="avatar-opt" onclick="pickAvatar('🌹')">🌹</span>
+        <span class="avatar-opt" onclick="pickAvatar('🦋')">🦋</span>
+        <span class="avatar-opt" onclick="pickAvatar('🐼')">🐼</span>
+        <span class="avatar-opt" onclick="pickAvatar('🐨')">🐨</span>
+        <span class="avatar-opt" onclick="pickAvatar('🦊')">🦊</span>
+        <span class="avatar-opt" onclick="pickAvatar('🐱')">🐱</span>
+        <span class="avatar-opt" onclick="pickAvatar('👩')">👩</span>
+        <span class="avatar-opt" onclick="pickAvatar('👩‍🦱')">👩‍🦱</span>
+        <span class="avatar-opt" onclick="pickAvatar('👩‍🦰')">👩‍🦰</span>
+        <span class="avatar-opt" onclick="pickAvatar('🧕')">🧕</span>
+        <span class="avatar-opt" onclick="pickAvatar('💃')">💃</span>
+        <span class="avatar-opt" onclick="pickAvatar('🧘')">🧘</span>
+      </div>
+      <button onclick="document.getElementById('avatar-picker').style.display='none'" style="width:100%;margin-top:14px;padding:12px;background:var(--border);border:none;border-radius:12px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;color:var(--t2);" id="ap-cancel">Abbrechen</button>
+    </div>
+  </div>
+
 </div>
 
 <!-- ══════════════════════════════════════
@@ -4182,6 +4333,283 @@ window.mktFilter = function(type, btn) {
     item.style.display = (type === 'all' || item.dataset.type === type) ? 'flex' : 'none';
   });
 };
+
+
+// ══════════════════════════════════════
+// PROFILE MODULE v2
+// ══════════════════════════════════════
+var profData = JSON.parse(localStorage.getItem('mamapedia_profile') || '{}');
+var darkMode = profData.darkMode || false;
+
+function profSave() {
+  localStorage.setItem('mamapedia_profile', JSON.stringify(profData));
+}
+
+function profInit() {
+  // Avatar
+  var av = profData.avatar || '🌸';
+  var avEl = document.getElementById('prof-avatar-btn');
+  if(avEl) avEl.textContent = av;
+
+  // Name
+  var nm = profData.name || 'Mama';
+  var nmEl = document.getElementById('prof-name');
+  if(nmEl) nmEl.textContent = nm;
+
+  // District
+  profUpdateDistrict();
+
+  // Child birthday
+  profUpdateChildAge();
+
+  // Dark mode
+  if(darkMode) {
+    document.querySelector('.phone').classList.add('dark');
+    var tog = document.getElementById('dark-toggle');
+    if(tog) tog.classList.add('on');
+  }
+
+  // Language buttons sync
+  var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
+  profSyncLangBtns(l);
+}
+
+function profSyncLangBtns(l) {
+  ['de','en','zh'].forEach(function(lang) {
+    var b = document.getElementById('plb-'+lang);
+    if(b) b.classList.toggle('on', lang===l);
+  });
+  // Also sync top header buttons
+  document.querySelectorAll('.lb').forEach(function(b) {
+    var t = b.textContent.trim();
+    var isActive = (l==='de'&&t==='DE')||(l==='en'&&t==='EN')||(l==='zh'&&(t==='中文'||t==='ZH'));
+    b.classList.toggle('on', isActive);
+  });
+}
+
+function openAvatarPicker() {
+  var picker = document.getElementById('avatar-picker');
+  picker.style.display = 'flex';
+}
+
+function pickAvatar(emoji) {
+  profData.avatar = emoji;
+  profSave();
+  var avEl = document.getElementById('prof-avatar-btn');
+  if(avEl) avEl.textContent = emoji;
+  document.getElementById('avatar-picker').style.display = 'none';
+  showToast('✅ Avatar aktualisiert');
+}
+
+function editProfileName() {
+  var current = profData.name || 'Mama';
+  var newName = prompt('Dein Name:', current);
+  if(newName && newName.trim()) {
+    profData.name = newName.trim();
+    profSave();
+    document.getElementById('prof-name').textContent = newName.trim();
+  }
+}
+
+function editDistrict() {
+  var districts = ['Stadtmitte','Pempelfort','Derendorf','Oberkassel','Heerdt','Lörick','Flingern','Bilk','Friedrichstadt','Düsseltal','Gerresheim','Eller','Rath','Lohausen','Kaiserswerth','Sonstiges'];
+  var current = profData.district || '';
+  var choice = prompt('Stadtteil wählen:\n' + districts.join(' / '), current);
+  if(choice) {
+    profData.district = choice;
+    profSave();
+    profUpdateDistrict();
+    showToast('📍 Stadtteil gespeichert');
+  }
+}
+
+function profUpdateDistrict() {
+  var d = profData.district || '';
+  var dispEl = document.getElementById('prof-district-display');
+  var valEl = document.getElementById('prof-district-val');
+  var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
+  var empty = {de:'Noch nicht gesetzt', en:'Not set yet', zh:'尚未设置'};
+  if(dispEl) dispEl.textContent = d ? '📍 ' + d : '📍 Düsseldorf';
+  if(valEl) valEl.textContent = d || (empty[l]||empty.de);
+}
+
+function editChildBirthday() {
+  var inp = document.getElementById('child-birthday-input');
+  inp.style.display = inp.style.display === 'none' ? 'block' : 'none';
+  if(profData.childBirthday) inp.value = profData.childBirthday;
+}
+
+function saveChildBirthday(val) {
+  profData.childBirthday = val;
+  profSave();
+  profUpdateChildAge();
+  document.getElementById('child-birthday-input').style.display = 'none';
+  showToast('🎂 Geburtstag gespeichert');
+}
+
+function profUpdateChildAge() {
+  var el = document.getElementById('child-age-display');
+  var ms = document.getElementById('child-milestones');
+  if(!el) return;
+  var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
+  if(!profData.childBirthday) {
+    var empty = {de:'Geburtsdatum eingeben',en:'Enter birth date',zh:'输入出生日期'};
+    el.textContent = empty[l]||empty.de;
+    if(ms) ms.innerHTML = '';
+    return;
+  }
+  var bd = new Date(profData.childBirthday + '-01');
+  var now = new Date();
+  var months = (now.getFullYear()-bd.getFullYear())*12 + (now.getMonth()-bd.getMonth());
+  var years = Math.floor(months/12);
+  var remMonths = months % 12;
+  var ageStr = years > 0 ?
+    (l==='zh' ? years+'岁'+(remMonths>0?remMonths+'个月':'') :
+     l==='en' ? years+' yr'+(remMonths>0?' '+remMonths+' mo':'') :
+     years+' J.'+(remMonths>0?' '+remMonths+' Mo.':'')) :
+    (l==='zh' ? months+'个月' : l==='en' ? months+' months' : months+' Monate');
+  el.textContent = '🎂 ' + ageStr;
+
+  // Milestones
+  var chips = [];
+  if(months < 6) chips.push('U3','U4','U5');
+  else if(months < 12) chips.push('U6','U7');
+  else if(months < 24) chips.push('U7a','U8');
+  else if(months < 48) chips.push('U9','Kita');
+  else chips.push('U10','U11','Schule');
+  if(ms) ms.innerHTML = chips.map(function(c){return '<span style="background:rgba(230,138,92,.1);border-radius:20px;padding:3px 8px;font-size:11px;font-weight:700;color:var(--action);">'+c+'</span>';}).join('');
+}
+
+function toggleDarkMode() {
+  darkMode = !darkMode;
+  profData.darkMode = darkMode;
+  profSave();
+  var phone = document.querySelector('.phone');
+  var tog = document.getElementById('dark-toggle');
+  if(phone) phone.classList.toggle('dark', darkMode);
+  if(tog) tog.classList.toggle('on', darkMode);
+}
+
+// ── Sub-panels (Cart, Groups, Inbox, Saved) ──
+function openProfilePanel(type) {
+  var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
+  var titles = {
+    de:{cart:'🛒 Warenkorb', groups:'👥 Meine Gruppen', inbox:'📬 Postfach', saved:'❤️ Gespeichert'},
+    en:{cart:'🛒 My Cart', groups:'👥 My Groups', inbox:'📬 Inbox', saved:'❤️ Saved'},
+    zh:{cart:'🛒 我的购物车', groups:'👥 我的群组', inbox:'📬 我的信箱', saved:'❤️ 我的收藏'}
+  };
+  var t = titles[l]||titles.de;
+  document.getElementById('prof-panel-title').textContent = t[type]||type;
+
+  var body = document.getElementById('prof-panel-body');
+  body.innerHTML = profPanelContent(type, l);
+
+  var overlay = document.getElementById('prof-panel-overlay');
+  overlay.style.display = 'flex';
+  setTimeout(function(){ overlay.style.transform = 'translateX(0)'; }, 10);
+}
+
+function closeProfPanel() {
+  var overlay = document.getElementById('prof-panel-overlay');
+  overlay.style.transform = 'translateX(100%)';
+  setTimeout(function(){ overlay.style.display = 'none'; }, 350);
+}
+
+function profPanelContent(type, l) {
+  if(type === 'inbox') {
+    var msgs = [
+      {unread:true, from:'MamaPedia Team', time:'vor 2h', subj:{de:'Willkommen bei MamaPedia! 🎉',en:'Welcome to MamaPedia! 🎉',zh:'欢迎来到MamaPedia！🎉'}, body:{de:'Schön, dass du dabei bist! Entdecke über 195 Einträge für Mamas in Düsseldorf.',en:'Great to have you! Discover 195+ entries for mamas in Düsseldorf.',zh:'很高兴你加入！发现195+条杜塞尔多夫妈妈资源。'}},
+      {unread:true, from:'Taipei Mama', time:'vor 5h', subj:{de:'Re: Kinderarzt Empfehlung',en:'Re: Pediatrician recommendation',zh:'回复：儿科医生推荐'}, body:{de:'Dr. Kever-Sager in Grafenberg ist super, spricht auch Englisch!',en:'Dr. Kever-Sager in Grafenberg is great, speaks English too!',zh:'Grafenberg的Kever-Sager医生很棒，也说英语！'}},
+      {unread:false, from:'Shanghai Mama', time:'vor 1d', subj:{de:'Spielgruppe Donnerstag?',en:'Playgroup Thursday?',zh:'周四游戏组？'}, body:{de:'Kommst du nächsten Donnerstag zur Spielgruppe in Oberkassel?',en:'Are you coming to the playgroup in Oberkassel next Thursday?',zh:'你下周四来Oberkassel的游戏组吗？'}}
+    ];
+    return msgs.map(function(m){
+      return '<div class="prof-inbox-item'+(m.unread?' prof-inbox-unread':'')+'" onclick="showToast('📬 Nachricht geöffnet')">'
+        +'<div style="display:flex;justify-content:space-between;margin-bottom:4px;">'
+        +'<span style="font-size:12px;font-weight:800;color:var(--t1);">'+m.from+'</span>'
+        +'<span style="font-size:11px;color:var(--t3);">'+m.time+'</span></div>'
+        +'<div style="font-size:13px;font-weight:'+(m.unread?'800':'600')+';color:var(--t1);margin-bottom:3px;">'+(m.subj[l]||m.subj.de)+'</div>'
+        +'<div style="font-size:12px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+(m.body[l]||m.body.de)+'</div>'
+        +'</div>';
+    }).join('') + '<div style="text-align:center;padding:16px;"><button onclick="showToast('✉️ Neue Nachricht')" style="background:var(--action);color:#fff;border:none;border-radius:12px;padding:10px 20px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;">+ '+(l==='zh'?'写信':l==='en'?'New message':'Neue Nachricht')+'</button></div>';
+  }
+
+  if(type === 'cart') {
+    var cartItems = profData.cart || [];
+    if(cartItems.length === 0) {
+      var empty = {de:'Dein Warenkorb ist leer. Füge Einträge aus dem Marktplatz hinzu!',en:'Your cart is empty. Add items from the marketplace!',zh:'购物车是空的。从市场添加商品！'};
+      return '<div style="text-align:center;padding:40px 20px;"><div style="font-size:48px;margin-bottom:12px;">🛒</div><div style="font-size:14px;color:var(--t2);line-height:1.6;">'+(empty[l]||empty.de)+'</div></div>';
+    }
+    return cartItems.map(function(item){
+      return '<div class="prof-cart-item"><div style="font-size:28px;">'+item.emoji+'</div><div style="flex:1"><div style="font-size:13px;font-weight:800;color:var(--t1);">'+item.name+'</div><div style="font-size:12px;color:var(--action);font-weight:700;">'+item.price+'</div></div><button onclick="removeFromCart(''+item.id+'')" style="background:none;border:none;font-size:18px;cursor:pointer;color:var(--t3);">✕</button></div>';
+    }).join('');
+  }
+
+  if(type === 'groups') {
+    var groups = [
+      {emoji:'🇨🇳', name:{de:'Chinesische Mamas Düsseldorf',en:'Chinese Mamas Düsseldorf',zh:'杜塞尔多夫中国妈妈群'}, members:'128', last:{de:'vor 20 Min aktiv',en:'Active 20 min ago',zh:'20分钟前活跃'}},
+      {emoji:'👶', name:{de:'U3 Spielgruppe Oberkassel',en:'U3 Playgroup Oberkassel',zh:'Oberkassel U3游戏组'}, members:'24', last:{de:'vor 2h aktiv',en:'Active 2h ago',zh:'2小时前活跃'}},
+      {emoji:'🏫', name:{de:'Kita-Mama Gruppe 2025',en:'Kita Mamas 2025',zh:'2025年Kita妈妈群'}, members:'56', last:{de:'gestern aktiv',en:'Active yesterday',zh:'昨天活跃'}}
+    ];
+    var joinLbl = {de:'Beitreten',en:'Join',zh:'加入'};
+    return groups.map(function(g){
+      return '<div style="background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;">'
+        +'<div style="width:44px;height:44px;border-radius:50%;background:rgba(230,138,92,.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">'+g.emoji+'</div>'
+        +'<div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:800;color:var(--t1);margin-bottom:2px;">'+(g.name[l]||g.name.de)+'</div>'
+        +'<div style="font-size:11px;color:var(--t2);">👥 '+g.members+' · '+(g.last[l]||g.last.de)+'</div></div>'
+        +'<button onclick="showToast('✅ Gruppe beigetreten')" style="background:var(--action);color:#fff;border:none;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;">'+(joinLbl[l]||joinLbl.de)+'</button></div>';
+    }).join('') + '<div style="text-align:center;padding:12px;"><button onclick="showToast('➕ Gruppe erstellen')" style="background:transparent;border:1.5px solid var(--border);border-radius:12px;padding:10px 20px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;color:var(--t2);">+ '+(l==='zh'?'创建群组':l==='en'?'Create group':'Gruppe erstellen')+'</button></div>';
+  }
+
+  if(type === 'saved') {
+    var saved = profData.saved || [];
+    if(saved.length === 0) {
+      var empty = {de:'Noch keine Einträge gespeichert. Tippe das ❤️ auf einer Karte!',en:'No saved entries yet. Tap ❤️ on any card!',zh:'还没有收藏。点击条目上的❤️！'};
+      return '<div style="text-align:center;padding:40px 20px;"><div style="font-size:48px;margin-bottom:12px;">❤️</div><div style="font-size:14px;color:var(--t2);line-height:1.6;">'+(empty[l]||empty.de)+'</div></div>';
+    }
+    return saved.map(function(s){
+      return '<div class="prof-inbox-item"><div style="font-size:13px;font-weight:800;color:var(--t1);">'+s.name+'</div><div style="font-size:11px;color:var(--t2);margin-top:3px;">'+s.cat+'</div></div>';
+    }).join('');
+  }
+  return '<div style="padding:20px;color:var(--t2);">Coming soon...</div>';
+}
+
+function removeFromCart(id) {
+  profData.cart = (profData.cart||[]).filter(function(i){return i.id!==id;});
+  profSave();
+  openProfilePanel('cart');
+}
+
+// Update tier display
+var _origSelectTier = window.selectTier;
+window.selectTier = function(tier) {
+  if(_origSelectTier) _origSelectTier(tier);
+  ['free','basic','vip'].forEach(function(t){
+    var row = document.getElementById('tier-row-'+t);
+    var chk = document.getElementById('tc-'+t);
+    if(row) row.classList.toggle('active', t===tier);
+    if(chk) chk.style.display = t===tier ? 'block' : 'none';
+  });
+  var badge = document.getElementById('prof-tier-badge');
+  if(badge) {
+    var labels = {free:'✨ Free', basic:'⚡ Basic', vip:'⭐ VIP'};
+    badge.textContent = labels[tier]||'✨ Free';
+  }
+};
+
+// Init on tab switch
+var _origSwitchTab2 = window.switchTab;
+window.switchTab = function(tab, btn) {
+  _origSwitchTab2(tab, btn);
+  if(tab === 'profile') {
+    profInit();
+    profUpdateChildAge();
+  }
+};
+
+// Dark mode CSS
+var darkStyle = document.createElement('style');
+darkStyle.textContent = '.phone.dark{--bg:#1a1a2e;--surface:#16213e;--border:#0f3460;--t1:#e0e0e0;--t2:#a0a0b0;--t3:#606080;}';
+document.head.appendChild(darkStyle);
 
 </script>
 
