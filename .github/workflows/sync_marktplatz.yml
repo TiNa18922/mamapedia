@@ -2,27 +2,27 @@ name: Sync Marktplatz Data
 
 on:
   schedule:
-    - cron: '0 7 * * *'  # 每天9am德国时间（UTC+2）
-  workflow_dispatch:      # 也可以手动触发
+    - cron: '0 7 * * *'
+  workflow_dispatch:
 
-yamljobs:
+jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      
+
       - name: Run sync script
         run: python .github/scripts/sync_marktplatz.py
-      
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
