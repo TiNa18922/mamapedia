@@ -1,0 +1,30 @@
+name: Sync Marktplatz Data
+
+on:
+  schedule:
+    - cron: '0 7 * * *'  # 每天9am德国时间（UTC+2）
+  workflow_dispatch:      # 也可以手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Run sync script
+        run: python .github/scripts/sync_marktplatz.py
+      
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add marktplatz_data.json
+          git diff --staged --quiet || git commit -m "Auto-sync marktplatz data $(date +'%Y-%m-%d')"
+          git push
