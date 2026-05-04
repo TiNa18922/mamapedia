@@ -1,13 +1,14 @@
 [
   {
-    "id": "2",
+    "id": "1",
     "type": "sell",
-    "emoji": "🎨",
+    "emoji": "📦",
     "name": "Junge Jacke, Gr. 5J, Jacadi",
-    "kategorie": "Kinderkleidung",
+    "kategorie": "",
     "zustand": "Wie neu",
-    "preis": "€12",
-    "stadtteil": "Stadtmitte",
+    "preis": "",
+    "abholung": "Beides möglich",
+    "stadtteil": "",
     "time": "neu"
   }
 ]
