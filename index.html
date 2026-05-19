@@ -280,6 +280,7 @@ body{background:#8a9aaa;
 </div>
 <div class="sbar"><span>🔍</span><input id="h-srch" placeholder="Kita, Arzt, Elterngeld..."/><span style="color:var(--t3)">🎤</span></div>
 </div>
+<div id="home-reminder-banner" style="display:none;margin:10px 16px 0;"></div>
 <div class="banner">
 <div><h2 id="h-gr">Hallo, Mama! 👋</h2><p id="h-sub">Wie kann ich dir heute helfen?</p></div>
 <div class="illus">🤱</div>
@@ -5013,17 +5014,32 @@ function _checkReminders() {
 }
 
 function _showReminderBanner(items) {
-  var banner = document.getElementById('sb-reminder-banner');
-  if (!banner) return;
-  if (items.length === 0) { banner.style.display = 'none'; return; }
+  // Update both: profile hero banner and home screen banner
+  var profileBanner = document.getElementById('sb-reminder-banner');
+  var homeBanner = document.getElementById('home-reminder-banner');
+
+  if (items.length === 0) {
+    if (profileBanner) profileBanner.style.display = 'none';
+    if (homeBanner) homeBanner.style.display = 'none';
+    return;
+  }
+
   var labels = items.map(function(i) { return i.child + ': ' + i.label; }).join(' · ');
-  banner.style.display = 'block';
-  banner.innerHTML = '<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:linear-gradient(90deg,#4A6580,#3A5068);border-radius:12px;margin:0 0 10px;">' +
+  var html = '<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:linear-gradient(90deg,#4A6580,#3A5068);border-radius:12px;">' +
     '<span style="font-size:20px;">🔔</span>' +
     '<div style="flex:1;"><div style="font-size:12px;font-weight:700;color:#fff;">Anstehende Termine</div>' +
     '<div style="font-size:11px;color:rgba(255,255,255,.8);">' + labels + '</div></div>' +
     '<button onclick="openProfileOverlay()" style="background:rgba(255,255,255,.2);border:none;border-radius:8px;padding:4px 10px;font-size:11px;font-weight:700;color:#fff;cursor:pointer;">Ansehen</button>' +
     '</div>';
+
+  if (profileBanner) {
+    profileBanner.style.display = 'block';
+    profileBanner.innerHTML = html;
+  }
+  if (homeBanner) {
+    homeBanner.style.display = 'block';
+    homeBanner.innerHTML = html;
+  }
 }
 
 // ── Update profile UI ──────────────────────────────────────
