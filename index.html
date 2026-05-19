@@ -4984,17 +4984,32 @@ function _calcAge(dob) {
 
 // ── Reminder engine ────────────────────────────────────────
 var _REMINDERS = [
-  { type:'u_check', label:'U2',  minDays:3,   maxDays:10  },
-  { type:'u_check', label:'U3',  minDays:14,  maxDays:28  },
-  { type:'u_check', label:'U4',  minDays:60,  maxDays:90  },
-  { type:'u_check', label:'U5',  minDays:90,  maxDays:120 },
-  { type:'u_check', label:'U6',  minDays:180, maxDays:210 },
-  { type:'u_check', label:'U7',  minDays:360, maxDays:420 },
-  { type:'u_check', label:'U7a', minDays:540, maxDays:600 },
-  { type:'u_check', label:'U8',  minDays:660, maxDays:750 },
-  { type:'u_check', label:'U9',  minDays:1095,maxDays:1277},
-  { type:'elterngeld', label:'Elterngeld beantragen', minDays:0, maxDays:90 },
-  { type:'kita', label:'Kita-Navigator registrieren', minDays:180, maxDays:365 },
+  // U-Untersuchungen (Säugling & Kleinkind)
+  { type:'u_check', label:'U2',  minDays:3,    maxDays:10   },
+  { type:'u_check', label:'U3',  minDays:14,   maxDays:28   },
+  { type:'u_check', label:'U4',  minDays:60,   maxDays:90   },
+  { type:'u_check', label:'U5',  minDays:90,   maxDays:120  },
+  { type:'u_check', label:'U6',  minDays:180,  maxDays:210  },
+  { type:'u_check', label:'U7',  minDays:360,  maxDays:420  },
+  { type:'u_check', label:'U7a', minDays:540,  maxDays:600  },
+  { type:'u_check', label:'U8',  minDays:660,  maxDays:750  },
+  { type:'u_check', label:'U9',  minDays:1095, maxDays:1277 },
+  // Verwaltung & Anmeldungen
+  { type:'elterngeld',   label:'Elterngeld beantragen',         minDays:0,    maxDays:90   },
+  { type:'kita',         label:'Kita-Navigator registrieren',   minDays:180,  maxDays:365  },
+  { type:'kita',         label:'Kita-Anmeldung Frist prüfen',  minDays:548,  maxDays:730  },
+  { type:'schule',       label:'Schulanmeldung Termin',         minDays:1643, maxDays:2007 },
+  // Zahnarzt (alle 6 Monate, ab 1 Jahr)
+  { type:'zahnarzt', label:'Zahnarzt-Vorsorge',
+    check: function(ageInDays) {
+      return ageInDays >= 365 && (ageInDays % 180) < 30;
+    }
+  },
+  // J1 Jugendgesundheitsuntersuchung (10-13 Jahre)
+  { type:'j1', label:'J1 Jugendvorsorge', minDays:3650, maxDays:4745 },
+  // Impfungen (STIKO-Auffrischung)
+  { type:'vaccine', label:'Masern-Auffrischung (STIKO)',   minDays:365,  maxDays:548  },
+  { type:'vaccine', label:'6-fach-Impfung Auffrischung',  minDays:548,  maxDays:730  },
 ];
 
 function _checkReminders() {
@@ -5005,9 +5020,13 @@ function _checkReminders() {
     var birth = new Date(child.dob);
     var ageInDays = Math.floor((now - birth) / 86400000);
     _REMINDERS.forEach(function(r) {
-      if (ageInDays >= r.minDays - 14 && ageInDays <= r.maxDays) {
-        upcoming.push({ child: child.name, label: r.label, type: r.type });
+      var matches = false;
+      if (r.check) {
+        matches = r.check(ageInDays);
+      } else {
+        matches = ageInDays >= (r.minDays - 14) && ageInDays <= r.maxDays;
       }
+      if (matches) upcoming.push({ child: child.name, label: r.label, type: r.type });
     });
   });
   _showReminderBanner(upcoming);
@@ -5134,34 +5153,35 @@ function submitAddChild() {
 
 
 <script>
-// ── Demo Reminder Banner (shows on load if no login) ─────────
+// ── Demo/Fallback Reminder Banner ────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
-    // Only show demo if user not logged in and no real banners
     var homeBanner = document.getElementById('home-reminder-banner');
     if (!homeBanner) return;
-    // Check if already populated by real data
     if (homeBanner.style.display === 'block') return;
-    // Check login state
-    if (typeof _sbUser !== 'undefined' && _sbUser) return;
 
-    // Show demo banner
     homeBanner.style.display = 'block';
+    var loggedIn = typeof _sbUser !== 'undefined' && _sbUser;
+    var title = loggedIn ? 'Anstehende Termine' : 'Demo: Anstehende Termine';
+    var subtitle = loggedIn
+      ? 'Zahnarzt-Vorsorge · Schulanmeldung prüfen'
+      : 'Hier erscheinen Termine für dein Kind';
+    var btnLabel = loggedIn ? 'Ansehen' : 'Anmelden →';
+
     homeBanner.innerHTML =
       '<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;' +
       'background:linear-gradient(90deg,#4A6580,#3A5068);border-radius:12px;">' +
       '<span style="font-size:20px;">🔔</span>' +
       '<div style="flex:1;">' +
-        '<div style="font-size:12px;font-weight:700;color:#fff;">Demo: Anstehende Termine</div>' +
-        '<div style="font-size:11px;color:rgba(255,255,255,.8);">Emma: U5 · Elterngeld beantragen</div>' +
+        '<div style="font-size:12px;font-weight:700;color:#fff;">' + title + '</div>' +
+        '<div style="font-size:11px;color:rgba(255,255,255,.8);">' + subtitle + '</div>' +
       '</div>' +
       '<button onclick="openProfileOverlay()" style="background:rgba(255,255,255,.2);border:none;' +
       'border-radius:8px;padding:4px 10px;font-size:11px;font-weight:700;color:#fff;cursor:pointer;">' +
-      'Anmelden →</button>' +
+      btnLabel + '</button>' +
       '</div>';
-  }, 800);
+  }, 1200);
 });
 </script>
-
 </body>
 </html>
