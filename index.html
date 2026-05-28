@@ -4638,14 +4638,16 @@ function mktRenderListings(listings) {
 
   var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
   var typeLabels = {
-    de: {sell:'💰 Verkaufen', swap:'🔄 Tauschen', free:'🎁 Gratis'},
-    en: {sell:'💰 Sell', swap:'🔄 Swap', free:'🎁 Free'},
-    zh: {sell:'💰 出售', swap:'🔄 交换', free:'🎁 免费'}
+    de: {sell:'💰 Verkaufen', swap:'🔄 Tauschen', free:'🎁 Gratis', search:'🔍 Suchen'},
+    en: {sell:'💰 Sell', swap:'🔄 Swap', free:'🎁 Free', search:'🔍 Looking for'},
+    zh: {sell:'💰 出售', swap:'🔄 交换', free:'🎁 免费', search:'🔍 求购'},
+    es: {sell:'💰 Vender', swap:'🔄 Intercambiar', free:'🎁 Gratis', search:'🔍 Buscar'}
   };
   var contactLabels = {
-    de: {sell:'💬 Verkäufer kontaktieren', swap:'💬 Tausch anfragen', free:'💬 Abholen anfragen'},
-    en: {sell:'💬 Contact seller', swap:'💬 Request swap', free:'💬 Request pickup'},
-    zh: {sell:'💬 联系卖家', swap:'💬 联系交换', free:'💬 联系领取'}
+    de: {sell:'💬 Verkäufer kontaktieren', swap:'💬 Tausch anfragen', free:'💬 Abholen anfragen', search:'💬 Anbieter kontaktieren'},
+    en: {sell:'💬 Contact seller', swap:'💬 Request swap', free:'💬 Request pickup', search:'💬 Contact requester'},
+    zh: {sell:'💬 联系卖家', swap:'💬 联系交换', free:'💬 联系领取', search:'💬 联系求购者'},
+    es: {sell:'💬 Contactar vendedor', swap:'💬 Solicitar intercambio', free:'💬 Solicitar recogida', search:'💬 Contactar solicitante'}
   };
   var tl = typeLabels[l] || typeLabels.de;
   var cl = contactLabels[l] || contactLabels.de;
