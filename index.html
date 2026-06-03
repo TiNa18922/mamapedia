@@ -3248,8 +3248,8 @@ var STRIPE_LINKS = {
   business:'https://buy.stripe.com/test_bJeeV6dS9e2w8HZ9kr93y00'
 };
 var WORKER_URL = 'https://mamapedia-proxy.golightly2004.workers.dev';
-var userTier = localStorage.getItem('mamapedia_tier') || 'free';
 var userEmail = localStorage.getItem('mamapedia_email') || '';
+userTier = localStorage.getItem('mamapedia_tier') || userTier || 'free';
 
 function upgradeTo(tier) {
   var link = STRIPE_LINKS[tier];
