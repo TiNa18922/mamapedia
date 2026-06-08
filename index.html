@@ -1151,28 +1151,87 @@ window.kalCloseModal = kalCloseModal;
 <!-- ── Mitgliedschaft ── -->
 <div class="prof-section">
 <div class="prof-section-title" id="ps-member">⭐ Mitgliedschaft</div>
-<div class="prof-card" style="padding:0;">
-<div class="prof-tier-row active" id="tier-row-free" onclick="selectTier('free')">
-<div>
-<div style="font-size:13px;font-weight:800;color:var(--t1);">Free <span style="color:var(--t3);font-weight:600;">· €0/Monat</span></div>
-<div id="tier-free-desc" style="font-size:11px;color:var(--t2);margin-top:2px;">Alle Einträge · 3 KI-Fragen/Tag</div>
+
+<!-- 当前等级显示 -->
+<div class="prof-card" style="padding:12px 14px;margin-bottom:8px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;">
+    <div>
+      <div style="font-size:11px;color:var(--t3);margin-bottom:2px;" id="pm-current-lbl">Aktueller Plan</div>
+      <div style="font-size:15px;font-weight:900;color:var(--action);" id="pm-current-tier">Free</div>
+    </div>
+    <div id="pm-status-dot" style="width:8px;height:8px;border-radius:50%;background:#ccc;"></div>
+  </div>
+  <!-- 邮箱验证区 -->
+  <div id="pm-verify-area" style="margin-top:10px;display:flex;gap:8px;">
+    <input id="pm-email-input" type="email" placeholder="E-Mail eingeben…"
+      style="flex:1;padding:8px 10px;border:1px solid var(--border);border-radius:10px;font-size:13px;background:var(--bg);color:var(--t1);outline:none;">
+    <button onclick="checkMembership()" id="pm-verify-btn"
+      style="padding:8px 14px;background:var(--action);color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;">
+      ✓
+    </button>
+  </div>
+  <div id="pm-verify-msg" style="font-size:11px;color:var(--t3);margin-top:6px;"></div>
 </div>
-<span class="tier-check" id="tc-free">✓</span>
-</div>
-<div class="prof-tier-row" id="tier-row-basic" onclick="selectTier('basic')" style="border-top:1px solid var(--border);">
-<div>
-<div style="font-size:13px;font-weight:800;color:var(--t1);">Basic <span style="color:var(--t3);font-weight:600;">· €6,99/Monat</span></div>
-<div id="tier-basic-desc" style="font-size:11px;color:var(--t2);margin-top:2px;">Unbegrenzte KI · Community</div>
-</div>
-<span class="tier-check" id="tc-basic" style="display:none;">✓</span>
-</div>
-<div class="prof-tier-row" id="tier-row-vip" onclick="selectTier('vip')" style="border-top:1px solid var(--border);">
-<div>
-<div style="font-size:13px;font-weight:800;color:#D4A853;">⭐ VIP <span style="color:var(--t3);font-weight:600;">· €12,99/Monat</span></div>
-<div id="tier-vip-desc" style="font-size:11px;color:var(--t2);margin-top:2px;">Marktplatz · KI-Foto · Priorität</div>
-</div>
-<span class="tier-check" id="tc-vip" style="display:none;">✓</span>
-</div>
+
+<!-- 升级方案卡片 -->
+<div id="pm-plans" style="display:flex;flex-direction:column;gap:8px;">
+
+  <!-- Free -->
+  <div class="prof-card" id="plan-free" style="padding:12px 14px;border:2px solid var(--action);opacity:.7;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:13px;font-weight:900;color:var(--t1);">✨ Free</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-free-desc">Kalender · Community</div>
+      </div>
+      <div style="font-size:16px;font-weight:900;color:var(--t3);">€0</div>
+    </div>
+  </div>
+
+  <!-- Premium -->
+  <div class="prof-card" id="plan-premium" style="padding:12px 14px;border:2px solid transparent;cursor:pointer;" onclick="upgradeTo('premium')">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:13px;font-weight:900;color:var(--action);">⚡ Premium</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-premium-desc">3x KI/Monat · 5 Inserate</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:16px;font-weight:900;color:var(--action);">€4,99</div>
+        <div style="font-size:10px;color:var(--t3);">/Monat</div>
+      </div>
+    </div>
+    <div style="margin-top:8px;padding:6px 12px;background:var(--action);color:#fff;border-radius:8px;text-align:center;font-size:12px;font-weight:700;" id="btn-premium">Jetzt upgraden →</div>
+  </div>
+
+  <!-- VIP -->
+  <div class="prof-card" id="plan-vip" style="padding:12px 14px;border:2px solid transparent;cursor:pointer;background:linear-gradient(135deg,#FFF8E0,#FDF5E6);" onclick="upgradeTo('vip')">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:13px;font-weight:900;color:#D4A853;">⭐ VIP</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-vip-desc">Unbegrenzte KI · Marktplatz + Topplatzierung</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:16px;font-weight:900;color:#D4A853;">€7,99</div>
+        <div style="font-size:10px;color:var(--t3);">/Monat</div>
+      </div>
+    </div>
+    <div style="margin-top:8px;padding:6px 12px;background:#D4A853;color:#fff;border-radius:8px;text-align:center;font-size:12px;font-weight:700;" id="btn-vip">Jetzt upgraden →</div>
+  </div>
+
+  <!-- Business -->
+  <div class="prof-card" id="plan-business" style="padding:12px 14px;border:2px solid transparent;cursor:pointer;background:linear-gradient(135deg,#E8F0E8,#F0F5F0);" onclick="upgradeTo('business')">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:13px;font-weight:900;color:#3A7A3A;">🏪 Business</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-business-desc">Gewerblicher Eintrag · Alle VIP-Vorteile</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:16px;font-weight:900;color:#3A7A3A;">€29,99</div>
+        <div style="font-size:10px;color:var(--t3);">/Monat</div>
+      </div>
+    </div>
+    <div style="margin-top:8px;padding:6px 12px;background:#3A7A3A;color:#fff;border-radius:8px;text-align:center;font-size:12px;font-weight:700;" id="btn-business">Eintrag beantragen →</div>
+  </div>
+
 </div>
 </div>
 <!-- ── Über MamaPedia ── -->
@@ -3182,12 +3241,71 @@ async function sendAI() {
 let userTier = 'free'; // 'free' | 'basic' | 'vip'
 // Demo: cycle tiers by tapping profile → select
 
-function selectTier(tier) {
-  userTier = tier;
-  const names = {free:'✨ Free', basic:'⚡ Basic', vip:'⭐ VIP'};
-  document.getElementById('prof-tier-badge').textContent = names[tier];
-  showToast('✅ Plan gewechselt: ' + names[tier]);
+// ── Stripe Payment Links (沙盒测试) ──
+var STRIPE_LINKS = {
+  premium: 'https://buy.stripe.com/test_3cI28k9BT5w04rJfIP93y02',
+  vip:     'https://buy.stripe.com/test_cNi6oA9BT4rW0bt0NV93y01',
+  business:'https://buy.stripe.com/test_bJeeV6dS9e2w8HZ9kr93y00'
+};
+var WORKER_URL = 'https://mamapedia-proxy.golightly2004.workers.dev';
+var userEmail = localStorage.getItem('mamapedia_email') || '';
+userTier = localStorage.getItem('mamapedia_tier') || userTier || 'free';
+
+function upgradeTo(tier) {
+  var link = STRIPE_LINKS[tier];
+  if (link) window.open(link, '_blank');
 }
+
+async function checkMembership() {
+  var email = document.getElementById('pm-email-input').value.trim();
+  if (!email) { showToast('❌ Bitte E-Mail eingeben'); return; }
+  var btn = document.getElementById('pm-verify-btn');
+  var msg = document.getElementById('pm-verify-msg');
+  btn.textContent = '…';
+  btn.disabled = true;
+  try {
+    var res = await fetch(WORKER_URL + '/check-premium?email=' + encodeURIComponent(email));
+    var data = await res.json();
+    var tier = data.tier || 'free';
+    localStorage.setItem('mamapedia_tier', tier);
+    localStorage.setItem('mamapedia_email', email);
+    userTier = tier;
+    applyTierUI(tier);
+    var names = {free:'✨ Free', premium:'⚡ Premium', vip:'⭐ VIP', business:'🏪 Business'};
+    showToast('✅ ' + (names[tier] || 'Free') + ' aktiviert!');
+    msg.textContent = tier === 'free' ? 'Kein aktives Abo gefunden.' : '✅ Abo aktiv';
+    msg.style.color = tier === 'free' ? 'var(--t3)' : '#1D9E75';
+  } catch(e) {
+    msg.textContent = 'Verbindungsfehler. Bitte erneut versuchen.';
+    msg.style.color = '#c0392b';
+  }
+  btn.textContent = '✓';
+  btn.disabled = false;
+}
+
+function applyTierUI(tier) {
+  var el = function(id){ return document.getElementById(id); };
+  var names = {free:'✨ Free', premium:'⚡ Premium', vip:'⭐ VIP', business:'🏪 Business'};
+  if(el('pm-current-tier')) el('pm-current-tier').textContent = names[tier] || 'Free';
+  if(el('pm-status-dot')) el('pm-status-dot').style.background = tier==='free'?'#ccc':'#1D9E75';
+  if(el('prof-tier-badge')) el('prof-tier-badge').textContent = names[tier] || '✨ Free';
+  // 高亮当前方案
+  ['free','premium','vip','business'].forEach(function(t){
+    var card = el('plan-'+t);
+    if(card) card.style.borderColor = t===tier ? 'var(--action)' : 'transparent';
+  });
+}
+
+function selectTier(tier) { applyTierUI(tier); }
+
+// 页面加载时恢复状态
+(function initMembership(){
+  if(userEmail) {
+    var inp = document.getElementById('pm-email-input');
+    if(inp) inp.value = userEmail;
+  }
+  applyTierUI(userTier);
+})();
 
 // ── Tab Navigation ──
 const tabMap = {
