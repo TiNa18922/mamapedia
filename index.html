@@ -3167,11 +3167,77 @@ function addTyping() {
   return div;
 }
 
+
+// ══════════════════════════════════════
+// 会员权限控制
+// ══════════════════════════════════════
+var TIER_LIMITS = {
+  free:     { ai: 0,  mkt: 0 },
+  premium:  { ai: 3,  mkt: 5 },
+  vip:      { ai: -1, mkt: -1 }, // -1 = 无限制
+  business: { ai: -1, mkt: -1 }
+};
+
+function getMonthKey() {
+  var d = new Date();
+  return d.getFullYear() + '_' + (d.getMonth() + 1);
+}
+
+function getUsageCount(type) {
+  return parseInt(localStorage.getItem(type + '_used_' + getMonthKey()) || '0');
+}
+
+function incrementUsage(type) {
+  var key = type + '_used_' + getMonthKey();
+  localStorage.setItem(key, (getUsageCount(type) + 1).toString());
+}
+
+function checkUsageLimit(type) {
+  var tier  = userTier || localStorage.getItem('mamapedia_tier') || 'free';
+  var limits = TIER_LIMITS[tier] || TIER_LIMITS.free;
+  var limit  = limits[type];
+
+  // 无限制
+  if (limit === -1) return true;
+
+  // 完全禁止（limit = 0）
+  if (limit === 0) {
+    var msgs = {
+      zh: { ai: '🔒 AI咨询需要Premium会员（€4.99/月）', mkt: '🔒 发帖需要Premium会员（€4.99/月）' },
+      en: { ai: '🔒 AI chat requires Premium (€4.99/mo)', mkt: '🔒 Posting requires Premium (€4.99/mo)' },
+      de: { ai: '🔒 KI-Chat benötigt Premium (€4,99/Mo.)', mkt: '🔒 Inserieren benötigt Premium (€4,99/Mo.)' },
+      es: { ai: '🔒 El chat IA requiere Premium (€4,99/mes)', mkt: '🔒 Publicar requiere Premium (€4,99/mes)' }
+    };
+    var lang = typeof aiLang !== 'undefined' ? aiLang : 'de';
+    var msg = (msgs[lang] || msgs.de)[type] || '🔒 Premium erforderlich';
+    showToast(msg + ' → Profil → Upgrade');
+    switchTab('profile', null);
+    return false;
+  }
+
+  // 有次数限制
+  var used = getUsageCount(type);
+  if (used >= limit) {
+    var tierNames = { premium: 'VIP (€7,99/Mo.)', vip: 'VIP', business: 'Business' };
+    var nextTier = tier === 'premium' ? 'VIP (€7,99/Mo.)' : 'VIP';
+    showToast('🔒 ' + limit + 'x/' + (typeof aiLang !== 'undefined' && aiLang === 'zh' ? '月已用完' :
+      aiLang === 'en' ? 'month used — upgrade to ' + nextTier :
+      aiLang === 'es' ? 'mes usado — mejora a ' + nextTier :
+      'Monat aufgebraucht — upgrade zu ' + nextTier));
+    switchTab('profile', null);
+    return false;
+  }
+
+  incrementUsage(type);
+  return true;
+}
+
 async function sendAI() {
   if (aiLoading) return;
   const input = document.getElementById('ai-input');
   const q = input.value.trim();
   if (!q) return;
+  if (!checkUsageLimit('ai')) return;
   
   input.value = '';
   addUserMsg(q);
@@ -4004,11 +4070,77 @@ const AI_SYSTEM_V2 = {
 
 // Override sendAI to use improved prompts
 const _origSendAI = window.sendAI;
+
+// ══════════════════════════════════════
+// 会员权限控制
+// ══════════════════════════════════════
+var TIER_LIMITS = {
+  free:     { ai: 0,  mkt: 0 },
+  premium:  { ai: 3,  mkt: 5 },
+  vip:      { ai: -1, mkt: -1 }, // -1 = 无限制
+  business: { ai: -1, mkt: -1 }
+};
+
+function getMonthKey() {
+  var d = new Date();
+  return d.getFullYear() + '_' + (d.getMonth() + 1);
+}
+
+function getUsageCount(type) {
+  return parseInt(localStorage.getItem(type + '_used_' + getMonthKey()) || '0');
+}
+
+function incrementUsage(type) {
+  var key = type + '_used_' + getMonthKey();
+  localStorage.setItem(key, (getUsageCount(type) + 1).toString());
+}
+
+function checkUsageLimit(type) {
+  var tier  = userTier || localStorage.getItem('mamapedia_tier') || 'free';
+  var limits = TIER_LIMITS[tier] || TIER_LIMITS.free;
+  var limit  = limits[type];
+
+  // 无限制
+  if (limit === -1) return true;
+
+  // 完全禁止（limit = 0）
+  if (limit === 0) {
+    var msgs = {
+      zh: { ai: '🔒 AI咨询需要Premium会员（€4.99/月）', mkt: '🔒 发帖需要Premium会员（€4.99/月）' },
+      en: { ai: '🔒 AI chat requires Premium (€4.99/mo)', mkt: '🔒 Posting requires Premium (€4.99/mo)' },
+      de: { ai: '🔒 KI-Chat benötigt Premium (€4,99/Mo.)', mkt: '🔒 Inserieren benötigt Premium (€4,99/Mo.)' },
+      es: { ai: '🔒 El chat IA requiere Premium (€4,99/mes)', mkt: '🔒 Publicar requiere Premium (€4,99/mes)' }
+    };
+    var lang = typeof aiLang !== 'undefined' ? aiLang : 'de';
+    var msg = (msgs[lang] || msgs.de)[type] || '🔒 Premium erforderlich';
+    showToast(msg + ' → Profil → Upgrade');
+    switchTab('profile', null);
+    return false;
+  }
+
+  // 有次数限制
+  var used = getUsageCount(type);
+  if (used >= limit) {
+    var tierNames = { premium: 'VIP (€7,99/Mo.)', vip: 'VIP', business: 'Business' };
+    var nextTier = tier === 'premium' ? 'VIP (€7,99/Mo.)' : 'VIP';
+    showToast('🔒 ' + limit + 'x/' + (typeof aiLang !== 'undefined' && aiLang === 'zh' ? '月已用完' :
+      aiLang === 'en' ? 'month used — upgrade to ' + nextTier :
+      aiLang === 'es' ? 'mes usado — mejora a ' + nextTier :
+      'Monat aufgebraucht — upgrade zu ' + nextTier));
+    switchTab('profile', null);
+    return false;
+  }
+
+  incrementUsage(type);
+  return true;
+}
+
 async function sendAI() {
   if (aiLoading) return;
   const input = document.getElementById('ai-input');
   const q = input.value.trim();
   if (!q) return;
+  if (!checkUsageLimit('ai')) return;
   
   input.value = '';
   addUserMsg(q);
@@ -4523,6 +4655,7 @@ function pubApplyLabels() {
 }
 
 window.openPublishPanel = function() {
+  if (!checkUsageLimit('mkt')) return;
   pubApplyLabels();
   PUB.step = 1;
   PUB.type = '';
