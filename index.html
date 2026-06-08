@@ -3210,8 +3210,11 @@ function checkUsageLimit(type) {
     };
     var lang = typeof aiLang !== 'undefined' ? aiLang : 'de';
     var msg = (msgs[lang] || msgs.de)[type] || '🔒 Premium erforderlich';
-    showToast(msg + ' → Profil → Upgrade');
-    switchTab('profile', null);
+    if (typeof closeAI === 'function') closeAI();
+    setTimeout(function() {
+      showToast(msg + ' → Profil → Upgrade');
+      switchTab('profile', null);
+    }, 150);
     return false;
   }
 
@@ -3224,7 +3227,10 @@ function checkUsageLimit(type) {
       aiLang === 'en' ? 'month used — upgrade to ' + nextTier :
       aiLang === 'es' ? 'mes usado — mejora a ' + nextTier :
       'Monat aufgebraucht — upgrade zu ' + nextTier));
-    switchTab('profile', null);
+    if (typeof closeAI === 'function') closeAI();
+    setTimeout(function() {
+      switchTab('profile', null);
+    }, 150);
     return false;
   }
 
@@ -4113,8 +4119,11 @@ function checkUsageLimit(type) {
     };
     var lang = typeof aiLang !== 'undefined' ? aiLang : 'de';
     var msg = (msgs[lang] || msgs.de)[type] || '🔒 Premium erforderlich';
-    showToast(msg + ' → Profil → Upgrade');
-    switchTab('profile', null);
+    if (typeof closeAI === 'function') closeAI();
+    setTimeout(function() {
+      showToast(msg + ' → Profil → Upgrade');
+      switchTab('profile', null);
+    }, 150);
     return false;
   }
 
@@ -4127,7 +4136,10 @@ function checkUsageLimit(type) {
       aiLang === 'en' ? 'month used — upgrade to ' + nextTier :
       aiLang === 'es' ? 'mes usado — mejora a ' + nextTier :
       'Monat aufgebraucht — upgrade zu ' + nextTier));
-    switchTab('profile', null);
+    if (typeof closeAI === 'function') closeAI();
+    setTimeout(function() {
+      switchTab('profile', null);
+    }, 150);
     return false;
   }
 
