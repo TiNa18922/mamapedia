@@ -1801,7 +1801,7 @@ window.kfSubmit=async function(){
   };
 
   try{
-    var resp=await fetch('https://mamapedia-proxy.golightly2004.workers.dev',{
+    var resp=await fetch('https://mamapedia-proxy.golightly2004.workers.dev/proxy',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
@@ -2312,7 +2312,7 @@ async function callAI(prompt){
   var ri=document.getElementById('gsf-result-inner');
   ri.innerHTML='<div class="kf-loading">'+t('loading')+'</div>';
   try{
-    var resp=await fetch('https://mamapedia-proxy.golightly2004.workers.dev',{
+    var resp=await fetch('https://mamapedia-proxy.golightly2004.workers.dev/proxy',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
@@ -3274,7 +3274,7 @@ async function sendAI() {
       ? basePrompt + '\n\n' + ctxHeader + aiEntriesContext + langReminder
       : basePrompt;
     
-    const resp = await fetch('https://mamapedia-proxy.golightly2004.workers.dev', {
+    const resp = await fetch('https://mamapedia-proxy.golightly2004.workers.dev/proxy', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -3319,7 +3319,7 @@ var STRIPE_LINKS = {
   vip:     'https://buy.stripe.com/test_cNi6oA9BT4rW0bt0NV93y01',
   business:'https://buy.stripe.com/test_bJeeV6dS9e2w8HZ9kr93y00'
 };
-var WORKER_URL = 'https://mamapedia-proxy.golightly2004.workers.dev';
+var WORKER_URL = 'https://mamapedia-proxy.golightly2004.workers.dev/proxy';
 var userEmail = localStorage.getItem('mamapedia_email') || '';
 userTier = localStorage.getItem('mamapedia_tier') || userTier || 'free';
 
@@ -3485,7 +3485,7 @@ Analysiere das hochgeladene Foto und antworte NUR im folgenden JSON-Format (kein
   "tags": ["#Kinderwagen", "#Düsseldorf", "#U3"]
 }`;
 
-    const resp = await fetch('https://mamapedia-proxy.golightly2004.workers.dev', {
+    const resp = await fetch('https://mamapedia-proxy.golightly2004.workers.dev/proxy', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -4238,7 +4238,7 @@ async function sendAI() {
       ? basePromptV2 + '\n\n' + ctxHeaderV2 + aiEntriesContext + langReminderV2
       : basePromptV2;
     
-    const resp = await fetch('https://mamapedia-proxy.golightly2004.workers.dev', {
+    const resp = await fetch('https://mamapedia-proxy.golightly2004.workers.dev/proxy', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
