@@ -65,6 +65,24 @@ body{background:#8a9aaa;
 .banner p{color:rgba(255,255,255,.88);font-size:13px;}
 .illus{width:58px;height:58px;flex-shrink:0;background:rgba(255,255,255,.2);
   border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;}
+/* ── HOME AI CHAT ── */
+.home-ai-wrap{
+  margin:12px 16px 0;background:var(--surface);border:1.5px solid var(--border);
+  border-radius:18px;overflow:hidden;display:flex;flex-direction:column;
+  min-height:260px;max-height:360px;box-shadow:0 6px 18px rgba(74,101,128,.12);
+}
+.home-ai-head{display:flex;align-items:center;gap:10px;padding:12px 14px 8px;
+  background:linear-gradient(135deg,rgba(74,101,128,.08),rgba(230,138,92,.10));
+  border-bottom:1px solid var(--border);}
+.home-ai-head-ico{width:36px;height:36px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(135deg,#F5A67A,#E68A5C);display:flex;align-items:center;
+  justify-content:center;font-size:18px;box-shadow:0 3px 10px rgba(74,101,128,.28);}
+.home-ai-head h2{font-size:15px;font-weight:800;color:var(--t1);line-height:1.2;margin:0;}
+.home-ai-head p{font-size:11px;color:var(--t2);margin:2px 0 0;font-weight:600;}
+.home-ai-wrap .ai-msgs{flex:1;min-height:110px;max-height:180px;}
+.home-ai-wrap .ai-input-row{border-top:1px solid var(--border);padding-bottom:12px;}
+.home-ai-note{font-size:11px;color:var(--t3);padding:0 14px 10px;line-height:1.4;}
+#bnav-market,#bnav-community,.bnav-center-wrap.bnav-legacy{display:none!important;}
 .sec-ttl{font-size:17px;font-weight:800;color:var(--t1);letter-spacing:-.3px;
   padding:22px 20px 14px;}
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;padding:0 20px;}
@@ -279,14 +297,26 @@ body{background:#8a9aaa;
 <button class="lb" onclick="setLang('es',this)">ES</button>
 </div>
 </div>
-<div class="sbar"><span>🔍</span><input id="h-srch" placeholder="Kita, Arzt, Elterngeld..."/><span style="color:var(--t3)">🎤</span></div>
+<div class="sbar"><span>🔍</span><input id="h-srch" placeholder="Kita, Arzt, Elterngeld..." onkeydown="if(event.key==='Enter'){event.preventDefault();submitHomeSearch();}"/><span style="color:var(--t3)">🎤</span></div>
 </div>
 <div id="home-reminder-banner" style="display:none;margin:10px 16px 0;"></div>
-<div class="banner">
-<div><h2 id="h-gr">Hallo, Mama! 👋</h2><p id="h-sub">Wie kann ich dir heute helfen?</p></div>
-<div class="illus">🤱</div>
+<div class="home-ai-wrap" id="home-ai-wrap">
+<div class="home-ai-head">
+<div class="home-ai-head-ico">🤖</div>
+<div class="f1">
+<h2 id="h-gr">Hallo, Mama! 👋</h2>
+<p id="h-sub">Frag mich zu Kita, Arzt &amp; Ämtern in Düsseldorf</p>
 </div>
-<div class="sec-ttl" id="h-kategorien">Kategorien</div>
+</div>
+<div class="ai-msgs" id="home-ai-msgs"></div>
+<div class="ai-quick" id="home-ai-quick"></div>
+<div class="ai-input-row">
+<input class="ai-input" id="home-ai-input" onkeydown="if(event.key==='Enter')sendAI()" placeholder="Frag mich...">
+<button class="ai-send" id="home-ai-send" onclick="sendAI()">➤</button>
+</div>
+<p class="home-ai-note" id="home-ai-note">Antworten aus Düsseldorf-Einträgen · 10× KI/Monat im Free-Plan</p>
+</div>
+<div class="sec-ttl" id="h-kategorien">Oder browsen</div>
 <div class="cat-grid">
 <div class="cat-tile" onclick="openCat('Behörden &amp; Soziales')" style=""><div class="cat-icon" style="background:rgba(74,101,128,.12)">🏛️<div class="premium-pip">⭐</div></div><div class="cat-lbl"><span id="cat-lbl-behoerden">Behörden</span><br/><span id="cat-sub-behoerden" style="font-size:9px;color:var(--t3);font-weight:600">Ämter &amp; Soziales</span></div></div>
 <div class="cat-tile" onclick="openCat('Gesundheit &amp; Medizin')" style=""><div class="cat-icon" style="background:rgba(107,174,138,.12)">❤️</div><div class="cat-lbl"><span id="cat-lbl-gesundheit">Gesundheit</span><br/><span id="cat-sub-gesundheit" style="font-size:9px;color:var(--t3);font-weight:600">Ärzte &amp; Medizin</span></div></div>
@@ -572,17 +602,25 @@ body{background:#8a9aaa;
 <!-- ── BOTTOM NAV ── -->
 <nav class="bnav" id="bnav">
 <button class="bnav-btn active" id="bnav-home" onclick="switchTab('home',this)">
-<span class="bnav-ico">🏠</span>
-<span class="bnav-lbl" id="bnav-lbl-home">Home</span>
+<span class="bnav-ico">🤖</span>
+<span class="bnav-lbl" id="bnav-lbl-home">Fragen</span>
 </button>
-<button class="bnav-btn" id="bnav-market" onclick="switchTab('market',this)">
+<button class="bnav-btn" id="bnav-guide" onclick="switchTab('guide',this)">
+<span class="bnav-ico">📚</span>
+<span class="bnav-lbl" id="bnav-lbl-guide">Guide</span>
+</button>
+<button class="bnav-btn" id="bnav-market" style="display:none" onclick="switchTab('market',this)" aria-hidden="true">
 <span class="bnav-ico">🛍️</span>
 <span class="bnav-lbl" id="bnav-lbl-markt">Markt</span>
 </button>
-<button class="bnav-center-wrap" onclick="openAI('MamaPedia Düsseldorf')">🤖</button>
-<button class="bnav-btn" id="bnav-community" onclick="switchTab('community',this)">
+<button class="bnav-center-wrap bnav-legacy" style="display:none" onclick="openAI('MamaPedia Düsseldorf')" aria-hidden="true">🤖</button>
+<button class="bnav-btn" id="bnav-community" style="display:none" onclick="switchTab('community',this)" aria-hidden="true">
 <span class="bnav-ico">💬</span>
 <span class="bnav-lbl" id="bnav-lbl-community">Community</span>
+</button>
+<button class="bnav-btn" id="bnav-kalender" onclick="switchTab('kalender',this)">
+<span class="bnav-ico">🗓️</span>
+<span class="bnav-lbl" id="bnav-lbl-kalender">Kalender</span>
 </button>
 <button class="bnav-btn" id="bnav-profile" onclick="switchTab('profile',this)">
 <span class="bnav-ico">👤</span>
@@ -1181,7 +1219,7 @@ window.kalCloseModal = kalCloseModal;
     <div style="display:flex;justify-content:space-between;align-items:center;">
       <div>
         <div style="font-size:13px;font-weight:900;color:var(--t1);">✨ Free</div>
-        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-free-desc">Kalender · Community</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-free-desc">10× KI/Monat · Guide · Kalender</div>
       </div>
       <div style="font-size:16px;font-weight:900;color:var(--t3);">€0</div>
     </div>
@@ -1192,7 +1230,7 @@ window.kalCloseModal = kalCloseModal;
     <div style="display:flex;justify-content:space-between;align-items:center;">
       <div>
         <div style="font-size:13px;font-weight:900;color:var(--action);">⚡ Premium</div>
-        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-premium-desc">3x KI/Monat · 5 Inserate</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:2px;" id="pf-premium-desc">50× KI/Monat · 5 Inserate</div>
       </div>
       <div style="text-align:right;">
         <div style="font-size:16px;font-weight:900;color:var(--action);">€4,99</div>
@@ -1257,7 +1295,7 @@ window.kalCloseModal = kalCloseModal;
 <span style="font-size:18px;">📱</span>
 <div>
 <div class="prof-row-lbl">Version</div>
-<div class="prof-row-sub">MamaPedia v2.5 · Düsseldorf 2025</div>
+<div class="prof-row-sub">MamaPedia v2.6 · Düsseldorf 2026</div>
 </div>
 </div>
 </div>
@@ -1805,7 +1843,7 @@ window.kfSubmit=async function(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
+        model:'claude-sonnet-4-5',
         max_tokens:600,
         system:prompts[KF_LANG]||prompts.zh,
         messages:[{role:'user',content:'请给我Kita建议。/ Please give me Kita advice. / Bitte Kita-Empfehlungen geben.'}]
@@ -2316,7 +2354,7 @@ async function callAI(prompt){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
+        model:'claude-sonnet-4-5',
         max_tokens:700,
         system:prompt,
         messages:[{role:'user',content:'请给我学校建议。'}]
@@ -2463,10 +2501,10 @@ function filterChip(el, acc) {
   var _prevLang = window.setLang; // KF→KT chain
 
   var TL = {
-    de:{gr:'Hallo, Mama! 👋', sub:'Wie kann ich dir heute helfen?', srch:'Kita, Arzt, Elterngeld...'},
-    en:{gr:'Hello, Mama! 👋', sub:'How can I help you today?', srch:'Search...'},
-    zh:{gr:'你好，妈妈！👋', sub:'今天我能帮你什么？', srch:'搜索...'},
-    es:{gr:'¡Hola, Mamá! 👋', sub:'¿En qué puedo ayudarte hoy?', srch:'Buscar...'}
+    de:{gr:'Hallo, Mama! 👋', sub:'Frag mich zu Kita, Arzt & Ämtern in Düsseldorf', srch:'Kita, Arzt, Elterngeld...'},
+    en:{gr:'Hello, Mama! 👋', sub:'Ask me about Kita, doctors & offices in Düsseldorf', srch:'Search...'},
+    zh:{gr:'你好，妈妈！👋', sub:'问我杜塞尔多夫的托儿所、医生和机构', srch:'搜索...'},
+    es:{gr:'¡Hola, Mamá! 👋', sub:'Pregúntame por Kita, médicos y oficinas en Düsseldorf', srch:'Buscar...'}
   };
 
   window.setLang = function(l, btn) {
@@ -2490,17 +2528,19 @@ function filterChip(el, acc) {
 
     // 3. Bottom nav + Kategorien heading
     var navLabels = {
-      de:{home:'Home', markt:'Markt', comm:'Community', profil:'Profil', kat:'Kategorien'},
-      en:{home:'Home', markt:'Market', comm:'Community', profil:'Profile', kat:'Categories'},
-      zh:{home:'首页', markt:'市场', comm:'社区', profil:'我的', kat:'分类'},
-      es:{home:'Inicio', markt:'Mercado', comm:'Comunidad', profil:'Perfil', kat:'Categorías'}
+      de:{home:'Fragen', guide:'Guide', kal:'Kalender', profil:'Profil', kat:'Oder browsen', note:'Antworten aus Düsseldorf-Einträgen · 10× KI/Monat im Free-Plan'},
+      en:{home:'Ask', guide:'Guide', kal:'Calendar', profil:'Profile', kat:'Or browse', note:'Answers from Düsseldorf listings · 10× AI/month on Free'},
+      zh:{home:'提问', guide:'指南', kal:'日历', profil:'我的', kat:'或浏览分类', note:'答案来自杜塞尔多夫条目 · Free 每月 10 次 AI'},
+      es:{home:'Preguntar', guide:'Guía', kal:'Calendario', profil:'Perfil', kat:'O explorar', note:'Respuestas de entradas de Düsseldorf · 10× IA/mes en Free'}
     };
     var nl = navLabels[l] || navLabels.de;
     if(el('bnav-lbl-home')) el('bnav-lbl-home').textContent = nl.home;
-    if(el('bnav-lbl-markt')) el('bnav-lbl-markt').textContent = nl.markt;
-    if(el('bnav-lbl-community')) el('bnav-lbl-community').textContent = nl.comm;
+    if(el('bnav-lbl-guide')) el('bnav-lbl-guide').textContent = nl.guide;
+    if(el('bnav-lbl-kalender')) el('bnav-lbl-kalender').textContent = nl.kal;
     if(el('bnav-lbl-profil')) el('bnav-lbl-profil').textContent = nl.profil;
     if(el('h-kategorien')) el('h-kategorien').textContent = nl.kat;
+    if(el('home-ai-note')) el('home-ai-note').textContent = nl.note;
+    if(el('home-ai-input')) el('home-ai-input').placeholder = (AI_INPUT_PLACEHOLDERS && AI_INPUT_PLACEHOLDERS[l]) || 'Frag mich...';
 
     // 4. Category tiles
     var catLabels = {
@@ -2852,9 +2892,9 @@ function showToast(msg) {
 <div class="ai-msgs" id="ai-msgs"></div>
 <div class="ai-quick" id="ai-quick"></div>
 <div class="ai-input-row">
-<input class="ai-input" id="ai-input" onkeydown="if(event.key==='Enter')sendAI()" placeholder="问我任何问题... / Ask me anything...">
+<input class="ai-input" id="ai-input" onkeydown="if(event.key==='Enter')sendAI()" placeholder="Frag mich...">
 <button class="ai-send" id="ai-send-btn" onclick="sendAI()">➤</button>
-</input></div>
+</div>
 </div>
 </div>
 <script>
@@ -2864,6 +2904,63 @@ let aiCtx = '';
 let aiHistory = [];
 let aiLoading = false;
 let aiEntriesContext = '';
+let aiUiMode = 'home'; // 'home' | 'overlay'
+
+function aiMsgsEl() {
+  if (aiUiMode === 'home') {
+    var h = document.getElementById('home-ai-msgs');
+    if (h) return h;
+  }
+  return document.getElementById('ai-msgs');
+}
+function aiQuickEl() {
+  if (aiUiMode === 'home') {
+    var h = document.getElementById('home-ai-quick');
+    if (h) return h;
+  }
+  return document.getElementById('ai-quick');
+}
+function aiInputEl() {
+  if (aiUiMode === 'home') {
+    var h = document.getElementById('home-ai-input');
+    if (h) return h;
+  }
+  return document.getElementById('ai-input');
+}
+function aiSendEl() {
+  if (aiUiMode === 'home') {
+    var h = document.getElementById('home-ai-send');
+    if (h) return h;
+  }
+  return document.getElementById('ai-send-btn');
+}
+function ensureHomeAI(forceReset) {
+  aiUiMode = 'home';
+  aiCtx = aiCtx || 'MamaPedia Düsseldorf';
+  var msgs = document.getElementById('home-ai-msgs');
+  if (!msgs) return;
+  if (forceReset || !msgs.dataset.ready) {
+    aiHistory = [];
+    aiEntriesContext = buildEntriesContext(aiCtx);
+    msgs.innerHTML = '';
+    addBotMsg(AI_GREETINGS[aiLang](aiCtx));
+    renderQuickBtns();
+    msgs.dataset.ready = '1';
+    var inp = document.getElementById('home-ai-input');
+    if (inp) inp.placeholder = AI_INPUT_PLACEHOLDERS[aiLang] || AI_INPUT_PLACEHOLDERS.de;
+  }
+}
+function submitHomeSearch() {
+  var srch = document.getElementById('h-srch');
+  var q = srch ? srch.value.trim() : '';
+  if (!q) return;
+  switchTab('home', document.getElementById('bnav-home'));
+  ensureHomeAI(false);
+  var inp = document.getElementById('home-ai-input');
+  if (inp) { inp.value = q; }
+  if (srch) srch.value = '';
+  sendAI();
+}
 
 function buildEntriesContext(ctx) {
   // Find the active sub-screen that contains entries for this context
@@ -3082,6 +3179,7 @@ const AI_INPUT_PLACEHOLDERS = {
 };
 
 function openAI(ctx) {
+  aiUiMode = 'overlay';
   aiCtx = ctx || 'MamaPedia Düsseldorf';
   aiHistory = [];
   aiEntriesContext = buildEntriesContext(aiCtx);
@@ -3112,33 +3210,43 @@ function closeAI() {
 function setAILang(l, btn) {
   aiLang = l;
   document.querySelectorAll('.ai-lb').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  document.getElementById('ai-input').placeholder = AI_INPUT_PLACEHOLDERS[l];
+  if (btn) btn.classList.add('on');
+  var inp = aiInputEl();
+  if (inp) inp.placeholder = AI_INPUT_PLACEHOLDERS[l];
+  var overlayInp = document.getElementById('ai-input');
+  if (overlayInp) overlayInp.placeholder = AI_INPUT_PLACEHOLDERS[l];
+  var homeInp = document.getElementById('home-ai-input');
+  if (homeInp) homeInp.placeholder = AI_INPUT_PLACEHOLDERS[l];
   renderQuickBtns();
   // Re-greet in new language if history is empty or just greeting
   if (aiHistory.length === 0) {
-    const msgs = document.getElementById('ai-msgs');
-    msgs.innerHTML = '';
-    addBotMsg(AI_GREETINGS[aiLang](aiCtx));
+    const msgs = aiMsgsEl();
+    if (msgs) {
+      msgs.innerHTML = '';
+      addBotMsg(AI_GREETINGS[aiLang](aiCtx || 'MamaPedia Düsseldorf'));
+    }
   }
 }
 
 function renderQuickBtns() {
-  const container = document.getElementById('ai-quick');
-  const qs = AI_QUICK[aiCtx] || AI_QUICK['default'];
-  const btns = qs[aiLang] || qs['zh'];
+  const container = aiQuickEl();
+  if (!container) return;
+  const qs = AI_QUICK[aiCtx] || AI_QUICK['default'] || AI_QUICK['MamaPedia Düsseldorf'] || Object.values(AI_QUICK)[0];
+  const btns = (qs && (qs[aiLang] || qs['de'] || qs['zh'])) || [];
   container.innerHTML = btns.map(q => 
     `<button class="ai-qtag" onclick="quickAsk(this.textContent)">${q}</button>`
   ).join('');
 }
 
 function quickAsk(q) {
-  document.getElementById('ai-input').value = q;
+  const input = aiInputEl();
+  if (input) input.value = q;
   sendAI();
 }
 
 function addBotMsg(text) {
-  const msgs = document.getElementById('ai-msgs');
+  const msgs = aiMsgsEl();
+  if (!msgs) return null;
   const div = document.createElement('div');
   div.className = 'ai-bubble bot';
   div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>');
@@ -3148,7 +3256,8 @@ function addBotMsg(text) {
 }
 
 function addUserMsg(text) {
-  const msgs = document.getElementById('ai-msgs');
+  const msgs = aiMsgsEl();
+  if (!msgs) return;
   const div = document.createElement('div');
   div.className = 'ai-bubble user';
   div.textContent = text;
@@ -3157,7 +3266,8 @@ function addUserMsg(text) {
 }
 
 function addTyping() {
-  const msgs = document.getElementById('ai-msgs');
+  const msgs = aiMsgsEl();
+  if (!msgs) return null;
   const div = document.createElement('div');
   div.className = 'ai-bubble bot loading';
   div.id = 'ai-typing';
@@ -3172,9 +3282,9 @@ function addTyping() {
 // 会员权限控制
 // ══════════════════════════════════════
 var TIER_LIMITS = {
-  free:     { ai: 0,  mkt: 0 },
-  premium:  { ai: 3,  mkt: 5 },
-  vip:      { ai: -1, mkt: -1 }, // -1 = 无限制
+  free:     { ai: 10, mkt: 0 },  // product is AI — free gets 10/month
+  premium:  { ai: 50, mkt: 5 },
+  vip:      { ai: -1, mkt: -1 }, // -1 = unlimited
   business: { ai: -1, mkt: -1 }
 };
 
@@ -3192,7 +3302,7 @@ function incrementUsage(type) {
   localStorage.setItem(key, (getUsageCount(type) + 1).toString());
 }
 
-function checkUsageLimit(type) {
+function checkUsageLimit(type, opts) {
   var tier  = userTier || localStorage.getItem('mamapedia_tier') || 'free';
   var limits = TIER_LIMITS[tier] || TIER_LIMITS.free;
   var limit  = limits[type];
@@ -3234,23 +3344,25 @@ function checkUsageLimit(type) {
     return false;
   }
 
-  incrementUsage(type);
+  if (!(opts && opts.commit === false)) incrementUsage(type);
   return true;
 }
 
 async function sendAI() {
   if (aiLoading) return;
-  const input = document.getElementById('ai-input');
+  const input = aiInputEl() || document.getElementById('ai-input');
+  if (!input) return;
   const q = input.value.trim();
   if (!q) return;
-  if (!checkUsageLimit('ai')) return;
+  if (!checkUsageLimit('ai', {commit:false})) return;
   
   input.value = '';
   addUserMsg(q);
   aiHistory.push({ role: 'user', content: q });
   
   aiLoading = true;
-  document.getElementById('ai-send-btn').disabled = true;
+  var sendBtn = aiSendEl();
+  if (sendBtn) sendBtn.disabled = true;
   
   const typingEl = addTyping();
   
@@ -3278,31 +3390,45 @@ async function sendAI() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-5',
         max_tokens: 600,
         system: systemPrompt,
         messages: aiHistory
       })
     });
     
-    const data = await resp.json();
-    typingEl.remove();
-    
-    const text = data.content?.[0]?.text || '抱歉，请稍后再试。/ Sorry, please try again.';
+    const raw = await resp.text();
+    let data = null;
+    try { data = raw ? JSON.parse(raw) : null; } catch (_) { data = { raw: raw }; }
+    if (typingEl) typingEl.remove();
+
+    if (!resp.ok) {
+      var err1 = (data && (data.error && (data.error.message || data.error) || data.message || data.raw)) || ('HTTP ' + resp.status);
+      addBotMsg('⚠️ KI-Fehler (' + resp.status + '): ' + String(err1).slice(0, 280));
+      return;
+    }
+    const text = data && data.content && data.content[0] && data.content[0].text;
+    if (!text) {
+      addBotMsg('⚠️ Keine Antwort vom Proxy. ' + String(raw || '').slice(0, 220));
+      return;
+    }
     addBotMsg(text);
+    incrementUsage('ai');
     aiHistory.push({ role: 'assistant', content: text });
     
     // Keep history manageable
     if (aiHistory.length > 10) aiHistory = aiHistory.slice(-10);
     
   } catch(e) {
-    typingEl.remove();
-    addBotMsg('⚠️ 网络错误，请检查连接。/ Network error, please check connection.');
+    if (typingEl) typingEl.remove();
+    addBotMsg('⚠️ Netzwerkfehler: ' + (e && e.message ? e.message : String(e)));
   }
   
   aiLoading = false;
-  document.getElementById('ai-send-btn').disabled = false;
-  document.getElementById('ai-input').focus();
+  var sendBtn2 = aiSendEl();
+  if (sendBtn2) sendBtn2.disabled = false;
+  var focusInp = aiInputEl();
+  if (focusInp) focusInp.focus();
 }
 
 // ══════════════════════════════════════
@@ -3391,16 +3517,39 @@ const tabMap = {
 function switchTab(tab, btn) {
   // Update nav buttons
   document.querySelectorAll('.bnav-btn').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    var navId = ({home:'bnav-home', guide:'bnav-guide', kalender:'bnav-kalender', profile:'bnav-profile', market:'bnav-market', community:'bnav-community'})[tab];
+    var navEl = navId ? document.getElementById(navId) : null;
+    if (navEl) navEl.classList.add('active');
+  }
   
   // Hide all overlays
   Object.values(tabMap).forEach(id => {
-    if (id) document.getElementById(id).classList.remove('visible');
+    if (id) {
+      var ov = document.getElementById(id);
+      if (ov) ov.classList.remove('visible');
+    }
   });
   
-  if (tab === 'home') {
+  if (tab === 'home' || tab === 'guide') {
     stack.className = 'stack';
-  } else {
+    if (tab === 'home') {
+      setTimeout(function() {
+        if (typeof ensureHomeAI === 'function') ensureHomeAI(false);
+        var sc = document.querySelector('#s0 .scroll');
+        if (sc) sc.scrollTop = 0;
+        var inp = document.getElementById('home-ai-input');
+        if (inp) try { inp.focus(); } catch(e) {}
+      }, 40);
+    } else {
+      setTimeout(function() {
+        var kat = document.getElementById('h-kategorien');
+        if (kat) kat.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 40);
+    }
+  } else if (tabMap[tab]) {
     document.getElementById(tabMap[tab]).classList.add('visible');
     // Re-apply current language when switching tabs
     var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
@@ -3489,7 +3638,7 @@ Analysiere das hochgeladene Foto und antworte NUR im folgenden JSON-Format (kein
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-5',
         max_tokens: 600,
         system: systemPrompt,
         messages: [{
@@ -4129,97 +4278,27 @@ const AI_SYSTEM_V2 = {
 - Indicar si se necesita cita, costes y documentos cuando sea relevante`
 };
 
-// Override sendAI to use improved prompts
-const _origSendAI = window.sendAI;
-
-// ══════════════════════════════════════
-// 会员权限控制
-// ══════════════════════════════════════
-var TIER_LIMITS = {
-  free:     { ai: -1, mkt: 0 }, // TEST MODE
-  premium:  { ai: 3,  mkt: 5 },
-  vip:      { ai: -1, mkt: -1 }, // -1 = 无限制
-  business: { ai: -1, mkt: -1 }
-};
-
-function getMonthKey() {
-  var d = new Date();
-  return d.getFullYear() + '_' + (d.getMonth() + 1);
-}
-
-function getUsageCount(type) {
-  return parseInt(localStorage.getItem(type + '_used_' + getMonthKey()) || '0');
-}
-
-function incrementUsage(type) {
-  var key = type + '_used_' + getMonthKey();
-  localStorage.setItem(key, (getUsageCount(type) + 1).toString());
-}
-
-function checkUsageLimit(type) {
-  var tier  = userTier || localStorage.getItem('mamapedia_tier') || 'free';
-  var limits = TIER_LIMITS[tier] || TIER_LIMITS.free;
-  var limit  = limits[type];
-
-  // 无限制
-  if (limit === -1) return true;
-
-  // 完全禁止（limit = 0）
-  if (limit === 0) {
-    var msgs = {
-      zh: { ai: '🔒 AI咨询需要Premium会员（€4.99/月）', mkt: '🔒 发帖需要Premium会员（€4.99/月）' },
-      en: { ai: '🔒 AI chat requires Premium (€4.99/mo)', mkt: '🔒 Posting requires Premium (€4.99/mo)' },
-      de: { ai: '🔒 KI-Chat benötigt Premium (€4,99/Mo.)', mkt: '🔒 Inserieren benötigt Premium (€4,99/Mo.)' },
-      es: { ai: '🔒 El chat IA requiere Premium (€4,99/mes)', mkt: '🔒 Publicar requiere Premium (€4,99/mes)' }
-    };
-    var lang = typeof aiLang !== 'undefined' ? aiLang : 'de';
-    var msg = (msgs[lang] || msgs.de)[type] || '🔒 Premium erforderlich';
-    if (typeof closeAI === 'function') closeAI();
-    setTimeout(function() {
-      showToast(msg + ' → Profil → Upgrade');
-      switchTab('profile', null);
-    }, 150);
-    return false;
-  }
-
-  // 有次数限制
-  var used = getUsageCount(type);
-  if (used >= limit) {
-    var tierNames = { premium: 'VIP (€7,99/Mo.)', vip: 'VIP', business: 'Business' };
-    var nextTier = tier === 'premium' ? 'VIP (€7,99/Mo.)' : 'VIP';
-    showToast('🔒 ' + limit + 'x/' + (typeof aiLang !== 'undefined' && aiLang === 'zh' ? '月已用完' :
-      aiLang === 'en' ? 'month used — upgrade to ' + nextTier :
-      aiLang === 'es' ? 'mes usado — mejora a ' + nextTier :
-      'Monat aufgebraucht — upgrade zu ' + nextTier));
-    if (typeof closeAI === 'function') closeAI();
-    setTimeout(function() {
-      switchTab('profile', null);
-    }, 150);
-    return false;
-  }
-
-  incrementUsage(type);
-  return true;
-}
-
+// Override sendAI to use improved V2 prompts (keep single TIER_LIMITS above — free.ai=10)
 async function sendAI() {
   if (aiLoading) return;
-  const input = document.getElementById('ai-input');
+  const input = aiInputEl() || document.getElementById('ai-input');
+  if (!input) return;
   const q = input.value.trim();
   if (!q) return;
-  if (!checkUsageLimit('ai')) return;
+  if (!checkUsageLimit('ai', {commit:false})) return;
   
   input.value = '';
   addUserMsg(q);
   aiHistory.push({ role: 'user', content: q });
   
   aiLoading = true;
-  document.getElementById('ai-send-btn').disabled = true;
+  var sendBtn = aiSendEl();
+  if (sendBtn) sendBtn.disabled = true;
   const typingEl = addTyping();
   
   try {
     // Use V2 system prompts
-    const basePromptV2 = (AI_SYSTEM_V2[aiLang] || AI_SYSTEM_V2.zh).replace('{context}', aiCtx);
+    const basePromptV2 = (AI_SYSTEM_V2[aiLang] || AI_SYSTEM_V2.de || AI_SYSTEM_V2.zh).replace('{context}', aiCtx);
     const AI_CTX_HEADERS_V2 = {
       zh: '--- 应用内真实数据库条目 ---\n以下是经过验证的条目。当被问到医生、机构或服务时，请始终使用这些具体数据（名称、电话、地址、开放时间、网站），而不是给出笼统建议：\n\n',
       en: '--- VERIFIED DATABASE ENTRIES ---\nYou have access to the following verified entries. When asked about a doctor, institution, or service, ALWAYS use this specific data (name, phone, address, hours, website) instead of general advice:\n\n',
@@ -4242,28 +4321,43 @@ async function sendAI() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-5',
         max_tokens: 600,
         system: systemPrompt,
         messages: aiHistory
       })
     });
     
-    const data = await resp.json();
-    typingEl.remove();
-    const text = data.content?.[0]?.text || '抱歉，请稍后再试。';
+    const raw = await resp.text();
+    let data = null;
+    try { data = raw ? JSON.parse(raw) : null; } catch (_) { data = { raw: raw }; }
+    if (typingEl) typingEl.remove();
+
+    if (!resp.ok) {
+      var errDetail = (data && (data.error && (data.error.message || data.error) || data.message || data.raw)) || ('HTTP ' + resp.status);
+      addBotMsg('⚠️ KI-Fehler (' + resp.status + '): ' + String(errDetail).slice(0, 280));
+      return;
+    }
+    const text = data && data.content && data.content[0] && data.content[0].text;
+    if (!text) {
+      addBotMsg('⚠️ Keine Antwort vom Proxy. ' + String(raw || JSON.stringify(data) || '').slice(0, 220));
+      return;
+    }
     addBotMsg(text);
+    incrementUsage('ai');
     aiHistory.push({ role: 'assistant', content: text });
     if (aiHistory.length > 10) aiHistory = aiHistory.slice(-10);
     
   } catch(e) {
-    typingEl.remove();
-    addBotMsg('⚠️ 网络错误，请检查连接。/ Network error / Netzwerkfehler.');
+    if (typingEl) typingEl.remove();
+    addBotMsg('⚠️ Netzwerkfehler: ' + (e && e.message ? e.message : String(e)));
   }
   
   aiLoading = false;
-  document.getElementById('ai-send-btn').disabled = false;
-  document.getElementById('ai-input').focus();
+  var sendBtn2 = aiSendEl();
+  if (sendBtn2) sendBtn2.disabled = false;
+  var focusInp = aiInputEl();
+  if (focusInp) focusInp.focus();
 }
 
 </script>
@@ -5624,12 +5718,21 @@ function _updateProfileUI() {
 // ── Login modal ────────────────────────────────────────────
 function openLoginModal() {
   var modal = document.getElementById('sb-login-modal');
-  if (modal) modal.style.display = 'flex';
+  if (modal) {
+    modal.style.display = 'flex';
+    modal.style.zIndex = '10050';
+    modal.style.pointerEvents = 'auto';
+  }
 }
 function closeLoginModal() {
   var modal = document.getElementById('sb-login-modal');
-  if (modal) modal.style.display = 'none';
+  if (modal) {
+    modal.style.display = 'none';
+    modal.style.pointerEvents = 'none';
+  }
 }
+window.closeLoginModal = closeLoginModal;
+window.openLoginModal = openLoginModal;
 
 // ── Add child modal ────────────────────────────────────────
 function openAddChildModal() {
@@ -5651,9 +5754,9 @@ function submitAddChild() {
 </script>
 
 <!-- ── Login Modal ─────────────────────────────────────────── -->
-<div id="sb-login-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
-  <div style="background:var(--bg);border-radius:20px;padding:28px 24px;width:min(340px,90vw);position:relative;">
-    <button onclick="closeLoginModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:var(--t2);">×</button>
+<div id="sb-login-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10050;align-items:center;justify-content:center;pointer-events:auto;" onclick="if(event.target===this)closeLoginModal()">
+  <div style="background:var(--bg);border-radius:20px;padding:28px 24px;width:min(340px,90vw);position:relative;z-index:1;pointer-events:auto;" onclick="event.stopPropagation()">
+    <button type="button" onclick="event.stopPropagation();closeLoginModal()" style="position:absolute;top:14px;right:16px;z-index:2;background:rgba(0,0,0,.06);border:none;border-radius:10px;width:36px;height:36px;font-size:22px;cursor:pointer;color:var(--t2);line-height:1;">×</button>
     <div style="text-align:center;margin-bottom:20px;">
       <div style="font-size:32px;margin-bottom:8px;">🌸</div>
       <div style="font-size:18px;font-weight:900;color:var(--t1);">Bei MamaPedia anmelden</div>
@@ -5672,9 +5775,9 @@ function submitAddChild() {
 </div>
 
 <!-- ── Add Child Modal ──────────────────────────────────────── -->
-<div id="sb-add-child-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
-  <div style="background:var(--bg);border-radius:20px;padding:28px 24px;width:min(340px,90vw);position:relative;">
-    <button onclick="closeAddChildModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:var(--t2);">×</button>
+<div id="sb-add-child-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10050;align-items:center;justify-content:center;" onclick="if(event.target===this)closeAddChildModal()">
+  <div style="background:var(--bg);border-radius:20px;padding:28px 24px;width:min(340px,90vw);position:relative;z-index:1;" onclick="event.stopPropagation()">
+    <button type="button" onclick="event.stopPropagation();closeAddChildModal()" style="position:absolute;top:14px;right:16px;z-index:2;background:rgba(0,0,0,.06);border:none;border-radius:10px;width:36px;height:36px;font-size:22px;cursor:pointer;color:var(--t2);line-height:1;">×</button>
     <div style="font-size:20px;font-weight:900;color:var(--t1);margin-bottom:18px;">👶 Kind hinzufügen</div>
     <div style="margin-bottom:14px;">
       <label style="font-size:13px;font-weight:700;color:var(--t1);display:block;margin-bottom:6px;">Name</label>
@@ -5692,6 +5795,9 @@ function submitAddChild() {
 <script>
 // ── Demo/Fallback Reminder Banner ────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    try { if (typeof ensureHomeAI === 'function') ensureHomeAI(false); } catch (e) {}
+  }, 200);
   setTimeout(function() {
     var homeBanner = document.getElementById('home-reminder-banner');
     if (!homeBanner) return;
