@@ -19,7 +19,7 @@ EMOJI_MAP = {
 
 TYPE_MAP = {
     "Verkaufen": "sell",
-    "Suchen": "search",
+    "Tauschen": "swap",
     "Verschenken": "free",
 }
 
@@ -57,22 +57,38 @@ def main():
         if not row.get("Artikelname", "").strip():
             continue
         
-        preis = row.get("Preis", "").strip()
-        if preis and not preis.startswith("€"):
-            preis = f"€{preis}"
-        
+        listing_type = TYPE_MAP.get(row.get("Inseratstyp", "").strip(), "sell")
         item = {
             "id": str(i + 1),
-            "type": TYPE_MAP.get(row.get("Inseratstyp", "").strip(), "sell"),
+            "type": listing_type,
             "emoji": get_emoji(row.get("Kategorie", "")),
             "name": row.get("Artikelname", "").strip(),
-            "kategorie": row.get("Kategorie", "").strip(),
-            "zustand": row.get("Zustand", "").strip(),
-            "preis": preis,
-            "abholung": row.get("Abholung", "").strip(),
+            "category": row.get("Kategorie", "").strip(),
+            "condition": row.get("Zustand", "").strip(),
             "stadtteil": row.get("Stadtteil", "").strip(),
-            "time": parse_time(row.get("时间戳记", "")),
+            "contactEmail": (row.get("E-Mail-Adresse") or row.get("Email") or "").strip(),
+            "createdAt": row.get("时间戳记", "").strip(),
+            "status": "active",
         }
+        if listing_type == "sell":
+            preis = row.get("Preis", "").strip().replace("€", "").replace(",", ".")
+            try:
+                item["priceEur"] = float(preis) if preis else None
+            except ValueError:
+                item["priceEur"] = None
+        elif listing_type == "swap":
+            item["swapWanted"] = (row.get("Tausch") or row.get("Suche im Tausch") or "").strip()
+        elif listing_type == "free":
+            item["pickup"] = row.get("Abholung", "").strip() or "Selbstabholung"
+        required = [item.get("type"), item.get("name"), item.get("category"), item.get("condition"), item.get("stadtteil"), item.get("contactEmail")]
+        if not all(required):
+            continue
+        if listing_type == "sell" and item.get("priceEur") is None:
+            continue
+        if listing_type == "swap" and not item.get("swapWanted"):
+            continue
+        if listing_type == "free" and not item.get("pickup"):
+            continue
         items.append(item)
     
     with open("marktplatz_data.json", "w", encoding="utf-8") as f:
