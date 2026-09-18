@@ -1,16 +1,1 @@
-[
-  {
-    "id": "local-fallback-1",
-    "type": "sell",
-    "emoji": "👕",
-    "name": "Junge Jacke, Gr. 5J, Jacadi",
-    "category": "婴幼儿服装",
-    "condition": "Wie neu",
-    "priceEur": 25,
-    "stadtteil": "Oberkassel",
-    "contactEmail": "markt-offline@example.com",
-    "description": "Lokaler Fallback, falls die Markt-API nicht erreichbar ist.",
-    "createdAt": "2026-09-17T00:00:00.000Z",
-    "status": "active"
-  }
-]
+[]
