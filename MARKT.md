@@ -39,5 +39,15 @@ This Netlify app (this repo) loads Markt from `GET /markt` and publishes with `P
 
 See `data/markt_schema_v1.json` for full field definitions.
 
+The Netlify client **only POSTs locked fields**. It does not send `kind` / `title` / `lang` / `contact` and does not use `x-app-secret`.
+
+Checked against the live worker while this client shipped:
+
+- `GET /markt` is live and returns `{ "posts": [] }` (empty list is success, not fallback).
+- Browser `POST /markt` (request includes `Origin`) currently returns **401** `{ "error": "unauthorized" }`. The publish panel shows that error in place; it does not open Google Forms.
+- A POST without `Origin` may still **400** with old `missing_fields` (`kind`, `title`, `category`, `condition`, `lang`, `contact`). That is the previous worker contract.
+
+A parallel mamapedia-chat change is aligning `/markt` to this same locked schema. Until that lands, keep this client as-is: validate locally, POST locked JSON, surface 400/401 clearly.
+
 ## Netlify deploy
-Push / merge to `main` on `TiNa18922/mamapedia`. The site at https://mamapedia.netlify.app is served from this GitHub repo (no extra Netlify build command; `index.html` is the app).
+Merge this branch to `main` on `TiNa18922/mamapedia`. https://mamapedia.netlify.app is a static site from this repo (`index.html` at the root; no build command). After merge, Netlify should publish automatically. There is no Netlify token in this environment, so the PR cannot trigger the production deploy itself.
