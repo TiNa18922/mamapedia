@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "locked": "2026-09-17",
+  "product": {
+    "name": "MamaPedia Markt",
+    "surfaces": ["netlify-mamapedia", "mamapedia-chat"],
+    "homepage": "encyclopedia chat remains primary; Markt is secondary nav",
+    "payments": false,
+    "dealVia": ["email", "whatsapp"],
+    "qualityRule": "incomplete listings must not be stored or shown"
+  },
+  "types": ["sell", "swap", "free"],
+  "required": {
+    "all": ["type", "name", "category", "condition", "stadtteil", "contactEmail"],
+    "sell": ["priceEur"],
+    "swap": ["swapWanted"],
+    "free": ["pickup"]
+  },
+  "optional": ["description", "whatsapp", "photoUrl", "emoji"],
+  "fields": {
+    "id": {"type": "string", "notes": "server-generated"},
+    "type": {"enum": ["sell", "swap", "free"]},
+    "name": {"type": "string", "zh": "物品名称", "de": "Artikelname"},
+    "category": {
+      "type": "string",
+      "examples": ["婴儿车 & 出行", "婴儿床 & 家具", "婴幼儿服装", "玩具 & 游戏", "儿童书籍 & 教材", "喂养用品", "学校用品", "运动用品", "其他"]
+    },
+    "condition": {"enum": ["Neu", "Wie neu", "Sehr gut", "Gut", "Akzeptabel"]},
+    "priceEur": {"type": "number", "when": "sell"},
+    "swapWanted": {"type": "string", "when": "swap", "zh": "想换什么"},
+    "pickup": {"enum": ["Selbstabholung", "Lieferung möglich", "Beides möglich"], "when": "free"},
+    "description": {"type": "string"},
+    "stadtteil": {
+      "type": "string",
+      "examples": ["Stadtmitte", "Pempelfort", "Derendorf", "Oberkassel", "Heerdt/Lörick", "Flingern", "Bilk/Friedrichstadt", "Düsseltal", "Gerresheim", "其他"]
+    },
+    "contactEmail": {"type": "string", "format": "email"},
+    "whatsapp": {"type": "string"},
+    "photoUrl": {"type": "string"},
+    "emoji": {"type": "string"},
+    "createdAt": {"type": "string", "format": "iso8601"},
+    "status": {"enum": ["active", "sold", "removed"], "default": "active"}
+  },
+  "listCardShows": ["type", "name", "category", "condition", "stadtteil", "priceEur|swapWanted|pickup", "emoji"],
+  "contactReveal": "show email (and WhatsApp if present) on detail or after explicit interest action; do not require VIP",
+  "i18n": ["zh", "de", "en"]
+}

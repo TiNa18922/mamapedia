@@ -82,7 +82,7 @@ body{background:#8a9aaa;
 .home-ai-wrap .ai-msgs{flex:1;min-height:110px;max-height:180px;}
 .home-ai-wrap .ai-input-row{border-top:1px solid var(--border);padding-bottom:12px;}
 .home-ai-note{font-size:11px;color:var(--t3);padding:0 14px 10px;line-height:1.4;}
-#bnav-market,#bnav-community,.bnav-center-wrap.bnav-legacy{display:none!important;}
+#bnav-community,.bnav-center-wrap.bnav-legacy{display:none!important;}
 .sec-ttl{font-size:17px;font-weight:800;color:var(--t1);letter-spacing:-.3px;
   padding:22px 20px 14px;}
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;padding:0 20px;}
@@ -445,6 +445,13 @@ body{background:#8a9aaa;
 .mkt-item-desc{font-size:11px;color:var(--t2);line-height:1.4;margin-bottom:5px;}
 .mkt-item-price{font-size:15px;font-weight:900;color:var(--action);}
 .mkt-item-tag{font-size:10px;color:var(--t3);margin-left:6px;}
+.mkt-offline-note{display:none;background:#FFF3CD;color:#856404;border-radius:12px;padding:10px 12px;margin-bottom:12px;font-size:12px;line-height:1.45;}
+.mkt-item2-meta{font-size:11px;color:var(--t3);margin-bottom:4px;}
+#mkt-detail-overlay{display:none;position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:210;align-items:flex-end;}
+#mkt-detail-panel{background:var(--bg);border-radius:24px 24px 0 0;width:100%;max-height:88%;overflow-y:auto;padding:0 20px 28px;}
+.mkt-detail-row{font-size:13px;color:var(--t2);margin:4px 0;line-height:1.45;}
+.mkt-detail-contact{margin-top:12px;padding:12px;background:var(--surface);border:1.5px solid var(--border);border-radius:14px;font-size:13px;line-height:1.5;}
+#pub-error{display:none;background:#FDECEC;color:#8A2A2A;border-radius:12px;padding:12px;margin-top:12px;font-size:12px;line-height:1.45;}
 
 /* ── COMMUNITY STYLES ── */
 .com-hero{
@@ -609,7 +616,7 @@ body{background:#8a9aaa;
 <span class="bnav-ico">📚</span>
 <span class="bnav-lbl" id="bnav-lbl-guide">Guide</span>
 </button>
-<button class="bnav-btn" id="bnav-market" style="display:none" onclick="switchTab('market',this)" aria-hidden="true">
+<button class="bnav-btn" id="bnav-market" onclick="switchTab('market',this)">
 <span class="bnav-ico">🛍️</span>
 <span class="bnav-lbl" id="bnav-lbl-markt">Markt</span>
 </button>
@@ -691,9 +698,10 @@ body{background:#8a9aaa;
 </div>
 <!-- Publish Button -->
 <button class="mkt-publish-btn" id="mkt-publish-btn" onclick="publishListing()">
-      ✅ Inserat veröffentlichen (VIP)
+      ✅ Inserat veröffentlichen
     </button>
 <!-- Filter chips -->
+<div id="mkt-offline-note" class="mkt-offline-note"></div>
 <div id="mkt-filter-chips" style="display:flex;gap:8px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;">
 <button class="mkt-chip mkt-chip-on" onclick="mktFilter('all',this)">Alle</button>
 <button class="mkt-chip" onclick="mktFilter('sell',this)">💰 Verkaufen</button>
@@ -704,7 +712,7 @@ body{background:#8a9aaa;
 <div class="mkt-listings" id="mkt-listings-wrap">
 <div class="mkt-list-title" id="mkt-list-lbl">🔥 Neueste Angebote</div>
 <div id="mkt-dynamic-listings">
-<!-- Dynamic listings loaded from marktplatz_data.json -->
+<!-- Dynamic listings loaded from mamapedia-chat /markt (fallback: marktplatz_data.json) -->
 <div style="text-align:center;padding:30px;color:var(--t3);">
 <div style="font-size:32px;margin-bottom:8px;">🔄</div>
 <div style="font-size:13px;">Angebote werden geladen...</div>
@@ -768,15 +776,15 @@ body{background:#8a9aaa;
 <label class="pub-label" id="pub-l-cat">Kategorie *</label>
 <select class="pub-input" id="pub-cat">
 <option value="">请选择</option>
-<option>🚗 婴儿车 &amp; 出行</option>
-<option>🛏️ 婴儿床 &amp; 家具</option>
-<option>👕 婴幼儿服装</option>
-<option>🧸 玩具 &amp; 游戏</option>
-<option>📚 儿童书籍 &amp; 教材</option>
-<option>🍼 喂养用品</option>
-<option>🎒 学校用品</option>
-<option>🏊 运动用品</option>
-<option>🎨 其他</option>
+<option value="婴儿车 &amp; 出行">🚗 婴儿车 &amp; 出行</option>
+<option value="婴儿床 &amp; 家具">🛏️ 婴儿床 &amp; 家具</option>
+<option value="婴幼儿服装">👕 婴幼儿服装</option>
+<option value="玩具 &amp; 游戏">🧸 玩具 &amp; 游戏</option>
+<option value="儿童书籍 &amp; 教材">📚 儿童书籍 &amp; 教材</option>
+<option value="喂养用品">🍼 喂养用品</option>
+<option value="学校用品">🎒 学校用品</option>
+<option value="运动用品">🏊 运动用品</option>
+<option value="其他">🎨 其他</option>
 </select>
 </div>
 <div class="pub-field">
@@ -792,7 +800,7 @@ body{background:#8a9aaa;
 <!-- 出售专用：价格 -->
 <div class="pub-field" id="pub-field-price">
 <label class="pub-label" id="pub-l-price">Preis (€) *</label>
-<input class="pub-input" id="pub-price" placeholder="z.B. 25" type="number"/>
+<input class="pub-input" id="pub-price" placeholder="z.B. 25" type="number" min="0" step="0.01"/>
 </div>
 <!-- 交换专用：想换什么 -->
 <div class="pub-field" id="pub-field-swap" style="display:none;">
@@ -867,13 +875,24 @@ body{background:#8a9aaa;
 </div>
 </div>
 <div id="pub-note" style="background:#FFF3CD;border-radius:12px;padding:12px;margin-top:12px;font-size:12px;color:#856404;">
-        📧 Nach dem Klick wirst du zum Google Formular weitergeleitet.
+        📧 Interessierte Mamas schreiben per E-Mail (WhatsApp optional). Kein VIP, keine Zahlung.
       </div>
+<div id="pub-error"></div>
 <div style="display:flex;gap:10px;margin-top:16px;">
 <button class="pub-back-btn" onclick="pubBack(4)">← 返回</button>
 <button id="pub-submit-btn" onclick="pubSubmit()" style="flex:2;padding:14px;background:linear-gradient(135deg,var(--action-lt),var(--action));color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;">✅ Inserat veröffentlichen</button>
 </div>
 </div>
+</div>
+</div>
+<div id="mkt-detail-overlay" onclick="if(event.target===this)mktCloseDetail()">
+<div id="mkt-detail-panel">
+<div style="display:flex;justify-content:center;padding:12px 0 4px;"><div style="width:40px;height:4px;background:var(--border);border-radius:99px;"></div></div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+<div id="mkt-detail-type" class="mkt-type-tag sell"></div>
+<button type="button" onclick="mktCloseDetail()" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--t2);">✕</button>
+</div>
+<div id="mkt-detail-body"></div>
 </div>
 </div>
 <!-- ══════════════════════════════════════
@@ -4686,22 +4705,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // MARKETPLACE PUBLISH PANEL v2
 // ══════════════════════════════════════
 
-// Google Form URL — replace with your actual form URL after creating it
-var GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ-RxXhfszpqwLywlPrG6niS20Z83z3Flv0SYkfeVmnjCv4w/viewform';
-// Google Form field entry IDs — replace after creating form
-var GF = {
-  type:     'entry.1780845744',
-  name:     'entry.1030023306',
-  category: 'entry.1159693407',
-  condition:'entry.2051700145',
-  price:    'entry.227266182',
-  swap:     'entry.1544692769',
-  pickup:   'entry.1244202384',
-  desc:     'entry.1787902544',
-  district: 'entry.256143030',
-  email:    'entry.2059531285',
-  whatsapp: 'entry.80810985'
-};
+var MARKT_API_BASE = 'https://mamapedia-chat.golightly2004.workers.dev';
+var MARKT_API_URL = MARKT_API_BASE + '/markt';
+var MARKT_FALLBACK_URL = 'marktplatz_data.json';
+var MARKT_TYPES = ['sell','swap','free'];
+var MARKT_CONDITIONS = ['Neu','Wie neu','Sehr gut','Gut','Akzeptabel'];
+var MARKT_PICKUPS = ['Selbstabholung','Lieferung möglich','Beides möglich'];
 
 var PUB = {
   open: false,
@@ -4723,7 +4732,7 @@ var PUB_LABELS = {
     lDesc:'商品描述（可选）', lDist:'所在区域 *',
     lEmail:'联系邮箱 *', lWa:'WhatsApp（可选）',
     emailHint:'感兴趣的妈妈会通过邮箱联系你',
-    note:'📧 点击发布后将跳转到Google表单完成提交，请用同一邮箱验证。',
+    note:'📧 感兴趣的妈妈会通过邮箱联系你。无需 VIP，无需付款。',
     heroTitle:'二手市场', heroSub:'出售 · 交换 · 免费转让',
     listLabel:'🔥 最新发布', submitBtn:'✅ 发布商品'
   },
@@ -4737,7 +4746,7 @@ var PUB_LABELS = {
     lDesc:'Description (optional)', lDist:'District *',
     lEmail:'Contact email *', lWa:'WhatsApp (optional)',
     emailHint:'Interested mamas will contact you by email',
-    note:'📧 After clicking publish, you will be redirected to Google Form to complete submission.',
+    note:'📧 Interested mamas will email you. No VIP, no payments.',
     heroTitle:'Second-hand Market', heroSub:'Sell · Swap · Free',
     listLabel:'🔥 Latest listings', submitBtn:'✅ Publish listing'
   },
@@ -4751,7 +4760,7 @@ var PUB_LABELS = {
     lDesc:'Beschreibung (optional)', lDist:'Stadtteil *',
     lEmail:'Kontakt-E-Mail *', lWa:'WhatsApp (optional)',
     emailHint:'Interessierte Mamas kontaktieren dich per E-Mail',
-    note:'📧 Nach dem Klick auf Veröffentlichen wirst du zum Google Formular weitergeleitet.',
+    note:'📧 Interessierte Mamas schreiben per E-Mail. Kein VIP, keine Zahlung.',
     heroTitle:'Gebrauchtmarkt', heroSub:'Verkaufen · Tauschen · Verschenken',
     listLabel:'🔥 Neueste Angebote', submitBtn:'✅ Inserat veröffentlichen'
   },
@@ -4765,7 +4774,7 @@ var PUB_LABELS = {
     lDesc:'Descripción (opcional)', lDist:'Barrio *',
     lEmail:'Email de contacto *', lWa:'WhatsApp (opcional)',
     emailHint:'Las mamás interesadas te contactarán por email',
-    note:'📧 Al publicar serás redirigida al formulario de Google para completar el envío.',
+    note:'📧 Las mamás interesadas te escribirán por email. Sin VIP, sin pagos.',
     heroTitle:'Mercado de Segunda Mano', heroSub:'Vender · Intercambiar · Gratis',
     listLabel:'🔥 Últimas ofertas', submitBtn:'✅ Publicar anuncio'
   }
@@ -4816,8 +4825,9 @@ function pubApplyLabels() {
 }
 
 window.openPublishPanel = function() {
-  if (!checkUsageLimit('mkt')) return;
   pubApplyLabels();
+  var err = document.getElementById('pub-error');
+  if (err) { err.style.display = 'none'; err.textContent = ''; }
   PUB.step = 1;
   PUB.type = '';
   PUB.cond = '';
@@ -4890,7 +4900,10 @@ window.pubNext = function(step) {
     if (!name) { showToast('请填写商品名称'); return; }
     if (!cat) { showToast('请选择分类'); return; }
     if (!PUB.cond) { showToast('请选择成色'); return; }
-    if (PUB.type === 'sell' && !document.getElementById('pub-price').value) { showToast('请填写价格'); return; }
+    if (PUB.type === 'sell') {
+      var priceVal = Number(document.getElementById('pub-price').value);
+      if (document.getElementById('pub-price').value === '' || !(isFinite(priceVal) && priceVal >= 0)) { showToast('请填写价格'); return; }
+    }
     if (PUB.type === 'swap' && !document.getElementById('pub-swap').value.trim()) { showToast('请填写想换什么'); return; }
     if (PUB.type === 'free' && !PUB.pickup) { showToast('请选择取件方式'); return; }
     pubShowStep(3);
@@ -4936,29 +4949,144 @@ function pubBuildPreview() {
   document.getElementById('pub-prev-contact').textContent = contact;
 }
 
+function mktEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function mktLang() {
+  return (typeof aiLang !== 'undefined' && aiLang) ? aiLang : 'de';
+}
+
+function mktEmojiForCategory(cat) {
+  var map = {
+    '婴儿车 & 出行':'🚗',
+    '婴儿床 & 家具':'🛏️',
+    '婴幼儿服装':'👕',
+    '玩具 & 游戏':'🧸',
+    '儿童书籍 & 教材':'📚',
+    '喂养用品':'🍼',
+    '学校用品':'🎒',
+    '运动用品':'🏊',
+    '其他':'🎨'
+  };
+  return map[cat] || '📦';
+}
+
+function mktEmailOk(v) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v || '').trim());
+}
+
+function mktBuildPayload() {
+  var payload = {
+    type: PUB.type,
+    name: (document.getElementById('pub-name').value || '').trim(),
+    category: (document.getElementById('pub-cat').value || '').trim(),
+    condition: PUB.cond,
+    stadtteil: (document.getElementById('pub-dist').value || '').trim(),
+    contactEmail: (document.getElementById('pub-email').value || '').trim()
+  };
+  if (PUB.type === 'sell') {
+    var n = Number(document.getElementById('pub-price').value);
+    payload.priceEur = n;
+  } else if (PUB.type === 'swap') {
+    payload.swapWanted = (document.getElementById('pub-swap').value || '').trim();
+  } else if (PUB.type === 'free') {
+    payload.pickup = PUB.pickup;
+  }
+  var desc = (document.getElementById('pub-desc').value || '').trim();
+  if (desc) payload.description = desc;
+  var wa = (document.getElementById('pub-wa').value || '').trim();
+  if (wa) payload.whatsapp = wa;
+  payload.emoji = mktEmojiForCategory(payload.category);
+  return payload;
+}
+
+function mktValidatePayload(p) {
+  var errors = [];
+  if (!p || MARKT_TYPES.indexOf(p.type) < 0) errors.push('type');
+  if (!p.name) errors.push('name');
+  if (!p.category) errors.push('category');
+  if (!p.condition || MARKT_CONDITIONS.indexOf(p.condition) < 0) errors.push('condition');
+  if (!p.stadtteil) errors.push('stadtteil');
+  if (!mktEmailOk(p.contactEmail)) errors.push('contactEmail');
+  if (p.type === 'sell' && !(typeof p.priceEur === 'number' && isFinite(p.priceEur) && p.priceEur >= 0)) errors.push('priceEur');
+  if (p.type === 'swap' && !p.swapWanted) errors.push('swapWanted');
+  if (p.type === 'free' && MARKT_PICKUPS.indexOf(p.pickup) < 0) errors.push('pickup');
+  return errors;
+}
+
+function mktShowPubError(msg) {
+  var el = document.getElementById('pub-error');
+  if (!el) { showToast(msg); return; }
+  el.style.display = 'block';
+  el.textContent = msg;
+}
+
+function mktHidePubError() {
+  var el = document.getElementById('pub-error');
+  if (!el) return;
+  el.style.display = 'none';
+  el.textContent = '';
+}
+
+function mktFormatServerError(status, data) {
+  var l = mktLang();
+  var prefix = status === 400
+    ? (l==='zh'?'发布失败（400）：':l==='en'?'Publish failed (400): ':l==='es'?'Error al publicar (400): ':'Veröffentlichen fehlgeschlagen (400): ')
+    : (l==='zh'?'发布失败（'+status+'）：':l==='en'?'Publish failed ('+status+'): ':l==='es'?'Error al publicar ('+status+'): ':'Veröffentlichen fehlgeschlagen ('+status+'): ');
+  if (!data) return prefix + (l==='zh'?'服务器错误':'Serverfehler');
+  var parts = [];
+  if (data.error) parts.push(String(data.error));
+  if (data.message && data.message !== data.error) parts.push(String(data.message));
+  if (Array.isArray(data.fields) && data.fields.length) parts.push((l==='zh'?'缺少/无效字段：':'Felder: ') + data.fields.join(', '));
+  return prefix + (parts.join(' — ') || JSON.stringify(data));
+}
+
 window.pubSubmit = function() {
-  var params = {};
-  var typeLabel = {sell:'出售', swap:'交换', free:'免费转让'};
-  params[GF.type] = typeLabel[PUB.type] || '';
-  params[GF.name] = document.getElementById('pub-name').value;
-  params[GF.category] = document.getElementById('pub-cat').value;
-  params[GF.condition] = PUB.cond;
-  params[GF.price] = PUB.type === 'sell' ? document.getElementById('pub-price').value : '';
-  params[GF.swap] = PUB.type === 'swap' ? document.getElementById('pub-swap').value : '';
-  params[GF.pickup] = PUB.type === 'free' ? PUB.pickup : '';
-  params[GF.desc] = document.getElementById('pub-desc').value;
-  params[GF.district] = document.getElementById('pub-dist').value;
-  params[GF.email] = document.getElementById('pub-email').value;
-  params[GF.whatsapp] = document.getElementById('pub-wa').value;
-
-  var qs = Object.keys(params).map(function(k) {
-    return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
-  }).join('&');
-
-  var url = GOOGLE_FORM_URL + '?' + qs;
-  window.open(url, '_blank');
-  closePublishPanel();
-  showToast('✅ 正在跳转到表单完成提交...');
+  var payload = mktBuildPayload();
+  var errors = mktValidatePayload(payload);
+  if (errors.length) {
+    mktShowPubError((mktLang()==='zh'?'请先补全必填项：':'Bitte Pflichtfelder ergänzen: ') + errors.join(', '));
+    showToast((mktLang()==='zh'?'信息不完整，无法发布':'Unvollständig — nicht veröffentlicht'));
+    return;
+  }
+  mktHidePubError();
+  var btn = document.getElementById('pub-submit-btn');
+  var prev = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = mktLang()==='zh'?'发布中…':(mktLang()==='en'?'Publishing…':'Wird veröffentlicht…'); }
+  fetch(MARKT_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).then(function(r) {
+    return r.json().catch(function(){ return {}; }).then(function(data) {
+      return { ok: r.ok, status: r.status, data: data };
+    });
+  }).then(function(res) {
+    if (!res.ok) {
+      mktShowPubError(mktFormatServerError(res.status, res.data));
+      return;
+    }
+    closePublishPanel();
+    var created = res.data && (res.data.post || res.data.listing || res.data.item || res.data);
+    if (created && created.name) {
+      var norm = mktNormalizeListing(created);
+      if (norm && mktIsComplete(norm)) {
+        mktAllListings = [norm].concat(mktAllListings.filter(function(x){ return x.id !== norm.id; }));
+        mktRenderListings(mktFiltered());
+      } else {
+        mktLoadListings();
+      }
+    } else {
+      mktLoadListings();
+    }
+    showToast(mktLang()==='zh'?'✅ 已发布':(mktLang()==='en'?'✅ Published':'✅ Inserat veröffentlicht'));
+  }).catch(function() {
+    mktShowPubError(mktLang()==='zh'?'无法连接到 Markt-API':'Markt-API nicht erreichbar');
+  }).then(function() {
+    if (btn) { btn.disabled = false; btn.textContent = prev || pubL('submitBtn'); }
+  });
 };
 
 window.mktFilter = function(type, btn) {
@@ -5249,107 +5377,274 @@ document.head.appendChild(darkStyle);
 
 
 // ══════════════════════════════════════
-// MARKTPLATZ DYNAMIC LOADER
+// MARKTPLATZ DYNAMIC LOADER (shared schema /markt)
 // ══════════════════════════════════════
 
-var MARKT_DATA_URL = 'https://raw.githubusercontent.com/TiNa18922/mamapedia/main/marktplatz_data.json';
 var mktAllListings = [];
+var mktActiveFilter = 'all';
+var mktOffline = false;
 
+function mktFiltered() {
+  return mktActiveFilter === 'all' ? mktAllListings : mktAllListings.filter(function(item) { return item.type === mktActiveFilter; });
+}
 
-function mktContact(el) {
-  var label = el.getAttribute('data-label') || 'Kontakt';
-  showToast(label);
+function mktExtractList(data) {
+  if (Array.isArray(data)) return data;
+  if (!data || typeof data !== 'object') return [];
+  if (Array.isArray(data.posts)) return data.posts;
+  if (Array.isArray(data.listings)) return data.listings;
+  if (Array.isArray(data.items)) return data.items;
+  if (Array.isArray(data.data)) return data.data;
+  return [];
+}
+
+function mktMapType(v) {
+  var s = String(v || '').toLowerCase();
+  if (s === 'sell' || s === 'sale' || s === 'verkaufen' || s === '出售') return 'sell';
+  if (s === 'swap' || s === 'tausch' || s === 'tauschen' || s === '交换') return 'swap';
+  if (s === 'free' || s === 'gratis' || s === 'verschenken' || s === '免费') return 'free';
+  return '';
+}
+
+function mktMapCondition(v) {
+  var raw = String(v || '').trim();
+  if (MARKT_CONDITIONS.indexOf(raw) >= 0) return raw;
+  var s = raw.toLowerCase().replace(/\s+/g, '_');
+  var map = { neu:'Neu', new:'Neu', wie_neu:'Wie neu', sehr_gut:'Sehr gut', gut:'Gut', akzeptabel:'Akzeptabel', gebraucht:'Akzeptabel' };
+  return map[s] || raw;
+}
+
+function mktMapPickup(v) {
+  var raw = String(v || '').trim();
+  if (MARKT_PICKUPS.indexOf(raw) >= 0) return raw;
+  var s = raw.toLowerCase();
+  if (s.indexOf('beides') >= 0) return 'Beides möglich';
+  if (s.indexOf('liefer') >= 0) return 'Lieferung möglich';
+  if (s.indexOf('selbst') >= 0 || s.indexOf('abhol') >= 0) return 'Selbstabholung';
+  return raw;
+}
+
+function mktNum(v) {
+  if (typeof v === 'number' && isFinite(v)) return v;
+  if (v == null || v === '') return null;
+  var n = Number(String(v).replace(/[^\d.,-]/g,'').replace(',', '.'));
+  return isFinite(n) ? n : null;
+}
+
+function mktNormalizeListing(raw) {
+  if (!raw || typeof raw !== 'object') return null;
+  var type = mktMapType(raw.type || raw.kind);
+  var item = {
+    id: raw.id || '',
+    type: type,
+    name: String(raw.name || raw.title || '').trim(),
+    category: String(raw.category || raw.kategorie || '').trim(),
+    condition: mktMapCondition(raw.condition || raw.zustand),
+    stadtteil: String(raw.stadtteil || '').trim(),
+    contactEmail: String(raw.contactEmail || raw.email || (typeof raw.contact === 'string' ? raw.contact : '') || '').trim(),
+    whatsapp: String(raw.whatsapp || raw.phone || '').trim(),
+    description: String(raw.description || raw.desc || '').trim(),
+    photoUrl: String(raw.photoUrl || '').trim(),
+    emoji: String(raw.emoji || '').trim(),
+    createdAt: raw.createdAt || raw.time || '',
+    status: raw.status || 'active'
+  };
+  if (type === 'sell') {
+    var price = mktNum(raw.priceEur != null ? raw.priceEur : raw.preis);
+    if (price != null) item.priceEur = price;
+  } else if (type === 'swap') {
+    item.swapWanted = String(raw.swapWanted || raw.want || raw.tausch || '').trim();
+  } else if (type === 'free') {
+    item.pickup = mktMapPickup(raw.pickup || raw.abholung);
+  }
+  if (!item.emoji) item.emoji = mktEmojiForCategory(item.category);
+  return item;
+}
+
+function mktIsComplete(item) {
+  if (!item) return false;
+  if (item.status && item.status !== 'active') return false;
+  if (MARKT_TYPES.indexOf(item.type) < 0) return false;
+  if (!item.name || !item.category || !item.condition || !item.stadtteil) return false;
+  if (item.type === 'sell') return item.priceEur != null && isFinite(item.priceEur) && item.priceEur >= 0;
+  if (item.type === 'swap') return !!item.swapWanted;
+  if (item.type === 'free') return MARKT_PICKUPS.indexOf(item.pickup) >= 0;
+  return false;
+}
+
+function mktDealLine(item, l) {
+  if (item.type === 'sell') return item.priceEur != null ? ('€' + item.priceEur) : '';
+  if (item.type === 'swap') return (l==='zh'?'想换：':l==='en'?'Want: ':l==='es'?'Busco: ':'Suche: ') + (item.swapWanted || '');
+  return item.pickup || (l==='zh'?'免费转让':l==='en'?'Free':'Kostenlos');
+}
+
+function mktRelativeTime(iso) {
+  if (!iso) return '';
+  var d = new Date(iso);
+  if (isNaN(d.getTime())) return String(iso);
+  var days = Math.round((Date.now() - d.getTime()) / 86400000);
+  var l = mktLang();
+  if (days <= 0) return l==='zh'?'刚刚':l==='en'?'new':'neu';
+  if (days === 1) return l==='zh'?'昨天':l==='en'?'yesterday':'gestern';
+  if (days < 7) return l==='zh'?(days+'天前'):l==='en'?(days+'d ago'):('vor '+days+' Tagen');
+  return d.toISOString().slice(0,10);
+}
+
+function mktSetOfflineNote(on) {
+  mktOffline = !!on;
+  var el = document.getElementById('mkt-offline-note');
+  if (!el) return;
+  if (!on) { el.style.display = 'none'; el.textContent = ''; return; }
+  var l = mktLang();
+  el.textContent = l==='zh'
+    ? '暂时显示本地列表：Markt-API 现在不可用。'
+    : l==='en'
+    ? 'Showing saved listings — Markt API is temporarily unavailable.'
+    : l==='es'
+    ? 'Mostrando anuncios locales: la API de Markt no está disponible.'
+    : 'Lokale Angebote — Markt-API gerade nicht erreichbar.';
+  el.style.display = 'block';
 }
 
 function mktRenderListings(listings) {
   var container = document.getElementById('mkt-dynamic-listings');
   if (!container) return;
-
-  var l = typeof aiLang !== 'undefined' ? aiLang : 'de';
+  var l = mktLang();
   var typeLabels = {
-    de: {sell:'💰 Verkaufen', swap:'🔄 Tauschen', free:'🎁 Gratis', search:'🔍 Suchen'},
-    en: {sell:'💰 Sell', swap:'🔄 Swap', free:'🎁 Free', search:'🔍 Looking for'},
-    zh: {sell:'💰 出售', swap:'🔄 交换', free:'🎁 免费', search:'🔍 求购'},
-    es: {sell:'💰 Vender', swap:'🔄 Intercambiar', free:'🎁 Gratis', search:'🔍 Buscar'}
-  };
-  var contactLabels = {
-    de: {sell:'💬 Verkäufer kontaktieren', swap:'💬 Tausch anfragen', free:'💬 Abholen anfragen', search:'💬 Anbieter kontaktieren'},
-    en: {sell:'💬 Contact seller', swap:'💬 Request swap', free:'💬 Request pickup', search:'💬 Contact requester'},
-    zh: {sell:'💬 联系卖家', swap:'💬 联系交换', free:'💬 联系领取', search:'💬 联系求购者'},
-    es: {sell:'💬 Contactar vendedor', swap:'💬 Solicitar intercambio', free:'💬 Solicitar recogida', search:'💬 Contactar solicitante'}
+    de: {sell:'💰 Verkaufen', swap:'🔄 Tauschen', free:'🎁 Gratis'},
+    en: {sell:'💰 Sell', swap:'🔄 Swap', free:'🎁 Free'},
+    zh: {sell:'💰 出售', swap:'🔄 交换', free:'🎁 免费'},
+    es: {sell:'💰 Vender', swap:'🔄 Intercambiar', free:'🎁 Gratis'}
   };
   var tl = typeLabels[l] || typeLabels.de;
-  var cl = contactLabels[l] || contactLabels.de;
-
   if (!listings || listings.length === 0) {
-    container.innerHTML = '<div style="text-align:center;padding:30px;color:var(--t3);"><div style="font-size:32px;margin-bottom:8px;">🛒</div><div style="font-size:13px;">' + (l==='zh'?'暂无商品':'Noch keine Angebote') + '</div></div>';
+    var empty = l==='zh'?'暂无完整商品':l==='en'?'No complete listings yet':'Noch keine vollständigen Angebote';
+    container.innerHTML = '<div style="text-align:center;padding:30px;color:var(--t3);"><div style="font-size:32px;margin-bottom:8px;">🛒</div><div style="font-size:13px;">' + empty + '</div></div>';
     return;
   }
-
-  container.innerHTML = listings.map(function(item) {
+  container.innerHTML = listings.map(function(item, idx) {
     var typeClass = item.type || 'sell';
     var typeLabel = tl[typeClass] || tl.sell;
-    var contactLabel = cl[typeClass] || cl.sell;
-    var priceHtml = typeClass === 'sell' ?
-      '<div class="mkt-item2-price">' + (item.preis || '') + '</div>' :
-      typeClass === 'swap' ?
-      '<div class="mkt-item2-price" style="color:var(--t2);font-size:12px;">' + (l==='zh'?'物物交换':l==='en'?'Item swap':l==='es'?'Intercambio':'Tausch') + '</div>' :
-      '<div class="mkt-item2-price" style="color:#1D9E75;">' + (l==='zh'?'免费转让':l==='en'?'Free':l==='es'?'Gratis':'Kostenlos') + '</div>';
-
-    return '<div class="mkt-item2" data-type="' + typeClass + '" onclick="mktContact(this)" data-label="' + contactLabel + '">' +
-      '<div class="mkt-item2-img">' + (item.emoji || '🎨') + '</div>' +
+    var deal = mktDealLine(item, l);
+    var idAttr = mktEsc(item.id || '');
+    var time = mktRelativeTime(item.createdAt);
+    return '<div class="mkt-item2" data-type="' + mktEsc(typeClass) + '" data-id="' + idAttr + '" onclick="mktOpenFiltered(' + idx + ')">' +
+      '<div class="mkt-item2-img">' + mktEsc(item.emoji || '📦') + '</div>' +
       '<div class="mkt-item2-body">' +
-        '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">' +
-          '<span class="mkt-type-tag ' + typeClass + '">' + typeLabel + '</span>' +
-          '<span class="mkt-item2-time">' + (item.time || 'neu') + '</span>' +
+        '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;flex-wrap:wrap;">' +
+          '<span class="mkt-type-tag ' + mktEsc(typeClass) + '">' + typeLabel + '</span>' +
+          (time ? '<span class="mkt-item2-time">' + mktEsc(time) + '</span>' : '') +
         '</div>' +
-        '<div class="mkt-item2-name">' + (item.name || '') + '</div>' +
-        '<div class="mkt-item2-desc">' + (item.zustand || '') + (item.stadtteil ? ' · ' + item.stadtteil : '') + '</div>' +
-        priceHtml +
+        '<div class="mkt-item2-name">' + mktEsc(item.name) + '</div>' +
+        '<div class="mkt-item2-meta">' + mktEsc(item.category) + '</div>' +
+        '<div class="mkt-item2-desc">' + mktEsc(item.condition) + (item.stadtteil ? ' · ' + mktEsc(item.stadtteil) : '') + '</div>' +
+        '<div class="mkt-item2-price">' + mktEsc(deal) + '</div>' +
       '</div>' +
     '</div>';
   }).join('');
 }
 
+function mktCloseDetail() {
+  var ov = document.getElementById('mkt-detail-overlay');
+  if (ov) ov.style.display = 'none';
+}
+
+function mktPaintDetail(item) {
+  var l = mktLang();
+  var typeLabels = {sell:l==='zh'?'出售':(l==='en'?'Sell':'Verkaufen'), swap:l==='zh'?'交换':(l==='en'?'Swap':'Tauschen'), free:l==='zh'?'免费':(l==='en'?'Free':'Gratis')};
+  var tag = document.getElementById('mkt-detail-type');
+  if (tag) { tag.className = 'mkt-type-tag ' + (item.type||'sell'); tag.textContent = typeLabels[item.type] || ''; }
+  var email = item.contactEmail ? ('<a href="mailto:' + mktEsc(item.contactEmail) + '">' + mktEsc(item.contactEmail) + '</a>') : (l==='zh'?'暂无邮箱':'Keine E-Mail');
+  var wa = item.whatsapp ? ('<div>📱 WhatsApp: ' + mktEsc(item.whatsapp) + '</div>') : '';
+  var body = document.getElementById('mkt-detail-body');
+  if (!body) return;
+  body.innerHTML =
+    '<div style="font-size:28px;margin-bottom:8px;">' + mktEsc(item.emoji || '📦') + '</div>' +
+    '<div style="font-size:18px;font-weight:900;color:var(--t1);margin-bottom:8px;">' + mktEsc(item.name) + '</div>' +
+    '<div class="mkt-detail-row">' + mktEsc(item.category) + '</div>' +
+    '<div class="mkt-detail-row">' + mktEsc(item.condition) + ' · ' + mktEsc(item.stadtteil) + '</div>' +
+    '<div class="mkt-detail-row" style="font-weight:800;color:var(--action);margin:10px 0;">' + mktEsc(mktDealLine(item, l)) + '</div>' +
+    (item.description ? '<div class="mkt-detail-row">' + mktEsc(item.description) + '</div>' : '') +
+    '<div class="mkt-detail-contact"><div style="font-weight:800;margin-bottom:6px;">' + (l==='zh'?'联系方式':'Kontakt') + '</div><div>📧 ' + email + '</div>' + wa + '</div>';
+}
+
+window.mktOpenFiltered = function(idx) {
+  var item = mktFiltered()[idx];
+  if (!item) return;
+  mktOpenDetailItem(item);
+};
+window.mktOpenDetail = function(id) {
+  var item = mktAllListings.filter(function(x){ return String(x.id) === String(id); })[0];
+  if (!item) return;
+  mktOpenDetailItem(item);
+};
+function mktOpenDetailItem(item) {
+  mktPaintDetail(item);
+  var ov = document.getElementById('mkt-detail-overlay');
+  if (ov) ov.style.display = 'flex';
+  if (item.id) {
+    fetch(MARKT_API_URL + '/' + encodeURIComponent(item.id))
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(data) {
+        if (!data) return;
+        var raw = data.post || data.listing || data.item || data;
+        var norm = mktNormalizeListing(raw);
+        if (norm) {
+          if (norm.contactEmail) item.contactEmail = norm.contactEmail;
+          if (norm.whatsapp) item.whatsapp = norm.whatsapp;
+          if (norm.description) item.description = norm.description;
+          mktPaintDetail(item);
+        }
+      })
+      .catch(function(){});
+  }
+}
+
 function mktLoadListings() {
-  fetch(MARKT_DATA_URL + '?t=' + Date.now())
-    .then(function(r) { return r.json(); })
+  var apiUrl = MARKT_API_URL + (MARKT_API_URL.indexOf('?')>=0 ? '&' : '?') + 't=' + Date.now();
+  fetch(apiUrl)
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
     .then(function(data) {
-      // data could be an array directly or wrapped
-      var listings = Array.isArray(data) ? data : (data.listings || []);
+      var listings = mktExtractList(data).map(mktNormalizeListing).filter(mktIsComplete);
       mktAllListings = listings;
-      mktRenderListings(listings);
+      mktSetOfflineNote(false);
+      mktRenderListings(mktFiltered());
     })
     .catch(function(e) {
-      console.log('Could not load marktplatz data:', e);
-      // Show empty state gracefully
-      var container = document.getElementById('mkt-dynamic-listings');
-      if (container) {
-        container.innerHTML = '<div style="text-align:center;padding:30px;color:var(--t3);"><div style="font-size:32px;margin-bottom:8px;">🛒</div><div style="font-size:13px;">Angebote werden geladen...</div></div>';
-      }
+      console.log('Markt API failed, using local fallback:', e);
+      fetch(MARKT_FALLBACK_URL + '?t=' + Date.now())
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var listings = mktExtractList(data).map(mktNormalizeListing).filter(mktIsComplete);
+          mktAllListings = listings;
+          mktSetOfflineNote(true);
+          mktRenderListings(mktFiltered());
+        })
+        .catch(function() {
+          mktAllListings = [];
+          mktSetOfflineNote(true);
+          mktRenderListings([]);
+        });
     });
 }
 
-// Override mktFilter to work with dynamic listings
 window.mktFilter = function(type, btn) {
-  document.querySelectorAll('.mkt-chip').forEach(function(b) { b.classList.remove('mkt-chip-on'); });
-  btn.classList.add('mkt-chip-on');
-  var filtered = type === 'all' ? mktAllListings : mktAllListings.filter(function(item) { return item.type === type; });
-  mktRenderListings(filtered);
+  mktActiveFilter = type || 'all';
+  document.querySelectorAll('#mkt-filter-chips .mkt-chip').forEach(function(b) { b.classList.remove('mkt-chip-on'); });
+  if (btn) btn.classList.add('mkt-chip-on');
+  mktRenderListings(mktFiltered());
 };
 
-// Load on market tab open
 var _mktSwitchTab = window.switchTab;
 window.switchTab = function(tab, btn) {
   _mktSwitchTab(tab, btn);
-  if (tab === 'market') {
-    mktLoadListings();
-  }
+  if (tab === 'market') mktLoadListings();
 };
 
-// Also load on initial page load
 document.addEventListener('DOMContentLoaded', function() {
-  // Pre-load in background
   setTimeout(mktLoadListings, 500);
 });
 
