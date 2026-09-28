@@ -1,0 +1,340 @@
+{
+  "_comment": "Geburtstagsparty catalog for the MamaPedia answer contract. Prices and ages are copied from the cited public pages; missing party fields stay empty and must be treated as unverified. Do not invent numbers.",
+  "subcategory": "Geburtstagsparty",
+  "listings": [
+    {
+      "id": "ginos",
+      "name": "Gino's Kinderland — Kindergeburtstag",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://ginoland.com",
+      "phone": "0211 96610880",
+      "address": "Vogelsanger Weg 49, 40470 Düsseldorf",
+      "indoor": true,
+      "food": false,
+      "closed_sunday": false,
+      "party": {
+        "min_age": 1,
+        "max_age": 18,
+        "price_per_child": 12,
+        "price_complete": true,
+        "price_includes": "entry",
+        "note": {
+          "zh": "入场 12 €/儿童（1–18 岁）。生日桌免费，蛋糕和冷饮可自带，餐食另计。",
+          "de": "Eintritt 12 € pro Kind (1–18 Jahre). Geburtstagstisch kostenlos; Kuchen und Kaltgetränke dürfen mitgebracht werden, Essen extra.",
+          "en": "Admission €12 per child (ages 1–18). Birthday table is free; cake and cold drinks may be brought, food is extra.",
+          "es": "Entrada 12 € por niño (1–18 años). La mesa de cumpleaños es gratis; se puede llevar tarta y bebidas frías, la comida va aparte."
+        }
+      },
+      "source": "https://www.ginoland.com/tickets-preise/ (page checked 2026-09-28)"
+    },
+    {
+      "id": "bobolino",
+      "name": "Bobolino Kinderwelt — Kindergeburtstag",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://bobolino-kinderwelt.de",
+      "phone": "0211 24459628",
+      "address": "Bochumerstr. 89, 40472 Düsseldorf",
+      "indoor": true,
+      "food": true,
+      "closed_sunday": false,
+      "party": {
+        "min_guests": 6,
+        "price_per_child": 16.5,
+        "price_complete": true,
+        "price_includes": "entry_and_meal",
+        "note": {
+          "zh": "16.50 €/儿童，含装饰桌、简餐、0.3 L 饮料和冰沙。至少 6 名儿童。周末可订 10:00–14:00 或 14:30–18:30。适龄未公布。",
+          "de": "16,50 € pro Kind inkl. dekoriertem Tisch, Menü, 0,3 l Getränk und Slusheis. Ab 6 Kindern. Wochenende 10–14 oder 14:30–18:30 Uhr. Alter nicht angegeben.",
+          "en": "€16.50 per child including decorated table, meal, 0.3 l drink and slush. From 6 children. Weekend slots 10:00–14:00 or 14:30–18:30. Age range not published.",
+          "es": "16,50 € por niño con mesa decorada, menú, bebida de 0,3 l y granizado. Desde 6 niños. Fin de semana 10:00–14:00 o 14:30–18:30. Edad no publicada."
+        }
+      },
+      "source": "https://www.bobolino-kinderwelt.de/geburtstage-bobbolino-kinderwelt/ (page checked 2026-09-28)"
+    },
+    {
+      "id": "superfly",
+      "name": "Trampolinpark Superfly Düsseldorf",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://superfly.de/duesseldorf",
+      "address": "Kappeler Straße 126, Düsseldorf",
+      "indoor": true,
+      "food": false,
+      "party": {
+        "min_age": 6,
+        "price_floor_per_child": 16.9,
+        "price_complete": false,
+        "price_includes": "birthday_package_from",
+        "note": {
+          "zh": "Birthday Flight 最低起价 16.90 €/人（Economy 60，标价为「起」）。场馆写明生日套餐从 6 岁起可订。周日实际标价未核实。",
+          "de": "Birthday Flight ab 16,90 €/Person (Economy 60, „ab“-Preis). Buchbar erst ab 6 Jahren. Sonntagspreis nicht verifiziert.",
+          "en": "Birthday Flight from €16.90 per person (Economy 60, an \"from\" price). Bookable only from age 6. Sunday price not verified.",
+          "es": "Birthday Flight desde 16,90 € por persona (Economy 60, precio \"desde\"). Reservable a partir de 6 años. Precio de domingo no verificado."
+        }
+      },
+      "source": "https://superfly.de/birthday-flight/ and https://superfly.de/faq/ (pages checked 2026-09-28)"
+    },
+    {
+      "id": "trampolino",
+      "name": "Trampolinpark Hilden — trampolino.de",
+      "city": "Hilden",
+      "geo": "nearby",
+      "url": "https://trampolino.de",
+      "address": "Kleinhülsen 17, 40721 Hilden",
+      "indoor": true,
+      "food": true,
+      "party": {
+        "price_per_child": 19.9,
+        "price_complete": true,
+        "price_includes": "entry_and_meal",
+        "note": {
+          "zh": "Jumpy 生日 19.90 €/儿童（入场 12.50 € + 菜单 7.40 €，含软饮）。适龄和人数未在该页写明。地点在 Hilden，不是杜塞尔多夫市内。",
+          "de": "Jumpy-Geburtstag 19,90 € pro Kind (Eintritt 12,50 € + Menü 7,40 € inkl. Softdrink). Alter und Personenzahl dort nicht genannt. Standort Hilden.",
+          "en": "Jumpy birthday €19.90 per child (admission €12.50 + menu €7.40 with a soft drink). Age and guest limits not stated on that page. Location is Hilden.",
+          "es": "Cumpleaños Jumpy 19,90 € por niño (entrada 12,50 € + menú 7,40 € con refresco). Edad y aforo no indicados. Está en Hilden."
+        }
+      },
+      "source": "https://www.trampolino.de/geburtstag-feiern/ (page checked 2026-09-28)"
+    },
+    {
+      "id": "einstein",
+      "name": "Einstein Boulderhalle Düsseldorf — Klettern & Feiern",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://duesseldorf.einstein-boulder.com",
+      "phone": "0211 97543644",
+      "address": "Lierenfelder Str. 49, 40231 Düsseldorf",
+      "indoor": true,
+      "food": false,
+      "closed_sunday": false,
+      "party": {
+        "price_tiers": [
+          {"max_guests": 7, "price_flat": 179},
+          {"max_guests": 14, "price_flat": 239}
+        ],
+        "price_surcharge_over": {"guests": 14, "flat": 60},
+        "price_complete": true,
+        "price_includes": "entry_shoes_table",
+        "note": {
+          "zh": "套餐含入场、租鞋和布置好的生日桌，餐食另计。至 7 名儿童 179 €，至 14 名 239 €，超过 14 名再加 60 €。官网写明节目年龄只是建议、可调整，因此不作为硬性适龄。",
+          "de": "Paket inkl. Eintritt, Leihschuhe und dekoriertem Tisch, Essen extra. Bis 7 Kinder 179 €, bis 14 Kinder 239 €, darüber zzgl. 60 €. Altersangaben sind laut Website nur Empfehlungen.",
+          "en": "Package includes admission, rental shoes and a decorated table; food is extra. Up to 7 children €179, up to 14 €239, above that plus €60. The site says ages are recommendations only.",
+          "es": "El paquete incluye entrada, zapatos de alquiler y mesa decorada; la comida va aparte. Hasta 7 niños 179 €, hasta 14 239 €, por encima +60 €. La web dice que las edades son solo recomendaciones."
+        }
+      },
+      "source": "https://duesseldorf.einstein-boulder.com/kindergeburtstag/ (page checked 2026-09-28)"
+    },
+    {
+      "id": "duesselstrand",
+      "name": "Freizeitbad Düsselstrand — Geburtstagsfeier",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://baeder-duesseldorf.de",
+      "address": "Kettwiger Straße 50, Düsseldorf",
+      "indoor": true,
+      "party": {
+        "price_floor_per_child": 16,
+        "price_complete": false,
+        "price_includes": "party_package_plus_admission",
+        "note": {
+          "zh": "生日布置套餐 16 €，另加每位客人的泳池门票（寿星免票）。门票金额未核实，所以总价未核实；已公布的 16 € 已是下限。",
+          "de": "Geburtstagspaket 16 € plus regulärer Badetarif je Gast (Geburtstagskind frei). Eintritt nicht verifiziert, daher Gesamtpreis offen; 16 € sind die Untergrenze.",
+          "en": "Birthday package €16 plus regular pool admission per guest (birthday child free). Admission amount is unverified, so the total is open; €16 is the floor.",
+          "es": "Paquete de cumpleaños 16 € más la entrada normal por invitado (el cumpleañero entra gratis). La entrada no está verificada; 16 € es el mínimo."
+        }
+      },
+      "source": "Rheinische Post, 2025-02-07, https://rp-online.de/nrw/staedte/duesseldorf/freizeit/kindergeburtstage-in-duesseldorf-cupcake-bis-kletterspass_aid-123415921"
+    },
+    {
+      "id": "aquazoo",
+      "name": "Aquazoo Düsseldorf — Erlebnisse für Kinder",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://aquazoo-duesseldorf.de/erlebnisse",
+      "indoor": true,
+      "food": false,
+      "closed_sunday": true,
+      "party": {
+        "min_age": 7,
+        "max_guests": 10,
+        "price_flat": 200,
+        "price_complete": true,
+        "price_includes": "entry_and_guide",
+        "note": {
+          "zh": "2026-07-01 起生日套票 200 €，含最多 10 名儿童、2 名成人入场和讲解。孩子至少满 7 岁。仅周一至周五下午，不含周末、学校假期和法定假日。餐食自带。",
+          "de": "Geburtstagsticket seit 01.07.2026: 200 € pauschal für bis zu 10 Kinder, 2 Erwachsene und pädagogische Betreuung. Ab dem 7. Geburtstag. Nur Mo–Fr nachmittags, nicht am Wochenende, in den Ferien oder an Feiertagen. Essen selbst mitbringen.",
+          "en": "From 1 July 2026 the birthday ticket is €200 flat for up to 10 children, 2 adults and a guide. Child must be at least 7. Weekday afternoons only — not weekends, school holidays or public holidays. Bring your own food.",
+          "es": "Desde el 1.7.2026 el ticket de cumpleaños cuesta 200 € por hasta 10 niños, 2 adultos y acompañamiento. A partir de los 7 años. Solo tardes de lunes a viernes, no fines de semana, vacaciones ni festivos. La comida se trae."
+        }
+      },
+      "source": "https://aquazoo-duesseldorf.de/aktuelles/moderate-preisanpassung-und-neue-angebote and https://aquazoo-duesseldorf.de/erlebnisse (checked 2026-09-28)"
+    },
+    {
+      "id": "benrath",
+      "name": "Schloss Benrath — Schnitzeljagd für Kinder",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://schloss-benrath.de/kinder-familien",
+      "phone": "0211 8921903",
+      "address": "Benrather Schlossallee 100-108, 40597 Düsseldorf",
+      "indoor": true,
+      "outdoor": true,
+      "food": false,
+      "closed_sunday": false,
+      "party": {
+        "programs": [
+          {"name": "Fuchsjagd", "min_age": 6, "max_guests": 10, "price_flat": 230, "price_complete": true},
+          {"name": "Das Geheimnis des schüchternen Dieners Ferdinand", "min_age": 8, "max_age": 12, "max_guests": 10, "price_flat": 230, "price_complete": true},
+          {"name": "Wie Prinz und Prinzessin", "min_age": 7, "max_age": 10, "max_guests": 10, "price_flat": 250, "price_complete": true}
+        ],
+        "note": {
+          "zh": "已核实项目均为整场标价、最多 10 名儿童，餐食自带：Fuchsjagd 230 €（6 岁起），Ferdinand 230 €（8–12 岁），Wie Prinz und Prinzessin 250 €（7–10 岁）。周一至周日可约，具体空档未核实。",
+          "de": "Pauschalpreise, max. 10 Kinder, Essen selbst mitbringen: Fuchsjagd 230 € (ab 6), Ferdinand 230 € (8–12), Wie Prinz und Prinzessin 250 € (7–10). Mo–So buchbar, konkreter Termin offen.",
+          "en": "Flat prices, max 10 children, bring food: Fuchsjagd €230 (from 6), Ferdinand €230 (ages 8–12), Wie Prinz und Prinzessin €250 (ages 7–10). Bookable Mon–Sun; a specific slot is not verified.",
+          "es": "Precios cerrados, máx. 10 niños, comida propia: Fuchsjagd 230 € (desde 6), Ferdinand 230 € (8–12), Wie Prinz und Prinzessin 250 € (7–10). Se puede reservar de lunes a domingo; el hueco concreto no está verificado."
+        }
+      },
+      "source": "https://www.schloss-benrath.de/kinder-familien and Rheinische Post 2025-02-07 (Ferdinand / Prinz age bands)"
+    },
+    {
+      "id": "schifffahrtmuseum",
+      "name": "Schifffahrtmuseum — Schatzsuche am Schlossturm",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://schifffahrtmuseum.de",
+      "party": {}
+    },
+    {
+      "id": "hoppehof",
+      "name": "Hoppehof Meerbusch — Bauernhof-Geburtstag",
+      "city": "Meerbusch",
+      "geo": "nearby",
+      "url": "https://hoppehof.de/kinder-erlebnisse",
+      "outdoor": true,
+      "party": {}
+    },
+    {
+      "id": "asp",
+      "name": "ASP Eller / Oberkassel — Outdoor-Geburtstag",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://asp-eller.de",
+      "outdoor": true,
+      "party": {}
+    },
+    {
+      "id": "bobbolandia",
+      "name": "Bobbolandia Grevenbroich",
+      "city": "Grevenbroich",
+      "geo": "far",
+      "url": "https://bobbolandia-grevenbroich.de",
+      "outdoor": true,
+      "party": {}
+    },
+    {
+      "id": "mama-macht",
+      "name": "Mama macht — Kindergeburtstag mit Raummiete",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://mama-macht.de",
+      "indoor": true,
+      "party": {}
+    },
+    {
+      "id": "happykids",
+      "name": "HappyKids Agentur — Komplettpaket Kindergeburtstag",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://happykids-agentur.de",
+      "phone": "0211 41658926",
+      "address": "Achenbachstr. 148, Düsseldorf",
+      "indoor": true,
+      "food": false,
+      "party": {
+        "max_guests": 50,
+        "price_flat": 300,
+        "price_complete": true,
+        "price_includes": "room_3h",
+        "note": {
+          "zh": "场地租金 300 € / 3 小时（含服务人员和结束清洁），餐饮和布置另计。创办人称派对最多约 50 位大小客人。适龄未作为硬性条件公布。",
+          "de": "Raummiete 300 € / 3 Stunden inkl. Servicekraft und Endreinigung; Essen und Deko extra. Laut Gründerin bis etwa 50 Gäste. Kein hartes Alter veröffentlicht.",
+          "en": "Room hire €300 for 3 hours including a helper and final clean; food and decor are extra. The founder described parties up to about 50 guests. No hard age limit was published.",
+          "es": "Alquiler de sala 300 € / 3 horas con personal y limpieza final; comida y decoración aparte. La fundadora habla de hasta unos 50 invitados. Sin edad máxima publicada."
+        }
+      },
+      "source": "Rheinische Post, 2025-02-07, interview with founder Amira Djember"
+    },
+    {
+      "id": "wunderland",
+      "name": "Kindercafé Wunderland Düsseldorf",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://kinder-cafe-duesseldorf.de",
+      "indoor": true,
+      "party": {}
+    },
+    {
+      "id": "kunstpalast",
+      "name": "Kunstpalast Düsseldorf — Kindergeburtstag",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://kunstpalast.de",
+      "indoor": true,
+      "food": false,
+      "closed_sunday": false,
+      "party": {
+        "min_age": 6,
+        "max_age": 12,
+        "max_guests": 10,
+        "price_flat": 200,
+        "price_complete": true,
+        "price_includes": "workshop_120",
+        "note": {
+          "zh": "6–12 岁。120 分钟（不含蛋糕时间）200 €，180 分钟（含蛋糕时间）270 €。最多 10 名儿童加 1 位陪同。蛋糕和冷饮自带。周二至周日 11:15 或 14:30。",
+          "de": "6–12 Jahre. 120 Minuten ohne Kuchenpause 200 €, 180 Minuten mit Kuchenpause 270 €. Max. 10 Kinder plus 1 Begleitperson. Kuchen selbst mitbringen. Di–So 11:15 oder 14:30.",
+          "en": "Ages 6–12. €200 for 120 minutes without a cake break, €270 for 180 minutes with one. Max 10 children plus 1 adult. Bring cake and cold drinks. Tue–Sun at 11:15 or 14:30.",
+          "es": "6–12 años. 200 € por 120 minutos sin pausa de tarta, 270 € por 180 minutos con pausa. Máx. 10 niños y 1 adulto. Tarta y bebidas frías propias. Mar–dom 11:15 o 14:30."
+        }
+      },
+      "source": "https://www.kunstpalast.de/de/programm/kinder-jugendliche-familien/kindergeburtstage/ (page checked 2026-09-28)"
+    },
+    {
+      "id": "slimtime",
+      "name": "Slimtime Düsseldorf — Glitzer und Schleim",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://slimtime-duesseldorf.de",
+      "indoor": true,
+      "party": {}
+    },
+    {
+      "id": "toepfern",
+      "name": "Töpfern & Keramik — Stadt Düsseldorf Workshops",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://duesseldorf.de/hatjens/workshops-und-fuehrungen/kindergeburtstag",
+      "indoor": true,
+      "party": {}
+    },
+    {
+      "id": "theatermuseum",
+      "name": "Theatermuseum Düsseldorf — Kreatives Stockentheater",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://theater-museum.de",
+      "indoor": true,
+      "party": {}
+    },
+    {
+      "id": "kunstsammlung",
+      "name": "Kunstsammlung NRW — Filmdrehen & Druckwerkstatt",
+      "city": "Düsseldorf",
+      "geo": "duesseldorf",
+      "url": "https://kunstsammlung.de",
+      "indoor": true,
+      "party": {}
+    }
+  ]
+}

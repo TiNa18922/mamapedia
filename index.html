@@ -79,7 +79,7 @@ body{background:#8a9aaa;
   justify-content:center;font-size:18px;box-shadow:0 3px 10px rgba(74,101,128,.28);}
 .home-ai-head h2{font-size:15px;font-weight:800;color:var(--t1);line-height:1.2;margin:0;}
 .home-ai-head p{font-size:11px;color:var(--t2);margin:2px 0 0;font-weight:600;}
-.home-ai-wrap .ai-msgs{flex:1;min-height:110px;max-height:180px;}
+.home-ai-wrap .ai-msgs{flex:1;min-height:110px;max-height:320px;}
 .home-ai-wrap .ai-input-row{border-top:1px solid var(--border);padding-bottom:12px;}
 .home-ai-note{font-size:11px;color:var(--t3);padding:0 14px 10px;line-height:1.4;}
 #bnav-community,.bnav-center-wrap.bnav-legacy{display:none!important;}
@@ -6120,6 +6120,73 @@ document.addEventListener('DOMContentLoaded', function() {
       '</div>';
   }, 1200);
 });
+</script>
+<script src="js/birthday-answer.js"></script>
+<script>
+// Geburtstagsparty answers follow the MamaPedia answer contract:
+// parse constraints, hard-filter structured party fields, then explain.
+(function () {
+  if (typeof sendAI !== 'function' || typeof MamaPediaBirthday === 'undefined') return;
+  var baseSendAI = sendAI;
+  window.sendAI = async function () {
+    var input = (typeof aiInputEl === 'function' && aiInputEl()) || document.getElementById('ai-input');
+    var q = input ? input.value.trim() : '';
+    if (q && !aiLoading) {
+      var bday = null;
+      try {
+        bday = await MamaPediaBirthday.respond(q, { lang: aiLang, history: aiHistory });
+      } catch (e) { bday = null; }
+      if (bday && bday.handled) {
+        if (!checkUsageLimit('ai', { commit: false })) return;
+        input.value = '';
+        addUserMsg(q);
+        aiHistory.push({ role: 'user', content: q });
+        aiLoading = true;
+        var sendBtn = typeof aiSendEl === 'function' ? aiSendEl() : null;
+        if (sendBtn) sendBtn.disabled = true;
+        addBotMsg(bday.text);
+        incrementUsage('ai');
+        aiHistory.push({ role: 'assistant', content: bday.text });
+        if (aiHistory.length > 10) aiHistory = aiHistory.slice(-10);
+        aiLoading = false;
+        if (sendBtn) sendBtn.disabled = false;
+        try { input.focus(); } catch (err) {}
+        return;
+      }
+    }
+    return baseSendAI.apply(this, arguments);
+  };
+
+  if (typeof setAILang === 'function') {
+    var baseSetAILang = setAILang;
+    window.setAILang = function (l, btn) {
+      baseSetAILang(l, btn);
+      MamaPediaBirthday.paintDirectory(l);
+    };
+  }
+  if (typeof setLang === 'function') {
+    var baseSetLang = setLang;
+    window.setLang = function (l, btn) {
+      var ret = baseSetLang(l, btn);
+      MamaPediaBirthday.paintDirectory(l);
+      return ret;
+    };
+  }
+  if (typeof openSub === 'function') {
+    var baseOpenSub = openSub;
+    window.openSub = function (cat, sub) {
+      var ret = baseOpenSub(cat, sub);
+      if (sub === 'Geburtstagsparty') {
+        MamaPediaBirthday.paintDirectory(typeof aiLang !== 'undefined' ? aiLang : 'de');
+      }
+      return ret;
+    };
+  }
+
+  MamaPediaBirthday.loadCatalog('data/geburtstagsparty.json').then(function () {
+    MamaPediaBirthday.paintDirectory(typeof aiLang !== 'undefined' ? aiLang : 'de');
+  });
+})();
 </script>
 </body>
 </html>
