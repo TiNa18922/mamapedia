@@ -1,0 +1,29 @@
+{
+  "id": "kb_mietrecht_mieter_duesseldorf",
+  "intent": "consult",
+  "source": "kb-mietrecht",
+  "category": "Wohnen & Recht",
+  "files": [
+    "kb_mietrecht_mieter_duesseldorf.txt",
+    "kb_mietrecht_mieter_duesseldorf_zh.md"
+  ],
+  "answer": "Pick 5–8 points from the 聊天用途 section. Warm advisor tone. Do not dump the article. Close by pointing to Mieterverein. No legal advice.",
+  "integration": {
+    "chat": "mamapedia-chat",
+    "intent": "consult",
+    "source": "kb-mietrecht",
+    "note": "Register these triggers on the consult path so rental questions answer from this pack before the Freizeit directory and before an unclear-category gate."
+  },
+  "triggers": [
+    "租房",
+    "租房合同",
+    "押金",
+    "Kaution",
+    "涨租",
+    "Mietpreisbremse",
+    "Kündigung",
+    "Eigenbedarf",
+    "Nebenkosten",
+    "Wohnungsgeberbestätigung"
+  ]
+}
