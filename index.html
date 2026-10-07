@@ -6188,5 +6188,40 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 </script>
+<script src="js/mietrecht-consult.js"></script>
+<script>
+// Rental / Mietrecht questions use the packed KB consult, not a directory list.
+(function () {
+  if (typeof sendAI !== 'function' || typeof MamaPediaMietrecht === 'undefined') return;
+  var baseSendAI = sendAI;
+  window.sendAI = async function () {
+    var input = (typeof aiInputEl === 'function' && aiInputEl()) || document.getElementById('ai-input');
+    var q = input ? input.value.trim() : '';
+    if (q && !aiLoading) {
+      var hit = null;
+      try { hit = MamaPediaMietrecht.answer(q, { lang: aiLang }); }
+      catch (e) { hit = null; }
+      if (hit && hit.handled) {
+        if (!checkUsageLimit('ai', { commit: false })) return;
+        input.value = '';
+        addUserMsg(q);
+        aiHistory.push({ role: 'user', content: q });
+        aiLoading = true;
+        var sendBtn = typeof aiSendEl === 'function' ? aiSendEl() : null;
+        if (sendBtn) sendBtn.disabled = true;
+        addBotMsg(hit.text);
+        incrementUsage('ai');
+        aiHistory.push({ role: 'assistant', content: hit.text });
+        if (aiHistory.length > 10) aiHistory = aiHistory.slice(-10);
+        aiLoading = false;
+        if (sendBtn) sendBtn.disabled = false;
+        try { input.focus(); } catch (err) {}
+        return;
+      }
+    }
+    return baseSendAI.apply(this, arguments);
+  };
+})();
+</script>
 </body>
 </html>

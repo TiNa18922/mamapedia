@@ -1,0 +1,266 @@
+--- MAMAPEDIA WISSENSBEREICH: MIETRECHT FÜR MIETER IN DÜSSELDORF / NRW (租房与德国租赁法 · 租客视角) ---
+Kategorie: Wohnen & Recht | Erstellt: Oktober 2026 | Stand der Recherche: 07.10.2026
+Quelle: BGB §§ 535 ff. (gesetze-im-internet.de); Mieterschutzverordnung NRW (MietSchVO NRW) vom 28.01.2025, geändert 28.10.2025 (recht.nrw.de); MHKBD.NRW Themenportal „Mieterschutz und Wohnungsaufsicht“; Deutscher Bundestag (Mietpreisbremse bis 2029, 26.06.2025); BMJV Pressemitteilung 29.04.2026 (Mietrecht II, Entwurf); Mietspiegel Düsseldorf gültig ab 01.08.2026 (Mieterverein Düsseldorf / Haus und Grund); Serviceportal Landeshauptstadt Düsseldorf (Anmeldung, Wohngeld); Verbraucherzentrale NRW; Amtsgericht Düsseldorf (Beratungshilfe)
+Zielgruppe: Chinesischsprachige Familien in Düsseldorf (neu zugezogen oder schon länger hier)
+
+⚠️ 免责声明 (Haftungsausschluss)：本内容为一般信息，不构成法律意见；个案请咨询 Mieterverein 或律师。
+   Dies ist eine allgemeine Information und keine Rechtsberatung. Im Einzelfall bitte Mieterverein oder Fachanwalt für Mietrecht fragen.
+
+============================================================
+## 0. 先说三句最重要的话
+============================================================
+- 在德国，租客受法律保护的程度比很多人想象得高。房东不能随便涨租、不能随便赶人、押金也有上限。
+- 但「有权利」≠「随便用」：减租 (Mietminderung)、扣租、拒绝涨租，都要按流程、留书面证据。拿不准时，先问 Mieterverein，再行动。
+- 所有重要沟通尽量书面 (schriftlich)：邮件可以留痕；但**解约 (Kündigung) 必须是亲笔签名的纸质信**（§ 568 BGB 书面形式 Schriftform），WhatsApp / 邮件 / 传真解约无效。
+
+============================================================
+## 1. 签约之前 (Vor der Unterschrift)
+============================================================
+### 1.1 看房清单 (Besichtigungs-Checkliste)
+- 墙角、窗框、浴室有无霉斑 (Schimmel)；闻一闻有没有霉味。
+- 窗户是否密封、暖气 (Heizung) 类型：中央供暖 / 燃气壁挂 (Gastherme) / 远程供暖 (Fernwärme)。问清楚暖气费怎么算。
+- 能源证书 (Energieausweis)：房东在看房时必须出示（法定义务），能看出大概的能耗与取暖成本。
+- 水压、热水、电源插座数量、手机信号、网络 (Glasfaser/DSL) 是否可接。
+- 厨房：是否带厨房 (Einbauküche)？很多德国房子是「空厨房」，要自己买橱柜和电器。问清楚厨房是属于房东还是前租客要卖给你 (Ablöse)。
+- 地下室 (Keller)、自行车/婴儿车存放处、洗衣房 (Waschkeller)、垃圾分类点。
+- 带娃家庭：楼层与电梯、楼梯间能否放婴儿车、附近 Kita / Grundschule、游乐场、公园、电车站。
+
+### 1.2 Schufa 与自我申报表 (Selbstauskunft)
+- 房东常要：身份证/护照 + 居留、近 3 个月工资单 (Gehaltsnachweise)、Schufa 信用报告、有时要前房东的无欠租证明 (Mietschuldenfreiheitsbescheinigung)。
+- Schufa：每个人每年可以**免费**获取一次数据副本（依据 DSGVO 第 15 条 Datenkopie）；房东要的那种「BonitätsCheck」通常是付费版。刚来德国没有 Schufa 记录很正常，可以用工作合同、工资单、雇主证明替代说明。
+- 自我申报表上**不必回答**与租房无关的私人问题，例如是否怀孕、宗教、政治立场、族裔等（这些在德国通常被认为不允许问；具体可参考各州数据保护机构的说明）。家庭人数、是否养宠物、收入范围属于常见可问内容。
+- 建议：只在真的有意向、看完房之后再交完整资料；不要把护照照片发给来路不明的「房东」——谨防诈骗（如要求先打押金/钥匙费、人在国外无法看房等，都是典型骗局信号）。
+
+### 1.3 中介费 (Maklerprovision) — 谁请谁付 (Bestellerprinzip)
+- 自 2015 年 6 月 1 日起，租房中介费实行「谁委托谁付」(Bestellerprinzip，§ 2 Abs. 1a WoVermittG)。
+- 房源是房东委托中介挂出来的 → **中介费由房东付，不能转嫁给租客**。
+- 只有当你本人书面委托中介专门为你找房、且这套房是中介为你才去找来的，你才需要付；上限为 2 个月冷租 + 增值税 (§ 3 WoVermittG)。
+- 前租客要你买家具/厨房 (Ablöse)：价格应合理；明显虚高的「转让费」可能无效，可问 Mieterverein。
+
+### 1.4 合同要看什么 (Mietvertrag prüfen)
+- 合同类型：无限期 (unbefristet) 最常见；有限期 (befristet / Zeitmietvertrag) 必须有法定理由写在合同里，否则视为无限期。
+- 租金结构：冷租 (Nettokaltmiete) + 杂费预付 (Nebenkostenvorauszahlung) + 暖气预付 (Heizkostenvorauszahlung) = 暖租 (Warmmiete)。
+- 阶梯租金 (Staffelmiete)：合同里提前写好每年涨多少；期间不能再按 Mietspiegel 另外涨。
+- 指数租金 (Indexmiete)：跟随消费者物价指数涨；通货膨胀时可能涨得很快。（2026 年联邦政府提出的 „Mietrecht II“ 草案计划在紧张市场对指数租金涨幅设限——截至 2026 年 10 月**尚未通过**，以 BMJV / Bundestag 最新公告为准。）
+- 互相不解约条款 (Kündigungsverzicht)：常见 1–4 年内双方不能普通解约；超过 4 年通常无效。签前想清楚家庭是否可能搬家（换工作、回国）。
+- 装修条款 (Schönheitsreparaturen)：带死板期限的条款（如「每 3 年必须刷墙」）或「搬走时无论如何都要粉刷」常被法院判无效。签前或搬走前请 Mieterverein 帮看。
+- 小修费条款 (Kleinreparaturklausel)：只有限额明确（单次和年度上限）才有效。
+- 宠物：小动物（仓鼠、鱼）不能禁；猫狗通常需要房东同意，一刀切的「全面禁止」条款通常无效。
+- 交房记录 (Übergabeprotokoll)：入住时一定要逐屋拍照+书面记录已有损伤、水电气表读数 (Zählerstände)，双方签字。这份记录决定搬走时押金能不能顺利退。
+
+============================================================
+## 2. 押金 (Mietkaution) — § 551 BGB
+============================================================
+- **上限：3 个月冷租 (Nettokaltmiete)**，不含杂费。超出部分可以要回。
+- **可分 3 期等额支付**：第一期在租期开始时付，后两期随之后两个月的房租一起付（§ 551 Abs. 2 BGB）。合同里要求「签约前一次付清」的约定对租客不利部分无效。
+- **必须与房东自有财产分开存放**（Treuhandkonto / Mietkautionskonto），并按通常储蓄利率计息，**利息归租客**、并入押金（§ 551 Abs. 3 BGB）。可以要求房东出示分开存放的证明。
+- 其他形式：押金担保 (Kautionsbürgschaft / Kautionsversicherung) 或银行担保，需房东同意。
+- **何时可以扣**：房东可以用押金抵扣合法的债权，例如欠租、超出正常使用的损坏 (Schäden über normale Abnutzung)、尚未结算的杂费补缴。
+- **正常磨损不能扣**：家具压痕、轻微钉孔、日常使用留下的痕迹属于正常使用 (vertragsgemäßer Gebrauch)。
+- **退还时间**：法律没有固定天数。联邦最高法院 (BGH) 认为房东有「合理的审查期」，通常 **3–6 个月**，情况复杂时可更长；押金在房东结算到达时到期。若当年的杂费结算还没出来，房东**只能扣留合理的一部分**作为预留，而不能扣全部押金。
+- 小贴士：搬走交钥匙时再做一次交房记录 (Abnahmeprotokoll)、拍照、记表数，书面告知新地址和银行账户。超过半年无消息 → 书面催告并设定期限，然后找 Mieterverein。
+- 租期内**不要**用押金「抵最后几个月房租」（通常不被允许，可能引发纠纷）。
+
+============================================================
+## 3. 房租与杂费 (Miete & Nebenkosten / Betriebskosten)
+============================================================
+### 3.1 冷租 vs 暖租
+- Kaltmiete / Nettokaltmiete：纯房租。
+- Nebenkosten / Betriebskosten：可分摊的运营费用（种类见《运营费用条例》Betriebskostenverordnung, BetrKV），例如物业税 (Grundsteuer)、水费/污水、垃圾、楼道清洁、电梯、园艺、公共照明、建筑保险、看楼人 (Hausmeister) 等。
+- Warmmiete = 冷租 + 杂费预付 + 暖气费预付。
+- 注意：自 2024 年 7 月 1 日起，有线电视费 (Kabelanschluss) 不再能作为杂费摊给租客（Nebenkostenprivileg 已取消）。
+- 电费（家庭用电）一般自己与电力公司签；网络自己签。
+
+### 3.2 杂费结算 (Nebenkostenabrechnung) 的权利
+- 房东必须在结算期结束后 **12 个月内**把结算送达租客；逾期一般不能再要补缴（除非不是房东的责任）（§ 556 Abs. 3 BGB）。
+- 租客收到结算后有 **12 个月** 时间提出异议 (Einwände)。
+- 你有权**查阅原始单据 (Belegeinsicht)**：账单、合同、分摊计算方式。
+- 暖气与热水必须**按实际用量为主**分摊（取暖费条例 HeizkostenV，50–70% 按用量）；房东没按用量结算时，租客通常可把自己那部分暖气费扣减 15%（§ 12 HeizkostenV）。
+
+### 3.3 常见可争议点 (häufig strittig)
+- 管理费 (Verwaltungskosten)、维修/保养费 (Instandhaltung/Reparaturen)、银行手续费：**不能**算进杂费。
+- Hausmeister 费用里如果包含维修或管理工作，那部分不能摊。
+- 合同里没写明可摊的项目不能突然加进来（「其他费用 sonstige Betriebskosten」需具体列明）。
+- 分摊比例（面积/人数/户数）是否与合同一致；面积是否正确。
+- 空置房的费用不能摊给在住租客。
+- 明显不经济的开支（经济性原则 Wirtschaftlichkeitsgebot）。
+- 结算出现大额补缴时：先付无争议部分，对有疑问部分书面提出异议、申请看单据，并尽快找 Mieterverein——它们最擅长查这个。
+
+============================================================
+## 4. 租金上限：Mietpreisbremse 与 NRW 租客保护条例 (MietSchVO NRW)
+============================================================
+### 4.1 杜塞尔多夫属于「住房市场紧张地区」(angespannter Wohnungsmarkt)
+- NRW 新的《租客保护条例》(Mieterschutzverordnung NRW, MietSchVO NRW) 于 **2025 年 3 月 1 日生效**，取代 2020 年版本；适用城市由 18 个扩大到 **57 个**，**Düsseldorf 在列**（周边如 Neuss、Meerbusch、Ratingen、Hilden、Erkrath、Kaarst、Köln 等也在列）。
+- 2025 年 10 月 28 日的修订（2025 年 11 月 7 日生效）把租金刹车部分的期限延长到 **2029 年 12 月 31 日**，与联邦法律一致：联邦议院于 2025 年 6 月 26 日通过将 Mietpreisbremse 延长至 2029 年底（2025 年 7 月 23 日生效）。
+- 官方原文：recht.nrw.de → „Mieterschutzverordnung NRW – MietSchVO NRW“；解读：mhkbd.nrw → Themenportal „Mieterschutz und Wohnungsaufsicht“。
+
+### 4.2 新签租约：租金刹车 (Mietpreisbremse, § 556d BGB)
+- 新租约的起始租金原则上**最多比当地比较租金 (ortsübliche Vergleichsmiete) 高 10%**。
+- 杜塞尔多夫的比较租金依据《杜塞尔多夫租金明细表》(Mietspiegel Düsseldorf)，现行版本 **2026 年 8 月 1 日起有效**（由 Mieterverein Düsseldorf 与 Haus und Grund Düsseldorf 共同制定，可在 miete-duesseldorf.de 免费下载）。按建造年份、地段（einfach/mittel/gut）和设施查范围。
+- **主要例外**：
+  · 新建房 (Neubau)：2014 年 10 月 1 日之后首次使用和出租的房子；
+  · 全面现代化改造 (umfassende Modernisierung) 后的首次出租；
+  · 前一任租客的租金 (Vormiete) 本来就更高时，房东可以维持该水平；
+  · 带家具出租、短租等有特殊规则（「Mietrecht II」草案拟收紧，截至 2026 年 10 月尚未生效）。
+- 房东若要援引例外，**签约前**就必须主动书面告知 (Auskunftspflicht, § 556g Abs. 1a BGB)，否则一般不能援引。
+- **如何维权**：先以文字形式 (Textform，邮件/信件均可) 向房东提出「申诉」(Rüge, § 556g Abs. 2 BGB)，说明租金超过上限。多付部分原则上从申诉之后可以要回；在租期开始后 30 个月内提出的合格申诉可追溯更多。具体计算较复杂——请交给 Mieterverein 做。
+- 不少家庭担心「申诉了会被赶」：申诉 Mietpreisbremse 本身不是合法的解约理由。
+
+### 4.3 现有租约涨租：上限 (Kappungsgrenze, § 558 BGB)
+- 房东要按 Mietspiegel 涨租时：
+  · 入住/上次涨租后 **15 个月**内不能生效涨租（实际上「每年最多一次」）；
+  · 涨后不能超过 ortsübliche Vergleichsmiete；
+  · **3 年内累计涨幅上限**：全国通常 20%；Düsseldorf 依 MietSchVO NRW 为 **15%**（此规定有效至 **2030 年 2 月 28 日**，来源 MHKBD.NRW）。
+- 房东必须书面说明理由（如 Mietspiegel、三套可比房屋或评估报告）。你有到**收到涨租要求后第二个完整月月底**为止的考虑期 (Zustimmungsfrist, § 558b BGB)；不必当场签字。
+- 现代化改造涨租 (Modernisierungsmieterhöhung, § 559 BGB)：每年最多可加改造费用的 8%，且 6 年内每平方米最多涨 3 欧（原租金低于 7 欧/m² 时为 2 欧）。维修 (Instandhaltung) 费用不能算进去。
+- Staffelmiete / Indexmiete 合同按合同自身规则走，不适用上面的 Mietspiegel 涨租程序。
+
+============================================================
+## 5. 解约 (Kündigung)
+============================================================
+### 5.1 租客解约
+- 无限期合同：租客普通解约期一般 **3 个月**（§ 573c BGB），解约信必须在当月第 3 个工作日之前到达房东，才算当月起算。
+- 必须签名纸质信 (Schriftform)，所有签约租客都签名。建议挂号信 (Einschreiben) 或当面交付+证人。
+- 注意合同中是否有有效的 Kündigungsverzicht（见 1.4）。
+- 想提前走：可以和房东协商解约协议 (Aufhebungsvertrag)；推荐接手租客 (Nachmieter) 并不自动让你有权提前走，除非合同另有约定或有特殊情况。
+
+### 5.2 房东解约 —— 需要法定理由
+- 房东普通解约需要「正当利益」(berechtigtes Interesse, § 573 BGB)，主要是：
+  · 自住需要 (Eigenbedarf)：本人、家庭成员或家庭成员需要入住；必须在信中具体写明是谁、为什么；
+  · 租客严重违约（如长期拖欠、严重扰邻）；
+  · 合理经济利用受阻（很少见）。
+- 为了涨租而解约是**不允许**的（§ 573 Abs. 1 BGB）。
+- 房东的解约期随租期增加：3 个月；满 5 年 6 个月；满 8 年 9 个月。
+- **社会困难异议 (Widerspruch, Sozialklausel, § 574 BGB)**：若搬走对家庭构成特别困难（如怀孕、重病、孩子临考、无法找到合适替代住房），可最迟在租期结束前 **2 个月**书面提出异议。带孩子的家庭尤其要知道这个权利。
+- 拖欠房租：拖欠达到两个月房租左右时，房东可能即时解约 (fristlose Kündigung, § 543 BGB)。若在起诉送达后 2 个月内补齐（Schonfristzahlung），即时解约通常失效（普通解约部分有不同判例；「Mietrecht II」草案拟改进——尚未生效）。**手头紧张时，第一时间联系 Jobcenter / 社会局 / Mieterverein，不要等。**
+- 被要求搬走时：**不要**马上签任何「同意搬走」的文件；先拿解约信去 Mieterverein 查是否有效（形式、理由、期限常有问题）。
+
+### 5.3 房子被改为产权房出售后 (Umwandlung in Eigentum) — Kündigungssperrfrist
+- 出租房被改为分户产权 (Wohnungseigentum) 并卖给新业主后，新业主在一定期限内不能以 Eigenbedarf 解约 (§ 577a BGB)。
+- 法定一般为 3 年；在 Düsseldorf 等 MietSchVO NRW 地区为 **8 年**（有效至 2030 年 2 月 28 日）。
+- **重要细节**：如果改为产权并出售发生在 **2025 年 3 月 1 日之前**，仍适用 2020 年旧条例（在旧条例覆盖的城市为 5 年），不会延长至 8 年（来源：MietSchVO NRW 及 MHKBD.NRW）。你的情况适用哪条，请 Mieterverein 结合土地登记 (Grundbuch) 日期判断。
+- 另外，改为产权后租客通常有优先购买权 (Vorkaufsrecht, § 577 BGB)。
+
+============================================================
+## 6. 房屋缺陷 (Mängel) 与减租 (Mietminderung)
+============================================================
+- 发现缺陷（暖气坏、漏水、发霉、窗户不密封、电梯长期坏等）→ **立即书面通知房东/物业** (Mängelanzeige, § 536c BGB)，写明问题、开始日期、附照片，并设定合理修理期限。不通知可能失去减租权，甚至要赔偿扩大损失。
+- 减租：缺陷明显影响使用时，租金依法**自动**按比例降低 (§ 536 BGB)——但**比例多少是争议焦点**（各法院判例差异很大）。
+- 推荐做法：**不要自行大幅扣租**。较稳妥的方式是按合同继续全额付款，但书面声明「保留减租权、有保留地付款」(Zahlung unter Vorbehalt)，之后在 Mieterverein 帮助下要回多付部分。随意扣租过多 → 可能被视为欠租 → 有被解约的风险。
+- 霉菌 (Schimmel)：常有「是建筑问题还是通风问题」之争。记录室内温湿度、照片，按建议规律通风（Stoßlüften），尽早让 Mieterverein 介入。
+- 紧急情况（水管爆裂、暖气冬季全坏）：立即联系物业紧急电话；若房东不处理，紧急自行修理 (Notmaßnahme) 前最好先咨询。
+- 有严重健康危害的房屋状况，城市的住房监管部门 (Wohnungsaufsicht, Amt für Wohnungswesen) 也是一个可以了解的方向（以 duesseldorf.de 信息为准）。
+
+============================================================
+## 7. 户籍登记 (Anmeldung) 与房东确认书 (Wohnungsgeberbestätigung)
+============================================================
+- 搬入新住址后 **2 周内**须到 Bürgerbüro 登记（最早在入住当天）；需要有效身份证件 + **房东确认书 (Wohnungsgeberbestätigung, § 19 Bundesmeldegesetz)**，**光有租房合同不够**。
+- 房东或物业有法定义务出具这份确认书。可从 duesseldorf.de 下载表格（Einwohnermeldeamt → Formulare）给房东签。
+- Düsseldorf 需在线预约 Bürgerbüro 时间；满足条件时也可在线登记（以 service.duesseldorf.de 最新说明为准）。
+- 家庭小贴士：
+  · 全家人（包括孩子）都要登记；登记证明 (Meldebescheinigung) 是申请 Kindergeld、Elterngeld、Kita 名额 (Kita-Navigator)、学校报名、银行开户等的基础。
+  · Grundschule 学区与 Kita 分配常与登记地址相关——搬家时间点尽量与入园/入学报名时间协调。
+  · 入住前的「临时地址」登记要谨慎：只有真正居住才可登记；提供虚假房东确认书属违法。
+
+============================================================
+## 8. 带娃家庭特别关注 (Familien-Tipps)
+============================================================
+- **孩子噪音 (Kinderlärm)**：德国法院对孩子正常生活发出的声音（跑跳、哭闹、玩耍）一般给予较高容忍度，属于正常居住使用；但并非无限——夜间休息时间 (Nachtruhe，通常 22–6 点，具体看 Hausordnung) 尽量照顾邻居，可铺地毯、垫子。邻居投诉时先和善沟通；收到房东警告信 (Abmahnung) 再找 Mieterverein。
+- **婴儿车放楼道**：在楼道空间允许、且确有需要时，通常可以放婴儿车（有 BGH 判例支持，但取决于具体情况和 Hausordnung，不能堵逃生通道）。
+- **找房地段**：查看附近 Kita（Kita-Navigator Düsseldorf）、Grundschule、儿科医生、绿地、电车。面积较大的房源竞争激烈，提前备好全套资料（含 Schufa、工资单、Selbstauskunft）。
+- **住房补助 (Wohngeld)**：收入不高的家庭可以检查是否有资格领取 Wohngeld（租房补贴）。在 Düsseldorf 由 **Amt für Wohnungswesen（Abteilung Wohngeld）** 受理，可在线申请（service.duesseldorf.de „Wohngeld“）。需要租约、收入证明、房租支付记录等。能否领、领多少以官方计算为准——本 KB 只做方向指引。
+- **公共住房资格 (Wohnberechtigungsschein, WBS)**：收入在限额内的家庭可申请，用于租「受补贴房」(geförderter Wohnraum)。同样在 Amt für Wohnungswesen 了解。
+- **单亲家庭**：可同时参考 kb_alleinerziehend_duesseldorf.txt、kb_unterhaltsvorschuss_soziale_hilfen.txt。
+
+============================================================
+## 9. 杜塞尔多夫 / NRW 去哪里求助 (Hilfe & Beratung)
+============================================================
+（以下联系方式取自各机构官网，2026-10-07 查询；开放时间可能变化，请以官网为准。）
+
+1) **Mieterverein Düsseldorf e.V.**（德国租客联合会 DMB 成员）
+   - 地址：Oststraße 47, 40211 Düsseldorf
+   - 电话：0211 / 16 99 6-0 · 邮件：info@mieterverein-duesseldorf.de
+   - 网站：www.mieterverein-duesseldorf.de
+   - 会员制：入会后可面谈、会员电话简短咨询、由协会代写与房东的信件；也帮忙查 Nebenkostenabrechnung、合同、减租、涨租。会费以官网为准。
+   - 提示：很多协会对「入会前已发生的纠纷」有等待期或限制——**最好在问题出现前就入会**。
+
+2) **Interessenverband Mieterschutz e.V. (IV Mieterschutz) – Geschäftsstelle Düsseldorf**
+   - 地址：Immermannstraße 9, 40210 Düsseldorf
+   - 网站：www.iv-mieterschutz.de（电话请查官网）
+   - 另一家会员制租客协会。
+
+3) **Verbraucherzentrale NRW – Beratungsstelle Düsseldorf**
+   - 地址：Helmholtzstraße 19, 40215 Düsseldorf · 电话：0211 710649-0
+   - 网站：www.verbraucherzentrale.nrw/beratungsstellen/duesseldorf
+   - 提供租房法律**初步咨询**（单次约 15 分钟，费用 20 欧，需预约；与 Mieterbund NRW 合作；不含代理）。
+
+4) **法律援助 (Beratungshilfe) — Amtsgericht Düsseldorf**
+   - 收入低、财产少的人可申请 Beratungshilfe，用于在法庭外找律师咨询；律师可能收取约 15 欧自付，其余由州财政承担。
+   - 申请：Amtsgericht Düsseldorf（www.ag-duesseldorf.nrw.de → Beratungshilfe）或通过律师；表格见 justiz.nrw.de。需带身份证件、问题材料、收入/社会福利及账户证明。
+   - 如果走到诉讼，可了解诉讼费用援助 (Prozesskostenhilfe)。
+
+5) **律师 (Fachanwalt für Mietrecht)**：复杂或涉及诉讼时；如有法律保护险 (Rechtsschutzversicherung, 含 Mietrecht 模块) 先问保险——注意通常有等待期。
+
+6) **官方信息页**
+   - MietSchVO NRW 原文：recht.nrw.de
+   - NRW 住房部 MHKBD：www.mhkbd.nrw → Mieterschutz und Wohnungsaufsicht
+   - 联邦司法部 BMJV：Mietrecht 信息与手册（www.bmjv.de，搜索 „Mietrecht“）
+   - Düsseldorf 城市服务：service.duesseldorf.de（Anmeldung、Wohngeld）、www.duesseldorf.de/wohnen
+   - Mietspiegel Düsseldorf：miete-duesseldorf.de
+
+============================================================
+## 10. 尚待核实 / 时效提示 (Unsicherheiten & Fristen)
+============================================================
+- Mietpreisbremse（新租约 +10%）在 NRW 有效至 **2029-12-31**；Kappungsgrenze 15% 与 8 年 Kündigungssperrfrist 有效至 **2030-02-28**。之后是否续期取决于联邦和州的新决定。
+- 「Mietrecht II」（指数租金、带家具出租、短租、Schonfristzahlung 等）截至 2026-10-07 仍为联邦政府草案（BT-Drs. 21/6807），尚未生效。生效后本条需更新。
+- 减租比例、押金退还具体期限、儿童噪音、婴儿车等问题高度依赖个案和判例，本文只给方向。
+- 会费、开放时间、咨询费会变化，以各机构官网为准。
+
+============================================================
+## 聊天用途 (Chat-Nutzung)
+============================================================
+使用原则：按用户具体问题挑 5–8 条要点回答，语气亲切；结尾提醒「个案请找 Mieterverein」。不要整篇倾倒。
+
+Q「租房合同要注意什么？」→
+1. 看清冷租、杂费、暖气预付，算出暖租；
+2. 是否 Staffel-/Indexmiete，涨租方式要心里有数；
+3. Kündigungsverzicht 多长（>4 年通常无效）；
+4. 装修/小修条款是否有具体上限，死板期限条款常无效；
+5. 中介是房东找的 → 你不付中介费（Bestellerprinzip）；
+6. 新租金是否超过 Mietspiegel +10%（Düsseldorf 适用 Mietpreisbremse）；
+7. 入住做 Übergabeprotokoll + 拍照 + 记表数；
+8. 拿不准就请 Mieterverein 签前帮看。
+
+Q「押金怎么退？」→
+1. 押金最多 3 个月冷租，可分 3 期付；
+2. 必须单独存放并计息，利息归你；
+3. 交钥匙时做交房记录、拍照、留新地址和账号；
+4. 正常磨损不能扣；
+5. 房东通常有 3–6 个月审查期；
+6. 杂费结算未出时只能扣留合理一部分，不能全扣；
+7. 超时无消息 → 书面催告设期限 → 找 Mieterverein。
+
+Q「房东涨租合法吗？」→
+1. 先看合同类型：Staffel / Index / 普通；
+2. 普通合同按 Mietspiegel 涨：15 个月内不能生效，涨后不超比较租金；
+3. Düsseldorf 3 年累计最多 15%（至 2030-02-28）；
+4. 必须书面说明理由；你有到第二个月月底的考虑期，不必当场同意；
+5. 现代化涨租：每年最多 8% 改造成本，且 6 年内每 m² 最多 +3 € / +2 €；
+6. 新租约起始租金超 Mietpreisbremse → 可书面 Rüge；
+7. 把信拍照/扫描交 Mieterverein 核算。
+
+Q「Eigenbedarf 被赶怎么办？」→
+1. 先别签任何同意搬走的文件；
+2. 检查：签名纸质信？写明为谁、为什么？期限对不对（3/6/9 个月）？
+3. 若房子是改为产权后卖给新业主：Düsseldorf 一般 8 年内不能以自住解约（2025-03-01 前的转换适用旧规则）；
+4. 家庭困难（怀孕、病、孩子上学、找不到替代住房）→ 最迟租期结束前 2 个月书面 Widerspruch；
+5. 虚假自住 (vorgetäuschter Eigenbedarf) 可能要赔偿；
+6. 立即带信去 Mieterverein / Verbraucherzentrale；低收入可申请 Beratungshilfe。
+
+Q「家里漏水/发霉可以少交房租吗？」→ 书面报修+照片+期限 → 有保留地付款 (unter Vorbehalt) → 减租比例请 Mieterverein 评估 → 不要随意大额扣租。
+
+Q「房东不给 Wohnungsgeberbestätigung？」→ 房东有法定义务出具；先书面提醒并附 duesseldorf.de 表格；仍拒绝可向 Einwohnermeldeamt 说明情况。
+
+⚠️ 免责声明：本内容为一般信息，不构成法律意见；个案请咨询 Mieterverein 或律师。
+   (Allgemeine Information, keine Rechtsberatung. Stand: Oktober 2026.)
+--- ENDE ---
