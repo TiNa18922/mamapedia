@@ -1,0 +1,24 @@
+# Do not deploy this file. It documents the binding Community expects.
+# Reuse the existing Markt KV namespace. No new Cloudflare namespace.
+#
+# In the live mamapedia-chat wrangler.toml (already present for Markt):
+#
+# [[kv_namespaces]]
+# binding = "MARKT"
+# id = "<existing MARKT namespace id>"
+#
+# Community stores JSON under the key prefix community:
+#   community:seeded
+#   community:ids
+#   community:q:<questionId>
+#   community:a:<answerId>   -> questionId
+#
+# Optional separate binding (not required for MVP):
+# [[kv_namespaces]]
+# binding = "COMMUNITY"
+# id = "<only if you choose a new namespace>"
+#
+# Moderation secret — set on the worker, do not commit a real value:
+#   wrangler secret put COMMUNITY_MOD_SECRET
+# If COMMUNITY_MOD_SECRET is unset, only /community/mod/* returns 503.
+# Public question routes keep working.
