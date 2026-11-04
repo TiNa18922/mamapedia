@@ -1,0 +1,4783 @@
+[
+  {
+    "id": "evt-001",
+    "name": "Kinderkarneval — Düsseldorfer Originale",
+    "type": "J",
+    "month": 1,
+    "when": "25. Jan 2026, Henkelsaal, 14 Uhr",
+    "place": "Heumarkt / Altstadt",
+    "cost": "Eintritt ab 13 Uhr",
+    "website": "duesseldorforiginale.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-002",
+    "name": "Junge Oper Kinder-Karnevalsumzug",
+    "type": "J",
+    "month": 2,
+    "when": "14. Feb 2026, Burgplatz 13 Uhr",
+    "place": "Altstadt / Burgplatz",
+    "cost": "kostenlos",
+    "website": "operamrhein.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-003",
+    "name": "Pflanzenbörse VHS-Biogarten",
+    "type": "W",
+    "month": 3,
+    "when": "März (Datum n. bestätigt)",
+    "place": "Bilk / VHS",
+    "cost": "kostenlos",
+    "website": "",
+    "confirmed": false
+  },
+  {
+    "id": "evt-004",
+    "name": "Pflanzenbörse Saat-Gutfestival",
+    "type": "W",
+    "month": 3,
+    "when": "März (Datum n. bestätigt)",
+    "place": "Düsseldorf",
+    "cost": "kostenlos",
+    "website": "",
+    "confirmed": false
+  },
+  {
+    "id": "evt-005",
+    "name": "Landesgartenschau Neuss",
+    "type": "E",
+    "month": 4,
+    "when": "16. Apr – 11. Okt 2026",
+    "place": "Neuss",
+    "cost": "ab 12 €",
+    "website": "landesgartenschau-neuss.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-006",
+    "name": "Ostereiersuche Affen- und Vogelpark",
+    "type": "W",
+    "month": 4,
+    "when": "3.–6. Apr 2026 (Osterwochenende)",
+    "place": "Eckenhagen",
+    "cost": "im Eintrittspreis",
+    "website": "affen-und-vogelpark.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-007",
+    "name": "Spieldoch! Messen Dortmund",
+    "type": "W",
+    "month": 4,
+    "when": "24.–26. Apr 2026",
+    "place": "Dortmund Messe",
+    "cost": "Familienkarte 34 €",
+    "website": "spieldoch-messe.com",
+    "confirmed": true
+  },
+  {
+    "id": "evt-008",
+    "name": "Survival-Race Kids Düsseldorf",
+    "type": "W",
+    "month": 6,
+    "when": "14. Jun 2026 (So.), Düsseltal",
+    "place": "Düsseltal",
+    "cost": "ab 14 €",
+    "website": "survivalrace.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-009",
+    "name": "Beachvolleyball & Friends Niederheid",
+    "type": "W",
+    "month": 4,
+    "when": "Apr–Sep (Datum n. bestätigt)",
+    "place": "Niederheid",
+    "cost": "",
+    "website": "sportactionbus.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-010",
+    "name": "BRICK-ART-Wettbewerb Düsseldorf",
+    "type": "W",
+    "month": 1,
+    "when": "Jan–Feb (Datum n. bestätigt)",
+    "place": "Düsseldorf",
+    "cost": "",
+    "website": "duesseldorf.de/kiju",
+    "confirmed": false
+  },
+  {
+    "id": "evt-011",
+    "name": "LVR-Industriemuseum Sonderausstellung",
+    "type": "E",
+    "month": 0,
+    "when": "variabel (Datum n. bestätigt)",
+    "place": "LVR-Industriemuseum",
+    "cost": "",
+    "website": "industriemuseum.lvr.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-012",
+    "name": "DINO Xperience Königswinter",
+    "type": "E",
+    "month": 3,
+    "when": "ab 28. Mär 2026",
+    "place": "Königswinter",
+    "cost": "",
+    "website": "explorado.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-013",
+    "name": "NABU Stunde der Wintervögel",
+    "type": "W",
+    "month": 1,
+    "when": "9.–11. Jan 2026 (abgeschlossen)",
+    "place": "Bundesweit",
+    "cost": "kostenlos",
+    "website": "nabu.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-014",
+    "name": "Workshops im Goethemuseum",
+    "type": "W",
+    "month": 1,
+    "when": "Jan–Feb (Datum n. bestätigt)",
+    "place": "Pempelfort",
+    "cost": "",
+    "website": "goethe-museum.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-015",
+    "name": "Familienmusikwoche Tonhalle Feb",
+    "type": "W",
+    "month": 2,
+    "when": "2.–9. Feb 2026 (Magie des Mondes)",
+    "place": "Pempelfort",
+    "cost": "ab 8 €",
+    "website": "tonhalle.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-016",
+    "name": "Düsselferien",
+    "type": "W",
+    "month": 7,
+    "when": "20. Jul – 7. Aug 2026 (Sommerferien)",
+    "place": "Stadtgebiet",
+    "cost": "ab 10 €",
+    "website": "duesseldorf.de/kiju",
+    "confirmed": true
+  },
+  {
+    "id": "evt-017",
+    "name": "Einstein Boulderhalle Ferienprogramm",
+    "type": "W",
+    "month": 12,
+    "when": "Winterferien (Datum n. bestätigt)",
+    "place": "Düsseldorf",
+    "cost": "",
+    "website": "einstein-boulder.com",
+    "confirmed": false
+  },
+  {
+    "id": "evt-018",
+    "name": "Kindertheater Bürgerhaus Reisholz",
+    "type": "W",
+    "month": 1,
+    "when": "monatlich (Termine auf Website)",
+    "place": "Reisholz",
+    "cost": "ab 3,50 €",
+    "website": "",
+    "confirmed": false
+  },
+  {
+    "id": "evt-019",
+    "name": "Düsseldorfer Lesefest",
+    "type": "W",
+    "month": 11,
+    "when": "ca. Nov 2026 (Datum n. bestätigt)",
+    "place": "Stadtgebiet",
+    "cost": "kostenlos",
+    "website": "leseband.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-020",
+    "name": "Tonhalle Familienmusikwoche „Was wiederkehrt“",
+    "type": "W",
+    "month": 3,
+    "when": "01.–07.03.2027 (Sonntag bis Sonntag); Familienmusikwoche der Tonhalle mit Konzerten für Familien, schon für die Allerkleinsten; Programm und Tickets auf tonhalle.de",
+    "place": "Tonhalle Düsseldorf, Ehrenhof 1, 40479 Düsseldorf (Pempelfort)",
+    "cost": "je nach Konzert, Tickets im Tonhalle-Ticketshop",
+    "website": "https://www.tonhalle.de/programm-fuer-kinder-und-familie",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Tonhalle 家庭音乐周“回来的东西”",
+        "when": "2027 年 3 月 1 日（周日）至 3 月 7 日（周日）；Tonhalle 音乐厅的家庭音乐周，有适合全家的音乐会，连最小的宝宝也能来；节目和票务见 tonhalle.de",
+        "place": "Tonhalle 音乐厅，Ehrenhof 1，40479 Düsseldorf（Pempelfort）",
+        "cost": "按场次定价，在 Tonhalle 售票处购票"
+      },
+      "en": {
+        "name": "Tonhalle Family Music Week “What comes back”",
+        "when": "Sun 1 Mar 2027 – Sun 7 Mar 2027; the Tonhalle's family music week with concerts for families, even for the very youngest; programme and tickets on tonhalle.de",
+        "place": "Tonhalle Düsseldorf, Ehrenhof 1, 40479 Düsseldorf (Pempelfort)",
+        "cost": "varies by concert, tickets via the Tonhalle ticket shop"
+      }
+    }
+  },
+  {
+    "id": "evt-021",
+    "name": "PLOPP! Bilderbuchfestival",
+    "type": "W",
+    "month": 10,
+    "when": "3.–4. Okt 2026",
+    "place": "Stadtmitte / Central, Junges Schauspiel",
+    "cost": "ca. 10 € / erm. 5 €",
+    "website": "https://www.dasbilderbuchfestival.de/",
+    "confirmed": true
+  },
+  {
+    "id": "evt-022",
+    "name": "Düsseldorfer Jugendmedientage",
+    "type": "W",
+    "month": 11,
+    "when": "ca. Nov 2026 (Datum n. bestätigt)",
+    "place": "Haus der Jugend",
+    "cost": "kostenlos",
+    "website": "duesseldorf-jugendmedientage.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-023",
+    "name": "Eiskönigin Musikshow auf Eis",
+    "type": "E",
+    "month": 2,
+    "when": "Feb (Datum n. bestätigt)",
+    "place": "Capitol Theater",
+    "cost": "",
+    "website": "highlight-concerts.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-024",
+    "name": "Mitmach-Musical Conni",
+    "type": "E",
+    "month": 12,
+    "when": "Dez + Feb (Datum n. bestätigt)",
+    "place": "Oberkassel",
+    "cost": "",
+    "website": "capitol-theater.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-025",
+    "name": "Lichtermarkt Duisburg",
+    "type": "W",
+    "month": 11,
+    "when": "27.–29. Nov 2026 (1. Advent)",
+    "place": "Duisburg-Nord",
+    "cost": "Erw. 7 €, Kinder frei",
+    "website": "landschaftspark.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-026",
+    "name": "Zoolichter im Zoo Duisburg",
+    "type": "W",
+    "month": 11,
+    "when": "05.11.–06.12.2026, Do–So ab 17 Uhr (Einlasszeitfenster halbstündlich 17–20 Uhr); über 30 Lichtinstallationen auf dem Rundweg, neu ein acht Meter langer chinesischer Drache; tagesgebundene Tickets nur vorab im Onlineshop des Zoos",
+    "place": "Zoo Duisburg, Mülheimer Straße 273, 47058 Duisburg",
+    "cost": "Kinder 10 €, Erwachsene 17,50 €",
+    "website": "https://shop.zoo-duisburg.de/category/55",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Duisburg 动物园灯光节（Zoolichter）",
+        "when": "2026 年 11 月 5 日–12 月 6 日，每周四至周日 17:00 起（每半小时一个入场时段，17:00–20:00）；环园步道上有 30 多组灯光装置，今年新增 8 米长的中国龙；门票限定日期，只能提前在动物园网店购买",
+        "place": "Duisburg 动物园，Mülheimer Straße 273，47058 Duisburg",
+        "cost": "儿童 10 欧元，成人 17.50 欧元"
+      },
+      "en": {
+        "name": "Zoolichter – Lights at Duisburg Zoo",
+        "when": "5 Nov – 6 Dec 2026, Thu–Sun from 5 pm (entry slots every half hour, 5–8 pm); more than 30 light installations along the circular path, new this year an eight-metre Chinese dragon; date-specific tickets only in advance from the zoo's online shop",
+        "place": "Duisburg Zoo, Mülheimer Straße 273, 47058 Duisburg",
+        "cost": "children €10, adults €17.50"
+      }
+    }
+  },
+  {
+    "id": "evt-027",
+    "name": "DE BLÄK Weihnachtsmarkt",
+    "type": "W",
+    "month": 11,
+    "when": "Nov–Dez (Datum n. bestätigt)",
+    "place": "Kappes-Hamm",
+    "cost": "kostenlos",
+    "website": "dusseldorf-hamm.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-028",
+    "name": "Berty-Albrecht-Park Winterzauber",
+    "type": "W",
+    "month": 12,
+    "when": "Dez (Datum n. bestätigt)",
+    "place": "Düsseldorf",
+    "cost": "kostenlos",
+    "website": "liebedaslebendus.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-029",
+    "name": "Nikolausmarkt ZONS",
+    "type": "W",
+    "month": 12,
+    "when": "5.–6. Dez 2026",
+    "place": "Dormagen-Zons",
+    "cost": "kostenlos",
+    "website": "swd-dormagen.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-030",
+    "name": "Kaiserswerth leuchtet Nikolausmarkt",
+    "type": "W",
+    "month": 12,
+    "when": "5.–6. Dez 2026",
+    "place": "Kaiserswerth",
+    "cost": "kostenlos",
+    "website": "kaiserswerth.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-031",
+    "name": "Weihnachtsmarkt Waldorfschule",
+    "type": "W",
+    "month": 11,
+    "when": "ca. 29. Nov (Datum n. bestätigt)",
+    "place": "Gerresheim",
+    "cost": "kostenlos",
+    "website": "waldorfschule-duesseldorf.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-032",
+    "name": "Schloss Benrath Adventssingen",
+    "type": "W",
+    "month": 12,
+    "when": "Dez (Datum n. bestätigt)",
+    "place": "Benrath",
+    "cost": "",
+    "website": "visitduesseldorf.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-033",
+    "name": "KD Adventsausflug auf dem Rhein",
+    "type": "W",
+    "month": 11,
+    "when": "Nov–Dez (Datum n. bestätigt)",
+    "place": "Rhein / KD",
+    "cost": "",
+    "website": "k-d.com",
+    "confirmed": false
+  },
+  {
+    "id": "evt-034",
+    "name": "Schifffahrtsmuseum Weihnachtsführung",
+    "type": "W",
+    "month": 12,
+    "when": "Dez (Datum n. bestätigt)",
+    "place": "Altstadt",
+    "cost": "",
+    "website": "schifffahrtmuseum.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-035",
+    "name": "Weihnachtsflohmarkt Kinderbauernhof Neuss",
+    "type": "W",
+    "month": 11,
+    "when": "ca. Nov (Datum n. bestätigt)",
+    "place": "Neuss-Selikum",
+    "cost": "kostenlos",
+    "website": "kinderbauernhof-neuss.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-036",
+    "name": "Sommertheater Akki-Haus Südpark",
+    "type": "W",
+    "month": 7,
+    "when": "Juli 2026, So. 15–16 Uhr, Südpark",
+    "place": "Oberbilk / Südpark",
+    "cost": "kostenlos",
+    "website": "akki-ev.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-037",
+    "name": "Haus Bürgel Römer-Hofmarkt",
+    "type": "W",
+    "month": 5,
+    "when": "17. Mai 2026 (Museumstag)",
+    "place": "Monheim am Rhein",
+    "cost": "kostenlos",
+    "website": "monheim-entdecken.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-038",
+    "name": "Bücherbummel Düsseldorf",
+    "type": "W",
+    "month": 5,
+    "when": "21.–25. Mai 2026 (Pfingsten)",
+    "place": "Stadtmitte / Kö",
+    "cost": "kostenlos",
+    "website": "buecherbummel-literaturtage.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-039",
+    "name": "Teddybärkrankenhaus UKD",
+    "type": "W",
+    "month": 6,
+    "when": "ca. Jun 2026 (Datum n. best.)",
+    "place": "Bilk / Universität",
+    "cost": "kostenlos",
+    "website": "tbk-duesseldorf.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-040",
+    "name": "JLC Sommercamps",
+    "type": "W",
+    "month": 7,
+    "when": "Sommerferien 2026 (wöchentlich)",
+    "place": "Innenstadt",
+    "cost": "ab 195 €/Woche",
+    "website": "jlc-duesseldorf.com",
+    "confirmed": false
+  },
+  {
+    "id": "evt-041",
+    "name": "⚠️ Nacht der Bibliotheken NRW",
+    "type": "W",
+    "month": 4,
+    "when": "⚠️ 2026 kein Event — nächste: 23. Apr 2027",
+    "place": "",
+    "cost": "",
+    "website": "nachtderbibliotheken.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-042",
+    "name": "⚠️ Petit Départ",
+    "type": "W",
+    "month": 5,
+    "when": "⚠️ 2026 nicht in bisheriger Form — Alternative: Rund um die Kö 9. Aug",
+    "place": "Innenstadt",
+    "cost": "",
+    "website": "duesseldorf.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-043",
+    "name": "Puppenspielwoche Düsseldorf",
+    "type": "W",
+    "month": 10,
+    "when": "Herbstferien 2026 (Datum n. best.)",
+    "place": "Bürgerhaus Reisholz",
+    "cost": "",
+    "website": "stadt-kultur-familie.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-044",
+    "name": "Kindergroschenkirmes ASP Eller",
+    "type": "W",
+    "month": 10,
+    "when": "24. Okt 2026 (Sa), 13–17 Uhr",
+    "place": "Eller",
+    "cost": "0,10 € pro Spiel",
+    "website": "asp-eller.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-045",
+    "name": "Windkunstprojekt Oberkassel",
+    "type": "W",
+    "month": 10,
+    "when": "Herbstferien (Datum n. bestätigt)",
+    "place": "Oberkassel",
+    "cost": "kostenlos",
+    "website": "akki-ev.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-046",
+    "name": "Pinseltöne Familienmusikwoche",
+    "type": "W",
+    "month": 9,
+    "when": "ca. Sep 2026 (Datum n. bestätigt)",
+    "place": "Pempelfort",
+    "cost": "ab 8 €",
+    "website": "tonhalle.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-047",
+    "name": "Sparkassen-Familientag Galopprennbahn",
+    "type": "J",
+    "month": 8,
+    "when": "23. Aug 2026 (40. Jubiläum)",
+    "place": "Grafenberg",
+    "cost": "kostenlos",
+    "website": "duesseldorf-galopp.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-048",
+    "name": "Kattas Kinderfestival Oberhausen",
+    "type": "J",
+    "month": 6,
+    "when": "14. Jun 2026, 12–18 Uhr",
+    "place": "Oberhausen",
+    "cost": "ab 9 €",
+    "website": "kattaskinderfestival.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-049",
+    "name": "Monheimer Kindertag",
+    "type": "W",
+    "month": 6,
+    "when": "ca. Jun/Jul 2026 (Datum n. best.)",
+    "place": "Monheim am Rhein",
+    "cost": "kostenlos",
+    "website": "monheim-entdecken.de",
+    "confirmed": false
+  },
+  {
+    "id": "evt-050",
+    "name": "Kinderkulturfestival Duisburg",
+    "type": "W",
+    "month": 5,
+    "when": "16.–24. Mai 2026",
+    "place": "Duisburg Innenhafen",
+    "cost": "teilw. kostenlos",
+    "website": "kinderkulturfestival.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-051",
+    "name": "⚠️ Disney on Ice Düsseldorf",
+    "type": "E",
+    "month": 1,
+    "when": "⚠️ 2026 kein Düsseldorf-Termin (Oberhausen, Berlin, München)",
+    "place": "",
+    "cost": "",
+    "website": "disneyonice.com",
+    "confirmed": false
+  },
+  {
+    "id": "evt-052",
+    "name": "Düsseldorfer Märchenwochen",
+    "type": "J",
+    "month": 1,
+    "when": "16.–31. Januar 2027",
+    "place": "Stadtgebiet; Eröffnung Sa 16.01.2027 im Kulturhaus Süd, Fritz-Erler-Straße 21, Garath",
+    "cost": "kostenlos",
+    "website": "duesseldorf.de/kiju/veranstaltungen/maerchenwochen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "when": "2027 年 1 月 16–31 日",
+        "place": "全市各处；2027 年 1 月 16 日（周六）在 Garath 的 Kulturhaus Süd（Fritz-Erler-Straße 21）开幕"
+      },
+      "en": {
+        "when": "16–31 January 2027",
+        "place": "Citywide; opening Sat 16 Jan 2027 at Kulturhaus Süd, Fritz-Erler-Straße 21, Garath"
+      }
+    }
+  },
+  {
+    "id": "evt-053",
+    "name": "VeggieWorld Düsseldorf",
+    "type": "J",
+    "month": 3,
+    "when": "28.–29. März 2026",
+    "place": "Messe Düsseldorf",
+    "cost": "ab 12 €",
+    "website": "veggie-world.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-054",
+    "name": "DRECK-WEG-TAG Düsseldorf",
+    "type": "J",
+    "month": 3,
+    "when": "21. März 2026",
+    "place": "Stadtgebiet",
+    "cost": "kostenlos",
+    "website": "dreck-weg-tag.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-055",
+    "name": "Osterkirmess Düsseldorf",
+    "type": "J",
+    "month": 4,
+    "when": "4.–12. Apr 2026",
+    "place": "Oberbilk",
+    "cost": "kostenlos",
+    "website": "",
+    "confirmed": true
+  },
+  {
+    "id": "evt-056",
+    "name": "JUNX Jugendaktionstage Düsseldorf",
+    "type": "W",
+    "month": 4,
+    "when": "30. März – 24. Apr 2026",
+    "place": "Stadtgebiet",
+    "cost": "kostenlos",
+    "website": "duesseldorf.de/kiju",
+    "confirmed": true
+  },
+  {
+    "id": "evt-057",
+    "name": "Bergische Wanderwochen",
+    "type": "W",
+    "month": 4,
+    "when": "25. Apr – 10. Mai 2026 (nicht Sep!)",
+    "place": "Bergisches Land",
+    "cost": "ab 5 €",
+    "website": "bergisches-wanderland.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-058",
+    "name": "Girls' & Boys' Day",
+    "type": "J",
+    "month": 4,
+    "when": "23. Apr 2026",
+    "place": "Bundesweit",
+    "cost": "kostenlos",
+    "website": "girls-day.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-059",
+    "name": "Cavalluna",
+    "type": "J",
+    "month": 5,
+    "when": "9.–10. Mai 2026, PSD Bank Dome",
+    "place": "Rath",
+    "cost": "ab 35 €",
+    "website": "cavalluna.com",
+    "confirmed": true
+  },
+  {
+    "id": "evt-060",
+    "name": "STADTRADELN Düsseldorf",
+    "type": "J",
+    "month": 5,
+    "when": "5.–25. Mai 2026",
+    "place": "Stadtgebiet",
+    "cost": "kostenlos",
+    "website": "stadtradeln.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-061",
+    "name": "Japantag Düsseldorf",
+    "type": "J",
+    "month": 5,
+    "when": "23. Mai 2026",
+    "place": "Innenstadt / Rheinufer",
+    "cost": "kostenlos",
+    "website": "japantag-duesseldorf.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-062",
+    "name": "Familienmusikwoche Tonhalle Sommer",
+    "type": "J",
+    "month": 6,
+    "when": "29. Jun – 5. Jul 2026",
+    "place": "Pempelfort",
+    "cost": "ab 8 €",
+    "website": "tonhalle.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-063",
+    "name": "Rheinkirmess Düsseldorf",
+    "type": "J",
+    "month": 7,
+    "when": "17.–26. Jul 2026",
+    "place": "Oberkassel / Rheinwiesen",
+    "cost": "kostenlos",
+    "website": "rheinkirmes.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-064",
+    "name": "Asphalt Festival Düsseldorf",
+    "type": "J",
+    "month": 7,
+    "when": "15. Jul – 2. Aug 2026",
+    "place": "Stadtgebiet",
+    "cost": "ab 10 €",
+    "website": "asphalt-festival.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-065",
+    "name": "HOT IN HEERDT",
+    "type": "J",
+    "month": 9,
+    "when": "12. Sep 2026, 18–22 Uhr",
+    "place": "Heerdt",
+    "cost": "10 € / 5 € Stud.",
+    "website": "hot-in-heerdt.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-066",
+    "name": "Neanderthal-Museum Museumsfest",
+    "type": "J",
+    "month": 8,
+    "when": "29.–30. Aug 2026",
+    "place": "Mettmann",
+    "cost": "6 € / Kinder frei",
+    "website": "neanderthal.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-067",
+    "name": "Olympic Adventure Camp Düsseldorf",
+    "type": "J",
+    "month": 8,
+    "when": "22.–29. Aug 2026, 13–19 Uhr",
+    "place": "Wersten",
+    "cost": "kostenlos",
+    "website": "duesseldorf.de/sportamt",
+    "confirmed": true
+  },
+  {
+    "id": "evt-068",
+    "name": "RhineCleanup Düsseldorf",
+    "type": "J",
+    "month": 9,
+    "when": "12. Sep 2026",
+    "place": "Rheinufer",
+    "cost": "kostenlos",
+    "website": "rhinecleanup.org",
+    "confirmed": true
+  },
+  {
+    "id": "evt-069",
+    "name": "Weltkindertag Düsseldorf",
+    "type": "J",
+    "month": 9,
+    "when": "20. Sep 2026, 12–18 Uhr",
+    "place": "Stadtgebiet",
+    "cost": "kostenlos",
+    "website": "duesseldorf.de/kiju",
+    "confirmed": true
+  },
+  {
+    "id": "evt-070",
+    "name": "KinderKinoFest Düsseldorf",
+    "type": "J",
+    "month": 11,
+    "when": "12.–18.11.2026 (Donnerstag bis Mittwoch); Kinderfilme in fünf Kinos (Bambi, Black Box, Kino Süd, Metropol, UFA), sortiert nach Alter; am Wochenende Familienprogramm: Familiensamstag 14.11.2026 und Familiensonntag 15.11.2026 mit Filmen und Mitmachaktionen; Anmeldung über die Hotline 0211 27404 3108 (in der Festwoche täglich 9–15 Uhr) oder online auf kinderkinofest.de; reservierte Karten im Kino bezahlen und spätestens 15 Minuten vor Beginn abholen, im Kino Süd und im UFA nur Barzahlung",
+    "place": "Bambi, Black Box, Kino Süd, Metropol und UFA in Düsseldorf",
+    "cost": "Kinder 3 €, Erwachsene 4 €",
+    "website": "https://www.kinderkinofest.de",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Düsseldorf 儿童电影节（KinderKinoFest）",
+        "when": "2026 年 11 月 12 日（周四）至 11 月 18 日（周三）；五家影院（Bambi、Black Box、Kino Süd、Metropol、UFA）放映儿童电影，按年龄分类；周末有家庭专场：11 月 14 日“家庭周六”和 11 月 15 日“家庭周日”，有电影也有互动活动；通过热线 0211 27404 3108（电影节期间每天 9:00–15:00）或 kinderkinofest.de 在线报名；预留的票在影院付款，最晚开场前 15 分钟取票，Kino Süd 和 UFA 只收现金",
+        "place": "Düsseldorf 的 Bambi、Black Box、Kino Süd、Metropol 和 UFA 影院",
+        "cost": "儿童 3 欧元，成人 4 欧元"
+      },
+      "en": {
+        "name": "KinderKinoFest Düsseldorf (children's film festival)",
+        "when": "Thu 12 Nov 2026 – Wed 18 Nov 2026; children's films in five cinemas (Bambi, Black Box, Kino Süd, Metropol, UFA), sorted by age; family programme at the weekend: Family Saturday 14 Nov 2026 and Family Sunday 15 Nov 2026 with films and hands-on activities; register via the hotline 0211 27404 3108 (daily 9 am–3 pm during festival week) or online at kinderkinofest.de; pay for reserved tickets at the cinema and collect them at least 15 minutes before the start, cash only at Kino Süd and UFA",
+        "place": "Bambi, Black Box, Kino Süd, Metropol and UFA in Düsseldorf",
+        "cost": "children €3, adults €4"
+      }
+    }
+  },
+  {
+    "id": "evt-071",
+    "name": "St.-Martins-Umzüge in den Stadtteilen",
+    "type": "J",
+    "month": 11,
+    "when": "Anfang/Mitte November 2026",
+    "place": "2026: über 60 Martinszüge in rund 40 Stadtteilen – alle einzeln im Kalender (Datum, Uhrzeit, Startpunkt); dazu oft Kita-/Schulzüge nur mit Aushang",
+    "cost": "kostenlos",
+    "website": "https://www.duesseldorf.de/medienportal/pressedienst-einzelansicht/pld/sankt-martin-reitet-wieder-durch-die-stadt-12",
+    "confirmed": true,
+    "dateHint": {
+      "de": "Anfang/Mitte Nov.",
+      "zh": "11 月上中旬",
+      "en": "early/mid Nov"
+    },
+    "i18n": {
+      "zh": {
+        "name": "各区圣马丁游行",
+        "when": "11 月上中旬",
+        "place": "2026 年杜塞约 40 个城区有 60 多场圣马丁游行，每场都已单独列在日历里（日期、时间、起点）；另有不少 Kita/学校内部游行只贴通知",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "St. Martin's parades in the neighbourhoods",
+        "when": "early/mid November",
+        "place": "2026: more than 60 St. Martin parades in about 40 neighbourhoods – each listed separately in the calendar (date, time, start); plus Kita/school parades announced only on their notice boards",
+        "cost": "Free"
+      }
+    }
+  },
+  {
+    "id": "evt-072",
+    "name": "Sternenzauber Monheim",
+    "type": "J",
+    "month": 11,
+    "when": "27. Nov 2026 – 10. Jan 2027",
+    "place": "Monheim am Rhein",
+    "cost": "kostenlos",
+    "website": "",
+    "confirmed": true
+  },
+  {
+    "id": "evt-073",
+    "name": "Schloss Benrath Weihnachtsmarkt",
+    "type": "J",
+    "month": 11,
+    "when": "11. Nov – 22. Dez (Fr–So)",
+    "place": "Benrath",
+    "cost": "kostenlos",
+    "website": "schloss-benrath.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-074",
+    "name": "Märchenspiele Freilichtbühne Zons",
+    "type": "J",
+    "month": 0,
+    "when": "ab Jun 2026 (Schneeweißchen)",
+    "place": "Dormagen-Zons",
+    "cost": "ab 8 €",
+    "website": "freilichtzons.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-075",
+    "name": "NABU Stunde der Wintervögel (Jahres)",
+    "type": "J",
+    "month": 1,
+    "when": "9.–11. Jan 2026",
+    "place": "Bundesweit",
+    "cost": "kostenlos",
+    "website": "nabu.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-076",
+    "name": "Familienmusikwoche Tonhalle Feb (J)",
+    "type": "J",
+    "month": 2,
+    "when": "2.–9. Feb 2026",
+    "place": "Pempelfort",
+    "cost": "ab 8 €",
+    "website": "tonhalle.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-077",
+    "name": "Bücherbummel Düsseldorf (J)",
+    "type": "J",
+    "month": 5,
+    "when": "21.–25. Mai 2026 (Pfingsten)",
+    "place": "Stadtmitte / Kö",
+    "cost": "kostenlos",
+    "website": "buecherbummel-literaturtage.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-078",
+    "name": "Haus Bürgel Römer-Hofmarkt (J)",
+    "type": "J",
+    "month": 5,
+    "when": "17. Mai 2026",
+    "place": "Monheim am Rhein",
+    "cost": "kostenlos",
+    "website": "monheim-entdecken.de",
+    "confirmed": true
+  },
+  {
+    "id": "evt-079",
+    "name": "P1 Trödel- und Sammlermarkt",
+    "type": "M",
+    "month": 10,
+    "when": "So 18.10.2026, 11–17 Uhr (letzter Termin 2026)",
+    "place": "Am Staad",
+    "cost": "Parken €5 (EC)",
+    "website": "https://p1-markt.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-080",
+    "name": "Radschlägermarkt Düsseldorf (rund um die METRO)",
+    "type": "M",
+    "month": 11,
+    "when": "So 08.11.2026, 11–17 Uhr",
+    "place": "METRO Düsseldorf, Einfahrt Walter-Eucken-Straße",
+    "cost": "Parken €5/Tag",
+    "website": "https://www.radschlaegermarkt-duesseldorf.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-081",
+    "name": "Radschlägermarkt Düsseldorf (rund um die METRO)",
+    "type": "M",
+    "month": 12,
+    "when": "So 13.12.2026, 11–17 Uhr",
+    "place": "METRO Düsseldorf, Einfahrt Walter-Eucken-Straße",
+    "cost": "Parken €5/Tag",
+    "website": "https://www.radschlaegermarkt-duesseldorf.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-082",
+    "name": "Fischmarkt Düsseldorf (Tonhallenufer)",
+    "type": "M",
+    "month": 11,
+    "when": "So 08.11.2026, 11–18 Uhr",
+    "place": "Tonhallenufer / Joseph-Beuys-Ufer",
+    "cost": "",
+    "website": "https://www.rheinlust.de/veranstaltungen-2/dusseldorf/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-083",
+    "name": "NachtYard – Kreativer Nachtmarkt (RheinRiff)",
+    "type": "M",
+    "month": 10,
+    "when": "Sa 17.10.2026, 18–24 Uhr",
+    "place": "RheinRiff, Hansaallee 321",
+    "cost": "€7; unter 16 frei",
+    "website": "https://www.nachtyard.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-084",
+    "name": "NachtYard – Kreativer Nachtmarkt (RheinRiff)",
+    "type": "M",
+    "month": 11,
+    "when": "Sa 14.11.2026, 18–24 Uhr",
+    "place": "RheinRiff, Hansaallee 321",
+    "cost": "€7; unter 16 frei",
+    "website": "https://www.nachtyard.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-085",
+    "name": "NachtYard – Kreativer Nachtmarkt (RheinRiff)",
+    "type": "M",
+    "month": 12,
+    "when": "Sa 12.12.2026, 18–24 Uhr",
+    "place": "RheinRiff, Hansaallee 321",
+    "cost": "€7; unter 16 frei",
+    "website": "https://www.nachtyard.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-086",
+    "name": "Düsseldorfer Flohmarkt am Blumengroßmarkt",
+    "type": "M",
+    "month": 11,
+    "when": "So 08.11.2026, 11–16 Uhr",
+    "place": "Blumengroßmarkt, Ulmenstraße 275",
+    "cost": "",
+    "website": "https://www.duesseldorfer-flohmarkt.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-087",
+    "name": "Düsseldorfer Flohmarkt am Blumengroßmarkt",
+    "type": "M",
+    "month": 12,
+    "when": "So 06.12.2026, 11–16 Uhr",
+    "place": "Blumengroßmarkt, Ulmenstraße 275",
+    "cost": "",
+    "website": "https://www.duesseldorfer-flohmarkt.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-088",
+    "name": "Moonlight Market – Nachtflohmarkt am Blumengroßmarkt",
+    "type": "M",
+    "month": 11,
+    "when": "Sa 21.11.2026, 17–23 Uhr",
+    "place": "Blumengroßmarkt, Ulmenstraße 275",
+    "cost": "5 €",
+    "website": "https://moonlight-market.de/duesseldorf/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-089",
+    "name": "Moonlight Market – Nachtflohmarkt am Blumengroßmarkt",
+    "type": "M",
+    "month": 12,
+    "when": "Sa 19.12.2026, 17–23 Uhr",
+    "place": "Blumengroßmarkt, Ulmenstraße 275",
+    "cost": "5 €",
+    "website": "https://moonlight-market.de/duesseldorf/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-090",
+    "name": "Trödelmarkt am IKEA Düsseldorf",
+    "type": "M",
+    "month": 10,
+    "when": "So 18.10.2026, 11–18 Uhr",
+    "place": "IKEA Düsseldorf, Oerschbachstraße 75",
+    "cost": "",
+    "website": "",
+    "confirmed": false
+  },
+  {
+    "id": "evt-091",
+    "name": "Trödelmarkt am IKEA Düsseldorf",
+    "type": "M",
+    "month": 11,
+    "when": "So 29.11.2026, 11–18 Uhr",
+    "place": "IKEA Düsseldorf, Oerschbachstraße 75",
+    "cost": "",
+    "website": "",
+    "confirmed": false
+  },
+  {
+    "id": "evt-092",
+    "name": "Trödelmarkt am IKEA Düsseldorf",
+    "type": "M",
+    "month": 12,
+    "when": "So 20.12.2026, 11–18 Uhr",
+    "place": "IKEA Düsseldorf, Oerschbachstraße 75",
+    "cost": "",
+    "website": "",
+    "confirmed": false
+  },
+  {
+    "id": "evt-093",
+    "name": "Mädchen Klamotte – Mädelsflohmarkt @ Düsseldorf Arcaden",
+    "type": "M",
+    "month": 10,
+    "when": "So 25.10.2026, 11–16 Uhr",
+    "place": "Düsseldorf Arcaden, Friedrichstraße 133",
+    "cost": "5 € ab 12 J.",
+    "website": "https://www.maedchenklamotte.de/",
+    "confirmed": false
+  },
+  {
+    "id": "evt-094",
+    "name": "Bücherflohmärkte der Stadtbüchereien Düsseldorf",
+    "type": "M",
+    "month": 10,
+    "when": "Bücherei Wersten 08.–18.10.2026, während der Öffnungszeiten",
+    "place": "Stadtteilbüchereien Düsseldorf",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": false
+  },
+  {
+    "id": "evt-095",
+    "name": "Bücherflohmärkte der Stadtbüchereien Düsseldorf",
+    "type": "M",
+    "month": 10,
+    "when": "Bücherei Bilk 12.–18.10.2026, während der Öffnungszeiten",
+    "place": "Stadtteilbüchereien Düsseldorf",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": false
+  },
+  {
+    "id": "evt-096",
+    "name": "Bücherflohmärkte der Stadtbüchereien Düsseldorf",
+    "type": "M",
+    "month": 11,
+    "when": "Bücherei Derendorf 05.–07.11.2026, während der Öffnungszeiten",
+    "place": "Stadtteilbüchereien Düsseldorf",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": false
+  },
+  {
+    "id": "evt-097",
+    "name": "Bücherflohmärkte der Stadtbüchereien Düsseldorf",
+    "type": "M",
+    "month": 11,
+    "when": "Bücherei Flingern 23.11.–05.12.2026, während der Öffnungszeiten",
+    "place": "Stadtteilbüchereien Düsseldorf",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": false
+  },
+  {
+    "id": "evt-098",
+    "name": "Bücherflohmärkte der Stadtbüchereien Düsseldorf",
+    "type": "M",
+    "month": 11,
+    "when": "Bücherei Kaiserswerth Mo 30.11.2026, 14–19 Uhr",
+    "place": "Stadtteilbüchereien Düsseldorf",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": false
+  },
+  {
+    "id": "evt-099",
+    "name": "Bücherflohmärkte der Stadtbüchereien Düsseldorf",
+    "type": "M",
+    "month": 12,
+    "when": "Bücherei Garath 07.–12.12.2026, während der Öffnungszeiten",
+    "place": "Stadtteilbüchereien Düsseldorf",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": false
+  },
+  {
+    "id": "evt-100",
+    "name": "Trödel- & Kindersachenmarkt im Bürgerhaus Reisholz",
+    "type": "M",
+    "month": 11,
+    "when": "Sa 28.11.2026, 14–16 Uhr",
+    "place": "Bürgerhaus Reisholz, Kappeler Straße 231",
+    "cost": "Eintritt frei",
+    "website": "",
+    "confirmed": false
+  },
+  {
+    "id": "evt-101",
+    "name": "Weihnachtscircus Düsseldorf 2026/27",
+    "type": "J",
+    "month": 12,
+    "when": "10.12.2026–03.01.2027 (Do–So)",
+    "place": "Grafenberg / Staufenplatz 10",
+    "cost": "Tickets lt. Veranstalter; Kinder unter 3 frei (ohne Sitzplatz)",
+    "website": "https://weihnachtscircus-duesseldorf.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "杜塞尔多夫圣诞马戏 2026/27",
+        "when": "2026 年 12 月 10 日（周四） – 2027 年 1 月 3 日（周日）",
+        "place": "Grafenberg / Staufenplatz 10"
+      },
+      "en": {
+        "name": "Christmas Circus Düsseldorf 2026/27",
+        "when": "Thu 10 December 2026 – Sun 3 January 2027",
+        "place": "Grafenberg / Staufenplatz 10"
+      }
+    }
+  },
+  {
+    "id": "evt-102",
+    "name": "Weihnachtsferien NRW 2026/27",
+    "type": "W",
+    "month": 12,
+    "when": "23.12.2026–06.01.2027 (Mi–Mi)",
+    "place": "NRW (alle Schulen)",
+    "cost": "–",
+    "website": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2026/27 年北威州圣诞假期",
+        "when": "2026 年 12 月 23 日（周三） – 2027 年 1 月 6 日（周三）",
+        "place": "北威州（所有学校）"
+      },
+      "en": {
+        "name": "Christmas school holidays NRW 2026/27",
+        "when": "Wed 23 December 2026 – Wed 6 January 2027",
+        "place": "NRW (all schools)"
+      }
+    }
+  },
+  {
+    "id": "evt-103",
+    "name": "Neujahr 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 1,
+    "when": "Fr 01.01.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年元旦（北威州法定假日）",
+        "when": "2027 年 1 月 1 日（周五）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "New Year's Day 2027 (public holiday NRW)",
+        "when": "Fri 1 January 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-104",
+    "name": "Kinderkarneval — Düsseldorfer Originale 2027",
+    "type": "J",
+    "month": 1,
+    "when": "So 24.01.2027, Einlass 13 Uhr, Beginn 14 Uhr",
+    "place": "Altstadt / Henkelsaal",
+    "cost": "Tickets lt. Veranstalter",
+    "website": "https://www.duesseldorferoriginale.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 Düsseldorfer Originale 儿童狂欢节",
+        "when": "2027 年 1 月 24 日（周日），13 点入场，14 点开始",
+        "place": "老城 / Henkelsaal"
+      },
+      "en": {
+        "name": "Children's Carnival — Düsseldorfer Originale 2027",
+        "when": "Sun 24 January 2027, doors 1 pm, starts 2 pm",
+        "place": "Old Town / Henkelsaal"
+      }
+    }
+  },
+  {
+    "id": "evt-105",
+    "name": "Altweiber 2027 – Sturm auf das Rathaus",
+    "type": "J",
+    "month": 2,
+    "when": "Do 04.02.2027, ab 11:11 Uhr",
+    "place": "Altstadt / Marktplatz",
+    "cost": "kostenlos",
+    "website": "https://www.comitee-duesseldorfer-carneval.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年女人狂欢节（Altweiber）",
+        "when": "2027 年 2 月 4 日（周四），11:11 起",
+        "place": "老城 / 市集广场（Marktplatz）"
+      },
+      "en": {
+        "name": "Altweiber 2027 – Women's Carnival Day",
+        "when": "Thu 4 February 2027, from 11:11 am",
+        "place": "Old Town / Marktplatz"
+      }
+    }
+  },
+  {
+    "id": "evt-106",
+    "name": "Kinder- und Jugendumzug Karneval 2027",
+    "type": "J",
+    "month": 2,
+    "when": "Sa 06.02.2027, 14 Uhr (Aufstellung am Rheinufer ab 13 Uhr)",
+    "place": "Altstadt / Rheinufer",
+    "cost": "Zuschauen kostenlos",
+    "website": "https://www.comitee-duesseldorfer-carneval.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 狂欢节儿童及青少年游行",
+        "when": "2027 年 2 月 6 日（周六），14 点（13 点起在莱茵河岸集合）",
+        "place": "老城 / 莱茵河岸"
+      },
+      "en": {
+        "name": "Children's and Youth Carnival Parade 2027",
+        "when": "Sat 6 February 2027, 2 pm (line-up on the Rhine embankment from 1 pm)",
+        "place": "Old Town / Rhine embankment"
+      }
+    }
+  },
+  {
+    "id": "evt-107",
+    "name": "Kö-Treiben 2027",
+    "type": "J",
+    "month": 2,
+    "when": "So 07.02.2027, ab 11 Uhr",
+    "place": "Stadtmitte / Königsallee",
+    "cost": "kostenlos",
+    "website": "https://www.comitee-duesseldorfer-carneval.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 国王大道狂欢（Kö-Treiben）",
+        "when": "2027 年 2 月 7 日（周日），11 点起",
+        "place": "市中心 / 国王大道（Königsallee）"
+      },
+      "en": {
+        "name": "Kö-Treiben 2027 (carnival on Königsallee)",
+        "when": "Sun 7 February 2027, from 11 am",
+        "place": "City centre / Königsallee"
+      }
+    }
+  },
+  {
+    "id": "evt-108",
+    "name": "Rosenmontagszug Düsseldorf 2027",
+    "type": "J",
+    "month": 2,
+    "when": "Mo 08.02.2027, ab 12:30 Uhr",
+    "place": "Innenstadt",
+    "cost": "Zuschauen kostenlos",
+    "website": "https://www.visitduesseldorf.de/event/rosenmontagszug-90ada89aad",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫玫瑰星期一大游行",
+        "when": "2027 年 2 月 8 日（周一），12:30 起",
+        "place": "市中心"
+      },
+      "en": {
+        "name": "Rose Monday Parade Düsseldorf 2027",
+        "when": "Mon 8 February 2027, from 12:30 pm",
+        "place": "City centre"
+      }
+    }
+  },
+  {
+    "id": "evt-109",
+    "name": "Disney On Ice — Mickys Magische Momente 2027",
+    "type": "J",
+    "month": 3,
+    "when": "05.03.–07.03.2027 (Fr–So), Fr 18:30; Sa 11, 15, 19 Uhr; So 12, 16 Uhr",
+    "place": "Rath / PSD Bank Dome",
+    "cost": "Ticket",
+    "website": "https://www.deag.de/disney-on-ice-praesentiert-mickys-magische-momente/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 迪士尼冰上世界《米奇的魔法时刻》",
+        "when": "2027 年 3 月 5 日（周五） – 2027 年 3 月 7 日（周日），周五 18:30；周六 11、15、19 点；周日 12、16 点",
+        "place": "Rath / PSD Bank Dome 体育馆"
+      },
+      "en": {
+        "name": "Disney On Ice — Mickey's Magical Moments 2027",
+        "when": "Fri 5 March 2027 – Sun 7 March 2027, Fri 6:30 pm; Sat 11 am, 3 pm, 7 pm; Sun 12 pm, 4 pm",
+        "place": "Rath / PSD Bank Dome"
+      }
+    }
+  },
+  {
+    "id": "evt-110",
+    "name": "Dreck-weg-Tag Düsseldorf 2027",
+    "type": "J",
+    "month": 3,
+    "when": "Sa 13.03.2027, 10–13 Uhr",
+    "place": "Stadtgebiet Düsseldorf",
+    "cost": "Kostenlos",
+    "website": "https://www.dreck-weg-tag.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫城市清洁日（Dreck-weg-Tag）",
+        "when": "2027 年 3 月 13 日（周六），10–13 点",
+        "place": "杜塞尔多夫全市"
+      },
+      "en": {
+        "name": "Dreck-weg-Tag Düsseldorf 2027 (city clean-up day)",
+        "when": "Sat 13 March 2027, 10 am–1 pm",
+        "place": "Citywide"
+      }
+    }
+  },
+  {
+    "id": "evt-111",
+    "name": "KinderKulturTage Düsseldorf 2027",
+    "type": "J",
+    "month": 3,
+    "when": "Sa 13.03.2027 Gesang, Sa 20.03.2027 Tanz, Sa 27.03.2027 Instrumental",
+    "place": "Garath / Kulturhaus Süd (Gesang, Tanz); Stadtmitte / Stadtmuseum (Instrumental)",
+    "cost": "Anmeldung erforderlich",
+    "website": "https://kinderkulturtage-duesseldorf.org/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫儿童文化日（才艺比赛）",
+        "when": "2027 年 3 月 13 日（周六）声乐，3 月 20 日（周六）舞蹈，3 月 27 日（周六）器乐",
+        "place": "Garath / Kulturhaus Süd（声乐、舞蹈）；市中心 / 城市博物馆（器乐）"
+      },
+      "en": {
+        "name": "KinderKulturTage Düsseldorf 2027 (children's talent festival)",
+        "when": "Sat 13 Mar 2027 singing, Sat 20 Mar 2027 dance, Sat 27 Mar 2027 instrumental",
+        "place": "Garath / Kulturhaus Süd (singing, dance); city centre / Stadtmuseum (instrumental)"
+      }
+    }
+  },
+  {
+    "id": "evt-112",
+    "name": "VeggieWorld Düsseldorf 2027",
+    "type": "J",
+    "month": 3,
+    "when": "20.03.–21.03.2027 (Sa–So), 10–18 Uhr",
+    "place": "Heerdt / Areal Böhler, Hansaallee 321",
+    "cost": "Eintritt kostenpflichtig",
+    "website": "https://www.veggieworld.eco/duesseldorf/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫 VeggieWorld 素食展",
+        "when": "2027 年 3 月 20 日（周六） – 2027 年 3 月 21 日（周日），10–18 点",
+        "place": "Heerdt / Areal Böhler（Hansaallee 321）"
+      },
+      "en": {
+        "name": "VeggieWorld Düsseldorf 2027",
+        "when": "Sat 20 March 2027 – Sun 21 March 2027, 10 am–6 pm",
+        "place": "Heerdt / Areal Böhler, Hansaallee 321"
+      }
+    }
+  },
+  {
+    "id": "evt-113",
+    "name": "Osterferien NRW 2027",
+    "type": "W",
+    "month": 3,
+    "when": "22.03.–03.04.2027 (Mo–Sa)",
+    "place": "NRW (alle Schulen)",
+    "cost": "–",
+    "website": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年北威州复活节假期",
+        "when": "2027 年 3 月 22 日（周一） – 2027 年 4 月 3 日（周六）",
+        "place": "北威州（所有学校）"
+      },
+      "en": {
+        "name": "Easter school holidays NRW 2027",
+        "when": "Mon 22 March 2027 – Sat 3 April 2027",
+        "place": "NRW (all schools)"
+      }
+    }
+  },
+  {
+    "id": "evt-114",
+    "name": "Karfreitag 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 3,
+    "when": "Fr 26.03.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年耶稣受难日（北威州法定假日）",
+        "when": "2027 年 3 月 26 日（周五）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Good Friday 2027 (public holiday NRW)",
+        "when": "Fri 26 March 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-115",
+    "name": "Ostereiersuche im Affen- und Vogelpark Eckenhagen 2027",
+    "type": "J",
+    "month": 3,
+    "when": "26.03.–29.03.2027 (Fr–Mo), ca. 11–17 Uhr",
+    "place": "Umgebung Düsseldorf / Reichshof-Eckenhagen",
+    "cost": "Parkeintritt",
+    "website": "https://www.affen-und-vogelpark.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 Eckenhagen 猴鸟乐园复活节寻彩蛋",
+        "when": "2027 年 3 月 26 日（周五） – 2027 年 3 月 29 日（周一），约 11–17 点",
+        "place": "杜塞尔多夫周边 / Reichshof-Eckenhagen"
+      },
+      "en": {
+        "name": "Easter egg hunt at Affen- und Vogelpark Eckenhagen 2027",
+        "when": "Fri 26 March 2027 – Mon 29 March 2027, approx. 11 am–5 pm",
+        "place": "Near Düsseldorf / Reichshof-Eckenhagen"
+      }
+    }
+  },
+  {
+    "id": "evt-116",
+    "name": "Ostermontag 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 3,
+    "when": "Mo 29.03.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年复活节星期一（北威州法定假日）",
+        "when": "2027 年 3 月 29 日（周一）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Easter Monday 2027 (public holiday NRW)",
+        "when": "Mon 29 March 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-117",
+    "name": "SPIEL DOCH! Dortmund 2027",
+    "type": "J",
+    "month": 4,
+    "when": "09.04.–11.04.2027 (Fr–So), Fr/Sa 10–19, So 10–18 Uhr",
+    "place": "Dortmund / Messe Dortmund",
+    "cost": "Ticket",
+    "website": "https://www.spieldoch-messe.com/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 多特蒙德 SPIEL DOCH! 桌游展",
+        "when": "2027 年 4 月 9 日（周五） – 2027 年 4 月 11 日（周日），周五/周六 10–19 点，周日 10–18 点",
+        "place": "多特蒙德 / 多特蒙德展览中心"
+      },
+      "en": {
+        "name": "SPIEL DOCH! board game fair Dortmund 2027",
+        "when": "Fri 9 April 2027 – Sun 11 April 2027, Fri/Sat 10 am–7 pm, Sun 10 am–6 pm",
+        "place": "Dortmund / Messe Dortmund"
+      }
+    }
+  },
+  {
+    "id": "evt-118",
+    "name": "Bambini Cup & Kids Cup (Düsseldorf Marathon) 2027",
+    "type": "J",
+    "month": 4,
+    "when": "Sa 17.04.2027, Start 11:00 / 11:30 / 12:00 Uhr",
+    "place": "Innenstadt / Rheinufer",
+    "cost": "Startgebühr lt. Veranstalter",
+    "website": "https://www.uniper-duesseldorfmarathon.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫马拉松 Bambini Cup 与 Kids Cup 儿童跑",
+        "when": "2027 年 4 月 17 日（周六），11:00 / 11:30 / 12:00 分批起跑",
+        "place": "市中心 / 莱茵河岸"
+      },
+      "en": {
+        "name": "Bambini Cup & Kids Cup (Düsseldorf Marathon) 2027",
+        "when": "Sat 17 April 2027, starts 11:00 / 11:30 / 12:00",
+        "place": "City centre / Rhine embankment"
+      }
+    }
+  },
+  {
+    "id": "evt-119",
+    "name": "Uniper Düsseldorf Marathon 2027",
+    "type": "J",
+    "month": 4,
+    "when": "So 18.04.2027, Halbmarathon ab 8 Uhr, Marathon 9:45 Uhr",
+    "place": "Innenstadt",
+    "cost": "Zuschauen kostenlos",
+    "website": "https://www.uniper-duesseldorfmarathon.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 Uniper 杜塞尔多夫马拉松",
+        "when": "2027 年 4 月 18 日（周日），半程马拉松 8 点起，全程马拉松 9:45",
+        "place": "市中心"
+      },
+      "en": {
+        "name": "Uniper Düsseldorf Marathon 2027",
+        "when": "Sun 18 April 2027, half marathon from 8 am, marathon 9:45 am",
+        "place": "City centre"
+      }
+    }
+  },
+  {
+    "id": "evt-120",
+    "name": "Girls'Day und Boys'Day 2027",
+    "type": "J",
+    "month": 4,
+    "when": "Do 22.04.2027",
+    "place": "Verschiedene Betriebe und Einrichtungen in Düsseldorf",
+    "cost": "Kostenlos",
+    "website": "https://www.boys-day.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 女孩日与男孩日（职业体验日）",
+        "when": "2027 年 4 月 22 日（周四）",
+        "place": "杜塞尔多夫各企业和机构"
+      },
+      "en": {
+        "name": "Girls' Day and Boys' Day 2027",
+        "when": "Thu 22 April 2027",
+        "place": "Various companies and institutions in Düsseldorf"
+      }
+    }
+  },
+  {
+    "id": "evt-121",
+    "name": "Nacht der Bibliotheken 2027",
+    "type": "J",
+    "month": 4,
+    "when": "Fr 23.04.2027",
+    "place": "Bibliotheken in Düsseldorf (mehrere)",
+    "cost": "Kostenlos",
+    "website": "https://www.nachtderbibliotheken.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 图书馆之夜",
+        "when": "2027 年 4 月 23 日（周五）",
+        "place": "杜塞尔多夫多家图书馆"
+      },
+      "en": {
+        "name": "Night of the Libraries 2027",
+        "when": "Fri 23 April 2027",
+        "place": "Libraries in Düsseldorf (several)"
+      }
+    }
+  },
+  {
+    "id": "evt-122",
+    "name": "Bergische Wanderwochen 2027",
+    "type": "J",
+    "month": 4,
+    "when": "24.04.–09.05.2027 (Sa–So)",
+    "place": "Bergisches Land (ca. 50 km von Düsseldorf)",
+    "cost": "je nach Wanderung",
+    "website": "https://www.bergische-wanderwochen.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 贝尔吉施徒步周",
+        "when": "2027 年 4 月 24 日（周六） – 2027 年 5 月 9 日（周日）",
+        "place": "贝尔吉施地区（距杜塞尔多夫约 50 公里）"
+      },
+      "en": {
+        "name": "Bergisch Hiking Weeks 2027",
+        "when": "Sat 24 April 2027 – Sun 9 May 2027",
+        "place": "Bergisches Land (approx. 50 km from Düsseldorf)"
+      }
+    }
+  },
+  {
+    "id": "evt-123",
+    "name": "Tag der Arbeit 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 5,
+    "when": "Sa 01.05.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年劳动节（北威州法定假日）",
+        "when": "2027 年 5 月 1 日（周六）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Labour Day 2027 (public holiday NRW)",
+        "when": "Sat 1 May 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-124",
+    "name": "Christi Himmelfahrt 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 5,
+    "when": "Do 06.05.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年耶稣升天节（北威州法定假日）",
+        "when": "2027 年 5 月 6 日（周四）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Ascension Day 2027 (public holiday NRW)",
+        "when": "Thu 6 May 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-125",
+    "name": "Pfingstmontag 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 5,
+    "when": "Mo 17.05.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年圣灵降临节星期一（北威州法定假日）",
+        "when": "2027 年 5 月 17 日（周一）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Whit Monday 2027 (public holiday NRW)",
+        "when": "Mon 17 May 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-126",
+    "name": "Pfingstferien NRW 2027",
+    "type": "W",
+    "month": 5,
+    "when": "Di 18.05.2027",
+    "place": "NRW (alle Schulen)",
+    "cost": "–",
+    "website": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年北威州圣灵降临节假期",
+        "when": "2027 年 5 月 18 日（周二）",
+        "place": "北威州（所有学校）"
+      },
+      "en": {
+        "name": "Whitsun school holiday NRW 2027",
+        "when": "Tue 18 May 2027",
+        "place": "NRW (all schools)"
+      }
+    }
+  },
+  {
+    "id": "evt-127",
+    "name": "Japan-Tag Düsseldorf/NRW 2027",
+    "type": "J",
+    "month": 5,
+    "when": "Sa 22.05.2027",
+    "place": "Altstadt / Rheinuferpromenade",
+    "cost": "kostenlos",
+    "website": "https://www.japantag-duesseldorf-nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫/北威州日本日",
+        "when": "2027 年 5 月 22 日（周六）",
+        "place": "老城 / 莱茵河滨步道"
+      },
+      "en": {
+        "name": "Japan Day Düsseldorf/NRW 2027",
+        "when": "Sat 22 May 2027",
+        "place": "Old Town / Rhine promenade"
+      }
+    }
+  },
+  {
+    "id": "evt-128",
+    "name": "Fronleichnam 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 5,
+    "when": "Do 27.05.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年基督圣体节（北威州法定假日）",
+        "when": "2027 年 5 月 27 日（周四）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Corpus Christi 2027 (public holiday NRW)",
+        "when": "Thu 27 May 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-129",
+    "name": "CAVALLUNA — Die Farben des Lebens 2027",
+    "type": "J",
+    "month": 6,
+    "when": "19.06.–20.06.2027 (Sa–So), Sa 14 & 19 Uhr, So 13 Uhr",
+    "place": "Rath / PSD Bank Dome",
+    "cost": "Ticket (ab ca. 40 €)",
+    "website": "https://www.cavalluna.com/tickets/duesseldorf",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 CAVALLUNA 马术秀《生命的色彩》",
+        "when": "2027 年 6 月 19 日（周六） – 2027 年 6 月 20 日（周日），周六 14 点和 19 点，周日 13 点",
+        "place": "Rath / PSD Bank Dome 体育馆"
+      },
+      "en": {
+        "name": "CAVALLUNA — The Colours of Life 2027",
+        "when": "Sat 19 June 2027 – Sun 20 June 2027, Sat 2 pm & 7 pm, Sun 1 pm",
+        "place": "Rath / PSD Bank Dome"
+      }
+    }
+  },
+  {
+    "id": "evt-130",
+    "name": "Düsseldorfer Frankreichfest 2027",
+    "type": "J",
+    "month": 7,
+    "when": "02.07.–04.07.2027 (Fr–So)",
+    "place": "Düsseldorf (Ort lt. Veranstalter)",
+    "cost": "lt. Veranstalter",
+    "website": "https://www.frankreichfest.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫法国节",
+        "when": "2027 年 7 月 2 日（周五） – 2027 年 7 月 4 日（周日）",
+        "place": "杜塞尔多夫（地点以主办方公布为准）"
+      },
+      "en": {
+        "name": "Düsseldorf French Festival 2027",
+        "when": "Fri 2 July 2027 – Sun 4 July 2027",
+        "place": "Düsseldorf (venue per organiser)"
+      }
+    }
+  },
+  {
+    "id": "evt-131",
+    "name": "asphalt Festival Düsseldorf 2027",
+    "type": "J",
+    "month": 7,
+    "when": "14.07.–01.08.2027 (Mi–So)",
+    "place": "Verschiedene Spielorte in Düsseldorf",
+    "cost": "variabel (teils kostenlos)",
+    "website": "https://www.asphalt-festival.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫 asphalt 艺术节",
+        "when": "2027 年 7 月 14 日（周三） – 2027 年 8 月 1 日（周日）",
+        "place": "杜塞尔多夫多个演出场地"
+      },
+      "en": {
+        "name": "asphalt Festival Düsseldorf 2027",
+        "when": "Wed 14 July 2027 – Sun 1 August 2027",
+        "place": "Various venues in Düsseldorf"
+      }
+    }
+  },
+  {
+    "id": "evt-132",
+    "name": "Rheinkirmes Düsseldorf 2027",
+    "type": "J",
+    "month": 7,
+    "when": "16.07.–25.07.2027 (Fr–So)",
+    "place": "Oberkassel / Rheinwiesen",
+    "cost": "Eintritt frei; Fahrgeschäfte kostenpflichtig",
+    "website": "https://rheinkirmes-duesseldorf.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫莱茵河游乐节（Rheinkirmes）",
+        "when": "2027 年 7 月 16 日（周五） – 2027 年 7 月 25 日（周日）",
+        "place": "Oberkassel / 莱茵河草坪"
+      },
+      "en": {
+        "name": "Rheinkirmes Düsseldorf 2027 (Rhine funfair)",
+        "when": "Fri 16 July 2027 – Sun 25 July 2027",
+        "place": "Oberkassel / Rhine meadows"
+      }
+    }
+  },
+  {
+    "id": "evt-133",
+    "name": "Sommerferien NRW 2027",
+    "type": "W",
+    "month": 7,
+    "when": "19.07.–31.08.2027 (Mo–Di)",
+    "place": "NRW (alle Schulen)",
+    "cost": "–",
+    "website": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年北威州暑假",
+        "when": "2027 年 7 月 19 日（周一） – 2027 年 8 月 31 日（周二）",
+        "place": "北威州（所有学校）"
+      },
+      "en": {
+        "name": "Summer school holidays NRW 2027",
+        "when": "Mon 19 July 2027 – Tue 31 August 2027",
+        "place": "NRW (all schools)"
+      }
+    }
+  },
+  {
+    "id": "evt-134",
+    "name": "RhineCleanUp 2027",
+    "type": "J",
+    "month": 9,
+    "when": "Sa 11.09.2027",
+    "place": "Rhein und Nebenflüsse (mehrere Orte)",
+    "cost": "Kostenlos",
+    "website": "https://www.rhinecleanup.org/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 莱茵河清洁日（RhineCleanUp）",
+        "when": "2027 年 9 月 11 日（周六）",
+        "place": "莱茵河及支流（多处）"
+      },
+      "en": {
+        "name": "RhineCleanUp 2027",
+        "when": "Sat 11 September 2027",
+        "place": "Rhine and tributaries (several locations)"
+      }
+    }
+  },
+  {
+    "id": "evt-135",
+    "name": "Tag der Deutschen Einheit 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 10,
+    "when": "So 03.10.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年德国统一日（北威州法定假日）",
+        "when": "2027 年 10 月 3 日（周日）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "German Unity Day 2027 (public holiday NRW)",
+        "when": "Sun 3 October 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-136",
+    "name": "Pink-5K Düsseldorf 2027",
+    "type": "J",
+    "month": 10,
+    "when": "So 17.10.2027, Rahmenprogramm ab 9 Uhr",
+    "place": "Unterbach / Unterbacher See",
+    "cost": "Startgebühr lt. Anmeldung",
+    "website": "https://pink-5k.de/duesseldorf",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 杜塞尔多夫 Pink-5K 公益跑",
+        "when": "2027 年 10 月 17 日（周日），9 点起有配套活动",
+        "place": "Unterbach / Unterbacher See 湖"
+      },
+      "en": {
+        "name": "Pink-5K Düsseldorf 2027",
+        "when": "Sun 17 October 2027, side programme from 9 am",
+        "place": "Unterbach / Unterbacher See"
+      }
+    }
+  },
+  {
+    "id": "evt-137",
+    "name": "Herbstferien NRW 2027",
+    "type": "W",
+    "month": 10,
+    "when": "23.10.–06.11.2027 (Sa–Sa)",
+    "place": "NRW (alle Schulen)",
+    "cost": "–",
+    "website": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年北威州秋假",
+        "when": "2027 年 10 月 23 日（周六） – 2027 年 11 月 6 日（周六）",
+        "place": "北威州（所有学校）"
+      },
+      "en": {
+        "name": "Autumn school holidays NRW 2027",
+        "when": "Sat 23 October 2027 – Sat 6 November 2027",
+        "place": "NRW (all schools)"
+      }
+    }
+  },
+  {
+    "id": "evt-138",
+    "name": "Allerheiligen 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 11,
+    "when": "Mo 01.11.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年诸圣节 Allerheiligen（北威州法定假日）",
+        "when": "2027 年 11 月 1 日（周一）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "All Saints' Day 2027 (public holiday NRW)",
+        "when": "Mon 1 November 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-139",
+    "name": "Weihnachtsferien NRW 2027/28",
+    "type": "W",
+    "month": 12,
+    "when": "24.12.2027–08.01.2028 (Fr–Sa)",
+    "place": "NRW (alle Schulen)",
+    "cost": "–",
+    "website": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027/28 年北威州圣诞假期",
+        "when": "2027 年 12 月 24 日（周五） – 2028 年 1 月 8 日（周六）",
+        "place": "北威州（所有学校）"
+      },
+      "en": {
+        "name": "Christmas school holidays NRW 2027/28",
+        "when": "Fri 24 December 2027 – Sat 8 January 2028",
+        "place": "NRW (all schools)"
+      }
+    }
+  },
+  {
+    "id": "evt-140",
+    "name": "1. Weihnachtstag 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 12,
+    "when": "Sa 25.12.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年圣诞节第一天（北威州法定假日）",
+        "when": "2027 年 12 月 25 日（周六）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Christmas Day 2027 (public holiday NRW)",
+        "when": "Sat 25 December 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-141",
+    "name": "2. Weihnachtstag 2027 (Feiertag NRW)",
+    "type": "E",
+    "month": 12,
+    "when": "So 26.12.2027",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2027 年圣诞节第二天（北威州法定假日）",
+        "when": "2027 年 12 月 26 日（周日）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Boxing Day (2nd Christmas Day) 2027 (public holiday NRW)",
+        "when": "Sun 26 December 2027",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-142",
+    "name": "Herbstferien NRW 2026",
+    "type": "W",
+    "month": 10,
+    "when": "17.10.–31.10.2026 (Sa–Sa)",
+    "place": "NRW (alle Schulen)",
+    "cost": "–",
+    "website": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2026 年北威州秋假",
+        "when": "2026 年 10 月 17 日（周六） – 2026 年 10 月 31 日（周六）",
+        "place": "北威州（所有学校）"
+      },
+      "en": {
+        "name": "Autumn school holidays NRW 2026",
+        "when": "Sat 17 October 2026 – Sat 31 October 2026",
+        "place": "NRW (all schools)"
+      }
+    }
+  },
+  {
+    "id": "evt-143",
+    "name": "Allerheiligen 2026 (Feiertag NRW)",
+    "type": "E",
+    "month": 11,
+    "when": "So 01.11.2026",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2026 年诸圣节 Allerheiligen（北威州法定假日）",
+        "when": "2026 年 11 月 1 日（周日）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "All Saints’ Day 2026 (public holiday NRW)",
+        "when": "Sun 1 November 2026",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-144",
+    "name": "1. Weihnachtstag 2026 (Feiertag NRW)",
+    "type": "E",
+    "month": 12,
+    "when": "Fr 25.12.2026",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2026 年圣诞节第一天（北威州法定假日）",
+        "when": "2026 年 12 月 25 日（周五）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Christmas Day 2026 (public holiday NRW)",
+        "when": "Fri 25 December 2026",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-145",
+    "name": "2. Weihnachtstag 2026 (Feiertag NRW)",
+    "type": "E",
+    "month": 12,
+    "when": "Sa 26.12.2026",
+    "place": "NRW",
+    "cost": "–",
+    "website": "https://recht.nrw.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "2026 年圣诞节第二天（北威州法定假日）",
+        "when": "2026 年 12 月 26 日（周六）",
+        "place": "北威州"
+      },
+      "en": {
+        "name": "Boxing Day (2nd Christmas Day) 2026 (public holiday NRW)",
+        "when": "Sat 26 December 2026",
+        "place": "NRW"
+      }
+    }
+  },
+  {
+    "id": "evt-146",
+    "name": "Herbstkirmes am Tonhallenufer",
+    "type": "J",
+    "month": 10,
+    "when": "23.10.–01.11.2026 (an Allerheiligen ab 18 Uhr)",
+    "place": "Tonhallenufer 2, 40479 Düsseldorf-Pempelfort (U Tonhalle/Ehrenhof)",
+    "cost": "Eintritt frei; Fahrgeschäfte kostenpflichtig",
+    "website": "https://sv-dus.de/herbst-kirmes-2026/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "秋季游乐场（Tonhallenufer）",
+        "when": "2026 年 10 月 23 日（周五）– 11 月 1 日（周日）（11 月 1 日 18:00 起）",
+        "place": "Tonhallenufer 2，Pempelfort（地铁 Tonhalle/Ehrenhof 站）",
+        "cost": "免费入场；游乐设施另收费"
+      },
+      "en": {
+        "name": "Autumn Funfair at Tonhallenufer",
+        "when": "Fri 23 Oct – Sun 1 Nov 2026 (1 Nov from 6 pm)",
+        "place": "Tonhallenufer 2, Pempelfort (U-Bahn Tonhalle/Ehrenhof)",
+        "cost": "Free entry, rides extra"
+      }
+    }
+  },
+  {
+    "id": "evt-147",
+    "name": "St. Martin Laternenumzug Altstadt (101. Altstadt-Martinszug)",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17 Uhr; größter Martinszug der Stadt, zum 101. Mal: Start 17 Uhr am Stiftsplatz über Ratinger Straße, Neubrückstraße, Andreasstraße und Kurze Straße zum Marktplatz; ab 17 Uhr wird vor dem Rathaus die Martinsgeschichte verlesen; gegen 17:30 Uhr erste Mantelteilung auf dem Marktplatz, gegen 18 Uhr zweite Mantelteilung am Burgplatz (Riesenrad), danach löst sich der Zug auf; St. Martin zu Pferd, Kapellen, Laterne mitbringen; Veranstalter: Vereinigung der Freunde des Martinsfestes e. V.",
+    "place": "Start Stiftsplatz, 40213 Düsseldorf-Altstadt → Marktplatz (Rathaus) → Burgplatz",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.duesseldorf.de/medienportal/pressedienst-einzelansicht/pld/sankt-martin-reitet-wieder-durch-die-stadt-12",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "圣马丁提灯游行（老城，第 101 届）",
+        "when": "2026 年 11 月 10 日（周二）17:00；全市最大的圣马丁游行，今年第 101 届：17:00 从 Stiftsplatz 出发，经 Ratinger Straße、Neubrückstraße、Andreasstraße、Kurze Straße 到市政厅前的 Marktplatz；17:00 起市政厅前朗读圣马丁的故事；约 17:30 在 Marktplatz 第一次分斗篷表演，约 18:00 在 Burgplatz（摩天轮旁）第二次分斗篷，之后游行解散；圣马丁骑马、乐队开道，带上灯笼；主办：Vereinigung der Freunde des Martinsfestes e. V.",
+        "place": "Stiftsplatz 出发（老城 40213）→ 市政厅前 Marktplatz → Burgplatz",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's Lantern Parade, Old Town (101st)",
+        "when": "Tue 10 Nov 2026, 5 pm; the city's biggest St. Martin's parade, for the 101st time: starts 5 pm at Stiftsplatz via Ratinger Straße, Neubrückstraße, Andreasstraße and Kurze Straße to the Marktplatz; from 5 pm the St. Martin story is read in front of the Rathaus; around 5:30 pm first cloak-sharing on the Marktplatz, around 6 pm second cloak-sharing at Burgplatz (Ferris wheel), then the parade ends; St. Martin on horseback, bands, bring a lantern; organiser: Vereinigung der Freunde des Martinsfestes e. V.",
+        "place": "Start Stiftsplatz, 40213 Old Town → Marktplatz (Rathaus) → Burgplatz",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-148",
+    "name": "Laternenausstellung Gerresheim",
+    "type": "J",
+    "month": 11,
+    "when": "10.11.–15.11.2026, täglich 10–18 Uhr (16 Uhr Martinslieder singen, freiwillig)",
+    "place": "Aula Gymnasium Gerresheim, Am Poth 60, 40625 Düsseldorf-Gerresheim",
+    "cost": "Eintritt frei",
+    "website": "https://www.sankt-martin-in-gerresheim.de/wp/termine/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "格雷斯海姆灯笼展",
+        "when": "2026 年 11 月 10 日（周二）– 11 月 15 日（周日），每天 10:00–18:00（16:00 可一起唱圣马丁歌，自愿参加）",
+        "place": "Gymnasium Gerresheim 礼堂，Am Poth 60，Gerresheim",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "Gerresheim Lantern Exhibition",
+        "when": "Tue 10 – Sun 15 Nov 2026, daily 10 am–6 pm (St. Martin's song singing at 4 pm, optional)",
+        "place": "Gymnasium Gerresheim school hall, Am Poth 60, Gerresheim",
+        "cost": "Free"
+      }
+    }
+  },
+  {
+    "id": "evt-149",
+    "name": "Nächtliche Halloween-Führung im Aquazoo",
+    "type": "J",
+    "month": 10,
+    "when": "Sa 31.10.2026, 19–20:30 Uhr",
+    "place": "Aquazoo Löbbecke Museum, Kaiserswerther Str. 380, Nordpark",
+    "cost": "16,66 € p. P., ab 12 J., nur Online-Tickets",
+    "website": "https://aquazoo-duesseldorf.de/veranstaltungen/veranstaltung/abendliche-halloween-fuehrung",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Aquazoo 万圣节夜间导览",
+        "when": "2026 年 10 月 31 日（周六）19:00–20:30",
+        "place": "Aquazoo Löbbecke 博物馆，Nordpark",
+        "cost": "每人 16.66 欧元，12 岁以上，仅限网上购票"
+      },
+      "en": {
+        "name": "Night-time Halloween Tour at the Aquazoo",
+        "when": "Sat 31 Oct 2026, 7–8:30 pm",
+        "place": "Aquazoo Löbbecke Museum, Nordpark",
+        "cost": "€16.66 p.p., ages 12+, online tickets only"
+      }
+    }
+  },
+  {
+    "id": "evt-150",
+    "name": "Sonderausstellung „Waffen der Tiere“ im Aquazoo",
+    "type": "E",
+    "month": 10,
+    "when": "17.10.2026–20.06.2027; Kuratorenführungen Sa 07.11. und So 08.11.2026, 11–12 Uhr (nur regulärer Eintritt, ohne Anmeldung)",
+    "place": "Aquazoo Löbbecke Museum, Kaiserswerther Str. 380, Nordpark",
+    "cost": "Museumseintritt",
+    "website": "https://aquazoo-duesseldorf.de/sonderausstellungen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“动物的武器”特展（Aquazoo）",
+        "when": "2026 年 10 月 17 日–2027 年 6 月 20 日；策展人导览 11 月 7 日（周六）、8 日（周日）11:00–12:00（仅需普通门票，无需报名）",
+        "place": "Aquazoo Löbbecke 博物馆，Nordpark",
+        "cost": "博物馆门票"
+      },
+      "en": {
+        "name": "Special exhibition “Waffen der Tiere” (Weapons of Animals) at the Aquazoo",
+        "when": "17 Oct 2026 – 20 Jun 2027; curator tours Sat 7 and Sun 8 Nov 2026, 11 am–12 pm (regular admission only, no booking)",
+        "place": "Aquazoo Löbbecke Museum, Nordpark",
+        "cost": "Museum admission"
+      }
+    }
+  },
+  {
+    "id": "evt-151",
+    "name": "Aquazoo Löbbecke Museum – Familienangebote",
+    "type": "W",
+    "month": 10,
+    "when": "täglich 10–18 Uhr; Infotische (für Familien, ohne Anmeldung) Sa 24.10., 07.11., 21.11., 05.12., 19.12.2026, 11–13:30 Uhr; Kinderführung „Das Tier in Dir!“ jeden 1. Sonntag im Monat, 15 Uhr (kostenlos, für Kinder ab sieben Jahren, am Evolutionsweg im Nordpark)",
+    "place": "Kaiserswerther Str. 380, Nordpark (U78/U79/U80 Nordpark/Aquazoo)",
+    "cost": "Eintritt 11 € / ermäßigt 6 € / Familienkarte 22 €; Kinder bis 5 Jahre frei",
+    "website": "https://aquazoo-duesseldorf.de/veranstaltungen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Aquazoo Löbbecke 博物馆 – 家庭活动",
+        "when": "每天 10:00–18:00；信息桌（适合全家，无需报名）2026 年 10 月 24 日、11 月 7 日、11 月 21 日、12 月 5 日、12 月 19 日（均为周六）11:00–13:30；儿童导览“你身体里的动物！”（Das Tier in Dir!）每月第一个周日 15:00（免费，7 岁以上，在 Nordpark 的进化之路 Evolutionsweg）",
+        "place": "Kaiserswerther Str. 380，Nordpark（地铁 U78/U79/U80 Nordpark/Aquazoo 站）",
+        "cost": "门票 11 欧元 / 优惠票 6 欧元 / 家庭票 22 欧元；5 岁及以下免费"
+      },
+      "en": {
+        "name": "Aquazoo Löbbecke Museum – family programme",
+        "when": "daily 10 am–6 pm; info tables (for families, no booking) Sat 24 Oct, 7 Nov, 21 Nov, 5 Dec, 19 Dec 2026, 11 am–1:30 pm; children's tour “Das Tier in Dir!” (The Animal in You!) every first Sunday of the month, 3 pm (free, ages 7+, on the Evolutionsweg in the Nordpark)",
+        "place": "Kaiserswerther Str. 380, Nordpark (U78/U79/U80 Nordpark/Aquazoo)",
+        "cost": "Admission €11 / reduced €6 / family ticket €22; children up to 5 free"
+      }
+    }
+  },
+  {
+    "id": "evt-152",
+    "name": "Playground. Ein Spielplatz im Museum von Sonia Kazovsky (K20)",
+    "type": "E",
+    "month": 4,
+    "when": "25.04.2026–09.05.2027, Di–So (Mo geschlossen); Zeitfenster Di–Fr 12–14 und 14:30–16:30 Uhr, Sa/So/Feiertage 11–13, 13:30–15:30 und 16–18 Uhr; für Kinder von 3 bis 10 Jahren (Babys und ältere Geschwister willkommen, Erwachsene nur mit Kind); nur mit Socken (am besten Stoppersocken)",
+    "place": "K20, Grabbeplatz 5, 40213 Düsseldorf",
+    "cost": "Kinder frei; Begleitperson 5 € (mit K20-Sammlung 10 €); Zeitfenster-Ticket für jede Person inkl. Babys, im Webshop 14 Tage vorher; wenige Plätze vor Ort ohne Garantie",
+    "website": "https://www.kunstsammlung.de/de/exhibitions/ein-spielplatz-im-museum",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“Playground：博物馆里的游乐场”（Sonia Kazovsky，K20）",
+        "when": "2026 年 4 月 25 日–2027 年 5 月 9 日，周二至周日（周一闭馆）；分时段入场：周二至周五 12:00–14:00、14:30–16:30，周六、周日及节假日 11:00–13:00、13:30–15:30、16:00–18:00；适合 3–10 岁儿童（婴儿和大一点的兄弟姐妹也欢迎，成人须有孩子陪同）；须穿袜子入场（最好是防滑袜）",
+        "place": "K20，Grabbeplatz 5，40213 Düsseldorf",
+        "cost": "儿童免费；陪同成人 5 欧元（含 K20 常设展 10 欧元）；每人（包括婴儿）都需分时段门票，提前 14 天在网店开放；现场名额很少，不保证入场"
+      },
+      "en": {
+        "name": "Playground. A Playground in the Museum by Sonia Kazovsky (K20)",
+        "when": "25 Apr 2026 – 9 May 2027, Tue–Sun (closed Mon); time slots Tue–Fri 12–2 pm and 2:30–4:30 pm, Sat/Sun/public holidays 11 am–1 pm, 1:30–3:30 pm and 4–6 pm; for children aged 3 to 10 (babies and older siblings welcome, adults only with a child); socks required (ideally grip socks)",
+        "place": "K20, Grabbeplatz 5, 40213 Düsseldorf",
+        "cost": "Children free; accompanying adult €5 (€10 incl. the K20 collection); time-slot ticket needed for every person incl. babies, released in the webshop 14 days ahead; a few walk-in places, entry not guaranteed"
+      }
+    }
+  },
+  {
+    "id": "evt-153",
+    "name": "Franz Marc. Die Suche nach einer besseren Welt (K20)",
+    "type": "E",
+    "month": 9,
+    "when": "12.09.2026–24.01.2027; Familienführung „Franz Marc. Animal Prints“ sonn- und feiertags 15–16:30 Uhr; Ferienworkshop „Von blauen Pferden und bunten Kühen“ (10–12 Jahre) Di–Do 27.–29.10.2026, 10–14 Uhr; Ferienworkshop „Geschenkt! Blaue Pferde und gelbe Wolken“ (6–8 Jahre) Mi 23.12.2026, 10–14 Uhr; kostenloser Audioguide (ca. 40 Min.)",
+    "place": "K20, Grabbeplatz 5, 40213 Düsseldorf",
+    "cost": "",
+    "website": "https://www.kunstsammlung.de/de/exhibitions/franz-marc-2026",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“弗朗茨·马尔克：寻找更美好的世界”特展（Franz Marc，K20）",
+        "when": "2026 年 9 月 12 日–2027 年 1 月 24 日；家庭导览“Franz Marc. Animal Prints”每周日及节假日 15:00–16:30；假期工作坊“蓝色的马和彩色的牛”（10–12 岁）2026 年 10 月 27–29 日（周二至周四）10:00–14:00；假期工作坊“送给你！蓝色的马和黄色的云”（6–8 岁）2026 年 12 月 23 日（周三）10:00–14:00；免费语音导览（约 40 分钟）",
+        "place": "K20，Grabbeplatz 5，40213 Düsseldorf",
+        "cost": ""
+      },
+      "en": {
+        "name": "Franz Marc. The Search for a Better World (K20)",
+        "when": "12 Sep 2026 – 24 Jan 2027; family tour “Franz Marc. Animal Prints” Sundays and public holidays 3–4:30 pm; holiday workshop “Von blauen Pferden und bunten Kühen” (Of Blue Horses and Colourful Cows, ages 10–12) Tue–Thu 27–29 Oct 2026, 10 am–2 pm; holiday workshop “Geschenkt! Blaue Pferde und gelbe Wolken” (A Gift! Blue Horses and Yellow Clouds, ages 6–8) Wed 23 Dec 2026, 10 am–2 pm; free audio guide (approx. 40 min)",
+        "place": "K20, Grabbeplatz 5, 40213 Düsseldorf",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-154",
+    "name": "Thomas Schütte (K21)",
+    "type": "E",
+    "month": 11,
+    "when": "14.11.2026–11.04.2027; Familientag „Bauen. Formen. Schauen.“ So 15.11.2026, 11–17 Uhr; Familienführung „Im Gegenteil“ an ausgewählten Samstagen, 15–16:30 Uhr; Ferienworkshop „Von Geistern und Wunderwesen“ (8–10 Jahre) Mi 23.12.2026, 10–14 Uhr",
+    "place": "K21, Ständehausstraße 1, 40217 Düsseldorf",
+    "cost": "",
+    "website": "https://www.kunstsammlung.de/de/exhibitions/thomas-schuette-2026",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“托马斯·许特”特展（Thomas Schütte，K21）",
+        "when": "2026 年 11 月 14 日–2027 年 4 月 11 日；家庭日“搭建・塑造・观看”（Bauen. Formen. Schauen.）2026 年 11 月 15 日（周日）11:00–17:00；家庭导览“恰恰相反”（Im Gegenteil）部分周六 15:00–16:30；假期工作坊“幽灵和奇妙生物”（8–10 岁）2026 年 12 月 23 日（周三）10:00–14:00",
+        "place": "K21，Ständehausstraße 1，40217 Düsseldorf",
+        "cost": ""
+      },
+      "en": {
+        "name": "Thomas Schütte (K21)",
+        "when": "14 Nov 2026 – 11 Apr 2027; family day “Bauen. Formen. Schauen.” (Build. Shape. Look.) Sun 15 Nov 2026, 11 am–5 pm; family tour “Im Gegenteil” (On the Contrary) on selected Saturdays, 3–4:30 pm; holiday workshop “Von Geistern und Wunderwesen” (Of Ghosts and Wondrous Creatures, ages 8–10) Wed 23 Dec 2026, 10 am–2 pm",
+        "place": "K21, Ständehausstraße 1, 40217 Düsseldorf",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-155",
+    "name": "Niki de Saint Phalle. Dream Machine (Kunstpalast)",
+    "type": "E",
+    "month": 9,
+    "when": "10.09.2026–07.02.2027; kostenloses Entdeckerheft für Kinder (6+ Jahre) und kostenlose Tonieboxen an der Kasse",
+    "place": "Kunstpalast, Ehrenhof 4-5, 40479 Düsseldorf",
+    "cost": "17 € / ermäßigt 13 €; Kinder und Jugendliche unter 18 Jahren frei",
+    "website": "https://www.kunstpalast.de/de/event/nikidesaintphalle",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“妮基·德·圣法勒：梦想机器”特展（Kunstpalast）",
+        "when": "2026 年 9 月 10 日–2027 年 2 月 7 日；售票处免费提供 6 岁以上儿童探索手册和 Toniebox 故事机",
+        "place": "Kunstpalast，Ehrenhof 4-5，40479 Düsseldorf",
+        "cost": "17 欧元 / 优惠票 13 欧元；18 岁以下儿童和青少年免费"
+      },
+      "en": {
+        "name": "Niki de Saint Phalle. Dream Machine (Kunstpalast)",
+        "when": "10 Sep 2026 – 7 Feb 2027; free explorer booklet for children aged 6+ and free Tonieboxes at the ticket desk",
+        "place": "Kunstpalast, Ehrenhof 4-5, 40479 Düsseldorf",
+        "cost": "€17 / reduced €13; children and young people under 18 free"
+      }
+    }
+  },
+  {
+    "id": "evt-156",
+    "name": "GYM. Fit mit Kunst (Kunstpalast)",
+    "type": "E",
+    "month": 11,
+    "when": "05.11.2026–21.02.2027; Sportparcours mit 23 Stationen durch die Sammlung, Geräte dürfen benutzt werden (Kinder nur in Begleitung eines Erwachsenen); Eröffnung „AfterWorkOut“ Do 05.11.2026, 18–21 Uhr, Eintritt frei",
+    "place": "Kunstpalast, Ehrenhof 4-5, 40479 Düsseldorf",
+    "cost": "17 € / ermäßigt 13 €; Kinder und Jugendliche unter 18 Jahren frei",
+    "website": "https://www.kunstpalast.de/de/event/gym",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“GYM：与艺术一起健身”展（Kunstpalast）",
+        "when": "2026 年 11 月 5 日–2027 年 2 月 21 日；穿过馆藏的运动路线，共 23 个站点，器材可以使用（儿童须由成人陪同）；开幕活动“AfterWorkOut”2026 年 11 月 5 日（周四）18:00–21:00，免费入场",
+        "place": "Kunstpalast，Ehrenhof 4-5，40479 Düsseldorf",
+        "cost": "17 欧元 / 优惠票 13 欧元；18 岁以下儿童和青少年免费"
+      },
+      "en": {
+        "name": "GYM. Get Fit with Art (Kunstpalast)",
+        "when": "5 Nov 2026 – 21 Feb 2027; sports course with 23 stations through the collection, the equipment may be used (children only with an adult); opening “AfterWorkOut” Thu 5 Nov 2026, 6–9 pm, free admission",
+        "place": "Kunstpalast, Ehrenhof 4-5, 40479 Düsseldorf",
+        "cost": "€17 / reduced €13; children and young people under 18 free"
+      }
+    }
+  },
+  {
+    "id": "evt-157",
+    "name": "ASIA POP (NRW-Forum)",
+    "type": "E",
+    "month": 9,
+    "when": "17.09.2026–23.05.2027; Di–So 11–18 Uhr, Do bis 21 Uhr, Mo geschlossen; ostasiatische Popkultur von Hello Kitty und Studio Ghibli bis K-Pop und Games, mit Spielen, Selfie-Stationen, Leseecke und Karaoke-Raum",
+    "place": "NRW-Forum, Ehrenhof 2, 40479 Düsseldorf",
+    "cost": "regulär 11 €",
+    "website": "https://www.nrw-forum.de/ausstellungen/asia-pop",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“ASIA POP”东亚流行文化展（NRW-Forum）",
+        "when": "2026 年 9 月 17 日–2027 年 5 月 23 日；周二至周日 11:00–18:00，周四至 21:00，周一闭馆；从 Hello Kitty、吉卜力工作室到 K-Pop 和电子游戏，现场有游戏、自拍点、阅读角和卡拉 OK 房间",
+        "place": "NRW-Forum，Ehrenhof 2，40479 Düsseldorf",
+        "cost": "标准票 11 欧元"
+      },
+      "en": {
+        "name": "ASIA POP (NRW-Forum)",
+        "when": "17 Sep 2026 – 23 May 2027; Tue–Sun 11 am–6 pm, Thu until 9 pm, closed Mon; East Asian pop culture from Hello Kitty and Studio Ghibli to K-pop and games, with games, selfie stations, a reading corner and a karaoke room",
+        "place": "NRW-Forum, Ehrenhof 2, 40479 Düsseldorf",
+        "cost": "Regular €11"
+      }
+    }
+  },
+  {
+    "id": "evt-158",
+    "name": "Mikroplastik im Rhein. Die große Reise des kleinen Plastiks (Naturkundemuseum Schloss Benrath)",
+    "type": "E",
+    "month": 8,
+    "when": "ab 28.08.2026, Laufzeit bis Ende 2027; sechs Virtual-Reality-Stationen im Naturkundemuseum",
+    "place": "Naturkundemuseum Schloss Benrath, Benrather Schloßallee 100-106, 40597 Düsseldorf-Benrath",
+    "cost": "",
+    "website": "https://www.schloss-benrath.de/mikroplastik-im-rhein",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“莱茵河里的微塑料：小塑料的大旅程”特展（Benrath 宫自然博物馆）",
+        "when": "2026 年 8 月 28 日起，展至 2027 年底；自然博物馆内设六个虚拟现实（VR）站点",
+        "place": "Schloss Benrath 自然博物馆，Benrather Schloßallee 100-106，40597 Düsseldorf-Benrath",
+        "cost": ""
+      },
+      "en": {
+        "name": "Microplastics in the Rhine. The Great Journey of the Little Plastic (Natural History Museum, Schloss Benrath)",
+        "when": "from 28 Aug 2026, running until the end of 2027; six virtual-reality stations in the natural history museum",
+        "place": "Naturkundemuseum Schloss Benrath, Benrather Schloßallee 100-106, 40597 Düsseldorf-Benrath",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-159",
+    "name": "Upside Down // Inside Out. Zwischen Lichtbild und Datenbild (Schloss Benrath)",
+    "type": "E",
+    "month": 11,
+    "when": "14.11.2026–20.12.2027; Bärbel Möllmann mit begehbarer Camera obscura, Fotografie und KI-Bildern; Vernissage Fr 13.11.2026, 19 Uhr, Museum für Gartenkunst (Ostflügel), Eintritt frei",
+    "place": "Schloss Benrath, Benrather Schloßallee 100-106, 40597 Düsseldorf-Benrath",
+    "cost": "",
+    "website": "https://www.schloss-benrath.de/upside-down-inside-out",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“颠倒//内外：在光影与数据影像之间”展（Benrath 宫）",
+        "when": "2026 年 11 月 14 日–2027 年 12 月 20 日；艺术家 Bärbel Möllmann，可走进去的暗箱（Camera obscura）、摄影和 AI 图像；开幕式 2026 年 11 月 13 日（周五）19:00，园林艺术博物馆（东翼），免费入场",
+        "place": "Schloss Benrath，Benrather Schloßallee 100-106，40597 Düsseldorf-Benrath",
+        "cost": ""
+      },
+      "en": {
+        "name": "Upside Down // Inside Out. Between Light Image and Data Image (Schloss Benrath)",
+        "when": "14 Nov 2026 – 20 Dec 2027; Bärbel Möllmann with a walk-in camera obscura, photography and AI images; opening Fri 13 Nov 2026, 7 pm, Museum für Gartenkunst (east wing), free admission",
+        "place": "Schloss Benrath, Benrather Schloßallee 100-106, 40597 Düsseldorf-Benrath",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-160",
+    "name": "5 Jahre KAP1 – Familientag in der Zentralbibliothek",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 11–18 Uhr; Geschichtenzeit mit Geburtstagsgeschichten 11–12 Uhr (Lesehöhle), Glitzertattoos und Basteln in der Kinderbibliothek, Rätselspaß, BibQuiz, Mitsing-Konzert, Familienführung im FFT 16 Uhr; MausHörspiel live mit der Maus und Nina Heuser um 14 und 16 Uhr (für Kinder von 6 bis 12 Jahren, nur mit Anmeldung)",
+    "place": "Zentralbibliothek im KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/aktionen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "KAP1 五周年家庭日（中央图书馆）",
+        "when": "2026 年 11 月 7 日（周六）11:00–18:00；11:00–12:00 生日故事会（Geschichtenzeit，Lesehöhle 阅读洞），儿童图书馆有闪粉纹身贴和手工，另有猜谜、图书馆知识竞赛、合唱，16:00 FFT 剧院家庭导览；14:00 和 16:00 “小老鼠”（Die Maus）现场听书会，Nina Heuser 主讲（适合 6–12 岁，须报名）",
+        "place": "KAP1 中央图书馆，Konrad-Adenauer-Platz 1，40210 Düsseldorf",
+        "cost": ""
+      },
+      "en": {
+        "name": "5 Years of KAP1 – Family Day at the Central Library",
+        "when": "Sat 7 Nov 2026, 11 am–6 pm; story time with birthday stories 11 am–12 pm (Lesehöhle reading den), glitter tattoos and crafts in the children's library, puzzles, library quiz, sing-along concert, family tour of the FFT at 4 pm; live “MausHörspiel” audio play with the Maus and Nina Heuser at 2 pm and 4 pm (for children aged 6 to 12, registration required)",
+        "place": "Central Library in KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-161",
+    "name": "Familienführung im Opernhaus (Deutsche Oper am Rhein)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 12–13 Uhr (evtl. nur Restkarten an der Abendkasse); So 22.11.2026, 13–14 Uhr; Sa 05.12.2026, 11–12 Uhr; Sa 12.12.2026, 13–14 Uhr; ca. 1 Stunde hinter die Kulissen, auf Deutsch, empfohlen für Kinder ab sechs Jahren; Kinderwagen und Buggys können nicht mitgenommen werden",
+    "place": "Opernhaus Düsseldorf, Heinrich-Heine-Allee 16a, 40213 Düsseldorf",
+    "cost": "6 €",
+    "website": "https://www.operamrhein.de/spielplan/a-z/familienfuehrung/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "歌剧院家庭导览（莱茵德意志歌剧院）",
+        "when": "2026 年 11 月 7 日（周六）12:00–13:00（可能只剩现场余票）；11 月 22 日（周日）13:00–14:00；12 月 5 日（周六）11:00–12:00；12 月 12 日（周六）13:00–14:00；约 1 小时参观后台，德语讲解，建议 6 岁以上；不能带婴儿车",
+        "place": "Düsseldorf 歌剧院，Heinrich-Heine-Allee 16a，40213 Düsseldorf",
+        "cost": "6 欧元"
+      },
+      "en": {
+        "name": "Family Tour of the Opera House (Deutsche Oper am Rhein)",
+        "when": "Sat 7 Nov 2026, 12–1 pm (possibly only remaining tickets at the box office); Sun 22 Nov 2026, 1–2 pm; Sat 5 Dec 2026, 11 am–12 pm; Sat 12 Dec 2026, 1–2 pm; about 1 hour behind the scenes, in German, recommended for children aged six and up; prams and buggies cannot be taken along",
+        "place": "Opernhaus Düsseldorf, Heinrich-Heine-Allee 16a, 40213 Düsseldorf",
+        "cost": "€6"
+      }
+    }
+  },
+  {
+    "id": "evt-162",
+    "name": "„Der Mond“ im Marionetten-Theater (Carl Orff)",
+    "type": "J",
+    "month": 11,
+    "when": "Nachmittagsvorstellungen Sa 07.11., 14.11., 21.11. und 28.11.2026, jeweils 15 Uhr; im November außerdem Mi, Fr und Sa um 20 Uhr; ca. 115 Min. mit Pause; für Erwachsene und Kinder ab acht Jahren",
+    "place": "Düsseldorfer Marionetten-Theater, Bilker Str. 7 (Palais Wittgenstein), 40213 Düsseldorf",
+    "cost": "Kinder bis 16 Jahre 13 €; Erwachsene Fr–So 25–32 €, Di–Do 21–27 € (je nach Kategorie)",
+    "website": "https://www.marionettentheater-duesseldorf.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "木偶剧《月亮》（Der Mond，Carl Orff，Marionetten-Theater）",
+        "when": "2026 年 11 月 7 日、14 日、21 日、28 日（均为周六）15:00 下午场；11 月每周三、周五、周六 20:00 另有晚场；约 115 分钟，含中场休息；适合成人和 8 岁以上儿童",
+        "place": "Düsseldorf 提线木偶剧院，Bilker Str. 7（Palais Wittgenstein），40213 Düsseldorf",
+        "cost": "16 岁以下儿童 13 欧元；成人周五至周日 25–32 欧元，周二至周四 21–27 欧元（按座位等级）"
+      },
+      "en": {
+        "name": "“Der Mond” (The Moon) at the Marionette Theatre (Carl Orff)",
+        "when": "Afternoon shows Sat 7, 14, 21 and 28 Nov 2026, 3 pm each; in November also Wed, Fri and Sat at 8 pm; approx. 115 min incl. interval; for adults and children aged eight and up",
+        "place": "Düsseldorfer Marionetten-Theater, Bilker Str. 7 (Palais Wittgenstein), 40213 Düsseldorf",
+        "cost": "Children up to 16 €13; adults Fri–Sun €25–32, Tue–Thu €21–27 (depending on category)"
+      }
+    }
+  },
+  {
+    "id": "evt-163",
+    "name": "1. Flutlicht-Dirtbike-Rennen (Opitzstraße)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 14.11.2026, 17 Uhr; Dirtbike-Parcours erstmals unter Flutlicht, offen für alle von 0 bis 99 Jahren, jede*r fährt einmal auf Zeit, Pokale für die Bestplatzierten; danach Open-Air-Konzert, Getränke und kleine Speisen vor Ort",
+    "place": "Dirtbike-Parcours am Wendehammer Opitzstraße, Düsseldorf-Mörsenbroich/Rath",
+    "cost": "",
+    "website": "https://www.duesseldorf.de/kiju/veranstaltungen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "首届夜光泥地自行车赛（Opitzstraße）",
+        "when": "2026 年 11 月 14 日（周六）17:00；泥地自行车赛道首次在灯光下开放，0–99 岁都可参加，每人计时骑一圈，成绩最好的有奖杯；赛后有露天音乐会，现场有饮料和小吃",
+        "place": "Opitzstraße 尽头回车场的泥地自行车赛道，Düsseldorf-Mörsenbroich/Rath",
+        "cost": ""
+      },
+      "en": {
+        "name": "1st Floodlight Dirtbike Race (Opitzstraße)",
+        "when": "Sat 14 Nov 2026, 5 pm; dirtbike course open under floodlights for the first time, for everyone aged 0 to 99, each rider does one timed run, trophies for the best; open-air concert afterwards, drinks and snacks on site",
+        "place": "Dirtbike course at the Opitzstraße turning area, Düsseldorf-Mörsenbroich/Rath",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-164",
+    "name": "Kleine Tiere, großes Kino: Das geheime Leben der Fledermäuse (UFA-Palast)",
+    "type": "J",
+    "month": 11,
+    "when": "So 22.11.2026, 17–19 Uhr; Live-Show von Fledermaus NRW mit Bildern und Videos auf der großen Kinoleinwand, Infostand vor Ort",
+    "place": "UFA-Palast Düsseldorf, Worringer Str. 142, 40210 Düsseldorf",
+    "cost": "10 €",
+    "website": "https://fledermaus.nrw/termin/kleine-tiere-grosses-kino-das-geheime-leben-der-fledermaeuse-2/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“小动物，大银幕：蝙蝠的秘密生活”现场秀（UFA-Palast 影院）",
+        "when": "2026 年 11 月 22 日（周日）17:00–19:00；Fledermaus NRW 团队的现场讲解秀，大银幕播放蝙蝠图片和视频，现场设信息台",
+        "place": "UFA-Palast 影院，Worringer Str. 142，40210 Düsseldorf",
+        "cost": "10 欧元"
+      },
+      "en": {
+        "name": "Small Animals, Big Screen: The Secret Life of Bats (UFA-Palast)",
+        "when": "Sun 22 Nov 2026, 5–7 pm; live show by Fledermaus NRW with photos and videos on the big cinema screen, info stand on site",
+        "place": "UFA-Palast Düsseldorf, Worringer Str. 142, 40210 Düsseldorf",
+        "cost": "€10"
+      }
+    }
+  },
+  {
+    "id": "evt-165",
+    "name": "Düsseldorfer Weihnachtsmarkt (Innenstadt/Altstadt)",
+    "type": "J",
+    "month": 11,
+    "when": "19.11.–30.12.2026; geschlossen am Totensonntag (22. November) und am 1. Weihnachtsfeiertag (25. Dezember); Heiligabend (24. Dezember) 11–15 Uhr, 2. Weihnachtsfeiertag (26. Dezember) 14–21 Uhr",
+    "place": "Düsseldorfer Innenstadt und Altstadt",
+    "cost": "",
+    "website": "https://www.visitduesseldorf.de/event/duesseldorfer-weihnachtsmarkt-c632015b44",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Düsseldorf 圣诞市场（市中心/老城）",
+        "when": "2026 年 11 月 19 日–12 月 30 日；11 月 22 日（亡者纪念日）和 12 月 25 日（圣诞节第一天）不开放；12 月 24 日平安夜 11:00–15:00，12 月 26 日（圣诞节第二天）14:00–21:00",
+        "place": "Düsseldorf 市中心和老城",
+        "cost": ""
+      },
+      "en": {
+        "name": "Düsseldorf Christmas Market (city centre/Altstadt)",
+        "when": "19 Nov – 30 Dec 2026; closed on Totensonntag (22 November) and Christmas Day (25 December); Christmas Eve (24 December) 11 am–3 pm, Boxing Day (26 December) 2–9 pm",
+        "place": "Düsseldorf city centre and Altstadt",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-166",
+    "name": "Programmierworkshop „Smart City mit Ozobots“ (KAP1)",
+    "type": "J",
+    "month": 11,
+    "when": "Mi 04.11.2026, 15:30–17 Uhr; in der Kreativschmiede der Kinderbibliothek planen Kinder von 8 bis 14 Jahren ihre eigene Smart City mit programmierbaren Zügen und Ozobots; Anmeldung mit Name und Alter per E-Mail an stbauskunft.kinder@duesseldorf.de",
+    "place": "Zentralbibliothek im KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+    "cost": "kostenlos",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“智慧城市”Ozobot 编程工作坊（KAP1 中央图书馆）",
+        "when": "2026 年 11 月 4 日（周三）15:30–17:00；在儿童图书馆创意工坊，8–14 岁孩子用可编程小火车和 Ozobot 机器人搭建自己的智慧城市；须用孩子姓名和年龄发邮件报名：stbauskunft.kinder@duesseldorf.de",
+        "place": "KAP1 中央图书馆，Konrad-Adenauer-Platz 1，40210 Düsseldorf",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "Programming workshop “Smart City with Ozobots” (KAP1)",
+        "when": "Wed 4 Nov 2026, 3:30–5 pm; in the children's library maker space, kids aged 8 to 14 plan their own smart city with programmable trains and Ozobots; register with name and age by email to stbauskunft.kinder@duesseldorf.de",
+        "place": "Central Library in KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+        "cost": "free"
+      }
+    }
+  },
+  {
+    "id": "evt-167",
+    "name": "Känguru-Führung mit Baby im Theatermuseum („Punk 50“)",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 11–12 Uhr; Rundgang für Eltern mit Babys im ersten Lebensjahr vor der regulären Öffnung durch die Sonderausstellung „Punk 50: Demand the Impossible“; Stillen, Fläschchen und Wickeln jederzeit möglich, Kinderwagen kann im Foyer bleiben",
+    "place": "Theatermuseum Düsseldorf, Jägerhofstraße 1, 40479 Düsseldorf",
+    "cost": "Führung kostenfrei, nur Ausstellungseintritt",
+    "website": "https://theater-museum.de/kalender/veranstaltungen-startseite/kaenguru-fuehrung",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“袋鼠导览”：带宝宝逛剧院博物馆（Punk 50 特展）",
+        "when": "2026 年 11 月 5 日（周四）11:00–12:00；面向带 1 岁以内宝宝的父母，在正式开馆前参观特展“Punk 50: Demand the Impossible”；随时可以喂奶、喂瓶、换尿布，婴儿车可停在大厅",
+        "place": "Düsseldorf 剧院博物馆，Jägerhofstraße 1，40479 Düsseldorf",
+        "cost": "导览免费，只需付展览门票"
+      },
+      "en": {
+        "name": "“Kangaroo tour” with baby at the Theatre Museum (“Punk 50”)",
+        "when": "Thu 5 Nov 2026, 11 am–12 pm; tour for parents with babies in their first year, before regular opening, through the special exhibition “Punk 50: Demand the Impossible”; breastfeeding, bottles and nappy changes welcome any time, prams can stay in the foyer",
+        "place": "Theatre Museum Düsseldorf, Jägerhofstraße 1, 40479 Düsseldorf",
+        "cost": "tour free, exhibition admission only"
+      }
+    }
+  },
+  {
+    "id": "evt-168",
+    "name": "„Ein Koffer voll Dornröschen“ im Puppentheater Helmholtzstraße",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026 16 Uhr; Sa 07.11. 15 Uhr; So 08.11. 11 und 15 Uhr; Fr 13.11. 16 Uhr; Sa 14.11. 15 Uhr; So 15.11.2026 11 und 15 Uhr; Dornröschen poetisch mit Puppen erzählt, ca. 45 Minuten, für Kinder von 3 bis 11 Jahren",
+    "place": "Puppentheater an der Helmholtzstraße, Helmholtzstraße 38, 40215 Düsseldorf",
+    "cost": "Kinder 10 €, Erwachsene 10 €",
+    "website": "https://www.puppentheater.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "木偶剧《一箱睡美人》（Helmholtzstraße 木偶剧院）",
+        "when": "2026 年 11 月 6 日（周五）16:00；11 月 7 日（周六）15:00；11 月 8 日（周日）11:00 和 15:00；11 月 13 日（周五）16:00；11 月 14 日（周六）15:00；11 月 15 日（周日）11:00 和 15:00；用精美木偶诗意地讲述睡美人童话，约 45 分钟，适合 3–11 岁",
+        "place": "Helmholtzstraße 木偶剧院，Helmholtzstraße 38，40215 Düsseldorf",
+        "cost": "儿童 10 欧元，成人 10 欧元"
+      },
+      "en": {
+        "name": "“A Suitcase Full of Sleeping Beauty” at Puppentheater Helmholtzstraße",
+        "when": "Fri 6 Nov 2026 4 pm; Sat 7 Nov 3 pm; Sun 8 Nov 11 am and 3 pm; Fri 13 Nov 4 pm; Sat 14 Nov 3 pm; Sun 15 Nov 2026 11 am and 3 pm; Sleeping Beauty told poetically with puppets, about 45 minutes, for children aged 3 to 11",
+        "place": "Puppentheater an der Helmholtzstraße, Helmholtzstraße 38, 40215 Düsseldorf",
+        "cost": "children €10, adults €10"
+      }
+    }
+  },
+  {
+    "id": "evt-169",
+    "name": "After-Work-Trödel der Graf-Recke-Kitas (Wittlaer)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 19–21 Uhr; Sa 07.11.2026, 10–12 Uhr; Charity-Trödel mit Kindersachen zugunsten der beiden Kitas der Graf Recke Stiftung in Wittlaer",
+    "place": "Ferdinand-Schule, Buschgasser Weg 25, Düsseldorf-Wittlaer",
+    "cost": "Eintritt frei",
+    "website": "https://www.stadt-kultur-familie.de/after-work-troedel/18429",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wittlaer 下班后跳蚤市场（Graf Recke 幼儿园义卖）",
+        "when": "2026 年 11 月 6 日（周五）19:00–21:00；11 月 7 日（周六）10:00–12:00；儿童用品慈善跳蚤市场，收入支持 Graf Recke 基金会在 Wittlaer 的两所幼儿园",
+        "place": "Ferdinand-Schule，Buschgasser Weg 25，Düsseldorf-Wittlaer",
+        "cost": "免费入场"
+      },
+      "en": {
+        "name": "After-work flea market of the Graf Recke daycare centres (Wittlaer)",
+        "when": "Fri 6 Nov 2026, 7–9 pm; Sat 7 Nov 2026, 10 am–12 pm; charity flea market for children's things in support of the two Graf Recke daycare centres in Wittlaer",
+        "place": "Ferdinand-Schule, Buschgasser Weg 25, Düsseldorf-Wittlaer",
+        "cost": "free entry"
+      }
+    }
+  },
+  {
+    "id": "evt-170",
+    "name": "Kinderkleiderbörse im Pestalozzihaus (Grafenberg)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 9:30–13 Uhr; Second-Hand-Börse für Kinderkleidung, Spielzeug und Babyausstattung der Ev. Emmaus-Kirchengemeinde",
+    "place": "Pestalozzihaus, Grafenberger Allee 186, 40237 Düsseldorf",
+    "cost": "Eintritt frei; Verkaufstisch 5 €",
+    "website": "https://www.stadt-kultur-familie.de/kleiderboerse-pestalozzihaus/18084",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Pestalozzihaus 儿童衣物交换市集（Grafenberg）",
+        "when": "2026 年 11 月 7 日（周六）9:30–13:00；Emmaus 新教教区举办的二手市集，有童装、玩具和婴儿用品",
+        "place": "Pestalozzihaus，Grafenberger Allee 186，40237 Düsseldorf",
+        "cost": "免费入场；摆摊每张桌子 5 欧元"
+      },
+      "en": {
+        "name": "Children's clothing swap at Pestalozzihaus (Grafenberg)",
+        "when": "Sat 7 Nov 2026, 9:30 am–1 pm; second-hand market for children's clothes, toys and baby gear run by the Protestant Emmaus parish",
+        "place": "Pestalozzihaus, Grafenberger Allee 186, 40237 Düsseldorf",
+        "cost": "free entry; seller table €5"
+      }
+    }
+  },
+  {
+    "id": "evt-171",
+    "name": "Kindertheater mit Bastelspaß: „Tschüss, kleine Hummel“ (Vorstadtkrokodile)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 11–13 Uhr; liebevolles, fröhliches Impro-Theaterstück über das Abschiednehmen von Tieren, kindgerecht und ohne erhobenen Zeigefinger; danach malen, schneiden und kleben die Kinder; empfohlen für Kinder ab fünf Jahren",
+    "place": "Vorstadtkrokodile, Otto-Petersen-Straße 2–8, Düsseldorf",
+    "cost": "5 €",
+    "website": "https://www.stadt-kultur-familie.de/kindertheater-tschuess-kleine-hummel/18325",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "儿童剧 + 手工：《再见，小熊蜂》（Vorstadtkrokodile）",
+        "when": "2026 年 11 月 7 日（周六）11:00–13:00；温柔又欢乐的即兴儿童剧，讲小动物的告别，用孩子听得懂的方式、不说教；演出后孩子们一起画画、剪贴做手工；建议 5 岁以上",
+        "place": "Vorstadtkrokodile，Otto-Petersen-Straße 2–8，Düsseldorf",
+        "cost": "5 欧元"
+      },
+      "en": {
+        "name": "Children's theatre with crafts: “Bye-bye, little bumblebee” (Vorstadtkrokodile)",
+        "when": "Sat 7 Nov 2026, 11 am–1 pm; a gentle, cheerful improv play about saying goodbye to animals, child-friendly and never preachy; afterwards the children paint, cut and glue; recommended for children aged five and up",
+        "place": "Vorstadtkrokodile, Otto-Petersen-Straße 2–8, Düsseldorf",
+        "cost": "€5"
+      }
+    }
+  },
+  {
+    "id": "evt-172",
+    "name": "Familientag in der Kunsthalle Düsseldorf",
+    "type": "J",
+    "month": 11,
+    "when": "So 08.11.2026 und So 13.12.2026, jeweils 11–18 Uhr; Familientag immer am zweiten Sonntag im Monat, Eintritt und Familienprogramm kostenlos (gefördert von den Stadtwerken Düsseldorf); im November zusätzlich Familienworkshop „Einsatz in vier Wänden“ 13–16 Uhr für Kinder von 6 bis 12 Jahren, dafür bitte vorher per E-Mail an bildung@kunsthalle-duesseldorf.de anmelden; sonst ohne Voranmeldung, Teilnehmerzahl begrenzt; einige Räume der Ausstellung kann man nur einzeln betreten, bei viel Andrang kann es Wartezeiten geben",
+    "place": "Kunsthalle Düsseldorf, Grabbeplatz 4, 40213 Düsseldorf",
+    "cost": "Eintritt frei",
+    "website": "https://www.kunsthalle-duesseldorf.de/kalender/2026-11-08-familientag/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Kunsthalle 美术馆家庭日",
+        "when": "2026 年 11 月 8 日（周日）和 12 月 13 日（周日），均为 11:00–18:00；家庭日固定在每月第二个周日，门票和家庭活动免费（Düsseldorf 城市公用事业公司赞助）；11 月 8 日 13:00–16:00 有家庭工作坊“四面墙里的行动”，适合 6–12 岁，需要提前发邮件到 bildung@kunsthalle-duesseldorf.de 报名；其他活动无需预约，名额有限；展览里有些房间一次只能进一个人，人多时可能要排队等一会儿",
+        "place": "Kunsthalle Düsseldorf，Grabbeplatz 4，40213 Düsseldorf",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "Family Day at Kunsthalle Düsseldorf",
+        "when": "Sun 8 Nov 2026 and Sun 13 Dec 2026, 11 am–6 pm each; Family Day is always on the second Sunday of the month, admission and family programme free (sponsored by Stadtwerke Düsseldorf); on 8 Nov a family workshop “Mission within four walls”, 1–4 pm, for children aged 6 to 12, please register in advance by email to bildung@kunsthalle-duesseldorf.de; otherwise no registration, limited places; some rooms of the exhibition can only be entered one at a time, so there may be a wait when it's busy",
+        "place": "Kunsthalle Düsseldorf, Grabbeplatz 4, 40213 Düsseldorf",
+        "cost": "free"
+      }
+    }
+  },
+  {
+    "id": "evt-173",
+    "name": "Familienführung „Super-Tiere“ im Naturkundemuseum Schloss Benrath",
+    "type": "J",
+    "month": 11,
+    "when": "So 08.11.2026, 15 Uhr und So 13.12.2026, 15 Uhr; Tiere mit erstaunlichen Fähigkeiten entdecken, von flinken Fliegern bis zu tierischen Spionen und Verteidigern; empfohlen für Kinder ab sechs Jahren",
+    "place": "Naturkundemuseum im Schloss Benrath, Benrather Schloßallee 100–108, 40597 Düsseldorf",
+    "cost": "5 € zzgl. Eintritt",
+    "website": "https://www.schloss-benrath.de/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“超级动物”家庭导览（Benrath 宫自然博物馆）",
+        "when": "2026 年 11 月 8 日（周日）15:00 和 12 月 13 日（周日）15:00；认识拥有惊人本领的动物，从灵巧的飞行高手到动物界的“间谍”和“防守高手”；建议 6 岁以上",
+        "place": "Benrath 宫自然博物馆，Benrather Schloßallee 100–108，40597 Düsseldorf",
+        "cost": "5 欧元，另付门票"
+      },
+      "en": {
+        "name": "Family tour “Super Animals” at the Natural History Museum, Benrath Palace",
+        "when": "Sun 8 Nov 2026, 3 pm and Sun 13 Dec 2026, 3 pm; discover animals with amazing abilities, from nimble fliers to animal spies and defenders; recommended for children aged six and up",
+        "place": "Natural History Museum at Benrath Palace, Benrather Schloßallee 100–108, 40597 Düsseldorf",
+        "cost": "€5 plus admission"
+      }
+    }
+  },
+  {
+    "id": "evt-174",
+    "name": "Vorlesen auf Französisch im KAP1",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 14.11.2026 und Sa 12.12.2026, jeweils 14–15 Uhr; Geschichten auf Französisch für Kinder von 3 bis 8 Jahren und ihre Familien, im Dezember liest Elsa Laurent vom Institut français; Anmeldung mit Name und Alter per E-Mail an stbauskunft.kinder@duesseldorf.de",
+    "place": "Zentralbibliothek im KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+    "cost": "kostenlos",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "KAP1 法语故事会",
+        "when": "2026 年 11 月 14 日（周六）和 12 月 12 日（周六），均为 14:00–15:00；为 3–8 岁孩子和家人读法语故事，12 月由法国文化中心的 Elsa Laurent 朗读；须用孩子姓名和年龄发邮件报名：stbauskunft.kinder@duesseldorf.de",
+        "place": "KAP1 中央图书馆，Konrad-Adenauer-Platz 1，40210 Düsseldorf",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "French story time at KAP1",
+        "when": "Sat 14 Nov 2026 and Sat 12 Dec 2026, 2–3 pm each; stories in French for children aged 3 to 8 and their families, in December read by Elsa Laurent of the Institut français; register with name and age by email to stbauskunft.kinder@duesseldorf.de",
+        "place": "Central Library in KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+        "cost": "free"
+      }
+    }
+  },
+  {
+    "id": "evt-175",
+    "name": "Offene Medienwerkstatt im K21 (Kinder und Erwachsene)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 14.11., 28.11. und 12.12.2026, jeweils 15–18 Uhr; Kinder von zehn Jahren an und Erwachsene experimentieren mit digitalen Bildmedien und setzen eigene Projekte um; einzelne Termine buchbar, Anmeldung beim Besucherservice (Tel. 0211 8381-204, service@kunstsammlung.de)",
+    "place": "K21 Ständehaus, Ständehausstraße 1, 40217 Düsseldorf",
+    "cost": "kostenlos",
+    "website": "https://www.stadt-kultur-familie.de/offene-medienwerkstatt/18539",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "K21 开放媒体工坊（儿童和大人）",
+        "when": "2026 年 11 月 14 日、11 月 28 日、12 月 12 日（均为周六）15:00–18:00；10 岁以上孩子和大人一起玩数字图像媒体、做自己的作品；可单次参加，须向访客服务处报名（电话 0211 8381-204，service@kunstsammlung.de）",
+        "place": "K21 Ständehaus，Ständehausstraße 1，40217 Düsseldorf",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "Open media workshop at K21 (children and adults)",
+        "when": "Sat 14 Nov, 28 Nov and 12 Dec 2026, 3–6 pm each; children aged ten and up and adults experiment with digital image media and work on their own projects; single dates bookable, register with visitor services (tel. 0211 8381-204, service@kunstsammlung.de)",
+        "place": "K21 Ständehaus, Ständehausstraße 1, 40217 Düsseldorf",
+        "cost": "free"
+      }
+    }
+  },
+  {
+    "id": "evt-176",
+    "name": "Tales for Tots – englische Vorlesestunde im KAP1",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 21.11.2026 und Sa 19.12.2026, jeweils 14–15 Uhr; Bilderbuchgeschichten und Lieder auf Englisch für Kleinkinder von 12 bis 36 Monaten mit Begleitperson, Geschwister willkommen; gemeinsam mit der International English Library; Anmeldung nötig, jeder Termin einzeln buchbar",
+    "place": "Zentralbibliothek im KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+    "cost": "kostenlos",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Tales for Tots 英语亲子故事会（KAP1）",
+        "when": "2026 年 11 月 21 日（周六）和 12 月 19 日（周六），均为 14:00–15:00；为 12–36 个月幼儿读英语绘本、唱儿歌，须有大人陪同，兄弟姐妹也欢迎；与 International English Library 合办；须报名，每场单独预约",
+        "place": "KAP1 中央图书馆，Konrad-Adenauer-Platz 1，40210 Düsseldorf",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "Tales for Tots – English story time at KAP1",
+        "when": "Sat 21 Nov 2026 and Sat 19 Dec 2026, 2–3 pm each; picture-book stories and songs in English for toddlers aged 12 to 36 months with an adult, siblings welcome; with the International English Library; registration required, each date booked separately",
+        "place": "Central Library in KAP1, Konrad-Adenauer-Platz 1, 40210 Düsseldorf",
+        "cost": "free"
+      }
+    }
+  },
+  {
+    "id": "evt-177",
+    "name": "Kamishibai – Erzähltheater mit Basteln in der Stadtteilbücherei Bilk",
+    "type": "J",
+    "month": 11,
+    "when": "Do 26.11.2026 und Do 17.12.2026, jeweils 16:30 Uhr; eine Geschichte oder ein Märchen wird mit großen Bildkarten erzählt, danach basteln oder malen die Kinder passend dazu; für Kinder von drei Jahren an, Familien und Großeltern; keine Anmeldung nötig",
+    "place": "Stadtteilbücherei Bilk, Friedrichstraße 127, 40217 Düsseldorf",
+    "cost": "kostenlos",
+    "website": "https://www.duesseldorf.de/stadtbuechereien/veranstaltungen",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Kamishibai 纸芝居故事会 + 手工（Bilk 区图书馆）",
+        "when": "2026 年 11 月 26 日（周四）和 12 月 17 日（周四），均为 16:30；用大幅图卡讲故事或童话，之后孩子们按故事主题做手工或画画；适合 3 岁以上孩子，全家和祖辈都欢迎；无需报名",
+        "place": "Bilk 区图书馆，Friedrichstraße 127，40217 Düsseldorf",
+        "cost": "免费"
+      },
+      "en": {
+        "name": "Kamishibai paper theatre with crafts at Bilk library",
+        "when": "Thu 26 Nov 2026 and Thu 17 Dec 2026, 4:30 pm each; a story or fairy tale told with large picture cards, then the children craft or paint to match; for children aged three and up, families and grandparents; no registration needed",
+        "place": "Bilk branch library, Friedrichstraße 127, 40217 Düsseldorf",
+        "cost": "free"
+      }
+    }
+  },
+  {
+    "id": "evt-178",
+    "name": "Kunst-Workshop im Wald „Malen ohne Dach“ (efa, Aaper Wald)",
+    "type": "J",
+    "month": 12,
+    "when": "Fr 04.12.2026, 15–17:15 Uhr; Eltern und Kinder von zwei Jahren an malen und gestalten mit Farben und Naturmaterialien im Wald, mit Spielen, Waldgeschichten, Liedern und Picknick; mitbringen: kleinen Imbiss, Wasserflasche und Becher oder Schüsselchen für die Farben",
+    "place": "Müllerswiese im Aaper Wald, Düsseldorf-Rath (Haltestelle Oberrath, U72)",
+    "cost": "Materialkosten 8 € pro Kind",
+    "website": "https://www.efa-duesseldorf.de",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "森林艺术工作坊“没有屋顶的画室”（efa，Aaper 森林）",
+        "when": "2026 年 12 月 4 日（周五）15:00–17:15；父母和 2 岁以上孩子在森林里用颜料和自然材料画画创作，还有游戏、森林故事、儿歌和野餐；请带小零食、水壶和调颜料用的杯子或小碗",
+        "place": "Aaper 森林 Müllerswiese 草地，Düsseldorf-Rath（U72 Oberrath 站）",
+        "cost": "材料费每个孩子 8 欧元"
+      },
+      "en": {
+        "name": "Art workshop in the woods “Painting without a roof” (efa, Aaper Wald)",
+        "when": "Fri 4 Dec 2026, 3–5:15 pm; parents and children aged two and up paint and create with colours and natural materials in the forest, with games, forest stories, songs and a picnic; bring a small snack, a water bottle and a cup or small bowl for mixing paint",
+        "place": "Müllerswiese in the Aaper Wald, Düsseldorf-Rath (Oberrath stop, U72)",
+        "cost": "materials €8 per child"
+      }
+    }
+  },
+  {
+    "id": "evt-179",
+    "name": "„Die Reise zum Weihnachtsmann“ – Kinder-Zauber-Krimi im zakk",
+    "type": "J",
+    "month": 12,
+    "when": "So 06.12.2026 und So 20.12.2026, jeweils 14 Uhr; Zauberkünstler Guido Hoehne sucht mit den Kindern im Publikum den kurz vor dem Fest verschwundenen Weihnachtsmann; empfohlen für Kinder ab vier Jahren",
+    "place": "zakk, Fichtenstraße 40, 40233 Düsseldorf",
+    "cost": "Vorverkauf 12,50 €, Tageskasse 13 €",
+    "website": "https://zakk.de/event-detail?event=16306",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "魔术侦探儿童剧《寻找圣诞老人》（zakk）",
+        "when": "2026 年 12 月 6 日（周日）和 12 月 20 日（周日），均为 14:00；魔术师 Guido Hoehne 带着台下的小观众一起寻找节前失踪的圣诞老人；建议 4 岁以上",
+        "place": "zakk 文化中心，Fichtenstraße 40，40233 Düsseldorf",
+        "cost": "预售 12.50 欧元，现场 13 欧元"
+      },
+      "en": {
+        "name": "“Journey to Father Christmas” – magic detective show for kids at zakk",
+        "when": "Sun 6 Dec 2026 and Sun 20 Dec 2026, 2 pm each; magician Guido Hoehne and the children in the audience search for Father Christmas, who has vanished just before the holidays; recommended for children aged four and up",
+        "place": "zakk, Fichtenstraße 40, 40233 Düsseldorf",
+        "cost": "advance €12.50, at the door €13"
+      }
+    }
+  },
+  {
+    "id": "evt-180",
+    "name": "Glühweintreff mit Weihnachtsbaumverkauf im Zentralschulgarten",
+    "type": "J",
+    "month": 12,
+    "when": "So 13.12.2026, 11–15 Uhr; Weihnachtsbäume, frischer Apfelsaft aus dem eigenen Garten und „Feines aus dem Schulgarten“ im historischen Schulgarten (Förderverein Schulgarten e. V.)",
+    "place": "Zentralschulgarten, Räuscherweg 40, Düsseldorf",
+    "cost": "",
+    "website": "https://www.stadt-kultur-familie.de/gluehweintreff-mit-weihnachtsbaum-verkauf/15065",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "中央学校花园热红酒聚会 + 圣诞树售卖",
+        "when": "2026 年 12 月 13 日（周日）11:00–15:00；在历史悠久的学校花园里选购圣诞树，喝花园自产的新鲜苹果汁，还有花园自制小食（学校花园促进会主办）",
+        "place": "中央学校花园（Zentralschulgarten），Räuscherweg 40，Düsseldorf",
+        "cost": ""
+      },
+      "en": {
+        "name": "Mulled wine meet-up with Christmas tree sale at the Zentralschulgarten",
+        "when": "Sun 13 Dec 2026, 11 am–3 pm; Christmas trees, fresh apple juice from the garden's own harvest and homemade treats in the historic school garden (Förderverein Schulgarten e. V.)",
+        "place": "Zentralschulgarten, Räuscherweg 40, Düsseldorf",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-181",
+    "name": "Winterspielplatz „Luis und Luisa“ in der Rheinkirche",
+    "type": "J",
+    "month": 11,
+    "when": "Mo 02.11., 09.11., 16.11., 23.11., 30.11., 07.12., 14.12. und 21.12.2026, jeweils 9:30–11:30 Uhr; Di 03.11., 10.11., 17.11., 24.11., 01.12., 08.12., 15.12. und 22.12.2026, jeweils 15–17 Uhr; Indoor-Spielraum und Elterncafé für Kinder bis vier Jahre mit Begleitung, kommen, wann es passt; Stoppersocken oder Hausschuhe mitbringen; Eingang im Innenhof, Atrium per Aufzug oder Treppe",
+    "place": "Rheinkirche Düsseldorf, Luisenstraße 51, 40215 Düsseldorf",
+    "cost": "kostenlos (Spende willkommen)",
+    "website": "https://www.stadt-kultur-familie.de/winterspielplatz-luis-und-luisa/2304",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Rheinkirche 冬季室内游乐场“Luis und Luisa”",
+        "when": "2026 年 11 月 2 日、9 日、16 日、23 日、30 日，12 月 7 日、14 日、21 日（周一）9:30–11:30；11 月 3 日、10 日、17 日、24 日，12 月 1 日、8 日、15 日、22 日（周二）15:00–17:00；0–4 岁孩子在大人陪同下玩耍，大人可以喝咖啡聊天（亲子咖啡角），随时来随时走；请带防滑袜或室内鞋；入口在内院，乘电梯或走楼梯到中庭",
+        "place": "Rheinkirche 教堂，Luisenstraße 51，40215 Düsseldorf",
+        "cost": "免费（欢迎捐款）"
+      },
+      "en": {
+        "name": "Winter playground “Luis und Luisa” at the Rheinkirche",
+        "when": "Mondays 2, 9, 16, 23, 30 Nov and 7, 14, 21 Dec 2026, 9:30–11:30 am; Tuesdays 3, 10, 17, 24 Nov and 1, 8, 15, 22 Dec 2026, 3–5 pm; indoor play space and parents' café for children up to four with an adult, drop in whenever it suits; bring grip socks or slippers; entrance in the courtyard, atrium by lift or stairs",
+        "place": "Rheinkirche Düsseldorf, Luisenstraße 51, 40215 Düsseldorf",
+        "cost": "free (donations welcome)"
+      }
+    }
+  },
+  {
+    "id": "evt-182",
+    "name": "Sankt-Martins-Markt auf dem Alten Markt in Hilden",
+    "type": "J",
+    "month": 11,
+    "when": "04.11.–11.11.2026; Mo–Fr 11–20 Uhr, Sa 11–21 Uhr, So 11:30–20 Uhr; erstmals eine Woche Martinsmarkt vor der Reformationskirche mit Kinderkarussell, gemeinsamem Martinssingen, Imbiss und heißen Getränken; Höhepunkt ist der Martinszug mit Sankt Martin zu Pferd durch die Innenstadt (Termin und Programm laut Veranstalter folgen), Laternen willkommen",
+    "place": "Alter Markt vor der Reformationskirche, Markt 18, 40721 Hilden",
+    "cost": "",
+    "website": "https://hildener-winterdorf.de/sankt-martins-markt.html",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Hilden 老市场圣马丁市集",
+        "when": "2026 年 11 月 4 日–11 日；周一至周五 11:00–20:00，周六 11:00–21:00，周日 11:30–20:00；首次在宗教改革教堂前举办为期一周的圣马丁市集，有儿童旋转木马、一起唱圣马丁歌、小吃和热饮；重头戏是圣马丁骑马带队穿过市中心的灯笼游行（具体日期和节目主办方稍后公布），欢迎带灯笼",
+        "place": "Hilden 老市场（宗教改革教堂前），Markt 18，40721 Hilden",
+        "cost": ""
+      },
+      "en": {
+        "name": "St. Martin's market on the Alter Markt in Hilden",
+        "when": "4–11 Nov 2026; Mon–Fri 11 am–8 pm, Sat 11 am–9 pm, Sun 11:30 am–8 pm; for the first time a week-long St. Martin's market in front of the Reformationskirche with a children's carousel, Martin singing together, snacks and hot drinks; the highlight is the lantern procession with St. Martin on horseback through the town centre (date and programme to be announced by the organiser), lanterns welcome",
+        "place": "Alter Markt in front of the Reformationskirche, Markt 18, 40721 Hilden",
+        "cost": ""
+      }
+    }
+  },
+  {
+    "id": "evt-183",
+    "name": "Junge Oper „So oder so oder so“ – Revue für Kinder",
+    "type": "J",
+    "month": 11,
+    "when": "Familienvorstellungen: So 29.11.2026, 12–13 Uhr und Mi 23.12.2026, 15–16 Uhr im Theater Duisburg (Opernfoyer); Sa 30.01.2027 und So 14.02.2027, jeweils 14–15 Uhr im Opernhaus Düsseldorf (Foyer); fabelhafte, farbenfrohe Revue von Tom Smith über Gefühle, Fantasie und Anderssein, ca. 45 Minuten, auf Deutsch, empfohlen für Kinder ab vier Jahren",
+    "place": "Theater Duisburg – Opernfoyer, Opernplatz, 47051 Duisburg (2026); Opernhaus Düsseldorf – Foyer, Heinrich-Heine-Allee 16a, 40213 Düsseldorf (2027)",
+    "cost": "10 €, ermäßigt 5 €",
+    "website": "https://www.operamrhein.de/spielplan/a-z/soodersooderso/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "莱茵德意志歌剧院青少年歌剧《这样那样这样》儿童歌舞剧",
+        "when": "家庭场：2026 年 11 月 29 日（周日）12:00–13:00 和 12 月 23 日（周三）15:00–16:00，Duisburg 剧院歌剧厅前厅；2027 年 1 月 30 日（周六）和 2 月 14 日（周日），均为 14:00–15:00，Düsseldorf 歌剧院前厅；Tom Smith 创作的色彩缤纷歌舞剧，讲情绪、想象力和与众不同，约 45 分钟，德语，建议 4 岁以上",
+        "place": "Duisburg 剧院歌剧前厅，Opernplatz，47051 Duisburg（2026）；Düsseldorf 歌剧院前厅，Heinrich-Heine-Allee 16a，40213 Düsseldorf（2027）",
+        "cost": "10 欧元，优惠价 5 欧元"
+      },
+      "en": {
+        "name": "Junge Oper “So oder so oder so” – a revue for children",
+        "when": "Family performances: Sun 29 Nov 2026, 12–1 pm and Wed 23 Dec 2026, 3–4 pm at Theater Duisburg (opera foyer); Sat 30 Jan 2027 and Sun 14 Feb 2027, 2–3 pm each at Opernhaus Düsseldorf (foyer); a colourful revue by Tom Smith about feelings, imagination and being different, about 45 minutes, in German, recommended for children aged four and up",
+        "place": "Theater Duisburg – opera foyer, Opernplatz, 47051 Duisburg (2026); Opernhaus Düsseldorf – foyer, Heinrich-Heine-Allee 16a, 40213 Düsseldorf (2027)",
+        "cost": "€10, reduced €5"
+      }
+    }
+  },
+  {
+    "id": "evt-184",
+    "name": "Schlossweihnacht Schloss Dyck",
+    "type": "J",
+    "month": 11,
+    "when": "Adventswochenenden 28.11.–29.11., 05.12.–06.12., 12.12.–13.12. und 19.12.–20.12.2026, jeweils Sa und So 10–20 Uhr (Kassenschluss 19 Uhr); Weihnachtsmarkt mit rund 130 Ausstellern am Wasserschloss, Kinderdampfeisenbahn, abendliches Lichtspiel, lebendiges Krippenspiel halbstündlich 12–19 Uhr; kostenloser Shuttle-Bus alle 20 Minuten vom S-Bahnhof Büttgen; Tickets tagesgebunden, nicht umtauschbar",
+    "place": "Schloss Dyck, 41363 Jüchen",
+    "cost": "online: Erwachsene 18,50 €, ermäßigt 13,50 €, Kinder 7–16 Jahre 3 €, Kinder bis 6 Jahre frei; Tageskasse bis zu 1 € teurer",
+    "website": "https://stiftung-schloss-dyck.de/veranstaltungen/schlossweihnacht-schloss-dyck.html",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Dyck 宫圣诞市集（Schlossweihnacht）",
+        "when": "2026 年降临节周末：11 月 28–29 日、12 月 5–6 日、12 月 12–13 日、12 月 19–20 日，每个周六周日 10:00–20:00（19:00 停止售票）；水上城堡前约 130 个摊位的圣诞市集，有儿童蒸汽小火车、晚间灯光秀，12:00–19:00 每半小时一场真人马槽剧；Büttgen 城铁站每 20 分钟有免费接驳巴士；门票限定日期，不可改签",
+        "place": "Dyck 宫，41363 Jüchen",
+        "cost": "网购：成人 18.50 欧元，优惠 13.50 欧元，7–16 岁儿童 3 欧元，6 岁及以下免费；现场售票最多贵 1 欧元"
+      },
+      "en": {
+        "name": "Christmas at Schloss Dyck (Schlossweihnacht)",
+        "when": "Advent weekends 28–29 Nov, 5–6 Dec, 12–13 Dec and 19–20 Dec 2026, Sat and Sun 10 am–8 pm (ticket desk closes 7 pm); Christmas market with about 130 stalls at the moated castle, children's steam train, evening light show, live nativity play every half hour 12–7 pm; free shuttle bus every 20 minutes from Büttgen S-Bahn station; date-specific, non-exchangeable tickets",
+        "place": "Schloss Dyck, 41363 Jüchen",
+        "cost": "online: adults €18.50, reduced €13.50, children 7–16 €3, children up to 6 free; up to €1 more at the door"
+      }
+    }
+  },
+  {
+    "id": "evt-185",
+    "name": "Figurentheater „Plötzlich Pinguin“ (Fithe) im Kulturhaus Süd",
+    "type": "E",
+    "month": 11,
+    "when": "Di 17.11.2026, 15 Uhr; Einlass ab 14:50 Uhr, nach 15 Uhr ist kein Einlass mehr möglich; Fithe, das Figurentheater aus Ostbelgien, erzählt von einem Kind, das einen kleinen Pinguin vor der Haustür findet und ihn zurück zum Südpol bringen will; für Kinder von drei Jahren an; Karten bitte vorher reservieren: persönlich im Kulturhaus Süd, telefonisch unter 0211 8997551 oder per E-Mail an khs@duesseldorf.de",
+    "place": "Kulturhaus Süd / Freizeitstätte Garath, Fritz-Erler-Straße 21, 40595 Düsseldorf",
+    "cost": "4 €",
+    "website": "https://www.duesseldorf.de/buergerhaeuser/kulturhaus-sued/kindertheater",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "木偶剧《突然来了只企鹅》（Fithe 木偶剧团，Kulturhaus Süd）",
+        "when": "2026 年 11 月 17 日（周二）15:00；14:50 开始入场，15:00 之后就不能再进场了；来自比利时东部的 Fithe 木偶剧团，讲一个孩子在家门口发现一只小企鹅、想把它送回南极的故事；适合 3 岁以上；请提前订票：到 Kulturhaus Süd 现场、打电话 0211 8997551，或发邮件到 khs@duesseldorf.de",
+        "place": "Kulturhaus Süd / Garath 文化中心，Fritz-Erler-Straße 21，40595 Düsseldorf",
+        "cost": "4 欧元"
+      },
+      "en": {
+        "name": "Puppet theatre “Suddenly Penguin” (Fithe) at Kulturhaus Süd",
+        "when": "Tue 17 Nov 2026, 3 pm; doors open 2:50 pm, no entry after 3 pm; Fithe, the puppet theatre from East Belgium, tells of a child who finds a little penguin at the front door and wants to take it home to the South Pole; for children aged three and up; please reserve tickets in advance: in person at Kulturhaus Süd, by phone on 0211 8997551 or by email to khs@duesseldorf.de",
+        "place": "Kulturhaus Süd / Freizeitstätte Garath, Fritz-Erler-Straße 21, 40595 Düsseldorf",
+        "cost": "€4"
+      }
+    }
+  },
+  {
+    "id": "evt-186",
+    "name": "„Die Lichtmaschinerie“ – Mitmach-Ausstellung für Familien (Akki)",
+    "type": "E",
+    "month": 11,
+    "when": "15.11.2026 – 19.02.2027; Eröffnung So 15.11.2026, 11–13 Uhr mit freiem Eintritt, am selben Tag Familienzeit 13:30–16:45 Uhr; danach Familienbesuch (je 90 Minuten) sonntags 10–16:45 Uhr und donnerstags 15–16:30 Uhr, in den Winterferien auch 28.–30.12.2026 und 04.–06.01.2027 (jeweils Mo bis Mi, 10–16:45 Uhr); letzter Familientermin Do 18.02.2027; Zahnräder, Seile, ein Krachapparat, Schatten und Licht zum Selbstantreiben, dazu Mal- und Bauwerkstatt; für alle von fünf Jahren an, jüngere Geschwister brauchen auch ein Ticket (außer im Kinderwagen oder in der Trage); begleitende Workshops mit eigener Anmeldung am 21.11.2026, 05.12.2026, 23.12.2026, 16.01.2027, 30.01.2027 und 13.02.2027; Tickets für Sonntage und Ferien online im Ticketshop",
+    "place": "Akki-Haus, Siegburger Straße 25, 40591 Düsseldorf (am Südpark)",
+    "cost": "5 € zzgl. Gebühren; Eröffnung 11–13 Uhr frei",
+    "website": "https://www.akki-ev.de/serien/die-lichtmaschinerie-mitmach-ausstellung-fuer-familien/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "“光之机器”亲子互动展（Akki）",
+        "when": "2026 年 11 月 15 日至 2027 年 2 月 19 日；开幕日 2026 年 11 月 15 日（周日）11:00–13:00 免费入场，当天 13:30–16:45 还有家庭场；之后家庭参观每场 90 分钟：每周日 10:00–16:45、每周四 15:00–16:30，寒假里 2026 年 12 月 28–30 日（周一至周三）和 2027 年 1 月 4–6 日（周一至周三）也开放；最后一个家庭场是 2027 年 2 月 18 日（周四）；齿轮、绳索、会发出各种声音的“噪音机”、光和影子都要自己踩踏板带动，还有绘画和制作工坊；适合 5 岁以上，弟弟妹妹也需要买票（坐婴儿车或背在背带里的除外）；配套工作坊需另外报名：2026 年 11 月 21 日、12 月 5 日、12 月 23 日，2027 年 1 月 16 日、1 月 30 日、2 月 13 日；周日和假期场次在线购票",
+        "place": "Akki-Haus，Siegburger Straße 25，40591 Düsseldorf（Südpark 旁）",
+        "cost": "5 欧元另加手续费；开幕 11:00–13:00 免费"
+      },
+      "en": {
+        "name": "“The Light Machinery” – hands-on exhibition for families (Akki)",
+        "when": "15 Nov 2026 – 19 Feb 2027; opening Sun 15 Nov 2026, 11 am–1 pm with free entry, family session the same day 1:30–4:45 pm; then family visits (90 minutes each) on Sundays 10 am–4:45 pm and Thursdays 3–4:30 pm, in the winter holidays also Mon 28 to Wed 30 Dec 2026 and Mon 4 to Wed 6 Jan 2027; last family slot Thu 18 Feb 2027; gears, ropes, a noise machine, light and shadows you set in motion yourself, plus painting and building workshops; for everyone aged five and up, younger siblings need a ticket too (unless in a pram or carrier); accompanying workshops with separate registration on 21 Nov 2026, 5 Dec 2026, 23 Dec 2026, 16 Jan 2027, 30 Jan 2027 and 13 Feb 2027; tickets for Sundays and holidays online",
+        "place": "Akki-Haus, Siegburger Straße 25, 40591 Düsseldorf (by the Südpark)",
+        "cost": "€5 plus fees; opening 11 am–1 pm free"
+      }
+    }
+  },
+  {
+    "id": "evt-187",
+    "name": "Familienkonzert zum Mitmachen: „Wer hat hier das Sagen?“ (Tonhalle)",
+    "type": "E",
+    "month": 11,
+    "when": "So 15.11.2026, 11 Uhr; das Orchester der Landesregierung Düsseldorf zeigt, was ein Dirigent eigentlich macht, welches Instrument am lautesten und welches am tiefsten klingt; mit etwas Glück dürfen Kinder selbst auf die große Bühne und das Orchester dirigieren; Tickets über den Ticketshop der Tonhalle",
+    "place": "Tonhalle Düsseldorf, Mendelssohn-Saal, Ehrenhof 1, 40479 Düsseldorf",
+    "cost": "Tickets im Tonhalle-Ticketshop",
+    "website": "https://www.tonhalle.de/veranstaltung/komet/20146-orchester-der-landesregierung",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "亲子互动音乐会《这里谁说了算？》（Tonhalle 音乐厅）",
+        "when": "2026 年 11 月 15 日（周日）11:00；Düsseldorf 州政府业余管弦乐团带孩子们看看指挥到底在做什么、哪件乐器声音最响、哪件最低沉；运气好的话，孩子还能亲自上大舞台指挥乐团；在 Tonhalle 官网售票处购票",
+        "place": "Tonhalle 音乐厅 Mendelssohn 厅，Ehrenhof 1，40479 Düsseldorf",
+        "cost": "在 Tonhalle 售票处购票"
+      },
+      "en": {
+        "name": "Hands-on family concert: “Who's in charge here?” (Tonhalle)",
+        "when": "Sun 15 Nov 2026, 11 am; the Orchester der Landesregierung Düsseldorf shows what a conductor actually does and which instrument is the loudest and which the deepest; with a bit of luck, children can step onto the big stage and conduct the orchestra themselves; tickets via the Tonhalle ticket shop",
+        "place": "Tonhalle Düsseldorf, Mendelssohn Hall, Ehrenhof 1, 40479 Düsseldorf",
+        "cost": "tickets via the Tonhalle ticket shop"
+      }
+    }
+  },
+  {
+    "id": "evt-188",
+    "name": "Martinszug Kita St. Peter (Friedrichstadt)",
+    "type": "J",
+    "month": 11,
+    "when": "Di 03.11.2026, 17 Uhr; Veranstalter: Kita St. Peter; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Talstraße (St. Peter), 40217 Düsseldorf-Friedrichstadt",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Friedrichstadt 圣马丁灯笼游行（Kita St. Peter）",
+        "when": "2026 年 11 月 3 日（周二）17:00；主办：Kita St. Peter；圣马丁骑马带队，带上灯笼",
+        "place": "Talstraße (St. Peter), 40217 Düsseldorf-Friedrichstadt",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Friedrichstadt (Kita St. Peter)",
+        "when": "Tue 3 Nov 2026, 5 pm; organiser: Kita St. Peter; St. Martin on horseback, bring a lantern",
+        "place": "Talstraße (St. Peter), 40217 Düsseldorf-Friedrichstadt",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-189",
+    "name": "Martinszug Garath",
+    "type": "J",
+    "month": 11,
+    "when": "Di 03.11.2026, 17:30 Uhr; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Wittenberger Weg 108, 40593 Düsseldorf-Garath",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Garath 圣马丁灯笼游行",
+        "when": "2026 年 11 月 3 日（周二）17:30；圣马丁骑马带队，带上灯笼",
+        "place": "Wittenberger Weg 108, 40593 Düsseldorf-Garath",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Garath",
+        "when": "Tue 3 Nov 2026, 5:30 pm; St. Martin on horseback, bring a lantern",
+        "place": "Wittenberger Weg 108, 40593 Düsseldorf-Garath",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-190",
+    "name": "Martinszug Lichtenbroich",
+    "type": "J",
+    "month": 11,
+    "when": "Mi 04.11.2026, 17 Uhr; ⚠️ andere Ankündigung nennt 16:30 Uhr – lieber etwas früher da sein; Veranstalter: Verein Leetebrok; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Einbrunger Weg, 40472 Düsseldorf-Lichtenbroich",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Lichtenbroich 圣马丁灯笼游行",
+        "when": "2026 年 11 月 4 日（周三）17:00；⚠️ 另有公告写 16:30，建议提早到；主办：Verein Leetebrok；圣马丁骑马带队，带上灯笼",
+        "place": "Einbrunger Weg, 40472 Düsseldorf-Lichtenbroich",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Lichtenbroich",
+        "when": "Wed 4 Nov 2026, 5 pm; ⚠️ another listing says 4:30 pm – best arrive a little early; organiser: Verein Leetebrok; St. Martin on horseback, bring a lantern",
+        "place": "Einbrunger Weg, 40472 Düsseldorf-Lichtenbroich",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-191",
+    "name": "Martinszug Kita der Diakonie (Golzheim)",
+    "type": "J",
+    "month": 11,
+    "when": "Mi 04.11.2026, 17:15 Uhr; Veranstalter: Kita der Diakonie; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Tersteegenplatz 1, 40474 Düsseldorf-Golzheim",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Golzheim 圣马丁灯笼游行（Kita der Diakonie）",
+        "when": "2026 年 11 月 4 日（周三）17:15；主办：Kita der Diakonie；圣马丁骑马带队，带上灯笼",
+        "place": "Tersteegenplatz 1, 40474 Düsseldorf-Golzheim",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Golzheim (Kita der Diakonie)",
+        "when": "Wed 4 Nov 2026, 5:15 pm; organiser: Kita der Diakonie; St. Martin on horseback, bring a lantern",
+        "place": "Tersteegenplatz 1, 40474 Düsseldorf-Golzheim",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-192",
+    "name": "Martinszug GGS Heinrich Heine (Heerdt)",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 16:30 Uhr; ⚠️ laut Liste Start „an der Rheinallee“; Kartenpunkt = GGS Heinrich Heine, Heerdter Landstraße 186 – genauen Startpunkt bei der Schule erfragen; Veranstalter: GGS Heinrich Heine; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "GGS Heinrich Heine, Heerdter Landstraße 186, 40549 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Heerdt 圣马丁灯笼游行（GGS Heinrich Heine）",
+        "when": "2026 年 11 月 5 日（周四）16:30；⚠️ 名单写「在 Rheinallee 出发」；地图点位为 GGS Heinrich Heine（Heerdter Landstraße 186），具体起点请向学校确认；主办：GGS Heinrich Heine；圣马丁骑马带队，带上灯笼",
+        "place": "GGS Heinrich Heine, Heerdter Landstraße 186, 40549 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Heerdt (GGS Heinrich Heine)",
+        "when": "Thu 5 Nov 2026, 4:30 pm; ⚠️ list says start 'an der Rheinallee'; map point is GGS Heinrich Heine, Heerdter Landstraße 186 – ask the school for the exact start; organiser: GGS Heinrich Heine; St. Martin on horseback, bring a lantern",
+        "place": "GGS Heinrich Heine, Heerdter Landstraße 186, 40549 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-193",
+    "name": "Martinszug Lierenfeld",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 16:30 Uhr; Veranstalter: Heimatverein Lierenfeld; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Gatherweg 109, 40231 Düsseldorf-Lierenfeld",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Lierenfeld 圣马丁灯笼游行",
+        "when": "2026 年 11 月 5 日（周四）16:30；主办：Heimatverein Lierenfeld；圣马丁骑马带队，带上灯笼",
+        "place": "Gatherweg 109, 40231 Düsseldorf-Lierenfeld",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Lierenfeld",
+        "when": "Thu 5 Nov 2026, 4:30 pm; organiser: Heimatverein Lierenfeld; St. Martin on horseback, bring a lantern",
+        "place": "Gatherweg 109, 40231 Düsseldorf-Lierenfeld",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-194",
+    "name": "Martinszug Unterrath/Lichtenbroich",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 16:30 Uhr; ⚠️ andere Ankündigung nennt 17 Uhr – lieber etwas früher da sein; Veranstalter: Bürgerverein Unterrath und Lichtenbroich; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Kartäuserstraße 70, 40468 Düsseldorf (Schützenhaus Unterrather Schützen)",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Unterrath 圣马丁灯笼游行（Unterrath/Lichtenbroich）",
+        "when": "2026 年 11 月 5 日（周四）16:30；⚠️ 另有公告写 17:00，建议提早到；主办：Bürgerverein Unterrath und Lichtenbroich；圣马丁骑马带队，带上灯笼",
+        "place": "Kartäuserstraße 70, 40468 Düsseldorf (Schützenhaus Unterrather Schützen)",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Unterrath (Unterrath/Lichtenbroich)",
+        "when": "Thu 5 Nov 2026, 4:30 pm; ⚠️ another listing says 5 pm – best arrive a little early; organiser: Bürgerverein Unterrath und Lichtenbroich; St. Martin on horseback, bring a lantern",
+        "place": "Kartäuserstraße 70, 40468 Düsseldorf (Schützenhaus Unterrather Schützen)",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-195",
+    "name": "Martinszug Kath. Grundschule (Eller)",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 16:45 Uhr; Veranstalter: Kath. Grundschule Fuldaer Str.; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Fuldaer Straße 33, 40229 Düsseldorf-Eller",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Eller 圣马丁灯笼游行（Kath. Grundschule）",
+        "when": "2026 年 11 月 5 日（周四）16:45；主办：Kath. Grundschule Fuldaer Str.；圣马丁骑马带队，带上灯笼",
+        "place": "Fuldaer Straße 33, 40229 Düsseldorf-Eller",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Eller (Kath. Grundschule)",
+        "when": "Thu 5 Nov 2026, 4:45 pm; organiser: Kath. Grundschule Fuldaer Str.; St. Martin on horseback, bring a lantern",
+        "place": "Fuldaer Straße 33, 40229 Düsseldorf-Eller",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-196",
+    "name": "Martinszug Schützen Garath",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 16:45 Uhr; Veranstalter: Schützen Garath; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Schulhof Neustrelitzer Straße, 40595 Düsseldorf-Garath",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Garath 圣马丁灯笼游行（Schützen Garath）",
+        "when": "2026 年 11 月 5 日（周四）16:45；主办：Schützen Garath；圣马丁骑马带队，带上灯笼",
+        "place": "Schulhof Neustrelitzer Straße, 40595 Düsseldorf-Garath",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Garath (Schützen Garath)",
+        "when": "Thu 5 Nov 2026, 4:45 pm; organiser: Schützen Garath; St. Martin on horseback, bring a lantern",
+        "place": "Schulhof Neustrelitzer Straße, 40595 Düsseldorf-Garath",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-197",
+    "name": "Martinszug Benrath",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 17 Uhr; Veranstalter: Martinsfreunde Benrath; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Erich-Müller-Straße 31, 40597 Düsseldorf-Benrath",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Benrath 圣马丁灯笼游行",
+        "when": "2026 年 11 月 5 日（周四）17:00；主办：Martinsfreunde Benrath；圣马丁骑马带队，带上灯笼",
+        "place": "Erich-Müller-Straße 31, 40597 Düsseldorf-Benrath",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Benrath",
+        "when": "Thu 5 Nov 2026, 5 pm; organiser: Martinsfreunde Benrath; St. Martin on horseback, bring a lantern",
+        "place": "Erich-Müller-Straße 31, 40597 Düsseldorf-Benrath",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-198",
+    "name": "Martinszug Kita/Familienzentrum Sulzbachstraße (Gerresheim)",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 17 Uhr; Veranstalter: Kita und Familienzentrum; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Sulzbachstraße 6, 40629 Düsseldorf-Gerresheim",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Gerresheim 圣马丁灯笼游行（Kita/Familienzentrum Sulzbachstraße）",
+        "when": "2026 年 11 月 5 日（周四）17:00；主办：Kita und Familienzentrum；圣马丁骑马带队，带上灯笼",
+        "place": "Sulzbachstraße 6, 40629 Düsseldorf-Gerresheim",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Gerresheim (Kita/Familienzentrum Sulzbachstraße)",
+        "when": "Thu 5 Nov 2026, 5 pm; organiser: Kita und Familienzentrum; St. Martin on horseback, bring a lantern",
+        "place": "Sulzbachstraße 6, 40629 Düsseldorf-Gerresheim",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-199",
+    "name": "Martinszug Holthausen",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 17 Uhr; ⚠️ Ankündigung nennt Mittwoch statt Donnerstag – Tag vorher bei den Schützen erfragen; Veranstalter: St. Seb. Schützen Holthausen; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Schulhof Adolf-Klarenbach-Schule, 40589 Düsseldorf-Holthausen",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": false,
+    "i18n": {
+      "zh": {
+        "name": "Holthausen 圣马丁灯笼游行",
+        "when": "2026 年 11 月 5 日（周四）17:00；⚠️ 公告把星期写成了周三（日期对应周四）——请提前向射手协会确认是哪一天；主办：St. Seb. Schützen Holthausen；圣马丁骑马带队，带上灯笼",
+        "place": "Schulhof Adolf-Klarenbach-Schule, 40589 Düsseldorf-Holthausen",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Holthausen",
+        "when": "Thu 5 Nov 2026, 5 pm; ⚠️ the listing says Wednesday instead of Thursday – check the day with the organiser beforehand; organiser: St. Seb. Schützen Holthausen; St. Martin on horseback, bring a lantern",
+        "place": "Schulhof Adolf-Klarenbach-Schule, 40589 Düsseldorf-Holthausen",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-200",
+    "name": "Martinszug Oberbilk",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 17 Uhr; ⚠️ andere Ankündigung nennt 16:30 Uhr – lieber etwas früher da sein; Veranstalter: Bürgerverein Oberbilk; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Lessingplatz, Düsseldorf-Oberbilk",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Oberbilk 圣马丁灯笼游行",
+        "when": "2026 年 11 月 5 日（周四）17:00；⚠️ 另有公告写 16:30，建议提早到；主办：Bürgerverein Oberbilk；圣马丁骑马带队，带上灯笼",
+        "place": "Lessingplatz, Düsseldorf-Oberbilk",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Oberbilk",
+        "when": "Thu 5 Nov 2026, 5 pm; ⚠️ another listing says 4:30 pm – best arrive a little early; organiser: Bürgerverein Oberbilk; St. Martin on horseback, bring a lantern",
+        "place": "Lessingplatz, Düsseldorf-Oberbilk",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-201",
+    "name": "Martinszug Stockum",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 17 Uhr; Veranstalter: St. Seb. Schützenverein Stockum; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Carl-Sonnenschein-Straße; Mantelteilung Begonienplatz, 40468 Düsseldorf-Stockum",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Stockum 圣马丁灯笼游行",
+        "when": "2026 年 11 月 5 日（周四）17:00；主办：St. Seb. Schützenverein Stockum；圣马丁骑马带队，带上灯笼",
+        "place": "Carl-Sonnenschein-Straße; Mantelteilung Begonienplatz, 40468 Düsseldorf-Stockum",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Stockum",
+        "when": "Thu 5 Nov 2026, 5 pm; organiser: St. Seb. Schützenverein Stockum; St. Martin on horseback, bring a lantern",
+        "place": "Carl-Sonnenschein-Straße; Mantelteilung Begonienplatz, 40468 Düsseldorf-Stockum",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-202",
+    "name": "Martinszug KGS Rather Kreuzweg",
+    "type": "J",
+    "month": 11,
+    "when": "Do 05.11.2026, 17:30 Uhr; Veranstalter: KGS Rather Kreuzweg; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Rather Kreuzweg 21, 40472 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Rath 圣马丁灯笼游行（KGS Rather Kreuzweg）",
+        "when": "2026 年 11 月 5 日（周四）17:30；主办：KGS Rather Kreuzweg；圣马丁骑马带队，带上灯笼",
+        "place": "Rather Kreuzweg 21, 40472 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Rath (KGS Rather Kreuzweg)",
+        "when": "Thu 5 Nov 2026, 5:30 pm; organiser: KGS Rather Kreuzweg; St. Martin on horseback, bring a lantern",
+        "place": "Rather Kreuzweg 21, 40472 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-203",
+    "name": "Martinszug KGS Im Grund (Lohausen)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 16 Uhr; ⚠️ andere Ankündigung nennt 16:30 Uhr; Veranstalter: St. Seb. Schützenverein Lohausen; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "KGS Im Grund 78, 40474 Düsseldorf-Lohausen",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Lohausen 圣马丁灯笼游行（KGS Im Grund）",
+        "when": "2026 年 11 月 6 日（周五）16:00；⚠️ 另有公告写 16:30；主办：St. Seb. Schützenverein Lohausen；圣马丁骑马带队，带上灯笼",
+        "place": "KGS Im Grund 78, 40474 Düsseldorf-Lohausen",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Lohausen (KGS Im Grund)",
+        "when": "Fri 6 Nov 2026, 4 pm; ⚠️ another listing says 4:30 pm; organiser: St. Seb. Schützenverein Lohausen; St. Martin on horseback, bring a lantern",
+        "place": "KGS Im Grund 78, 40474 Düsseldorf-Lohausen",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-204",
+    "name": "Martinszug Paulsmühle (Benrath)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 16:15 Uhr; ⚠️ andere Ankündigung nennt 17 Uhr – lieber etwas früher da sein; Veranstalter: Paulsmühler Martinsfreunde; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Grundschule Einsiedelstraße, 40597 Düsseldorf-Benrath",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Benrath 圣马丁灯笼游行（Paulsmühle）",
+        "when": "2026 年 11 月 6 日（周五）16:15；⚠️ 另有公告写 17:00，建议提早到；主办：Paulsmühler Martinsfreunde；圣马丁骑马带队，带上灯笼",
+        "place": "Grundschule Einsiedelstraße, 40597 Düsseldorf-Benrath",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Benrath (Paulsmühle)",
+        "when": "Fri 6 Nov 2026, 4:15 pm; ⚠️ another listing says 5 pm – best arrive a little early; organiser: Paulsmühler Martinsfreunde; St. Martin on horseback, bring a lantern",
+        "place": "Grundschule Einsiedelstraße, 40597 Düsseldorf-Benrath",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-205",
+    "name": "Martinszug Hellerhof",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 16:30 Uhr; Veranstalter: Bürgerverein Hellerhof; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Ingeborg-Bachmann-Straße 31, 40595 Düsseldorf-Hellerhof",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Hellerhof 圣马丁灯笼游行",
+        "when": "2026 年 11 月 6 日（周五）16:30；主办：Bürgerverein Hellerhof；圣马丁骑马带队，带上灯笼",
+        "place": "Ingeborg-Bachmann-Straße 31, 40595 Düsseldorf-Hellerhof",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Hellerhof",
+        "when": "Fri 6 Nov 2026, 4:30 pm; organiser: Bürgerverein Hellerhof; St. Martin on horseback, bring a lantern",
+        "place": "Ingeborg-Bachmann-Straße 31, 40595 Düsseldorf-Hellerhof",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-206",
+    "name": "Martinszug Familienzentrum Derfflingerstraße (Rath)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 16:30 Uhr; Veranstalter: Städt. Familienzentrum; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Derfflingerstraße, 40470 Düsseldorf-Rath",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Rath 圣马丁灯笼游行（Familienzentrum Derfflingerstraße）",
+        "when": "2026 年 11 月 6 日（周五）16:30；主办：Städt. Familienzentrum；圣马丁骑马带队，带上灯笼",
+        "place": "Derfflingerstraße, 40470 Düsseldorf-Rath",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Rath (Familienzentrum Derfflingerstraße)",
+        "when": "Fri 6 Nov 2026, 4:30 pm; organiser: Städt. Familienzentrum; St. Martin on horseback, bring a lantern",
+        "place": "Derfflingerstraße, 40470 Düsseldorf-Rath",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-207",
+    "name": "Martinszug Derendorf",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 17 Uhr; Veranstalter: Heimatverein Derendorfer Jonges; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Golzheimer Str./Collenbachstraße; Mantelteilung Frankenplatz, 40476 Düsseldorf-Derendorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Derendorf 圣马丁灯笼游行",
+        "when": "2026 年 11 月 6 日（周五）17:00；主办：Heimatverein Derendorfer Jonges；圣马丁骑马带队，带上灯笼",
+        "place": "Golzheimer Str./Collenbachstraße; Mantelteilung Frankenplatz, 40476 Düsseldorf-Derendorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Derendorf",
+        "when": "Fri 6 Nov 2026, 5 pm; organiser: Heimatverein Derendorfer Jonges; St. Martin on horseback, bring a lantern",
+        "place": "Golzheimer Str./Collenbachstraße; Mantelteilung Frankenplatz, 40476 Düsseldorf-Derendorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-208",
+    "name": "Martinszug Volker-Rosin-Schule (Vennhausen)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 17 Uhr; Veranstalter: Volker-Rosin-Schule; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Erfurter Weg, 40627 Düsseldorf-Vennhausen",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Vennhausen 圣马丁灯笼游行（Volker-Rosin-Schule）",
+        "when": "2026 年 11 月 6 日（周五）17:00；主办：Volker-Rosin-Schule；圣马丁骑马带队，带上灯笼",
+        "place": "Erfurter Weg, 40627 Düsseldorf-Vennhausen",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Vennhausen (Volker-Rosin-Schule)",
+        "when": "Fri 6 Nov 2026, 5 pm; organiser: Volker-Rosin-Schule; St. Martin on horseback, bring a lantern",
+        "place": "Erfurter Weg, 40627 Düsseldorf-Vennhausen",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-209",
+    "name": "Martinszug Wersten (Theodor-Heuss-Schule)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 17 Uhr; einer von drei Sternzügen der Martinsfreunde Wersten an diesem Abend; Veranstalter: Martinsfreunde Wersten; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Theodor-Heuss-Schule, Lützenkircher Straße, 40591 Düsseldorf-Wersten",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wersten 圣马丁灯笼游行（Theodor-Heuss-Schule）",
+        "when": "2026 年 11 月 6 日（周五）17:00；Wersten 圣马丁之友当晚三路「星形游行」之一；主办：Martinsfreunde Wersten；圣马丁骑马带队，带上灯笼",
+        "place": "Theodor-Heuss-Schule, Lützenkircher Straße, 40591 Düsseldorf-Wersten",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Wersten (Theodor-Heuss-Schule)",
+        "when": "Fri 6 Nov 2026, 5 pm; one of three star-shaped parades of the Martinsfreunde Wersten that evening; organiser: Martinsfreunde Wersten; St. Martin on horseback, bring a lantern",
+        "place": "Theodor-Heuss-Schule, Lützenkircher Straße, 40591 Düsseldorf-Wersten",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-210",
+    "name": "Martinszug Wersten (Lore-Agnes-Haus)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 17 Uhr; einer von drei Sternzügen der Martinsfreunde Wersten an diesem Abend; Veranstalter: Martinsfreunde Wersten; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Lore-Agnes-Haus, Bruchhausenstraße, 40591 Düsseldorf-Wersten",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wersten 圣马丁灯笼游行（Lore-Agnes-Haus）",
+        "when": "2026 年 11 月 6 日（周五）17:00；Wersten 圣马丁之友当晚三路「星形游行」之一；主办：Martinsfreunde Wersten；圣马丁骑马带队，带上灯笼",
+        "place": "Lore-Agnes-Haus, Bruchhausenstraße, 40591 Düsseldorf-Wersten",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Wersten (Lore-Agnes-Haus)",
+        "when": "Fri 6 Nov 2026, 5 pm; one of three star-shaped parades of the Martinsfreunde Wersten that evening; organiser: Martinsfreunde Wersten; St. Martin on horseback, bring a lantern",
+        "place": "Lore-Agnes-Haus, Bruchhausenstraße, 40591 Düsseldorf-Wersten",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-211",
+    "name": "Martinszug Wersten (Gansbruch)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 17 Uhr; ⚠️ einer von drei Sternzügen der Martinsfreunde Wersten; andere Ankündigung nennt Start am Rheindorfer Weg; Veranstalter: Martinsfreunde Wersten; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Gelbe Brücke am Gansbruch, 40225 Düsseldorf-Wersten",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wersten 圣马丁灯笼游行（Gansbruch）",
+        "when": "2026 年 11 月 6 日（周五）17:00；⚠️ Wersten 三路「星形游行」之一；另有公告写从 Rheindorfer Weg 出发；主办：Martinsfreunde Wersten；圣马丁骑马带队，带上灯笼",
+        "place": "Gelbe Brücke am Gansbruch, 40225 Düsseldorf-Wersten",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Wersten (Gansbruch)",
+        "when": "Fri 6 Nov 2026, 5 pm; ⚠️ one of three star-shaped parades of the Martinsfreunde Wersten; another listing gives the start as Rheindorfer Weg; organiser: Martinsfreunde Wersten; St. Martin on horseback, bring a lantern",
+        "place": "Gelbe Brücke am Gansbruch, 40225 Düsseldorf-Wersten",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-212",
+    "name": "Martinszug Angermund",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 06.11.2026, 17:15 Uhr; Veranstalter: Martins-Komitee Angermund; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Am Litzgraben 28a, 40489 Düsseldorf-Angermund",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Angermund 圣马丁灯笼游行",
+        "when": "2026 年 11 月 6 日（周五）17:15；主办：Martins-Komitee Angermund；圣马丁骑马带队，带上灯笼",
+        "place": "Am Litzgraben 28a, 40489 Düsseldorf-Angermund",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Angermund",
+        "when": "Fri 6 Nov 2026, 5:15 pm; organiser: Martins-Komitee Angermund; St. Martin on horseback, bring a lantern",
+        "place": "Am Litzgraben 28a, 40489 Düsseldorf-Angermund",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-213",
+    "name": "Martinsfest bei den Islandpferdereitern (Lohausen)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 15 Uhr; Martinsfest, kein klassischer Umzug; Veranstalter: Islandpferdereiter Lohausen; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Gelände der Islandpferdereiter, Neusser Weg, 40474 Düsseldorf-Lohausen",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "圣马丁节（冰岛马骑手协会）",
+        "when": "2026 年 11 月 7 日（周六）15:00；圣马丁节庆活动，不是传统游行；主办：Islandpferdereiter Lohausen；圣马丁骑马带队，带上灯笼",
+        "place": "Gelände der Islandpferdereiter, Neusser Weg, 40474 Düsseldorf-Lohausen",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's party at the Icelandic horse riders (Lohausen)",
+        "when": "Sat 7 Nov 2026, 3 pm; St. Martin's party rather than a classic parade; organiser: Islandpferdereiter Lohausen; St. Martin on horseback, bring a lantern",
+        "place": "Gelände der Islandpferdereiter, Neusser Weg, 40474 Düsseldorf-Lohausen",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-214",
+    "name": "Rather Martinsfeuer mit Mantelteilung",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 16 Uhr; Martinsfeuer mit Mantelteilung; Veranstalter: Rather Schützen; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Rather Broich 137, 40472 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Rath 圣马丁篝火",
+        "when": "2026 年 11 月 7 日（周六）16:00；圣马丁篝火 + 分斗篷表演；主办：Rather Schützen；圣马丁骑马带队，带上灯笼",
+        "place": "Rather Broich 137, 40472 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "Rath St. Martin's bonfire with cloak-sharing",
+        "when": "Sat 7 Nov 2026, 4 pm; St. Martin's bonfire with the cloak-sharing scene; organiser: Rather Schützen; St. Martin on horseback, bring a lantern",
+        "place": "Rather Broich 137, 40472 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-215",
+    "name": "Martinszug Gartenverein Bertastraße (Gerresheim)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 18 Uhr; ⚠️ andere Ankündigung nennt 17 Uhr ab Sorpeweg – lieber vorher beim Gartenverein erfragen; Veranstalter: Gartenverein Bertastraße; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Thuner Weg 6, 40625 Düsseldorf-Gerresheim",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Gerresheim 圣马丁灯笼游行（Gartenverein Bertastraße）",
+        "when": "2026 年 11 月 7 日（周六）18:00；⚠️ 另有公告写 17:00 从 Sorpeweg 出发，建议先向园艺协会确认；主办：Gartenverein Bertastraße；圣马丁骑马带队，带上灯笼",
+        "place": "Thuner Weg 6, 40625 Düsseldorf-Gerresheim",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Gerresheim (Gartenverein Bertastraße)",
+        "when": "Sat 7 Nov 2026, 6 pm; ⚠️ another listing says 5 pm from Sorpeweg – best check with the garden club first; organiser: Gartenverein Bertastraße; St. Martin on horseback, bring a lantern",
+        "place": "Thuner Weg 6, 40625 Düsseldorf-Gerresheim",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-216",
+    "name": "Martinszug Wersten (Siebenbürgenweg)",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 07.11.2026, 18 Uhr; Veranstalter: Martinsfreunde Wersten; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Siebenbürgenweg, 40591 Düsseldorf-Wersten",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wersten 圣马丁灯笼游行（Siebenbürgenweg）",
+        "when": "2026 年 11 月 7 日（周六）18:00；主办：Martinsfreunde Wersten；圣马丁骑马带队，带上灯笼",
+        "place": "Siebenbürgenweg, 40591 Düsseldorf-Wersten",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Wersten (Siebenbürgenweg)",
+        "when": "Sat 7 Nov 2026, 6 pm; organiser: Martinsfreunde Wersten; St. Martin on horseback, bring a lantern",
+        "place": "Siebenbürgenweg, 40591 Düsseldorf-Wersten",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-217",
+    "name": "Martinszug Familienzentrum Richardstraße (Eller)",
+    "type": "J",
+    "month": 11,
+    "when": "Mo 09.11.2026, 17 Uhr; Veranstalter: Städt. Familienzentrum; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Richardstraße 8, 40231 Düsseldorf-Eller",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Eller 圣马丁灯笼游行（Familienzentrum Richardstraße）",
+        "when": "2026 年 11 月 9 日（周一）17:00；主办：Städt. Familienzentrum；圣马丁骑马带队，带上灯笼",
+        "place": "Richardstraße 8, 40231 Düsseldorf-Eller",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Eller (Familienzentrum Richardstraße)",
+        "when": "Mon 9 Nov 2026, 5 pm; organiser: Städt. Familienzentrum; St. Martin on horseback, bring a lantern",
+        "place": "Richardstraße 8, 40231 Düsseldorf-Eller",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-218",
+    "name": "Martinszug GGS Vennhauser Allee (Vennhausen)",
+    "type": "J",
+    "month": 11,
+    "when": "Mo 09.11.2026, 17 Uhr; Veranstalter: GGS Vennhauser Allee; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Vennhauser Allee 162, 40627 Düsseldorf-Vennhausen",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Vennhausen 圣马丁灯笼游行（GGS Vennhauser Allee）",
+        "when": "2026 年 11 月 9 日（周一）17:00；主办：GGS Vennhauser Allee；圣马丁骑马带队，带上灯笼",
+        "place": "Vennhauser Allee 162, 40627 Düsseldorf-Vennhausen",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Vennhausen (GGS Vennhauser Allee)",
+        "when": "Mon 9 Nov 2026, 5 pm; organiser: GGS Vennhauser Allee; St. Martin on horseback, bring a lantern",
+        "place": "Vennhauser Allee 162, 40627 Düsseldorf-Vennhausen",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-219",
+    "name": "Martinszug Penty4Pänz (Urdenbach)",
+    "type": "J",
+    "month": 11,
+    "when": "Mo 09.11.2026, 17:15 Uhr; Veranstalter: Penty4Pänz; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Urdenbacher Dorfstraße 59a, 40593 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Urdenbach 圣马丁灯笼游行（Penty4Pänz）",
+        "when": "2026 年 11 月 9 日（周一）17:15；主办：Penty4Pänz；圣马丁骑马带队，带上灯笼",
+        "place": "Urdenbacher Dorfstraße 59a, 40593 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Urdenbach (Penty4Pänz)",
+        "when": "Mon 9 Nov 2026, 5:15 pm; organiser: Penty4Pänz; St. Martin on horseback, bring a lantern",
+        "place": "Urdenbacher Dorfstraße 59a, 40593 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-220",
+    "name": "Martinszug GGS Flurstraße (Flingern)",
+    "type": "J",
+    "month": 11,
+    "when": "Mo 09.11.2026, 18 Uhr; Veranstalter: Städt. GGS Flurstraße; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Flurstraße 59, 40235 Düsseldorf-Flingern",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Flingern 圣马丁灯笼游行（GGS Flurstraße）",
+        "when": "2026 年 11 月 9 日（周一）18:00；主办：Städt. GGS Flurstraße；圣马丁骑马带队，带上灯笼",
+        "place": "Flurstraße 59, 40235 Düsseldorf-Flingern",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Flingern (GGS Flurstraße)",
+        "when": "Mon 9 Nov 2026, 6 pm; organiser: Städt. GGS Flurstraße; St. Martin on horseback, bring a lantern",
+        "place": "Flurstraße 59, 40235 Düsseldorf-Flingern",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-221",
+    "name": "Martinszug Mosaikschule (Wersten)",
+    "type": "J",
+    "month": 11,
+    "when": "Mo 09.11.2026, 18 Uhr; Veranstalter: Mosaikschule; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Am Massenberger Kamp 45, 40589 Düsseldorf-Wersten",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wersten 圣马丁灯笼游行（Mosaikschule）",
+        "when": "2026 年 11 月 9 日（周一）18:00；主办：Mosaikschule；圣马丁骑马带队，带上灯笼",
+        "place": "Am Massenberger Kamp 45, 40589 Düsseldorf-Wersten",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Wersten (Mosaikschule)",
+        "when": "Mon 9 Nov 2026, 6 pm; organiser: Mosaikschule; St. Martin on horseback, bring a lantern",
+        "place": "Am Massenberger Kamp 45, 40589 Düsseldorf-Wersten",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-222",
+    "name": "Martinszug Unterbach",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 16:45 Uhr; ⚠️ Gerresheimer Landstraße ist lang – Kartenpunkt ungefähr, genauen Startpunkt beim Bürger- & Heimatverein erfragen; Veranstalter: Bürger- & Heimatverein Unterbach; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Gerresheimer Landstraße, 40627 Düsseldorf-Unterbach",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Unterbach 圣马丁灯笼游行",
+        "when": "2026 年 11 月 10 日（周二）16:45；⚠️ Gerresheimer Landstraße 很长，地图点位只是大概，具体起点请向市民与乡土协会确认；主办：Bürger- & Heimatverein Unterbach；圣马丁骑马带队，带上灯笼",
+        "place": "Gerresheimer Landstraße, 40627 Düsseldorf-Unterbach",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Unterbach",
+        "when": "Tue 10 Nov 2026, 4:45 pm; ⚠️ Gerresheimer Landstraße is long – the map point is approximate; ask the Bürger- & Heimatverein for the exact start; organiser: Bürger- & Heimatverein Unterbach; St. Martin on horseback, bring a lantern",
+        "place": "Gerresheimer Landstraße, 40627 Düsseldorf-Unterbach",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-223",
+    "name": "Martinszug Bilk",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17 Uhr; ⚠️ andere Ankündigung nennt 17:30 Uhr – lieber etwas früher da sein; Veranstalter: Martinsfreunde Bilk; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Siegplatz, Ecke Wupperstraße, 40219 Düsseldorf-Bilk",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Bilk 圣马丁灯笼游行",
+        "when": "2026 年 11 月 10 日（周二）17:00；⚠️ 另有公告写 17:30，建议提早到；主办：Martinsfreunde Bilk；圣马丁骑马带队，带上灯笼",
+        "place": "Siegplatz, Ecke Wupperstraße, 40219 Düsseldorf-Bilk",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Bilk",
+        "when": "Tue 10 Nov 2026, 5 pm; ⚠️ another listing says 5:30 pm – best arrive a little early; organiser: Martinsfreunde Bilk; St. Martin on horseback, bring a lantern",
+        "place": "Siegplatz, Ecke Wupperstraße, 40219 Düsseldorf-Bilk",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-224",
+    "name": "Martinszug GGS Bingener Weg (Eller)",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17 Uhr; Veranstalter: GGS Bingener Weg; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "GGS Bingener Weg, 40229 Düsseldorf-Eller",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Eller 圣马丁灯笼游行（GGS Bingener Weg）",
+        "when": "2026 年 11 月 10 日（周二）17:00；主办：GGS Bingener Weg；圣马丁骑马带队，带上灯笼",
+        "place": "GGS Bingener Weg, 40229 Düsseldorf-Eller",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Eller (GGS Bingener Weg)",
+        "when": "Tue 10 Nov 2026, 5 pm; organiser: GGS Bingener Weg; St. Martin on horseback, bring a lantern",
+        "place": "GGS Bingener Weg, 40229 Düsseldorf-Eller",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-225",
+    "name": "Martinszug Hamm",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17 Uhr; Veranstalter: St. Sebastianus Schützen Hamm; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Nikolaus-Faber-Platz, Düsseldorf-Hamm",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Hamm 圣马丁灯笼游行",
+        "when": "2026 年 11 月 10 日（周二）17:00；主办：St. Sebastianus Schützen Hamm；圣马丁骑马带队，带上灯笼",
+        "place": "Nikolaus-Faber-Platz, Düsseldorf-Hamm",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Hamm",
+        "when": "Tue 10 Nov 2026, 5 pm; organiser: St. Sebastianus Schützen Hamm; St. Martin on horseback, bring a lantern",
+        "place": "Nikolaus-Faber-Platz, Düsseldorf-Hamm",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-226",
+    "name": "Martinsandacht + Zug Hassels",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17 Uhr; Martinsandacht in der Kirche, danach Umzug; Veranstalter: Martinsfreunde Hassels; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Ev. Kirche, Hasselsstraße 71, 40599 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Hassels 圣马丁祈祷 + 游行",
+        "when": "2026 年 11 月 10 日（周二）17:00；先在教堂做圣马丁祈祷，之后游行；主办：Martinsfreunde Hassels；圣马丁骑马带队，带上灯笼",
+        "place": "Ev. Kirche, Hasselsstraße 71, 40599 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's service + parade, Hassels",
+        "when": "Tue 10 Nov 2026, 5 pm; short St. Martin's service in the church, then the parade; organiser: Martinsfreunde Hassels; St. Martin on horseback, bring a lantern",
+        "place": "Ev. Kirche, Hasselsstraße 71, 40599 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-227",
+    "name": "Martinszug Volmerswerth",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17 Uhr; Veranstalter: Volmerswerther Martinsfreunde; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Volmarweg 7, 40221 Düsseldorf-Volmerswerth",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Volmerswerth 圣马丁灯笼游行",
+        "when": "2026 年 11 月 10 日（周二）17:00；主办：Volmerswerther Martinsfreunde；圣马丁骑马带队，带上灯笼",
+        "place": "Volmarweg 7, 40221 Düsseldorf-Volmerswerth",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Volmerswerth",
+        "when": "Tue 10 Nov 2026, 5 pm; organiser: Volmerswerther Martinsfreunde; St. Martin on horseback, bring a lantern",
+        "place": "Volmarweg 7, 40221 Düsseldorf-Volmerswerth",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-228",
+    "name": "Martinszug Familienzentrum St. Bruno (Derendorf)",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17:30 Uhr; Kalkumer Straße 62 liegt eher in Unterrath; Veranstalter: SKFM Familienzentrum St. Bruno; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Kalkumer Straße 62, 40468 Düsseldorf-Derendorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Derendorf 圣马丁灯笼游行（Familienzentrum St. Bruno）",
+        "when": "2026 年 11 月 10 日（周二）17:30；Kalkumer Straße 62 实际更靠近 Unterrath；主办：SKFM Familienzentrum St. Bruno；圣马丁骑马带队，带上灯笼",
+        "place": "Kalkumer Straße 62, 40468 Düsseldorf-Derendorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Derendorf (Familienzentrum St. Bruno)",
+        "when": "Tue 10 Nov 2026, 5:30 pm; Kalkumer Straße 62 is actually closer to Unterrath; organiser: SKFM Familienzentrum St. Bruno; St. Martin on horseback, bring a lantern",
+        "place": "Kalkumer Straße 62, 40468 Düsseldorf-Derendorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-229",
+    "name": "Martinszug Niederkassel",
+    "type": "J",
+    "month": 11,
+    "when": "Di 10.11.2026, 17:30 Uhr; Veranstalter: St. Seb. Niederkassel; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Schulhof Niederkasseler Straße 36, 40547 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Niederkassel 圣马丁灯笼游行",
+        "when": "2026 年 11 月 10 日（周二）17:30；主办：St. Seb. Niederkassel；圣马丁骑马带队，带上灯笼",
+        "place": "Schulhof Niederkasseler Straße 36, 40547 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Niederkassel",
+        "when": "Tue 10 Nov 2026, 5:30 pm; organiser: St. Seb. Niederkassel; St. Martin on horseback, bring a lantern",
+        "place": "Schulhof Niederkasseler Straße 36, 40547 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-230",
+    "name": "Martinszug Eller",
+    "type": "J",
+    "month": 11,
+    "when": "Mi 11.11.2026, 16:30 Uhr; Veranstalter: St. Sebastianus Schützen Eller; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Gertrudisplatz, 40229 Düsseldorf-Eller",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Eller 圣马丁灯笼游行",
+        "when": "2026 年 11 月 11 日（周三）16:30；主办：St. Sebastianus Schützen Eller；圣马丁骑马带队，带上灯笼",
+        "place": "Gertrudisplatz, 40229 Düsseldorf-Eller",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Eller",
+        "when": "Wed 11 Nov 2026, 4:30 pm; organiser: St. Sebastianus Schützen Eller; St. Martin on horseback, bring a lantern",
+        "place": "Gertrudisplatz, 40229 Düsseldorf-Eller",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-231",
+    "name": "Martinszug Kita St. Cäcilia (Benrath)",
+    "type": "J",
+    "month": 11,
+    "when": "Mi 11.11.2026, 17:25 Uhr; Veranstalter: Kita St. Cäcilia; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Am Mönchgraben 47 (St. Cäcilia), 40597 Düsseldorf-Benrath",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Benrath 圣马丁灯笼游行（Kita St. Cäcilia）",
+        "when": "2026 年 11 月 11 日（周三）17:25；主办：Kita St. Cäcilia；圣马丁骑马带队，带上灯笼",
+        "place": "Am Mönchgraben 47 (St. Cäcilia), 40597 Düsseldorf-Benrath",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Benrath (Kita St. Cäcilia)",
+        "when": "Wed 11 Nov 2026, 5:25 pm; organiser: Kita St. Cäcilia; St. Martin on horseback, bring a lantern",
+        "place": "Am Mönchgraben 47 (St. Cäcilia), 40597 Düsseldorf-Benrath",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-232",
+    "name": "Martinszug Kaiserswerth",
+    "type": "J",
+    "month": 11,
+    "when": "Do 12.11.2026, 16:45 Uhr; Veranstalter: St. Sebastianus-Bruderschaft 1285 Kaiserswerth; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Fliednerstraße, 40489 Düsseldorf-Kaiserswerth",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Kaiserswerth 圣马丁灯笼游行",
+        "when": "2026 年 11 月 12 日（周四）16:45；主办：St. Sebastianus-Bruderschaft 1285 Kaiserswerth；圣马丁骑马带队，带上灯笼",
+        "place": "Fliednerstraße, 40489 Düsseldorf-Kaiserswerth",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Kaiserswerth",
+        "when": "Thu 12 Nov 2026, 4:45 pm; organiser: St. Sebastianus-Bruderschaft 1285 Kaiserswerth; St. Martin on horseback, bring a lantern",
+        "place": "Fliednerstraße, 40489 Düsseldorf-Kaiserswerth",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-233",
+    "name": "Martinszug St. Franziskus-Schule (Mörsenbroich)",
+    "type": "J",
+    "month": 11,
+    "when": "Do 12.11.2026, 16:45 Uhr; Veranstalter: St. Franziskus Schule; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Kirche St. Franziskus Xaverius, 40470 Düsseldorf-Mörsenbroich",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Mörsenbroich 圣马丁灯笼游行（St. Franziskus-Schule）",
+        "when": "2026 年 11 月 12 日（周四）16:45；主办：St. Franziskus Schule；圣马丁骑马带队，带上灯笼",
+        "place": "Kirche St. Franziskus Xaverius, 40470 Düsseldorf-Mörsenbroich",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Mörsenbroich (St. Franziskus-Schule)",
+        "when": "Thu 12 Nov 2026, 4:45 pm; organiser: St. Franziskus Schule; St. Martin on horseback, bring a lantern",
+        "place": "Kirche St. Franziskus Xaverius, 40470 Düsseldorf-Mörsenbroich",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-234",
+    "name": "Martinszug GGS Knittkuhl",
+    "type": "J",
+    "month": 11,
+    "when": "Do 12.11.2026, 17 Uhr; ⚠️ andere Ankündigung nennt 17:30 Uhr – lieber etwas früher da sein; Veranstalter: GGS Knittkuhl; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Am Mergelsberg 1, 40629 Düsseldorf-Knittkuhl",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Knittkuhl 圣马丁灯笼游行（GGS Knittkuhl）",
+        "when": "2026 年 11 月 12 日（周四）17:00；⚠️ 另有公告写 17:30，建议提早到；主办：GGS Knittkuhl；圣马丁骑马带队，带上灯笼",
+        "place": "Am Mergelsberg 1, 40629 Düsseldorf-Knittkuhl",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Knittkuhl (GGS Knittkuhl)",
+        "when": "Thu 12 Nov 2026, 5 pm; ⚠️ another listing says 5:30 pm – best arrive a little early; organiser: GGS Knittkuhl; St. Martin on horseback, bring a lantern",
+        "place": "Am Mergelsberg 1, 40629 Düsseldorf-Knittkuhl",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-235",
+    "name": "Martinszug Wittlaer",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 13.11.2026, 16:45 Uhr; Veranstalter: Martinsausschuss Wittlaer; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Rheinweg, 40489 Düsseldorf-Wittlaer",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wittlaer 圣马丁灯笼游行",
+        "when": "2026 年 11 月 13 日（周五）16:45；主办：Martinsausschuss Wittlaer；圣马丁骑马带队，带上灯笼",
+        "place": "Rheinweg, 40489 Düsseldorf-Wittlaer",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Wittlaer",
+        "when": "Fri 13 Nov 2026, 4:45 pm; organiser: Martinsausschuss Wittlaer; St. Martin on horseback, bring a lantern",
+        "place": "Rheinweg, 40489 Düsseldorf-Wittlaer",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-236",
+    "name": "Martinszug GGS Garather Straße (Urdenbach)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 13.11.2026, 17 Uhr; Veranstalter: GGS Garather Straße; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Schulhof Kohlhagenstraße / Urdenbacher Allee 91, 40593 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Urdenbach 圣马丁灯笼游行（GGS Garather Straße）",
+        "when": "2026 年 11 月 13 日（周五）17:00；主办：GGS Garather Straße；圣马丁骑马带队，带上灯笼",
+        "place": "Schulhof Kohlhagenstraße / Urdenbacher Allee 91, 40593 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Urdenbach (GGS Garather Straße)",
+        "when": "Fri 13 Nov 2026, 5 pm; organiser: GGS Garather Straße; St. Martin on horseback, bring a lantern",
+        "place": "Schulhof Kohlhagenstraße / Urdenbacher Allee 91, 40593 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-237",
+    "name": "Martinszug Kita Kohlhagenstraße (Urdenbach)",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 13.11.2026, 17 Uhr; ⚠️ eine andere Ankündigung nennt ein früheres Datum – vorher bei der Kita erfragen; Veranstalter: Kita/Familienzentrum Kohlhagenstraße; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Kolhagenstraße 11, 40593 Düsseldorf-Urdenbach (Städt. Kita Kolhagenstraße)",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": false,
+    "i18n": {
+      "zh": {
+        "name": "Urdenbach 圣马丁灯笼游行（Kita Kohlhagenstraße）",
+        "when": "2026 年 11 月 13 日（周五）17:00；⚠️ 另有公告写的是更早的日期——请提前向 Kita 确认；主办：Kita/Familienzentrum Kohlhagenstraße；圣马丁骑马带队，带上灯笼",
+        "place": "Kolhagenstraße 11, 40593 Düsseldorf-Urdenbach (Städt. Kita Kolhagenstraße)",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Urdenbach (Kita Kohlhagenstraße)",
+        "when": "Fri 13 Nov 2026, 5 pm; ⚠️ another listing gives an earlier date – check with the Kita beforehand; organiser: Kita/Familienzentrum Kohlhagenstraße; St. Martin on horseback, bring a lantern",
+        "place": "Kolhagenstraße 11, 40593 Düsseldorf-Urdenbach (Städt. Kita Kolhagenstraße)",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-238",
+    "name": "Martinszug Itter",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 13.11.2026, 17:15 Uhr; Veranstalter: St. Hubertus Schützen Itter; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Itterstraße 152, 40589 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Itter 圣马丁灯笼游行",
+        "when": "2026 年 11 月 13 日（周五）17:15；主办：St. Hubertus Schützen Itter；圣马丁骑马带队，带上灯笼",
+        "place": "Itterstraße 152, 40589 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Itter",
+        "when": "Fri 13 Nov 2026, 5:15 pm; organiser: St. Hubertus Schützen Itter; St. Martin on horseback, bring a lantern",
+        "place": "Itterstraße 152, 40589 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-239",
+    "name": "Martinszug Lörick",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 13.11.2026, 17:15 Uhr; laut Bürgerverein Lörick 17:15 Uhr (eine andere Ankündigung nennt 17 Uhr); Veranstalter: Bürgerverein Lörick; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Kaarster Weg / Ecke Glehner Weg, 40547 Düsseldorf-Lörick",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://bv-duesseldorf-loerick.de/event/st-martinszug-in-loerick-2026/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Lörick 圣马丁灯笼游行",
+        "when": "2026 年 11 月 13 日（周五）17:15；Lörick 市民协会官网写 17:15（另有公告写 17:00）；主办：Bürgerverein Lörick；圣马丁骑马带队，带上灯笼",
+        "place": "Kaarster Weg / Ecke Glehner Weg, 40547 Düsseldorf-Lörick",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Lörick",
+        "when": "Fri 13 Nov 2026, 5:15 pm; 5:15 pm according to the Bürgerverein Lörick (another listing says 5 pm); organiser: Bürgerverein Lörick; St. Martin on horseback, bring a lantern",
+        "place": "Kaarster Weg / Ecke Glehner Weg, 40547 Düsseldorf-Lörick",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-240",
+    "name": "Martinszug Familienzentrum Wittlaer",
+    "type": "J",
+    "month": 11,
+    "when": "Fr 13.11.2026, 17:15 Uhr; Veranstalter: Städt. Familienzentrum; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Heinrich-Holtschneider-Weg 20, 40489 Düsseldorf-Wittlaer",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Wittlaer 圣马丁灯笼游行（Familienzentrum Wittlaer）",
+        "when": "2026 年 11 月 13 日（周五）17:15；主办：Städt. Familienzentrum；圣马丁骑马带队，带上灯笼",
+        "place": "Heinrich-Holtschneider-Weg 20, 40489 Düsseldorf-Wittlaer",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Wittlaer (Familienzentrum Wittlaer)",
+        "when": "Fri 13 Nov 2026, 5:15 pm; organiser: Städt. Familienzentrum; St. Martin on horseback, bring a lantern",
+        "place": "Heinrich-Holtschneider-Weg 20, 40489 Düsseldorf-Wittlaer",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-241",
+    "name": "Martinszug Himmelgeist",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 14.11.2026, 17 Uhr; Kartenpunkt ungefähr; Veranstalter: Pfarrei St. Nikolaus & Sebastianus Schützen; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Schützenplatz Himmelgeist, Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Himmelgeist 圣马丁灯笼游行",
+        "when": "2026 年 11 月 14 日（周六）17:00；地图点位只是大概；主办：Pfarrei St. Nikolaus & Sebastianus Schützen；圣马丁骑马带队，带上灯笼",
+        "place": "Schützenplatz Himmelgeist, Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Himmelgeist",
+        "when": "Sat 14 Nov 2026, 5 pm; map point is approximate; organiser: Pfarrei St. Nikolaus & Sebastianus Schützen; St. Martin on horseback, bring a lantern",
+        "place": "Schützenplatz Himmelgeist, Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-242",
+    "name": "Martinszug Hubbelrath",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 14.11.2026, 17 Uhr; Veranstalter: St. Seb. Schützen Hubbelrath; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Dorfstraße 5, 40629 Düsseldorf-Hubbelrath",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Hubbelrath 圣马丁灯笼游行",
+        "when": "2026 年 11 月 14 日（周六）17:00；主办：St. Seb. Schützen Hubbelrath；圣马丁骑马带队，带上灯笼",
+        "place": "Dorfstraße 5, 40629 Düsseldorf-Hubbelrath",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Hubbelrath",
+        "when": "Sat 14 Nov 2026, 5 pm; organiser: St. Seb. Schützen Hubbelrath; St. Martin on horseback, bring a lantern",
+        "place": "Dorfstraße 5, 40629 Düsseldorf-Hubbelrath",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-243",
+    "name": "Martinszug Kalkum",
+    "type": "J",
+    "month": 11,
+    "when": "Sa 14.11.2026, 17 Uhr; Veranstalter: St. Martinskomitee Kalkum; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Unterdorfstraße, 40489 Düsseldorf-Kalkum",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Kalkum 圣马丁灯笼游行",
+        "when": "2026 年 11 月 14 日（周六）17:00；主办：St. Martinskomitee Kalkum；圣马丁骑马带队，带上灯笼",
+        "place": "Unterdorfstraße, 40489 Düsseldorf-Kalkum",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Kalkum",
+        "when": "Sat 14 Nov 2026, 5 pm; organiser: St. Martinskomitee Kalkum; St. Martin on horseback, bring a lantern",
+        "place": "Unterdorfstraße, 40489 Düsseldorf-Kalkum",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-244",
+    "name": "Martinszug Flehe",
+    "type": "J",
+    "month": 11,
+    "when": "Mo 16.11.2026, 17 Uhr; ⚠️ Kartenpunkt = Kirche, Startpunkt ungefähr; Veranstalter: St. Sebastianus Schützen Flehe; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "In der Hött 26, 40223 Düsseldorf-Flehe (Kirche Schmerzreiche Mutter)",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Flehe 圣马丁灯笼游行",
+        "when": "2026 年 11 月 16 日（周一）17:00；⚠️ 地图点位为教堂，起点大致在附近；主办：St. Sebastianus Schützen Flehe；圣马丁骑马带队，带上灯笼",
+        "place": "In der Hött 26, 40223 Düsseldorf-Flehe (Kirche Schmerzreiche Mutter)",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Flehe",
+        "when": "Mon 16 Nov 2026, 5 pm; ⚠️ map point is the church; the start is nearby; organiser: St. Sebastianus Schützen Flehe; St. Martin on horseback, bring a lantern",
+        "place": "In der Hött 26, 40223 Düsseldorf-Flehe (Kirche Schmerzreiche Mutter)",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-245",
+    "name": "Martinszug Gerresheim (Süd)",
+    "type": "J",
+    "month": 11,
+    "when": "Di 17.11.2026, 17 Uhr; Veranstalter: Aktionsgemeinschaft Martinus e.V.; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Quadenhofstraße, Höhe Hatzfeldstraße, 40625 Düsseldorf-Gerresheim",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Gerresheim 圣马丁灯笼游行（Gerresheim (Süd)）",
+        "when": "2026 年 11 月 17 日（周二）17:00；主办：Aktionsgemeinschaft Martinus e.V.；圣马丁骑马带队，带上灯笼",
+        "place": "Quadenhofstraße, Höhe Hatzfeldstraße, 40625 Düsseldorf-Gerresheim",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Gerresheim (Gerresheim (Süd))",
+        "when": "Tue 17 Nov 2026, 5 pm; organiser: Aktionsgemeinschaft Martinus e.V.; St. Martin on horseback, bring a lantern",
+        "place": "Quadenhofstraße, Höhe Hatzfeldstraße, 40625 Düsseldorf-Gerresheim",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-246",
+    "name": "Martinszug Reisholz",
+    "type": "J",
+    "month": 11,
+    "when": "Mi 18.11.2026, 17 Uhr; Veranstalter: Bürger- u. Heimatverein / KG Reisholzer Quatschköpp; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Bürgerhaus Reisholz, Buchenstraße 16, 40599 Düsseldorf",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Reisholz 圣马丁灯笼游行",
+        "when": "2026 年 11 月 18 日（周三）17:00；主办：Bürger- u. Heimatverein / KG Reisholzer Quatschköpp；圣马丁骑马带队，带上灯笼",
+        "place": "Bürgerhaus Reisholz, Buchenstraße 16, 40599 Düsseldorf",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Reisholz",
+        "when": "Wed 18 Nov 2026, 5 pm; organiser: Bürger- u. Heimatverein / KG Reisholzer Quatschköpp; St. Martin on horseback, bring a lantern",
+        "place": "Bürgerhaus Reisholz, Buchenstraße 16, 40599 Düsseldorf",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-247",
+    "name": "Martinszug Gerresheim (Am Poth)",
+    "type": "J",
+    "month": 11,
+    "when": "Do 19.11.2026, 17 Uhr; Kartenpunkt = Gymnasium Am Poth 60; Veranstalter: Aktionsgemeinschaft Martinus e.V.; St. Martin zu Pferd, Laterne mitbringen",
+    "place": "Am Poth, 40625 Düsseldorf-Gerresheim",
+    "cost": "kostenlos, keine Anmeldung",
+    "website": "https://www.ddorf-aktuell.de/2026/11/03/duesseldorf-fast-100-martinszuege-ziehen-2022-in-den-stadtteilen/",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "Gerresheim 圣马丁灯笼游行（Gerresheim (Am Poth)）",
+        "when": "2026 年 11 月 19 日（周四）17:00；地图点位为 Am Poth 60 文理中学；主办：Aktionsgemeinschaft Martinus e.V.；圣马丁骑马带队，带上灯笼",
+        "place": "Am Poth, 40625 Düsseldorf-Gerresheim",
+        "cost": "免费，无需报名"
+      },
+      "en": {
+        "name": "St. Martin's lantern parade Gerresheim (Gerresheim (Am Poth))",
+        "when": "Thu 19 Nov 2026, 5 pm; map point is the Gymnasium at Am Poth 60; organiser: Aktionsgemeinschaft Martinus e.V.; St. Martin on horseback, bring a lantern",
+        "place": "Am Poth, 40625 Düsseldorf-Gerresheim",
+        "cost": "Free, no registration"
+      }
+    }
+  },
+  {
+    "id": "evt-248",
+    "name": "Aktionswoche für Allein- und Getrennterziehende",
+    "type": "J",
+    "month": 11,
+    "when": "14.11.–22.11.2026 (Sa–So); Programm in allen Stadtteilen: offene Treffs, Frühstücksrunden, Kreativzeit, Klettern, Yoga, Infos zu Familienleistungen & Berufseinstieg; Auftakt am Samstag in der Efa",
+    "place": "verschiedene Orte in allen Düsseldorfer Stadtteilen (siehe Programm)",
+    "cost": "kostenlos, sofern nicht anders angegeben; teils Anmeldung nötig",
+    "website": "https://www.duesseldorf.de/familie/alleine-erziehen/aktionswoche",
+    "confirmed": true,
+    "i18n": {
+      "zh": {
+        "name": "单亲家庭行动周",
+        "when": "2026 年 11 月 14 日（周六）至 22 日（周日）；全市各区：开放聚会、早餐会、手工、攀岩、瑜伽、家庭补助与就业信息；14.11 在 Efa 开幕",
+        "place": "杜塞各区多个地点（见官方节目单）",
+        "cost": "除另注明外免费；部分需报名"
+      },
+      "en": {
+        "name": "Action week for single and separated parents",
+        "when": "Sat 14 – Sun 22 Nov 2026; programme across all districts: open meet-ups, breakfasts, crafts, climbing, yoga, info on family benefits & getting back to work; kick-off Sat 14 Nov at Efa",
+        "place": "Various venues across Düsseldorf (see programme)",
+        "cost": "Free unless stated otherwise; some require registration"
+      }
+    }
+  }
+]
